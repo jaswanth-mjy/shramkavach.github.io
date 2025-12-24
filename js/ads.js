@@ -4,7 +4,7 @@
 // AdSense Auto Ads (Recommended for beginners)
 (function() {
     // TODO: Replace with your AdSense publisher ID after approval
-    const ADSENSE_ID = 'ca-pub-XXXXXXXXXXXXXXXX';
+    const ADSENSE_ID = 'ca-pub-2868999138532322';
     
     if (ADSENSE_ID !== 'ca-pub-XXXXXXXXXXXXXXXX') {
         const script = document.createElement('script');
