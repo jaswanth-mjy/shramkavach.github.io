@@ -4237,15 +4237,10 @@
     <script>
     // Modal functionality
     function openCalculator(modalId) {
-        console.log('Opening calculator modal:', modalId);
         const modal = document.getElementById(modalId);
-        console.log('Modal element found:', modal);
         if (modal) {
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
-            console.log('Modal classes after opening:', modal.className);
-        } else {
-            console.error('Modal not found with ID:', modalId);
         }
     }
     
@@ -4273,13 +4268,6 @@
             });
             document.body.style.overflow = 'auto';
         }
-    });
-    
-    // Debug: Log all modal IDs on page load
-    window.addEventListener('DOMContentLoaded', function() {
-        const modals = document.querySelectorAll('.calculator-modal');
-        console.log('Total modals found:', modals.length);
-        modals.forEach(modal => console.log('Modal ID:', modal.id));
     });
     </script>
     
