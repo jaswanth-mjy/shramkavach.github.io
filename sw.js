@@ -1,5 +1,5 @@
 // Service Worker for ShramKavach PWA - Production Version
-const CACHE_NAME = 'shramkavach-v3.0.0'; // Increment version to force cache refresh
+const CACHE_NAME = 'shramkavach-v3.1.0'; // Increment version to force cache refresh
 const urlsToCache = [
   '/',
   '/index.html',
@@ -11,6 +11,7 @@ const urlsToCache = [
   '/generator.html',
   '/logo.png',
   '/manifest.json',
+  '/css/styles.min.css',
   '/js/calculators.js',
   '/js/prompt-loader.js',
   '/js/common.js',

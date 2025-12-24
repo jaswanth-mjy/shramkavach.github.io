@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "python3 -m http.server 8000",
     "start": "python3 -m http.server 8000",
-    "build": "echo 'Static site - no build needed'",
+    "build:css": "./tailwindcss -i input.css -o css/styles.min.css --minify",
+    "build": "npm run build:css",
+    "watch:css": "./tailwindcss -i input.css -o css/styles.min.css --watch",
     "test": "echo \"No tests configured\" && exit 0"
   },
   "keywords": [
@@ -30,10 +32,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shramkavach/platform.git"
+    "url": "git+https://github.com/shramkavach/platform.git"
   },
   "bugs": {
     "url": "https://github.com/shramkavach/platform/issues"
   },
-  "homepage": "https://shramkavach.com"
+  "homepage": "https://shramkavach.com",
+  "devDependencies": {
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  }
 }
