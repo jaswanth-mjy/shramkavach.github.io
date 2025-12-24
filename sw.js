@@ -1,5 +1,5 @@
 // Service Worker for ShramKavach PWA - Production Version
-const CACHE_NAME = 'shramkavach-v2.0.0';
+const CACHE_NAME = 'shramkavach-v3.0.0'; // Increment version to force cache refresh
 const urlsToCache = [
   '/',
   '/index.html',
@@ -47,47 +47,68 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event - Network First for HTML, Cache First for assets
 self.addEventListener('fetch', (event) => {
   // Skip non-GET requests
   if (event.request.method !== 'GET') {
     return;
   }
 
+  const { request } = event;
+  const requestUrl = new URL(request.url);
+
+  // Network First strategy for HTML pages
+  if (request.headers.get('accept').includes('text/html')) {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          // Clone and cache the fresh response
+          const responseToCache = response.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(request, responseToCache);
+          });
+          return response;
+        })
+        .catch(() => {
+          // Fallback to cache if network fails
+          return caches.match(request).then((response) => {
+            return response || new Response('Offline - Please check your connection', {
+              status: 503,
+              statusText: 'Service Unavailable',
+              headers: new Headers({ 'Content-Type': 'text/plain' })
+            });
+          });
+        })
+    );
+    return;
+  }
+
+  // Cache First strategy for static assets (JS, CSS, images, fonts)
   event.respondWith(
-    caches.match(event.request)
+    caches.match(request)
       .then((response) => {
-        // Cache hit - return response
         if (response) {
           return response;
         }
 
-        // Clone the request
-        const fetchRequest = event.request.clone();
+        const fetchRequest = request.clone();
 
         return fetch(fetchRequest).then((response) => {
-          // Check if valid response
           if (!response || response.status !== 200 || response.type !== 'basic') {
             return response;
           }
 
-          // Clone the response
           const responseToCache = response.clone();
-
-          caches.open(CACHE_NAME)
-            .then((cache) => {
-              cache.put(event.request, responseToCache);
-            });
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(request, responseToCache);
+          });
 
           return response;
         }).catch(() => {
-          // Return offline fallback
           return new Response('Offline - Please check your connection', {
             status: 503,
             statusText: 'Service Unavailable',
-            headers: new Headers({
-              'Content-Type': 'text/plain'
-            })
+            headers: new Headers({ 'Content-Type': 'text/plain' })
           });
         });
       })
