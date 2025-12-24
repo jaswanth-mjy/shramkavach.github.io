@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "title": "Kirana Store WhatsApp Status - New Product",
+    "category": "marketing",
+    "language": "hi",
+    "description": "आज नया माल आया है! WhatsApp status के लिए 3-line catchy message",
+    "prompt": "मेरे Kirana store में आज [Product Name] का fresh stock आया है। एक catchy 3-line WhatsApp status लिखो जो:\n1. Product की खासियत बताए\n2. जल्दी खरीदने के लिए urgency create करे\n3. Shop का नाम और location include करे\n\nTone: Friendly और conversational\nLanguage: Hindi (Hinglish mix allowed)"
+  },
+  {
+    "id": 2,
+    "title": "Angry Customer Reply - Late Delivery",
+    "category": "customer-service",
+    "language": "hi",
+    "description": "Late delivery की complaint के लिए polite और professional reply",
+    "prompt": "एक customer ने मुझे message किया है कि उनका order late deliver हुआ। मुझे एक polite, empathetic, और professional reply लिखना है जो:\n1. Genuinely sorry हो\n2. Reason briefly explain करे (without making excuses)\n3. Compensation/solution offer करे\n4. Future improvement का assurance दे\n\nCustomer message: \"[Customer ki complaint yahan paste karein]\"\n\nLanguage: Hindi\nTone: Sincere और respectful"
+  },
+  {
+    "id": 3,
+    "title": "Freelance Rate Increase Request",
+    "category": "negotiation",
+    "language": "en",
+    "description": "Long-term client se rate badhane ka professional email",
+    "prompt": "I have been working with a client for [X months/years] as a [Your Service - e.g., video editor, graphic designer]. I want to request a rate increase from ₹[Current Rate] to ₹[New Rate].\n\nWrite a professional email that:\n1. Appreciates our working relationship\n2. Highlights my consistent quality and reliability\n3. Justifies the increase (market rates, skill improvement, inflation)\n4. Suggests a gradual implementation if needed\n5. Remains respectful and open to discussion\n\nTone: Professional but warm\nLength: 150-200 words"
+  },
+  {
+    "id": 4,
+    "title": "Daily Expense Tracker Prompt",
+    "category": "business-planning",
+    "language": "hi",
+    "description": "Excel/Google Sheets mein daily kharcha track karne ka system",
+    "prompt": "Mere small business के लिए एक simple daily expense tracker बनाने में मदद करो। Mujhe:\n1. Excel/Google Sheets formula चाहिए\n2. Categories: Raw Material, Transport, Staff Salary, Electricity, Miscellaneous\n3. Daily, Weekly, Monthly totals automatically calculate हों\n4. Budget vs Actual comparison\n\nStep-by-step Hindi mein batao kaise setup karoon."
+  },
+  {
+    "id": 5,
+    "title": "Instagram Reel Script - Product Launch",
+    "category": "content-creation",
+    "language": "hi",
+    "description": "15-30 second Reel ke liye engaging script",
+    "prompt": "Mere [Product/Service Name] की launch के liye ek Instagram Reel script likho:\n\nDuration: 15-30 seconds\nHook: Pehle 3 seconds mein attention grab karna\nBody: Product benefit batana\nCTA: Follow/Buy karne ke liye encourage karna\n\nStyle: Trendy, youth-friendly\nLanguage: Hinglish (Hindi + English mix)"
+  },
+  {
+    "id": 6,
+    "title": "Payment Reminder - Polite Follow-up",
+    "category": "customer-service",
+    "language": "hi",
+    "description": "Pending payment ke liye polite reminder message",
+    "prompt": "Mere client ka payment [X days] se pending hai। Amount: ₹[Amount]\nDue Date: [Date]\n\nEk polite payment reminder message likho jo:\n1. Friendly tone ho, aggressive na lage\n2. Invoice details clearly mention करे\n3. Payment methods suggest करे\n4. Contact karne ka option दे if any issue है\n\nLanguage: Hindi (Professional tone)\nLength: 4-5 lines"
+  },
+  {
+    "id": 7,
+    "title": "Cold Email - Local Business Partnership",
+    "category": "negotiation",
+    "language": "en",
+    "description": "Local business se partnership/collaboration ka cold email",
+    "prompt": "I want to reach out to [Business Type - e.g., cafe, salon, gym] in my area for a partnership/cross-promotion opportunity.\n\nMy business: [Your Business]\nProposal: [Brief idea - e.g., discount coupons exchange, joint event]\n\nWrite a cold email that:\n1. Introduces me professionally\n2. Explains mutual benefits clearly\n3. Proposes a no-commitment initial meeting\n4. Sounds collaborative, not salesy\n\nLength: 120-150 words\nTone: Friendly professional"
+  },
+  {
+    "id": 8,
+    "title": "Google My Business Description",
+    "category": "marketing",
+    "language": "hi",
+    "description": "Local search के लिए optimized GMB description",
+    "prompt": "Mere business के लिए Google My Business (GMB) description likho:\n\nBusiness: [Type - e.g., restaurant, salon, coaching center]\nLocation: [Area, City]\nUSP: [What makes you different]\nServices: [List main services]\n\nDescription should:\n1. 750 characters के अंदर हो\n2. Local keywords include करे\n3. Contact करने की urgency create करे\n4. Trust build करे\n\nLanguage: Hindi"
+  },
+  {
+    "id": 9,
+    "title": "Product Description - E-commerce",
+    "category": "content-creation",
+    "language": "en",
+    "description": "Flipkart/Amazon-style product description",
+    "prompt": "Write an e-commerce product description for:\n\nProduct: [Name]\nCategory: [Electronics/Fashion/Home/etc.]\nKey Features: [List 4-5 features]\nPrice: ₹[Price]\nTarget Customer: [Who should buy this]\n\nDescription should:\n1. Start with a compelling hook\n2. Highlight benefits (not just features)\n3. Include bullet points for scannability\n4. End with a persuasive CTA\n5. Be 150-200 words\n6. Use emotional triggers\n\nTone: Persuasive but trustworthy"
+  },
+  {
+    "id": 10,
+    "title": "Customer Testimonial Request",
+    "category": "marketing",
+    "language": "hi",
+    "description": "Happy customer se review maangne ka message",
+    "prompt": "Mera ek customer बहुत satisfied है। Main usse Google/Facebook review maangna chahta hoon.\n\nEk short, friendly message likho jo:\n1. Thank you bole for their business\n2. Politely review request करे\n3. Link provide karne ka mention करे\n4. Incentive hint करे (optional - discount on next purchase)\n\nTone: Grateful और humble\nLanguage: Hindi\nLength: 3-4 lines"
+  },
+  {
+    "id": 11,
+    "title": "Legal Notice Reply - Sample",
+    "category": "legal",
+    "language": "en",
+    "description": "Mild legal dispute ke liye formal reply draft",
+    "prompt": "I received a legal notice/complaint regarding [Issue - e.g., product defect, delayed payment, contract breach].\n\nHelp me draft a professional reply that:\n1. Acknowledges receipt of notice\n2. States my position calmly (without admitting fault)\n3. Proposes amicable resolution\n4. Maintains legal tone\n5. Leaves door open for discussion\n\nNote: This is a draft; I will consult a lawyer before sending.\n\nLength: 200-250 words\nTone: Formal and diplomatic"
+  },
+  {
+    "id": 12,
+    "title": "Team Motivation Message",
+    "category": "business-planning",
+    "language": "hi",
+    "description": "Apni small team ko motivate karne ka WhatsApp message",
+    "prompt": "Mere [Number] staff members hain. Abhi business mein thoda slow phase hai. Mujhe team ko motivate karna hai.\n\nEk WhatsApp message likho jo:\n1. Situation honestly acknowledge करे\n2. Past achievements याद दिलाए\n3. Future goals के liye inspire करे\n4. Team effort की importance बताए\n5. Positive note पर end करे\n\nLanguage: Hindi\nTone: Leader जैसा, empathetic\nLength: 6-8 lines"
+  },
+  {
+    "id": 13,
+    "title": "Budget-Friendly Marketing Plan",
+    "category": "business-planning",
+    "language": "hi",
+    "description": "Low budget mein marketing strategy kaise banayein",
+    "prompt": "Mere paas marketing ke liye bahut limited budget hai (₹[Budget]).\n\nBusiness: [Type]\nTarget Audience: [Who]\nGoal: [e.g., local awareness, online sales]\n\nEk actionable marketing plan suggest karo with:\n1. Free/low-cost tactics (Social media, WhatsApp, local partnerships)\n2. Priority order (kya pehle karoon)\n3. Expected timeline\n4. Success metrics (kaise measure karoon)\n\nLanguage: Hindi\nFormat: Step-by-step checklist"
+  },
+  {
+    "id": 14,
+    "title": "Festival Offer Announcement",
+    "category": "marketing",
+    "language": "hi",
+    "description": "Diwali/Holi/Eid jaise festivals ke liye offer message",
+    "prompt": "[Festival Name] के occasion पर mere business में special offer hai:\n\nOffer: [Details - e.g., 20% off, Buy 1 Get 1]\nValidity: [Date range]\n\nEk attractive announcement message likho for:\n- WhatsApp broadcast\n- Facebook/Instagram post\n\nMessage should:\n1. Festival की warmth reflect करे\n2. Offer clearly highlight करे\n3. Urgency create करे (limited time)\n4. Shop/contact details include करे\n\nLanguage: Hindi\nEmojis: Use karo to make it festive"
+  },
+  {
+    "id": 15,
+    "title": "Job Post - Hiring Staff",
+    "category": "business-planning",
+    "language": "hi",
+    "description": "Local staff hire karne ke liye job posting",
+    "prompt": "Mujhe [Position - e.g., shop assistant, delivery boy, accountant] hire karna hai.\n\nRequirements:\n- Education: [Minimum qualification]\n- Experience: [Required or not]\n- Location: [Area]\n- Salary: ₹[Range]\n\nEk job posting likho for:\n- Facebook local groups\n- WhatsApp status\n- OLX/Quikr\n\nPosting should:\n1. Clear और concise ho\n2. Responsibilities mention करे\n3. Contact method clearly बताए\n4. Professional लगे\n\nLanguage: Hindi"
+  },
+  {
+    "id": 16,
+    "title": "Customer Loyalty Program Idea",
+    "category": "marketing",
+    "language": "hi",
+    "description": "Repeat customers ke liye simple loyalty program",
+    "prompt": "Mere [Business Type] के liye ek simple customer loyalty program design karo:\n\nBudget: Low (mostly manual tracking)\nGoal: Regular customers ko retain karna\n\nProgram should include:\n1. Reward structure (points/stamps/discounts)\n2. How to track (digital ya physical card)\n3. Redemption rules\n4. Communication strategy\n\nLanguage: Hindi\nKeep it realistic and easy to implement"
+  },
+  {
+    "id": 17,
+    "title": "Competitor Analysis Framework",
+    "category": "business-planning",
+    "language": "en",
+    "description": "Apne competitors ko analyze karne ka systematic tareeka",
+    "prompt": "I want to analyze my competitors systematically.\n\nMy Business: [Type]\nCompetitors: [List 2-3 names or types]\n\nCreate a simple framework to compare:\n1. Pricing\n2. Product/Service quality\n3. Marketing tactics\n4. Customer service\n5. Online presence\n6. Unique selling points\n\nProvide this as a table/checklist format that I can fill and use for strategic decisions.\n\nLanguage: English (simple)"
+  },
+  {
+    "id": 18,
+    "title": "Invoice Follow-up Sequence",
+    "category": "customer-service",
+    "language": "hi",
+    "description": "Payment na aane par step-by-step follow-up messages",
+    "prompt": "Client ko invoice bheje [X days] ho gaye but payment nahi aaya.\n\nAmount: ₹[Amount]\nDue Date: [Date]\n\nEk 3-step follow-up sequence likho:\n\nMessage 1: Friendly reminder (Day 7 after due)\nMessage 2: Firm but polite (Day 14)\nMessage 3: Final notice with consequences (Day 21)\n\nHar message:\n- Professional tone maintain करे\n- Invoice number/details include करे\n- Clear next steps बताए\n\nLanguage: Hindi"
+  },
+  {
+    "id": 19,
+    "title": "New Product Launch Email",
+    "category": "marketing",
+    "language": "en",
+    "description": "Existing customers ko new product/service announce karna",
+    "prompt": "I'm launching a new [Product/Service] for my existing customer base.\n\nProduct: [Name]\nBenefit: [Main value proposition]\nLaunch Offer: [Special discount/bonus]\n\nWrite an email announcement that:\n1. Creates excitement\n2. Explains how it solves their problem\n3. Highlights launch offer\n4. Includes clear CTA\n5. Thanks them for loyalty\n\nLength: 150-180 words\nTone: Exciting but professional"
+  },
+  {
+    "id": 20,
+    "title": "Out of Stock Apology",
+    "category": "customer-service",
+    "language": "hi",
+    "description": "Popular product stock khatam hone par customer ko message",
+    "prompt": "Mera [Product Name] out of stock ho gaya hai aur customer maang rahe hain.\n\nEk message likho jo:\n1. Sincerely sorry bole\n2. Restock timeline बताए (if known)\n3. Alternative suggest करे (if any)\n4. Pre-order/waiting list option दे\n5. Customer ko retain करे\n\nLanguage: Hindi\nTone: Apologetic but solution-oriented\nLength: 4-5 lines"
+  },
+  {
+    "id": 21,
+    "title": "Business Introduction for Networking",
+    "category": "negotiation",
+    "language": "en",
+    "description": "Networking event mein apna business introduce karne ka 30-second pitch",
+    "prompt": "I'm attending a local business networking event. I need a 30-second elevator pitch.\n\nMy Business: [Name and type]\nWhat I do: [Service/Product]\nTarget Market: [Who I serve]\nUnique Value: [What makes me different]\n\nWrite a pitch that:\n1. Grabs attention immediately\n2. Clearly explains what I do\n3. Highlights my unique angle\n4. Ends with a memorable hook\n5. Invites conversation\n\nWord count: ~75 words\nTone: Confident and approachable"
+  },
+  {
+    "id": 22,
+    "title": "Social Media Content Calendar",
+    "category": "content-creation",
+    "language": "hi",
+    "description": "1 hafte ke liye social media post ideas",
+    "prompt": "Mere [Business Type] के लिए 1 week (7 days) का social media content calendar banao:\n\nPlatforms: Facebook, Instagram\nPosting Frequency: 1 post per day\n\nContent mix should include:\n- Product/service highlights\n- Customer testimonials\n- Behind-the-scenes\n- Educational/tips\n- Engagement posts (polls, questions)\n\nHar post ke liye:\n1. Topic\n2. Post type (image/video/text)\n3. Caption idea (2-3 lines)\n4. Best posting time\n\nLanguage: Hindi"
+  },
+  {
+    "id": 23,
+    "title": "Customer Onboarding Welcome Message",
+    "category": "customer-service",
+    "language": "hi",
+    "description": "Naye customer ko welcome message (subscription/membership)",
+    "prompt": "Ek naya customer ne meri [Service/Membership] join ki hai.\n\nEk warm welcome message likho jo:\n1. Thank you bole\n2. What to expect next बताए\n3. How to get support बताए\n4. Next steps clearly mention करे\n5. Personal touch ho\n\nDelivery: Email or WhatsApp\nLanguage: Hindi\nTone: Friendly and helpful\nLength: 6-8 lines"
+  },
+  {
+    "id": 24,
+    "title": "Price Increase Announcement",
+    "category": "negotiation",
+    "language": "en",
+    "description": "Customers ko price badhane ka diplomatic announcement",
+    "prompt": "Due to [reason - inflation, supplier costs, etc.], I need to increase prices by [X%] starting [Date].\n\nCurrent Price: ₹[Amount]\nNew Price: ₹[Amount]\n\nWrite an announcement message/email that:\n1. Explains reason transparently\n2. Emphasizes value they still get\n3. Provides advance notice\n4. Thanks for understanding\n5. Offers grandfathering/transition (optional)\n\nTone: Honest and respectful\nLength: 120-150 words"
+  },
+  {
+    "id": 25,
+    "title": "Google Review Response - Positive",
+    "category": "customer-service",
+    "language": "hi",
+    "description": "Achhe review ka thank you reply",
+    "prompt": "Ek customer ne mujhe 5-star Google review diya hai:\n\nReview: \"[Customer review yahan paste karein]\"\n\nEk professional thank you reply likho jo:\n1. Genuinely grateful ho\n2. Specific point ka mention करे from their review\n3. Invite करे to visit again\n4. Professional aur warm dono ho\n\nLanguage: Hindi\nLength: 2-3 lines"
+  },
+  {
+    "id": 26,
+    "title": "Google Review Response - Negative",
+    "category": "customer-service",
+    "language": "hi",
+    "description": "Negative review ka diplomatic aur solution-focused reply",
+    "prompt": "Ek customer ne negative review diya hai:\n\nReview: \"[Customer complaint yahan paste karein]\"\n\nEk public reply likho jo:\n1. Empathy dikhaye\n2. Issue acknowledge करे\n3. Solution/action taken mention करे\n4. Offline resolve karne ka offer करे\n5. Professional image maintain करे\n\nImportant: Public reply hai, to defensive mat bano\n\nLanguage: Hindi\nLength: 3-4 lines"
+  },
+  {
+    "id": 27,
+    "title": "Referral Program Announcement",
+    "category": "marketing",
+    "language": "hi",
+    "description": "\"Refer and Earn\" program launch message",
+    "prompt": "Main ek referral program launch kar raha hoon:\n\nReward for Referrer: [e.g., ₹100 discount, free product]\nReward for Referee: [e.g., 10% off first order]\n\nEk announcement message likho for WhatsApp/Email jo:\n1. Program simply explain करे\n2. How it works (step-by-step)\n3. Rewards clearly mention करे\n4. Excitement create करे\n5. CTA दे (Start referring now!)\n\nLanguage: Hindi\nTone: Exciting and friendly"
+  },
+  {
+    "id": 28,
+    "title": "Business Milestone Celebration Post",
+    "category": "content-creation",
+    "language": "hi",
+    "description": "1 year/100 customers jaise milestone celebrate karna",
+    "prompt": "Mera business ek milestone achieve kar liya hai:\n\nMilestone: [e.g., 1 year completed, 100th customer, 500 orders]\n\nEk social media post likho jo:\n1. Milestone proudly announce करे\n2. Customers/supporters को thank करे\n3. Journey briefly reflect करे\n4. Future excitement hint करे\n5. Celebratory tone ho\n\nOptional: Giveaway/discount announce karna ho to mention karo\n\nLanguage: Hindi\nLength: 8-10 lines"
+  },
+  {
+    "id": 29,
+    "title": "Business Crisis Communication",
+    "category": "customer-service",
+    "language": "en",
+    "description": "Emergency situation mein customers ko inform karna",
+    "prompt": "An unexpected situation has occurred:\n\nSituation: [e.g., shop closed due to emergency, delivery delays due to weather, website down]\n\nWrite a crisis communication message that:\n1. States facts clearly\n2. Apologizes for inconvenience\n3. Provides expected resolution time\n4. Offers alternative (if any)\n5. Maintains trust\n6. Provides contact for urgent queries\n\nTone: Transparent and reassuring\nLength: 100-120 words\nFormat: Email/SMS/Social media"
+  },
+  {
+    "id": 30,
+    "title": "Seasonal Inventory Clearance",
+    "category": "marketing",
+    "language": "hi",
+    "description": "Old stock clear karne ke liye sale announcement",
+    "prompt": "Mujhe [Season] ke old stock ko clear karna hai.\n\nDiscount: [e.g., 30-50% off]\nDuration: [Date range]\nProducts: [Category]\n\nEk catchy sale announcement likho for:\n- WhatsApp Status\n- Facebook/Instagram\n\nMessage should:\n1. Urgency create करे (limited time/stock)\n2. Discount boldly highlight करे\n3. Quality assure करे (old stock ≠ bad quality)\n4. CTA दे (Visit/Call now)\n\nLanguage: Hindi\nEmojis welcome"
+  }
+]

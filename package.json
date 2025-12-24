@@ -1,0 +1,39 @@
+{
+  "name": "shramkavach",
+  "version": "2.0.0",
+  "description": "ShramKavach - Complete Worker Empowerment Platform with 34+ Calculators, 1200+ AI Prompts, Legal Tools & Worker Rights Protection",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "start": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build needed'",
+    "test": "echo \"No tests configured\" && exit 0"
+  },
+  "keywords": [
+    "labour-rights",
+    "worker-empowerment",
+    "india",
+    "calculators",
+    "ai-prompts",
+    "legal-tools",
+    "dpdp-act-2023",
+    "gratuity-calculator",
+    "pf-calculator",
+    "salary-calculator",
+    "hindi",
+    "vernacular",
+    "worker-protection",
+    "compliance",
+    "freelancer-tools"
+  ],
+  "author": "ShramKavach Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shramkavach/platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shramkavach/platform/issues"
+  },
+  "homepage": "https://shramkavach.com"
+}

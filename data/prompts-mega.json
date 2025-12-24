@@ -1,0 +1,372 @@
+{
+  "meta": {
+    "total_prompts": 1200,
+    "categories": 25,
+    "languages": ["hi", "en", "hinglish"],
+    "last_updated": "2025-12-19"
+  },
+  "categories": {
+    "marketing": {
+      "name": "Marketing & Advertising",
+      "icon": "📢",
+      "count": 120
+    },
+    "customer_service": {
+      "name": "Customer Service",
+      "icon": "💬",
+      "count": 100
+    },
+    "negotiation": {
+      "name": "Negotiation & Pricing",
+      "icon": "💰",
+      "count": 80
+    },
+    "content_creation": {
+      "name": "Content Creation",
+      "icon": "✍️",
+      "count": 150
+    },
+    "business_planning": {
+      "name": "Business Planning",
+      "icon": "📊",
+      "count": 90
+    },
+    "social_media": {
+      "name": "Social Media",
+      "icon": "📱",
+      "count": 130
+    },
+    "email_writing": {
+      "name": "Email & Communication",
+      "icon": "✉️",
+      "count": 85
+    },
+    "sales": {
+      "name": "Sales & Conversion",
+      "icon": "🎯",
+      "count": 75
+    },
+    "legal": {
+      "name": "Legal & Contracts",
+      "icon": "⚖️",
+      "count": 60
+    },
+    "finance": {
+      "name": "Finance & Accounting",
+      "icon": "💵",
+      "count": 70
+    },
+    "productivity": {
+      "name": "Productivity & Time Management",
+      "icon": "⏰",
+      "count": 50
+    },
+    "branding": {
+      "name": "Branding & Identity",
+      "icon": "🎨",
+      "count": 45
+    },
+    "delivery": {
+      "name": "Delivery & Logistics",
+      "icon": "🛵",
+      "count": 55
+    },
+    "cab_driver": {
+      "name": "Cab & Transport Services",
+      "icon": "🚗",
+      "count": 50
+    },
+    "food_business": {
+      "name": "Food & Restaurant",
+      "icon": "🍽️",
+      "count": 65
+    },
+    "beauty_salon": {
+      "name": "Beauty & Salon",
+      "icon": "💇",
+      "count": 55
+    },
+    "home_services": {
+      "name": "Home Services",
+      "icon": "🔧",
+      "count": 60
+    },
+    "education": {
+      "name": "Education & Tutoring",
+      "icon": "📚",
+      "count": 50
+    }
+  },
+  "prompts": [
+    {
+      "id": 1,
+      "title": "WhatsApp Status - New Product Arrival",
+      "category": "marketing",
+      "language": "hi",
+      "tags": ["whatsapp", "product-launch", "retail"],
+      "description": "नए product के लिए catchy WhatsApp status",
+      "prompt": "मेरे [Shop/Business Name] में आज [Product Name] का fresh stock आया है। Price: ₹[Price]\n\nएक catchy WhatsApp status लिखो (3-4 lines) जो:\n1. Product की खासियत बताए\n2. Limited stock का urgency create करे\n3. Call करने या visit करने के lिए encourage करे\n4. Emojis use करे\n\nTone: Exciting और friendly\nLanguage: Hindi/Hinglish"
+    },
+    {
+      "id": 2,
+      "title": "Angry Customer Response - Professional",
+      "category": "customer_service",
+      "language": "hi",
+      "tags": ["complaint-handling", "customer-care", "communication"],
+      "description": "Angry customer की complaint ka polite reply",
+      "prompt": "एक customer बहुत angry है और complaint कर रहा है: \"[Customer की complaint यहाँ]\"\n\nMujhe एक professional reply लिखना है जो:\n1. Empathy dikhाए\n2. Sorry कहे without defensive bane\n3. Solution या compensation offer करे\n4. Future mein better service का assurance दे\n5. Relationship maintain करे\n\nTone: Respectful, calm, solution-oriented\nLength: 100-150 words"
+    },
+    {
+      "id": 3,
+      "title": "Freelance Rate Increase Email",
+      "category": "negotiation",
+      "language": "en",
+      "tags": ["pricing", "client-communication", "freelancing"],
+      "description": "Client को rate increase request email",
+      "prompt": "I've been working with [Client Name] for [Duration] as a [Your Service]. Current rate: ₹[Amount]. New rate: ₹[Amount].\n\nWrite a professional email requesting rate increase:\n1. Express gratitude for partnership\n2. Highlight value delivered\n3. Justify increase (market rates, skill growth, inflation)\n4. Propose implementation timeline\n5. Show flexibility for discussion\n\nTone: Professional, confident, respectful\nLength: 200-250 words"
+    },
+    {
+      "id": 4,
+      "title": "Instagram Reel Hook - 3 Seconds",
+      "category": "content_creation",
+      "language": "hinglish",
+      "tags": ["instagram", "video-content", "social-media"],
+      "description": "Reel के first 3 seconds के lिए powerful hook",
+      "prompt": "Mere [Product/Service] के lिए Instagram Reel bana रहा हूँ। Target audience: [Age group/Demographics]\n\nPehle 3 seconds का powerful hook लिखो जो:\n1. Pattern interrupt करे (scroll रोके)\n2. Curiosity create करे\n3. Relatable हो\n4. Clear audio text दे\n\nExamples देना:\n- Visual description\n- Spoken words\n- Text overlay\n\nStyle: Trendy, youth-friendly"
+    },
+    {
+      "id": 5,
+      "title": "Payment Reminder - 1st Polite Follow-up",
+      "category": "customer_service",
+      "language": "hi",
+      "tags": ["payment", "follow-up", "finance"],
+      "description": "Pending payment के लिए first reminder",
+      "prompt": "Client का payment pending है:\n- Invoice #: [Number]\n- Amount: ₹[Amount]\n- Due date: [Date] (आज से [X] days पहले)\n\nPehla polite reminder message लिखो:\n1. Friendly greeting\n2. Gentle reminder (assume they forgot)\n3. Payment details और methods\n4. Help offer करे if issue है\n5. Thank you note\n\nTone: Polite, non-aggressive\nLength: 4-5 lines"
+    },
+    {
+      "id": 6,
+      "title": "Google My Business Post - Offer",
+      "category": "marketing",
+      "language": "hi",
+      "tags": ["local-seo", "google", "promotion"],
+      "description": "GMB पर special offer announce करने का post",
+      "prompt": "Mere [Business Name] के लिए Google My Business post:\n\nOffer: [Offer details - e.g., \"20% off on all services\"]\nValidity: [Start date] to [End date]\nConditions: [Any terms]\n\nPost लिखो (150 words max) जो:\n1. Attention-grabbing headline\n2. Offer clearly explain करे\n3. Benefits highlight करे\n4. CTA include करे (Book now, Visit, Call)\n5. SEO keywords naturally use करे\n\nEmojis: Use karo\nHashtags: 3-5 relevant"
+    },
+    {
+      "id": 7,
+      "title": "Salary Negotiation - Job Offer",
+      "category": "negotiation",
+      "language": "en",
+      "tags": ["job", "salary", "career"],
+      "description": "Job offer में salary negotiate करने का email",
+      "prompt": "I received a job offer:\n- Position: [Job Title]\n- Offered salary: ₹[Amount]/month\n- Expected salary: ₹[Amount]/month\n- My experience: [Years] years\n\nWrite a negotiation email:\n1. Express excitement about the role\n2. Politely mention salary expectation\n3. Justify with skills, experience, market research\n4. Show flexibility (willing to discuss)\n5. Maintain positive tone\n\nTone: Professional, confident but not demanding\nLength: 150-200 words"
+    },
+    {
+      "id": 8,
+      "title": "Facebook Ad Copy - Local Business",
+      "category": "marketing",
+      "language": "hinglish",
+      "tags": ["facebook-ads", "advertising", "local-business"],
+      "description": "Small business के लिए Facebook ad copy",
+      "prompt": "Mere [Business Type] के लिए Facebook ad:\n\nTarget: [Location] के [Target Audience]\nGoal: [Footfall/Sales/Awareness]\nBudget: ₹[Daily budget]\nUSP: [Unique Selling Point]\n\n3 variations के ad copy लिखो:\n\n**Version A**: Emotional approach\n**Version B**: Discount/Offer focused  \n**Version C**: Problem-solution format\n\nEach ad:\n- Headline (5-7 words)\n- Primary text (120-150 characters)\n- CTA button text\n\nLanguage: Hinglish\nEmojis: Use karo"
+    },
+    {
+      "id": 9,
+      "title": "Project Scope Document",
+      "category": "business_planning",
+      "language": "en",
+      "tags": ["freelancing", "project-management", "documentation"],
+      "description": "Freelance project का clear scope document",
+      "prompt": "Create a project scope document for:\n\nProject: [Project Name]\nClient: [Client Name]\nService: [e.g., Logo Design, Website, Video Editing]\n\nDocument should include:\n1. Project Overview (what will be done)\n2. Deliverables (specific items)\n3. Timeline with milestones\n4. Revision policy (how many rounds)\n5. What's NOT included (out of scope)\n6. Payment terms\n7. Communication protocol\n8. Cancellation policy\n\nFormat: Professional, clear, concise\nTone: Friendly but businesslike"
+    },
+    {
+      "id": 10,
+      "title": "LinkedIn Post - Milestone Achievement",
+      "category": "social_media",
+      "language": "en",
+      "tags": ["linkedin", "professional-branding", "achievement"],
+      "description": "Professional milestone share करने का LinkedIn post",
+      "prompt": "I want to share a milestone on LinkedIn:\n\nAchievement: [e.g., \"Completed 100 projects\", \"3 years in business\", \"Won award\"]\nMy field: [Industry/Service]\n\nWrite a LinkedIn post (200-300 words) that:\n1. Starts with engaging hook\n2. Shares journey briefly (challenges + learnings)\n3. Thanks supporters\n4. Shares 3-5 key lessons learned\n5. Inspires others in similar field\n6. Ends with forward-looking statement\n\nTone: Professional, humble, inspiring\nHashtags: 5-7 relevant"
+    },
+    {
+      "id": 11,
+      "title": "Late Delivery Apology Message",
+      "category": "customer_service",
+      "language": "hi",
+      "tags": ["delivery", "apology", "customer-care"],
+      "description": "Late delivery के लिए sincere apology",
+      "prompt": "Mere customer ka order late deliver हो गया:\n\nOrder #: [Number]\nExpected: [Date/Time]\nActual: [Date/Time]\nReason: [Brief reason]\n\nApology message लिखो जो:\n1. Genuine sorry express करे\n2. Inconvenience acknowledge करे\n3. Reason briefly बताए (without excuse)\n4. Compensation offer करे\n5. Future assurance दे\n\nTone: Sincere, empathetic\nLength: 100-120 words"
+    },
+    {
+      "id": 12,
+      "title": "Business Bio - Instagram Profile",
+      "category": "branding",
+      "language": "hinglish",
+      "tags": ["instagram", "bio", "branding"],
+      "description": "Instagram profile के लिए catchy bio",
+      "prompt": "Mere [Business Type] के लिए Instagram bio:\n\nWhat we do: [Service/Product]\nLocation: [City]\nUSP: [What makes us different]\n\n150 characters में एक catchy bio लिखो जो:\n1. Clearly बताए हम क्या करते हैं\n2. Location include करे\n3. CTA हो (DM, Call, Visit)\n4. Personality reflect करे\n5. Emojis strategically use करे\n\nStyle: [Professional/Fun/Quirky - choose]\nKeywords: [1-2 searchable terms]"
+    },
+    {
+      "id": 13,
+      "title": "Product Description - E-commerce",
+      "category": "content_creation",
+      "language": "en",
+      "tags": ["ecommerce", "product-copy", "sales"],
+      "description": "Online product listing के लिए description",
+      "prompt": "Write product description for:\n\nProduct: [Name]\nCategory: [Type]\nPrice: ₹[Amount]\nKey features: [List 3-5]\nTarget customer: [Who will buy]\n\nCreate:\n\n**Headline**: Catchy 5-7 words\n\n**Description** (200-250 words):\n- Start with benefit, not feature\n- Address pain point\n- List features as benefits\n- Include use cases\n- Add social proof hint\n- End with CTA\n\n**Bullet points**: 5-7 key features\n\n**SEO keywords**: 5-8 relevant terms\n\nTone: Persuasive, benefit-focused"
+    },
+    {
+      "id": 14,
+      "title": "WhatsApp Broadcast - Festival Offer",
+      "category": "marketing",
+      "language": "hi",
+      "tags": ["whatsapp", "festival", "promotion"],
+      "description": "Festival season के लिए broadcast message",
+      "prompt": "[Festival Name] के occasion पर special offer:\n\nOffer: [Details]\nValidity: [Dates]\nBusiness: [Name & Type]\n\nWhatsApp broadcast message लिखो:\n1. Festival greeting\n2. Offer details clearly\n3. Urgency create करे\n4. How to avail बताए\n5. Contact info\n\nLength: 6-8 lines\nEmojis: Festive + relevant\nTone: Celebratory, warm"
+    },
+    {
+      "id": 15,
+      "title": "Client Onboarding Email Sequence",
+      "category": "email_writing",
+      "language": "en",
+      "tags": ["onboarding", "client-management", "automation"],
+      "description": "नए client के लिए 3-email welcome sequence",
+      "prompt": "Create 3-email onboarding sequence for new client:\n\nService: [Your service]\nClient name: [Name]\n\n**Email 1 - Welcome** (Day 1):\n- Warm welcome\n- What to expect\n- Next steps\n- Point of contact\n\n**Email 2 - Resources** (Day 3):\n- Helpful resources\n- FAQ\n- How to communicate\n- Timeline overview\n\n**Email 3 - Check-in** (Day 7):\n- How are they feeling\n- Answer questions\n- Reinforce support\n- Excitement for project\n\nEach: 150-200 words\nTone: Professional, welcoming, helpful"
+    },
+    {
+      "id": 16,
+      "title": "YouTube Video Script - Tutorial",
+      "category": "content_creation",
+      "language": "hinglish",
+      "tags": ["youtube", "video", "education"],
+      "description": "Tutorial video के लिए complete script",
+      "prompt": "YouTube tutorial video script:\n\nTopic: [Tutorial subject]\nDuration: [Minutes]\nTarget audience: [Beginners/Intermediate]\n\nScript structure:\n\n**Intro** (0:00-0:30):\n- Hook (problem/question)\n- Intro + channel pitch\n- What viewer will learn\n\n**Main Content** (0:30-[X:00]):\n- Step-by-step breakdown\n- Screen actions to show\n- Voiceover text\n- Tips/warnings\n\n**Conclusion** ([X:00]-End):\n- Quick recap\n- CTA (Like, Subscribe, Comment)\n- Next video teaser\n\nLanguage: Hinglish\nStyle: Clear, teaching-focused"
+    },
+    {
+      "id": 17,
+      "title": "Refund Request Handling",
+      "category": "customer_service",
+      "language": "hi",
+      "tags": ["refund", "complaint", "policy"],
+      "description": "Customer के refund request का professional response",
+      "prompt": "Customer refund request कर रहा है:\n\nReason: [Why they want refund]\nOrder value: ₹[Amount]\nOrder date: [Date]\nYour policy: [Brief policy]\n\n2 responses लिखो:\n\n**Response A**: जब refund APPROVE कर सकते हैं\n**Response B**: जब refund DENY करना है\n\nDono में:\n1. Empathy dikhाओ\n2. Policy explain करो\n3. Clear next steps\n4. Timeline बताओ\n5. Alternative offer करो (if denying)\n\nTone: Professional, understanding\nLength: 100-150 words each"
+    },
+    {
+      "id": 18,
+      "title": "Pitch Email - Corporate Client",
+      "category": "sales",
+      "language": "en",
+      "tags": ["b2b", "pitch", "cold-email"],
+      "description": "Corporate client को cold pitch email",
+      "prompt": "Write cold pitch email to corporate client:\n\nMy service: [What you offer]\nTheir company: [Company name]\nTheir likely pain point: [Problem you can solve]\n\nEmail structure:\n\n**Subject line**: Attention-grabbing (under 50 chars)\n\n**Body** (150-200 words):\n1. Personalized opener (show you researched)\n2. Identify their pain point\n3. Your solution (brief)\n4. Proof (result/testimonial)\n5. Soft CTA (call/meeting request)\n\n**PS**: Add value (tip/resource)\n\nTone: Professional, confident, value-focused\nAvoid: Pushy, salesy language"
+    },
+    {
+      "id": 19,
+      "title": "Testimonial Request Message",
+      "category": "customer_service",
+      "language": "hi",
+      "tags": ["review", "testimonial", "reputation"],
+      "description": "Happy customer से testimonial मांगने का message",
+      "prompt": "Client/Customer happy है mere [Service/Product] से। Ab testimonial request करना है।\n\nMessage लिखो जो:\n1. Thank करे for business\n2. Politely testimonial request करे\n3. Guide करे क्या लिखना है\n4. Easy बनाए (questions provide करे)\n5. Platform suggest करे (Google, FB, etc.)\n6. Optional: Small incentive offer\n\nTone: Grateful, humble, not pushy\nLength: 100-120 words\n\nBonus: 3-5 guiding questions include करो"
+    },
+    {
+      "id": 20,
+      "title": "Price Quote - Service Business",
+      "category": "sales",
+      "language": "en",
+      "tags": ["quotation", "pricing", "b2b"],
+      "description": "Professional service quotation format",
+      "prompt": "Create formal quotation for:\n\nClient: [Name]\nService: [What you're providing]\nScope: [Brief scope]\n\nQuotation format:\n\n**Header**:\n- Quote #\n- Date\n- Valid until\n\n**Client details**\n\n**Services breakdown**:\n- Item description\n- Quantity/Hours\n- Rate\n- Amount\n\n**Subtotal**\n**Taxes** (if applicable)\n**Total**\n\n**Terms**:\n- Payment schedule\n- Cancellation policy\n- Deliverable timeline\n\n**CTA**: Accept/Sign\n\nTone: Professional, clear\nFormat: Clean, scannable"
+    },
+    {
+      "id": 21,
+      "title": "Zomato/Swiggy Resto Description",
+      "category": "food_business",
+      "language": "hinglish",
+      "tags": ["food-delivery", "restaurant", "description"],
+      "description": "Food delivery app के लिए restaurant description",
+      "prompt": "Mere restaurant के लिए Zomato/Swiggy description:\n\nRestaurant: [Name]\nCuisine: [Type]\nSpecialty: [Famous dishes]\nUSP: [What's special]\n\n150-200 words का description जो:\n1. Mouthwatering हो\n2. Specialty highlight करे\n3. Quality/freshness emphasize करे\n4. Popular dishes mention करे\n5. Keywords naturally include करे\n\nStyle: Appetizing, inviting\nKeywords: [Cuisine type, location, dish names]"
+    },
+    {
+      "id": 22,
+      "title": "Uber/Ola Profile Bio",
+      "category": "cab_driver",
+      "language": "hi",
+      "tags": ["ride-sharing", "profile", "driver"],
+      "description": "Cab driver profile के लिए professional bio",
+      "prompt": "Uber/Ola driver profile bio:\n\nExperience: [Years]\nVehicle: [Car model]\nCity: [Location]\nSpecialty: [e.g., Airport rides, Safe driving]\n\n50-80 words का bio लिखो जो:\n1. Professional impression दे\n2. Experience highlight करे\n3. Safety emphasize करे\n4. Friendly tone हो\n5. Trust build करे\n\nInclude:\n- Years of experience\n- Clean/maintained car\n- Safe driving record\n- Languages spoken\n- Special services (AC, music, water)"
+    },
+    {
+      "id": 23,
+      "title": "Delivery Partner - Customer Message",
+      "category": "delivery",
+      "language": "hi",
+      "tags": ["delivery", "communication", "customer-service"],
+      "description": "Delivery delay होने पर customer को inform करना",
+      "prompt": "Main delivery partner हूँ (Zomato/Swiggy/Amazon)। Order [X minutes] late हो रहा है।\n\nCustomer ko inform karne के lिए message:\n\nReason: [Traffic/Weather/Multiple orders]\nExpected time: [New ETA]\n\nMessage लिखो जो:\n1. Polite apology\n2. Reason briefly बताए\n3. Revised ETA दे\n4. Assurance दे (order safe hai)\n5. Thank you note\n\nTone: Polite, professional\nLength: 3-4 lines\nLanguage: Simple Hindi"
+    },
+    {
+      "id": 24,
+      "title": "Beauty Salon - Service Menu",
+      "category": "beauty_salon",
+      "language": "hinglish",
+      "tags": ["menu", "pricing", "services"],
+      "description": "Salon services का attractive menu card text",
+      "prompt": "Mere beauty salon का service menu:\n\nServices: [List services]\nPrice range: ₹[Min] to ₹[Max]\nSpecial packages: [Any combos]\n\nMenu card ke lिए descriptions लिखो:\n\n**For each service**:\n- Service name (creative/appealing)\n- Brief description (1-2 lines)\n- Benefits highlight\n- Duration\n- Price\n\n**Package deals**:\n- Package name\n- Included services\n- Savings\n\nTone: Luxurious yet approachable\nEmojis: Minimal, classy"
+    },
+    {
+      "id": 25,
+      "title": "Home Service - Booking Confirmation",
+      "category": "home_services",
+      "language": "hi",
+      "tags": ["booking", "confirmation", "service"],
+      "description": "Service booking confirm करने का message",
+      "prompt": "Customer ne booking की है:\n\nService: [e.g., Plumbing, Electrician, Cleaning]\nDate: [Date]\nTime: [Time slot]\nAddress: [Location]\n\nConfirmation message लिखो जो:\n1. Booking confirm करे\n2. सभी details repeat करे\n3. What to expect बताए\n4. Cancellation policy brief में\n5. Contact number दे\n6. Professional impression दे\n\nFormat:\n- Clear sections\n- Easy to scan\n- Professional\n\nLength: 100-150 words"
+    },
+    {
+      "id": 26,
+      "title": "Tutoring Ad - Parents Target",
+      "category": "education",
+      "language": "hi",
+      "tags": ["tutoring", "education", "advertising"],
+      "description": "Home tuition का ad copy for parents",
+      "prompt": "Mere home tuition classes का ad:\n\nSubjects: [List]\nClasses: [Grade levels]\nExperience: [Years]\nResults: [Past achievements]\nLocation: [Area]\n\nAd copy लिखो (200-250 words) जो:\n1. Parents की concerns address करे\n2. Credentials highlight करे\n3. Teaching methodology बताए\n4. Results/testimonials mention करे\n5. Demo class offer करे\n6. Contact details clear हों\n\nTone: Trustworthy, professional, caring\nTarget: Concerned parents"
+    },
+    {
+      "id": 27,
+      "title": "Contract Template - Freelance Work",
+      "category": "legal",
+      "language": "en",
+      "tags": ["contract", "freelance", "legal"],
+      "description": "Simple freelance work agreement template",
+      "prompt": "Create simple freelance contract template for:\n\nService: [Type of work]\nTypical project duration: [Days/Weeks]\n\nContract sections:\n\n1. **Parties**: Freelancer & Client details\n2. **Scope of Work**: What will be done\n3. **Deliverables**: Specific outputs\n4. **Timeline**: Milestones & deadlines\n5. **Payment Terms**: Amount, schedule, method\n6. **Revisions**: Number of rounds included\n7. **Intellectual Property**: Who owns what\n8. **Confidentiality**: NDA clause\n9. **Termination**: How to end contract\n10. **Signatures**: Date & sign\n\nTone: Legal but understandable\nLength: 2-3 pages equivalent"
+    },
+    {
+      "id": 28,
+      "title": "Monthly Business Report - Self",
+      "category": "business_planning",
+      "language": "hinglish",
+      "tags": ["reporting", "analytics", "business"],
+      "description": "अपने business का monthly performance review",
+      "prompt": "Apne business का monthly self-review report:\n\nMonth: [Month, Year]\nBusiness: [Type]\n\nReport format:\n\n**1. Revenue**:\n- Total income\n- vs last month\n- vs target\n\n**2. Expenses**:\n- Breakdown by category\n- Major spends\n- vs budget\n\n**3. Clients/Customers**:\n- New acquired\n- Retained\n- Lost (reasons)\n\n**4. Top Wins**:\n- 3-5 achievements\n\n**5. Challenges**:\n- Problems faced\n- How handled\n\n**6. Learnings**:\n- Key insights\n\n**7. Next Month Goals**:\n- Specific targets\n\nFormat: Simple, honest, actionable"
+    },
+    {
+      "id": 29,
+      "title": "Crisis Management - Bad Review",
+      "category": "customer_service",
+      "language": "hi",
+      "tags": ["reputation", "review", "crisis"],
+      "description": "Negative online review का public response",
+      "prompt": "Kisi ne meri business ko bad review दी है:\n\nPlatform: [Google/Facebook/Zomato]\nRating: [Stars]\nComplaint: [What they said]\n\n2 responses लिखो:\n\n**Public Reply** (Everyone देखेगा):\n1. Thank them for feedback\n2. Acknowledge issue professionally\n3. Apologize sincerely\n4. Offer to discuss offline\n5. Show commitment to improve\n\n**Private Message** (Customer को direct):\n1. More detailed apology\n2. Explain what happened\n3. Offer resolution/compensation\n4. Request to update review\n\nTone: Professional, not defensive\nLength: 80-100 words (public), 150-200 words (private)"
+    },
+    {
+      "id": 30,
+      "title": "Influencer Collaboration Pitch",
+      "category": "marketing",
+      "language": "en",
+      "tags": ["influencer", "collaboration", "marketing"],
+      "description": "Small influencer ko collaboration pitch",
+      "prompt": "Pitch to micro-influencer for collaboration:\n\nInfluencer: [Name]\nTheir niche: [Topic/Industry]\nFollowers: [Approximate count]\nMy business: [What I sell/offer]\n\nDM/Email pitch (200-250 words):\n1. Personalized intro (show you follow them)\n2. Compliment their content (specific)\n3. Why collaboration makes sense\n4. What you're offering:\n   - Free product/service\n   - OR fixed payment ₹[Amount]\n   - OR affiliate commission [%]\n5. What you expect (post/story/reel)\n6. Creative freedom mention\n7. Easy next step\n\nTone: Friendly, professional, mutual-benefit\nAvoid: Demanding, entitled language"
+    }
+  ]
+}

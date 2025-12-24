@@ -1,0 +1,13 @@
+# robots.txt for ShramKavach
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://shramkavach.com/sitemap.xml
+
+# Disallow admin or sensitive paths (if any in future)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Crawl-delay (optional, usually not needed)
+# Crawl-delay: 1

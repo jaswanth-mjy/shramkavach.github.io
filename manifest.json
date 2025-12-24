@@ -1,0 +1,35 @@
+{
+  "name": "ShramKavach - Worker Empowerment Platform",
+  "short_name": "ShramKavach",
+  "description": "Empowering Indian workers with free calculators, legal tools, AI prompts, and worker rights protection resources.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "finance", "education", "utilities"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "logo.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ]
+}
