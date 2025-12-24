@@ -45,6 +45,3 @@ Thumbs.db
 
 # Vercel
 .vercel/
-node_modules/
-tailwindcss
-input.css
