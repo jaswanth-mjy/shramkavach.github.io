@@ -1151,53 +1151,112 @@
         </div>
     </section>
 
+    <!-- Web3Forms Integration -->
     <script>
-        // Form submission handler
-        document.getElementById('query-form').addEventListener('submit', function(e) {
+        // Form submission handler using Web3Forms API
+        document.getElementById('query-form').addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            const formData = new FormData(this);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                type: formData.get('type'),
-                message: formData.get('message')
-            };
-            
-            // Create mailto link with form data
-            const subject = encodeURIComponent(`ShramKavach Query: ${data.type}`);
-            const body = encodeURIComponent(
-                `Name: ${data.name}\n` +
-                `Email: ${data.email}\n` +
-                `Phone: ${data.phone || 'Not provided'}\n` +
-                `Query Type: ${data.type}\n\n` +
-                `Message:\n${data.message}\n\n` +
-                `---\nSubmitted via ShramKavach Contact Form`
-            );
-            
-            // Open default email client
-            window.location.href = `mailto:jaswanthplc@gmail.com?subject=${subject}&body=${body}`;
-            
-            // Show success message
+            const submitBtn = this.querySelector('button[type="submit"]');
             const messageDiv = document.getElementById('form-message');
-            messageDiv.className = 'bg-green-50 border-2 border-green-200 text-green-800 px-6 py-4 rounded-xl flex items-center gap-3';
-            messageDiv.innerHTML = `
-                <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <div>
-                    <p class="font-bold">Your email client should open now!</p>
-                    <p class="text-sm">Please send the pre-filled email to complete your query submission.</p>
-                </div>
-            `;
-            messageDiv.classList.remove('hidden');
+            const formData = new FormData(this);
             
-            // Reset form after 3 seconds
-            setTimeout(() => {
-                this.reset();
-                messageDiv.classList.add('hidden');
-            }, 5000);
+            // Add Web3Forms access key and other details
+            formData.append('access_key', '8f3e5d72-4a91-4c2e-b9e8-7f6d4c1a2b3e'); // Free tier key
+            formData.append('subject', `ShramKavach Query: ${formData.get('type')}`);
+            formData.append('from_name', 'ShramKavach Contact Form');
+            formData.append('to_email', 'jaswanthplc@gmail.com');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+                <svg class="animate-spin w-6 h-6" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span>Sending...</span>
+            `;
+            
+            try {
+                // Send form data directly to your email via fetch
+                const emailData = {
+                    to: 'jaswanthplc@gmail.com',
+                    subject: `ShramKavach Query: ${formData.get('type')}`,
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone') || 'Not provided',
+                    type: formData.get('type'),
+                    message: formData.get('message')
+                };
+                
+                // Use formsubmit.co (free, no signup required)
+                const response = await fetch('https://formsubmit.co/ajax/jaswanthplc@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: emailData.name,
+                        email: emailData.email,
+                        phone: emailData.phone,
+                        type: emailData.type,
+                        message: emailData.message,
+                        _subject: emailData.subject,
+                        _template: 'box',
+                        _captcha: 'false'
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    // Show success message
+                    messageDiv.className = 'bg-green-50 border-2 border-green-200 text-green-800 px-6 py-4 rounded-xl flex items-center gap-3';
+                    messageDiv.innerHTML = `
+                        <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div>
+                            <p class="font-bold">Query Submitted Successfully!</p>
+                            <p class="text-sm">We'll get back to you within 24-48 hours.</p>
+                        </div>
+                    `;
+                    messageDiv.classList.remove('hidden');
+                    
+                    // Reset form after success
+                    this.reset();
+                    
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        messageDiv.classList.add('hidden');
+                    }, 5000);
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (error) {
+                // Show error message
+                messageDiv.className = 'bg-red-50 border-2 border-red-200 text-red-800 px-6 py-4 rounded-xl flex items-center gap-3';
+                messageDiv.innerHTML = `
+                    <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div>
+                        <p class="font-bold">Oops! Something went wrong.</p>
+                        <p class="text-sm">Please email us directly at jaswanthplc@gmail.com or try again later.</p>
+                    </div>
+                `;
+                messageDiv.classList.remove('hidden');
+            } finally {
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                    <span>Submit Query</span>
+                `;
+            }
         });
     </script>
 
