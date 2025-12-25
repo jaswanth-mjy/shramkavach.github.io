@@ -55,28 +55,102 @@ class LegalDocumentGenerator {
         });
     }
 
-    // Modal for collecting user inputs
+    // Modal for collecting user inputs - Enhanced with better UX
     showInputModal(title, fields, callback) {
         const modal = document.createElement('div');
-        modal.className = 'fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4';
+        modal.className = 'fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 animate-fadeIn';
+        modal.style.animation = 'fadeIn 0.2s ease-out';
+        
+        // Calculate progress based on required fields
+        const requiredFields = fields.filter(f => f.required !== false).length;
+        
         modal.innerHTML = `
-            <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-                <div class="sticky top-0 bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 rounded-t-xl relative">
-                    <h2 class="text-2xl font-bold pr-12">${title}</h2>
-                    <p class="text-sm opacity-90 mt-1">All data stays in your browser - 100% private</p>
-                    <button type="button" class="absolute top-4 right-4 text-white hover:text-gray-200 transition-colors" onclick="this.closest('.fixed').remove()" aria-label="Close">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <style>
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                @keyframes slideUp {
+                    from { transform: translateY(20px); opacity: 0; }
+                    to { transform: translateY(0); opacity: 1; }
+                }
+                .modal-content {
+                    animation: slideUp 0.3s ease-out;
+                }
+                .progress-bar {
+                    transition: width 0.3s ease;
+                }
+                .field-error {
+                    display: none;
+                    color: #DC2626;
+                    font-size: 0.875rem;
+                    margin-top: 0.25rem;
+                }
+                .input-error {
+                    border-color: #DC2626 !important;
+                }
+                .input-success {
+                    border-color: #10B981 !important;
+                }
+                .floating-label {
+                    position: absolute;
+                    left: 1rem;
+                    top: 0.75rem;
+                    pointer-events: none;
+                    transition: all 0.2s ease;
+                    color: #6B7280;
+                }
+                .input-wrapper input:focus ~ .floating-label,
+                .input-wrapper input:not(:placeholder-shown) ~ .floating-label,
+                .input-wrapper textarea:focus ~ .floating-label,
+                .input-wrapper textarea:not(:placeholder-shown) ~ .floating-label,
+                .input-wrapper select:focus ~ .floating-label,
+                .input-wrapper select:not([value=""]) ~ .floating-label {
+                    top: -0.5rem;
+                    left: 0.75rem;
+                    font-size: 0.75rem;
+                    background: white;
+                    padding: 0 0.25rem;
+                    color: #4F46E5;
+                }
+            </style>
+            <div class="modal-content bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
+                <!-- Header with Progress -->
+                <div class="sticky top-0 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white p-6 relative">
+                    <button type="button" class="absolute top-4 right-4 text-white hover:bg-white hover:bg-opacity-20 rounded-full p-2 transition-all" onclick="this.closest('.fixed').remove()" aria-label="Close">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
                     </button>
+                    <div class="pr-12">
+                        <h2 class="text-2xl md:text-3xl font-bold mb-2">${title}</h2>
+                        <p class="text-sm opacity-90 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                            100% Private - All data stays in your browser
+                        </p>
+                    </div>
+                    <!-- Progress Bar -->
+                    <div class="mt-4 bg-white bg-opacity-20 rounded-full h-2 overflow-hidden">
+                        <div id="progress-bar" class="progress-bar bg-white h-full" style="width: 0%"></div>
+                    </div>
+                    <p id="progress-text" class="text-xs mt-2 opacity-75">0 of ${requiredFields} fields completed</p>
                 </div>
-                <form id="generator-form" class="p-6 space-y-4">
-                    ${fields.map(field => this.createFormField(field)).join('')}
-                    <div class="flex gap-3 pt-4">
-                        <button type="submit" class="flex-1 bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-indigo-700 transition">
+
+                <!-- Form Content -->
+                <form id="generator-form" class="p-6 md:p-8 space-y-6 overflow-y-auto" style="max-height: calc(90vh - 200px);">
+                    ${fields.map((field, index) => this.createFormField(field, index)).join('')}
+                    
+                    <!-- Action Buttons -->
+                    <div class="sticky bottom-0 bg-white pt-6 pb-2 border-t border-gray-200 flex flex-col sm:flex-row gap-3">
+                        <button type="submit" id="submit-btn" class="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-indigo-700 hover:to-purple-700 transform hover:scale-105 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
                             Generate Document
                         </button>
-                        <button type="button" class="px-6 py-3 border-2 border-gray-300 rounded-lg font-bold hover:bg-gray-100 transition" onclick="this.closest('.fixed').remove()">
+                        <button type="button" class="px-8 py-4 border-2 border-gray-300 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all hover:border-gray-400" onclick="this.closest('.fixed').remove()">
                             Cancel
                         </button>
                     </div>
@@ -86,54 +160,367 @@ class LegalDocumentGenerator {
 
         document.body.appendChild(modal);
 
-        modal.querySelector('form').addEventListener('submit', (e) => {
+        // Close on backdrop click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.remove();
+            }
+        });
+
+        // Close on Escape key
+        const escapeHandler = (e) => {
+            if (e.key === 'Escape') {
+                modal.remove();
+                document.removeEventListener('keydown', escapeHandler);
+            }
+        };
+        document.addEventListener('keydown', escapeHandler);
+
+        const form = modal.querySelector('form');
+        const progressBar = modal.querySelector('#progress-bar');
+        const progressText = modal.querySelector('#progress-text');
+        const submitBtn = modal.querySelector('#submit-btn');
+
+        // Track field completion
+        let completedFields = 0;
+        const updateProgress = () => {
+            completedFields = 0;
+            fields.filter(f => f.required !== false).forEach(field => {
+                const input = form.querySelector(`[name="${field.name}"]`);
+                if (input && input.value.trim()) {
+                    completedFields++;
+                }
+            });
+            const progress = (completedFields / requiredFields) * 100;
+            progressBar.style.width = `${progress}%`;
+            progressText.textContent = `${completedFields} of ${requiredFields} fields completed`;
+        };
+
+        // Add input validation and progress tracking
+        form.querySelectorAll('input, textarea, select').forEach(input => {
+            // Real-time validation
+            input.addEventListener('input', () => {
+                updateProgress();
+                this.validateField(input);
+                
+                // Character counter for textareas
+                if (input.tagName === 'TEXTAREA') {
+                    const charCount = input.parentElement.querySelector('.char-count');
+                    if (charCount) {
+                        charCount.textContent = input.value.length;
+                    }
+                }
+            });
+
+            input.addEventListener('blur', () => {
+                this.validateField(input);
+            });
+
+            // Focus effect with smooth animation
+            input.addEventListener('focus', () => {
+                input.parentElement.style.transform = 'scale(1.01)';
+                input.parentElement.style.transition = 'transform 0.2s ease-out';
+                input.style.boxShadow = '0 0 0 3px rgba(79, 70, 229, 0.1)';
+            });
+
+            input.addEventListener('blur', () => {
+                input.parentElement.style.transform = 'scale(1)';
+                input.style.boxShadow = 'none';
+            });
+        });
+
+        // Form submission with validation
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-            const formData = new FormData(e.target);
+            
+            // Validate all fields
+            let isValid = true;
+            form.querySelectorAll('input, textarea, select').forEach(input => {
+                if (!this.validateField(input)) {
+                    isValid = false;
+                }
+            });
+
+            if (!isValid) {
+                // Scroll to first error
+                const firstError = form.querySelector('.input-error');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                return;
+            }
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+                <svg class="animate-spin w-6 h-6" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Generating...
+            `;
+
+            const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
-            modal.remove();
-            callback(data);
+            
+            // Simulate brief processing time for better UX
+            setTimeout(() => {
+                modal.remove();
+                document.removeEventListener('keydown', escapeHandler);
+                callback(data);
+            }, 500);
         });
     }
 
-    createFormField(field) {
-        const { name, label, type = 'text', required = true, placeholder = '', options = [] } = field;
+    // Field validation
+    validateField(input) {
+        const value = input.value.trim();
+        const isRequired = input.hasAttribute('required');
+        const type = input.type;
+        const errorDiv = input.parentElement.querySelector('.field-error');
+
+        // Clear previous states
+        input.classList.remove('input-error', 'input-success');
+        if (errorDiv) errorDiv.style.display = 'none';
+
+        // Required field check
+        if (isRequired && !value) {
+            if (input !== document.activeElement) { // Don't show error while typing
+                input.classList.add('input-error');
+                if (errorDiv) {
+                    errorDiv.textContent = 'This field is required';
+                    errorDiv.style.display = 'block';
+                }
+                return false;
+            }
+            return true;
+        }
+
+        // Type-specific validation
+        if (value) {
+            let isValid = true;
+            let errorMsg = '';
+
+            switch(type) {
+                case 'email':
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    isValid = emailRegex.test(value);
+                    errorMsg = 'Please enter a valid email address';
+                    break;
+                case 'tel':
+                    const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+                    isValid = phoneRegex.test(value) && value.replace(/\D/g, '').length >= 10;
+                    errorMsg = 'Please enter a valid phone number';
+                    break;
+                case 'number':
+                    isValid = !isNaN(value) && parseFloat(value) >= 0;
+                    errorMsg = 'Please enter a valid number';
+                    break;
+                case 'url':
+                    try {
+                        new URL(value);
+                        isValid = true;
+                    } catch {
+                        isValid = false;
+                        errorMsg = 'Please enter a valid URL';
+                    }
+                    break;
+            }
+
+            if (!isValid) {
+                input.classList.add('input-error');
+                if (errorDiv) {
+                    errorDiv.textContent = errorMsg;
+                    errorDiv.style.display = 'block';
+                }
+                return false;
+            } else {
+                input.classList.add('input-success');
+            }
+        }
+
+        return true;
+    }
+
+    createFormField(field, index) {
+        const { name, label, type = 'text', required = true, placeholder = '', options = [], help = '' } = field;
+        const fieldId = `field-${name}-${index}`;
+        const requiredMark = required ? '<span class="text-red-500 ml-1">*</span>' : '';
+        const helpText = help ? `<p class="text-xs text-gray-500 mt-1">${help}</p>` : '';
+
+        // Common input classes with better styling
+        const inputClasses = 'w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 focus:outline-none transition-all duration-200 text-gray-800 placeholder-gray-400';
 
         if (type === 'textarea') {
             return `
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">${label} ${required ? '<span class="text-red-500">*</span>' : ''}</label>
-                    <textarea name="${name}" ${required ? 'required' : ''} placeholder="${placeholder}" rows="3" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-indigo-600 focus:outline-none"></textarea>
+                <div class="input-wrapper relative group">
+                    <label for="${fieldId}" class="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-1">
+                        <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                        </svg>
+                        ${label}${requiredMark}
+                    </label>
+                    <textarea 
+                        id="${fieldId}"
+                        name="${name}" 
+                        ${required ? 'required' : ''} 
+                        placeholder="${placeholder || `Enter ${label.toLowerCase()}...`}" 
+                        rows="4" 
+                        class="${inputClasses} resize-none"
+                    ></textarea>
+                    <div class="field-error"></div>
+                    ${helpText}
+                    <div class="absolute bottom-2 right-2 text-xs text-gray-400 pointer-events-none">
+                        <span class="char-count">0</span> characters
+                    </div>
                 </div>
             `;
         } else if (type === 'select') {
             return `
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">${label} ${required ? '<span class="text-red-500">*</span>' : ''}</label>
-                    <select name="${name}" ${required ? 'required' : ''} class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-indigo-600 focus:outline-none">
-                        <option value="">Select ${label}</option>
-                        ${options.map(opt => `<option value="${opt}">${opt}</option>`).join('')}
-                    </select>
+                <div class="input-wrapper relative group">
+                    <label for="${fieldId}" class="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-1">
+                        <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                        ${label}${requiredMark}
+                    </label>
+                    <div class="relative">
+                        <select 
+                            id="${fieldId}"
+                            name="${name}" 
+                            ${required ? 'required' : ''} 
+                            class="${inputClasses} appearance-none cursor-pointer bg-white pr-10"
+                        >
+                            <option value="">Select ${label}</option>
+                            ${options.map(opt => `<option value="${opt}">${opt}</option>`).join('')}
+                        </select>
+                        <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="field-error"></div>
+                    ${helpText}
                 </div>
             `;
         } else if (type === 'date') {
             return `
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">${label} ${required ? '<span class="text-red-500">*</span>' : ''}</label>
-                    <input type="date" name="${name}" ${required ? 'required' : ''} class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-indigo-600 focus:outline-none">
+                <div class="input-wrapper relative group">
+                    <label for="${fieldId}" class="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-1">
+                        <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        ${label}${requiredMark}
+                    </label>
+                    <input 
+                        id="${fieldId}"
+                        type="date" 
+                        name="${name}" 
+                        ${required ? 'required' : ''} 
+                        class="${inputClasses}"
+                    >
+                    <div class="field-error"></div>
+                    ${helpText}
                 </div>
             `;
         } else if (type === 'number') {
             return `
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">${label} ${required ? '<span class="text-red-500">*</span>' : ''}</label>
-                    <input type="number" name="${name}" ${required ? 'required' : ''} placeholder="${placeholder}" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-indigo-600 focus:outline-none">
+                <div class="input-wrapper relative group">
+                    <label for="${fieldId}" class="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-1">
+                        <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                        </svg>
+                        ${label}${requiredMark}
+                    </label>
+                    <div class="relative">
+                        <input 
+                            id="${fieldId}"
+                            type="number" 
+                            name="${name}" 
+                            ${required ? 'required' : ''} 
+                            placeholder="${placeholder || '0'}" 
+                            min="0"
+                            step="any"
+                            class="${inputClasses}"
+                        >
+                        <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                        </svg>
+                    </div>
+                    <div class="field-error"></div>
+                    ${helpText}
+                </div>
+            `;
+        } else if (type === 'email') {
+            return `
+                <div class="input-wrapper relative group">
+                    <label for="${fieldId}" class="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-1">
+                        <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        ${label}${requiredMark}
+                    </label>
+                    <div class="relative">
+                        <input 
+                            id="${fieldId}"
+                            type="email" 
+                            name="${name}" 
+                            ${required ? 'required' : ''} 
+                            placeholder="${placeholder || 'example@email.com'}" 
+                            class="${inputClasses} pl-10"
+                        >
+                        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path>
+                        </svg>
+                    </div>
+                    <div class="field-error"></div>
+                    ${helpText}
+                </div>
+            `;
+        } else if (type === 'tel') {
+            return `
+                <div class="input-wrapper relative group">
+                    <label for="${fieldId}" class="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-1">
+                        <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        ${label}${requiredMark}
+                    </label>
+                    <div class="relative">
+                        <input 
+                            id="${fieldId}"
+                            type="tel" 
+                            name="${name}" 
+                            ${required ? 'required' : ''} 
+                            placeholder="${placeholder || '+91 9876543210'}" 
+                            class="${inputClasses} pl-10"
+                        >
+                        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="field-error"></div>
+                    ${helpText}
                 </div>
             `;
         } else {
             return `
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">${label} ${required ? '<span class="text-red-500">*</span>' : ''}</label>
-                    <input type="${type}" name="${name}" ${required ? 'required' : ''} placeholder="${placeholder}" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-indigo-600 focus:outline-none">
+                <div class="input-wrapper relative group">
+                    <label for="${fieldId}" class="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-1">
+                        <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        ${label}${requiredMark}
+                    </label>
+                    <input 
+                        id="${fieldId}"
+                        type="${type}" 
+                        name="${name}" 
+                        ${required ? 'required' : ''} 
+                        placeholder="${placeholder || `Enter ${label.toLowerCase()}...`}" 
+                        class="${inputClasses}"
+                    >
+                    <div class="field-error"></div>
+                    ${helpText}
                 </div>
             `;
         }
