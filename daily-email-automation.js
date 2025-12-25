@@ -25,7 +25,7 @@
  */
 
 // Configuration
-const SPREADSHEET_ID = "YOUR_SPREADSHEET_ID_HERE"; // Replace with your Google Sheets ID
+const SPREADSHEET_ID = "1uq1dC70vP1GVz_98HMwxExom19CdO1GKjJdhXrsHKKU"; // Replace with your Google Sheets ID
 const FROM_NAME = "ShramKavach";
 const REPLY_TO_EMAIL = "jaswanthplc@gmail.com";
 
