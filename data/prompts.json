@@ -318,5 +318,85 @@
     "language": "hi",
     "description": "Virtual class के लिए engagement strategies",
     "prompt": "मैं [Subject] को online पढ़ा रहा हूँ:\n\nPlatform: [Zoom/Google Meet/etc.]\nClass size: [Number of students]\nAge group: [X-Y years]\nDuration: [X minutes]\n\nOnline teaching improve करने के tips दो:\n1. Student engagement बढ़ाने के techniques\n2. Screen fatigue कम करने के methods\n3. Interactive tools/activities\n4. Attendance और attention maintain करना\n5. Technical issues handle करना\n6. Homework submission track करना\n\nPractical और immediately implement हो सकने वाले tips।\n\nLanguage: Hindi"
+  },
+  {
+    "id": 41,
+    "title": "కిరాణా దుకాణం WhatsApp స్టేటస్ - కొత్త ప్రొడక్ట్",
+    "category": "marketing",
+    "language": "te",
+    "description": "కొత్త సామాను వచ్చింది! WhatsApp status కోసం catchy message",
+    "prompt": "నా Kirana దుకాణంలో ఈరోజు [Product Name] fresh stock వచ్చింది। ఒక catchy 3-line WhatsApp status రాయండి:\n1. Product ప్రత్యేకత చెప్పాలి\n2. త్వరగా కొనమని urgency create చేయాలి\n3. Shop పేరు మరియు location include చేయాలి\n\nTone: స్నేహపూర్వక మరియు conversational\nLanguage: తెలుగు (Telugu-English mix allowed)"
+  },
+  {
+    "id": 42,
+    "title": "కస్టమర్ complaint కు సమాధానం - Late Delivery",
+    "category": "customer-service",
+    "language": "te",
+    "description": "Late delivery complaint కు polite మరియు professional reply",
+    "prompt": "ఒక customer వారి order late deliver అయినందుకు complaint చేశారు। నేను polite, empathetic మరియు professional reply రాయాలి:\n1. నిజంగా sorry అనాలి\n2. కారణం briefly explain చేయాలి (excuses కాకుండా)\n3. Compensation/solution offer చేయాలి\n4. భవిష్యత్తులో మెరుగుపరుస్తామని assurance ఇవ్వాలి\n\nCustomer message: \"[కస్టమర్ complaint ఇక్కడ paste చేయండి]\"\n\nLanguage: తెలుగు\nTone: నిజాయితీ మరియు గౌరవంతో"
+  },
+  {
+    "id": 43,
+    "title": "Daily ఖర్చుల Tracker",
+    "category": "business-planning",
+    "language": "te",
+    "description": "Excel/Google Sheets లో రోజువారీ ఖర్చులు track చేయడం",
+    "prompt": "నా చిన్న వ్యాపారం కోసం ఒక simple daily expense tracker setup చేయాలి:\n1. Excel/Google Sheets formula కావాలి\n2. Categories: Raw Material, Transport, Staff Salary, Electricity, Miscellaneous\n3. Daily, Weekly, Monthly totals automatically calculate అవ్వాలి\n4. Budget vs Actual comparison\n\nStep-by-step తెలుగులో చెప్పండి ఎలా setup చేయాలో।"
+  },
+  {
+    "id": 44,
+    "title": "Payment Reminder - మర్యాదగా Follow-up",
+    "category": "customer-service",
+    "language": "te",
+    "description": "Pending payment కోసం polite reminder message",
+    "prompt": "నా client యొక్క payment [X days] నుండి pending ఉంది:\nAmount: ₹[Amount]\nDue Date: [Date]\n\nఒక polite payment reminder message రాయండి:\n1. Friendly tone ఉండాలి, aggressive కాకూడదు\n2. Invoice details clearly mention చేయాలి\n3. Payment methods suggest చేయాలి\n4. ఏదైనా issue ఉంటే contact చేయమని చెప్పాలి\n\nLanguage: తెలుగు (Professional tone)\nLength: 4-5 lines"
+  },
+  {
+    "id": 45,
+    "title": "Instagram Reel Script - Product Launch",
+    "category": "content-creation",
+    "language": "te",
+    "description": "15-30 second Reel కోసం engaging script",
+    "prompt": "నా [Product/Service Name] launch కోసం Instagram Reel script రాయండి:\n\nDuration: 15-30 seconds\nHook: మొదటి 3 seconds లో attention grab చేయాలి\nBody: Product benefit చెప్పాలి\nCTA: Follow/Buy చేయమని encourage చేయాలి\n\nStyle: ట్రెండీ, youth-friendly\nLanguage: Tenglish (తెలుగు + English mix)"
+  },
+  {
+    "id": 46,
+    "title": "ఇంగ్లీష్ Beginner Lesson Plan - Day 1",
+    "category": "teaching",
+    "language": "te",
+    "description": "ఇంగ్లీష్ మొదటి నుండి నేర్పించడానికి first lesson plan",
+    "prompt": "నేను ఒక teacher ను, complete beginners కు ఇంగ్లీష్ నేర్పించాలి। నా students వయస్సు [Age Group - e.g., 10-15 years, adults]:\n\nDay 1 యొక్క detailed lesson plan తయారు చేయండి:\n1. Introduction (Greetings, Basic Phrases)\n2. Alphabet మరియు pronunciation basics\n3. 10 simple రోజువారీ words (తెలుగు అర్థంతో)\n4. Interactive activities/games\n5. Homework assignment\n\nTime: 45-60 minutes\nLanguage: తెలుగులో explain చేయండి\nGoal: Students కు comfortable feel అవ్వాలి మరియు interest కలగాలి"
+  },
+  {
+    "id": 47,
+    "title": "Math Concept సరళీకరణ",
+    "category": "teaching",
+    "language": "te",
+    "description": "కష్టమైన math topic ని సులభంగా explain చేయడం",
+    "prompt": "నేను [Math Topic - e.g., Fractions, Algebra, Geometry] Class [X] విద్యార్థులకు నేర్పించాలి:\n\nఈ concept ను step-by-step explain చేయండి:\n1. Real-life examples తో start చేయండి\n2. Basic concept నుండి advanced వరకు\n3. Students చేసే సాధారణ తప్పులు (మరియు ఎలా avoid చేయాలి)\n4. Practice problems (easy to hard)\n5. Quick revision tips\n\nLanguage: తెలుగు\nStyle: సింపుల్, పిల్లల భాషలో"
+  },
+  {
+    "id": 48,
+    "title": "Science Experiment For Class",
+    "category": "teaching",
+    "language": "te",
+    "description": "Classroom లో చేయగలిగే hands-on experiment",
+    "prompt": "నేను Class [X] కు [Science Topic - e.g., Photosynthesis, Electricity, Chemical Reactions] నేర్పిస్తున్నాను:\n\nఒక simple experiment suggest చేయండి:\n1. సులభంగా లభించే materials తో చేయగలిగేది\n2. సురక్షితమైనది (school లో చేయవచ్చు)\n3. Concept clearly demonstrate చేయాలి\n4. 15-20 minutes లో complete అవ్వాలి\n\nచెప్పండి:\n- Materials needed\n- Step-by-step procedure\n- Expected result\n- Scientific explanation (సింపుల్ language లో)\n\nLanguage: తెలుగు"
+  },
+  {
+    "id": 49,
+    "title": "Student Report Card Comments",
+    "category": "teaching",
+    "language": "te",
+    "description": "Report card కోసం positive మరియు constructive comments",
+    "prompt": "Student Profile:\n- Name: [Student name]\n- Class: [X]\n- Subject: [మీ subject]\n- Performance: [అద్భుతం/మంచి/సగటు/తక్కువ]\n- Strengths: [2-3 list చేయండి]\n- మెరుగుపరచాల్సిన areas: [2-3 list చేయండి]\n- ప్రవర్తన/పాల్గొనడం: [Details]\n\nఒక professional report card comment (50-80 words) రాయండి:\n1. Achievements highlight చేయాలి\n2. మెరుగుపరచాల్సిన areas మర్యాదగా mention చేయాలి\n3. Encouraging ఉండాలి\n4. తల్లిదండ్రులకు actionable suggestions ఇవ్వాలి\n\nLanguage: తెలుగు లేదా English (మీరు choose చేసుకోండి)"
+  },
+  {
+    "id": 50,
+    "title": "Online Teaching టిప్స్ & Techniques",
+    "category": "teaching",
+    "language": "te",
+    "description": "Virtual class కోసం engagement strategies",
+    "prompt": "నేను [Subject] ను online గా నేర్పిస్తున్నాను:\n\nPlatform: [Zoom/Google Meet/etc.]\nClass size: [విద్యార్థుల సంఖ్య]\nAge group: [X-Y years]\nDuration: [X minutes]\n\nOnline teaching మెరుగుపరచడానికి tips ఇవ్వండి:\n1. Student engagement పెంచే techniques\n2. Screen fatigue తగ్గించే methods\n3. Interactive tools/activities\n4. Attendance మరియు attention maintain చేయడం\n5. Technical issues handle చేయడం\n6. Homework submission track చేయడం\n\nPractical మరియు వెంటనే implement చేయగలిగే tips.\n\nLanguage: తెలుగు"
   }
 ]
