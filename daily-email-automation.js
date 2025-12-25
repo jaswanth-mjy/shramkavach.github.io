@@ -30,6 +30,68 @@ const FROM_NAME = "ShramKavach";
 const REPLY_TO_EMAIL = "jaswanthplc@gmail.com";
 
 /**
+ * Handle POST requests from the contact form
+ */
+function doPost(e) {
+  try {
+    // Parse the incoming JSON data
+    const data = JSON.parse(e.postData.contents);
+    
+    // Add subscriber
+    const result = addSubscriber(data.email, data.name);
+    
+    return ContentService
+      .createTextOutput(JSON.stringify(result))
+      .setMimeType(ContentService.MimeType.JSON);
+    
+  } catch (error) {
+    console.error("Error processing request:", error);
+    return ContentService
+      .createTextOutput(JSON.stringify({
+        success: false,
+        message: "Server error: " + error.message
+      }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+/**
+ * Handle GET requests (for testing)
+ */
+function doGet(e) {
+  return ContentService.createTextOutput(
+    JSON.stringify({
+      status: "success",
+      message: "ShramKavach Daily Email Automation is running",
+      subscribers: getSubscriberCount(),
+      timestamp: new Date().toISOString()
+    })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
+/**
+ * Get total subscriber count
+ */
+function getSubscriberCount() {
+  try {
+    const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName("Subscribers");
+    const data = sheet.getDataRange().getValues();
+    let count = 0;
+    
+    for (let i = 1; i < data.length; i++) {
+      const subscribed = data[i][2];
+      if (subscribed === true || subscribed === "TRUE" || subscribed === "Yes") {
+        count++;
+      }
+    }
+    
+    return count;
+  } catch (error) {
+    return 0;
+  }
+}
+
+/**
  * Main function - Send daily emails to all subscribers
  * Set this to run daily via time-based trigger
  */
