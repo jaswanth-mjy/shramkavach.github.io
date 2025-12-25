@@ -53,6 +53,9 @@ function doPost(e) {
     const success = sendEmail(data);
     
     if (success) {
+      // Send auto-reply to the user
+      sendAutoReply(data);
+      
       // Optional: Save to Google Sheets
       // saveToSheet(data);
       
@@ -197,6 +200,197 @@ Visit: https://shramkavach.github.io
     return true;
   } catch (error) {
     console.error("Error sending email:", error);
+    return false;
+  }
+}
+
+/**
+ * Send auto-reply confirmation email to the user
+ */
+function sendAutoReply(data) {
+  try {
+    const subject = `Thank you for contacting ShramKavach - We've received your ${data.type || 'query'}`;
+    
+    // Create HTML auto-reply email
+    const htmlBody = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <style>
+          body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
+          .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+          .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 30px; border-radius: 10px 10px 0 0; text-align: center; }
+          .header h1 { margin: 0 0 10px 0; font-size: 28px; }
+          .header p { margin: 0; opacity: 0.95; font-size: 16px; }
+          .content { background: #ffffff; padding: 40px 30px; border-left: 1px solid #e5e7eb; border-right: 1px solid #e5e7eb; }
+          .greeting { font-size: 18px; color: #1f2937; margin-bottom: 20px; }
+          .message { color: #4b5563; margin-bottom: 25px; line-height: 1.8; }
+          .info-box { background: #f0f9ff; border-left: 4px solid #667eea; padding: 20px; margin: 25px 0; border-radius: 5px; }
+          .info-box h3 { margin: 0 0 10px 0; color: #667eea; font-size: 16px; }
+          .info-box p { margin: 5px 0; color: #1e40af; }
+          .details { background: #f9fafb; padding: 20px; border-radius: 8px; margin: 25px 0; }
+          .details h3 { margin: 0 0 15px 0; color: #374151; font-size: 16px; }
+          .detail-row { display: flex; padding: 10px 0; border-bottom: 1px solid #e5e7eb; }
+          .detail-row:last-child { border-bottom: none; }
+          .detail-label { font-weight: bold; color: #6b7280; min-width: 120px; }
+          .detail-value { color: #1f2937; }
+          .cta-section { text-align: center; margin: 30px 0; }
+          .cta-button { display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 40px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; }
+          .footer { background: #f3f4f6; padding: 30px; text-align: center; border-radius: 0 0 10px 10px; border: 1px solid #e5e7eb; border-top: none; }
+          .footer-links { margin: 20px 0; }
+          .footer-links a { color: #667eea; text-decoration: none; margin: 0 15px; font-weight: 500; }
+          .social-icons { margin: 20px 0; }
+          .disclaimer { font-size: 12px; color: #9ca3af; margin-top: 20px; line-height: 1.6; }
+          .checkmark { font-size: 48px; color: #10b981; text-align: center; margin-bottom: 20px; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <div class="checkmark">✓</div>
+            <h1>Query Received Successfully!</h1>
+            <p>Your message has been delivered to our team</p>
+          </div>
+          
+          <div class="content">
+            <div class="greeting">
+              Dear <strong>${data.name}</strong>,
+            </div>
+            
+            <div class="message">
+              Thank you for reaching out to <strong>ShramKavach</strong>! We've successfully received your ${data.type || 'query'} and our team is already reviewing it.
+            </div>
+            
+            <div class="info-box">
+              <h3>⏰ What Happens Next?</h3>
+              <p>✓ Our team will review your submission within 2-4 hours</p>
+              <p>✓ You'll receive a detailed response within 24-48 hours</p>
+              <p>✓ For urgent matters, we'll prioritize your request</p>
+            </div>
+            
+            <div class="details">
+              <h3>📋 Your Submission Details:</h3>
+              <div class="detail-row">
+                <span class="detail-label">Query Type:</span>
+                <span class="detail-value">${data.type || 'General'}</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Submitted:</span>
+                <span class="detail-value">${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'full', timeStyle: 'short' })} IST</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Reference Email:</span>
+                <span class="detail-value">${data.email}</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Phone:</span>
+                <span class="detail-value">${data.phone || 'Not provided'}</span>
+              </div>
+            </div>
+            
+            <div class="message">
+              <strong>Your Message:</strong><br>
+              <div style="background: #f9fafb; padding: 15px; border-radius: 5px; margin-top: 10px; color: #4b5563; font-style: italic;">
+                "${data.message}"
+              </div>
+            </div>
+            
+            <div class="cta-section">
+              <a href="https://shramkavach.github.io" class="cta-button">Visit Our Website</a>
+            </div>
+            
+            <div class="message" style="margin-top: 30px;">
+              While you wait for our response, feel free to:
+              <ul style="color: #4b5563;">
+                <li>Explore our <a href="https://shramkavach.github.io/calculators.html" style="color: #667eea;">Labour Law Calculators</a></li>
+                <li>Generate <a href="https://shramkavach.github.io/protection.html" style="color: #667eea;">Legal Documents</a></li>
+                <li>Read our <a href="https://shramkavach.github.io/#faq" style="color: #667eea;">FAQs</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="footer">
+            <p style="font-weight: bold; color: #374151; margin-bottom: 15px;">Need Immediate Assistance?</p>
+            
+            <div class="footer-links">
+              <a href="mailto:jaswanthplc@gmail.com">📧 Email Us</a>
+              <a href="https://wa.me/+919876543210">💬 WhatsApp</a>
+              <a href="https://shramkavach.github.io">🌐 Website</a>
+            </div>
+            
+            <div class="disclaimer">
+              <strong>ShramKavach - Labour Rights Protection Platform</strong><br>
+              Empowering workers with knowledge, tools, and legal support.<br><br>
+              
+              This is an automated confirmation email. Please do not reply to this email.<br>
+              For any queries, please use the contact methods above or submit a new form on our website.<br><br>
+              
+              © 2025 ShramKavach. All rights reserved.<br>
+              Protecting labour rights, one worker at a time.
+            </div>
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+    
+    // Plain text version
+    const plainBody = `
+Dear ${data.name},
+
+Thank you for contacting ShramKavach!
+
+We've successfully received your ${data.type || 'query'} and our team is reviewing it.
+
+WHAT HAPPENS NEXT:
+✓ Our team will review your submission within 2-4 hours
+✓ You'll receive a detailed response within 24-48 hours
+✓ For urgent matters, we'll prioritize your request
+
+YOUR SUBMISSION DETAILS:
+- Query Type: ${data.type || 'General'}
+- Submitted: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })} IST
+- Email: ${data.email}
+- Phone: ${data.phone || 'Not provided'}
+
+Your Message:
+"${data.message}"
+
+NEED IMMEDIATE ASSISTANCE?
+- Email: jaswanthplc@gmail.com
+- WhatsApp: +91 9876543210
+- Website: https://shramkavach.github.io
+
+While you wait, explore our:
+- Labour Law Calculators: https://shramkavach.github.io/calculators.html
+- Legal Document Generators: https://shramkavach.github.io/protection.html
+- FAQs: https://shramkavach.github.io/#faq
+
+---
+ShramKavach - Labour Rights Protection Platform
+Empowering workers with knowledge, tools, and legal support.
+
+This is an automated confirmation. Please do not reply to this email.
+
+© 2025 ShramKavach. All rights reserved.
+    `;
+    
+    // Send auto-reply email to the user
+    GmailApp.sendEmail(
+      data.email,
+      subject,
+      plainBody,
+      {
+        htmlBody: htmlBody,
+        name: 'ShramKavach Support',
+        replyTo: 'jaswanthplc@gmail.com',
+        noReply: false
+      }
+    );
+    
+    return true;
+  } catch (error) {
+    console.error("Error sending auto-reply:", error);
     return false;
   }
 }
