@@ -238,5 +238,85 @@
     "language": "hi",
     "description": "Old stock clear karne ke liye sale announcement",
     "prompt": "Mujhe [Season] ke old stock ko clear karna hai.\n\nDiscount: [e.g., 30-50% off]\nDuration: [Date range]\nProducts: [Category]\n\nEk catchy sale announcement likho for:\n- WhatsApp Status\n- Facebook/Instagram\n\nMessage should:\n1. Urgency create करे (limited time/stock)\n2. Discount boldly highlight करे\n3. Quality assure करे (old stock ≠ bad quality)\n4. CTA दे (Visit/Call now)\n\nLanguage: Hindi\nEmojis welcome"
+  },
+  {
+    "id": 31,
+    "title": "English Beginner Lesson Plan - Day 1",
+    "category": "teaching",
+    "language": "hi",
+    "description": "English शुरू से सिखाने के लिए first lesson plan",
+    "prompt": "मैं एक teacher हूँ जो complete beginners को English सिखाना चाहता हूँ। मेरे students की age [Age Group - e.g., 10-15 years, adults] है।\n\nDay 1 का detailed lesson plan बनाओ जिसमें:\n1. Introduction (Greetings, Basic Phrases)\n2. Alphabet और pronunciation basics\n3. 10 simple everyday words (with Hindi meaning)\n4. Interactive activities/games\n5. Homework assignment\n\nTime: 45-60 minutes\nLanguage: Hindi में explain करो\nGoal: Students को comfortable feel हो और interest बने"
+  },
+  {
+    "id": 32,
+    "title": "Math Concept Simplification",
+    "category": "teaching",
+    "language": "hi",
+    "description": "Complex math topic को simple तरीके से समझाना",
+    "prompt": "मुझे [Math Topic - e.g., Fractions, Algebra, Geometry] को Class [X] के students को पढ़ाना है।\n\nइस concept को step-by-step explain करो:\n1. Real-life examples से start करो\n2. Basic concept से advanced तक\n3. Common mistakes students करते हैं (और कैसे avoid करें)\n4. Practice problems (easy to hard)\n5. Quick revision tips\n\nLanguage: Hindi\nStyle: Simple, बच्चों की language में"
+  },
+  {
+    "id": 33,
+    "title": "Science Experiment For Class",
+    "category": "teaching",
+    "language": "hi",
+    "description": "Hands-on experiment जो classroom में करा सकें",
+    "prompt": "मैं Class [X] को [Science Topic - e.g., Photosynthesis, Electricity, Chemical Reactions] पढ़ा रहा हूँ।\n\nएक simple experiment suggest करो जो:\n1. Easily available materials से हो सके\n2. Safe हो (school में कर सकें)\n3. Concept clearly demonstrate करे\n4. 15-20 minutes में complete हो\n\nBatao:\n- Materials needed\n- Step-by-step procedure\n- Expected result\n- Scientific explanation (simple language में)\n\nLanguage: Hindi"
+  },
+  {
+    "id": 34,
+    "title": "Subject Homework Assignment Creator",
+    "category": "teaching",
+    "language": "hi",
+    "description": "किसी भी subject का interesting homework बनाएं",
+    "prompt": "मुझे [Subject - e.g., Hindi, Social Studies, Science] का homework देना है:\n\nClass: [X]\nTopic: [Chapter/Topic name]\nDifficulty: [Easy/Medium/Hard]\nTime to complete: [X hours]\n\n5-7 questions/tasks बनाओ जो:\n1. Different types हों (MCQ, Short answer, Application based)\n2. Critical thinking develop करें\n3. Practical examples include करें\n4. Students को research करने को motivate करें\n\nAnswer key भी provide करो।\n\nLanguage: Hindi"
+  },
+  {
+    "id": 35,
+    "title": "Student Report Card Comment Generator",
+    "category": "teaching",
+    "language": "hi",
+    "description": "Report card के लिए positive और constructive comments",
+    "prompt": "Student Profile:\n- Name: [Student name]\n- Class: [X]\n- Subject: [Your subject]\n- Performance: [Excellent/Good/Average/Below Average]\n- Strengths: [List 2-3]\n- Areas to improve: [List 2-3]\n- Behavior/Participation: [Details]\n\nEk professional report card comment (50-80 words) likho jo:\n1. Achievements highlight करे\n2. Areas of improvement politely mention करे\n3. Encouraging हो\n4. Parents को actionable suggestions दे\n\nLanguage: Hindi या English (aap choose karo)"
+  },
+  {
+    "id": 36,
+    "title": "Teaching Aid - Visual Learning Content",
+    "category": "teaching",
+    "language": "hi",
+    "description": "Charts, diagrams, और visual aids के लिए content",
+    "prompt": "मुझे [Subject] का एक chart/poster बनाना है:\n\nTopic: [e.g., Parts of Speech, Periodic Table, Indian States]\nClass: [X]\nSize: [A4/Chart paper]\n\nHelp करो design करने में:\n1. Main headings और subheadings\n2. Key information points (bullet format)\n3. Color suggestions\n4. Example/illustration ideas\n5. Memory tricks (mnemonic devices)\n\nGoal: Visual से students को easily समझ आए और याद रहे।\n\nLanguage: Hindi"
+  },
+  {
+    "id": 37,
+    "title": "Parent-Teacher Meeting Talking Points",
+    "category": "teaching",
+    "language": "hi",
+    "description": "PTM के लिए structured discussion points",
+    "prompt": "Mujhe [Student name] के parents से meeting hai।\n\nStudent details:\n- Class: [X]\n- Subjects teaching: [List]\n- Academic performance: [Summary]\n- Behavioral issues (if any): [Details]\n- Strengths: [List]\n\nPTM के लिए structured talking points prepare करो:\n1. Opening (positive note से start)\n2. Academic progress discussion\n3. Concerns (if any) - diplomatic तरीके से\n4. Suggestions for parents\n5. Goals for next term\n6. Q&A points\n\nTime: 10-15 minutes\nTone: Professional yet friendly\nLanguage: Hindi"
+  },
+  {
+    "id": 38,
+    "title": "Interactive Quiz Questions",
+    "category": "teaching",
+    "language": "hi",
+    "description": "Engaging quiz बनाना किसी भी subject के लिए",
+    "prompt": "Subject: [Subject name]\nTopic: [Chapter/Topic]\nClass: [X]\nQuiz Type: [Multiple Choice/True-False/Fill in the blanks/Mix]\n\n15-20 quiz questions बनाओ जो:\n1. Different difficulty levels हों\n2. Conceptual understanding test करें (रटने वाले नहीं)\n3. Fun और engaging हों\n4. Answer key साथ में हो\n5. Marks distribution suggest करो\n\nGoal: Classroom में use करने के लिए या homework के लिए।\n\nLanguage: Hindi या English"
+  },
+  {
+    "id": 39,
+    "title": "Special Education - Personalized Learning",
+    "category": "teaching",
+    "language": "hi",
+    "description": "Slow learners या special needs students के लिए",
+    "prompt": "Student Profile:\n- Age: [X years]\n- Learning difficulty: [e.g., Dyslexia, ADHD, Slow learner, etc.]\n- Subject struggling with: [Subject]\n- Current level: [Class/Grade]\n\nPersonalized teaching strategy suggest करो:\n1. Simple explanation techniques\n2. Visual/Audio/Kinesthetic methods\n3. Patience building activities\n4. Small milestone goals\n5. Home support tips for parents\n\nTone: Empathetic और encouraging\nLanguage: Hindi"
+  },
+  {
+    "id": 40,
+    "title": "Online Teaching Tips & Techniques",
+    "category": "teaching",
+    "language": "hi",
+    "description": "Virtual class के लिए engagement strategies",
+    "prompt": "मैं [Subject] को online पढ़ा रहा हूँ:\n\nPlatform: [Zoom/Google Meet/etc.]\nClass size: [Number of students]\nAge group: [X-Y years]\nDuration: [X minutes]\n\nOnline teaching improve करने के tips दो:\n1. Student engagement बढ़ाने के techniques\n2. Screen fatigue कम करने के methods\n3. Interactive tools/activities\n4. Attendance और attention maintain करना\n5. Technical issues handle करना\n6. Homework submission track करना\n\nPractical और immediately implement हो सकने वाले tips।\n\nLanguage: Hindi"
   }
 ]
