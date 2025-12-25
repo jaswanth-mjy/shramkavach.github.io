@@ -27,7 +27,7 @@
 // Configuration
 const SPREADSHEET_ID = "1uq1dC70vP1GVz_98HMwxExom19CdO1GKjJdhXrsHKKU"; // Replace with your Google Sheets ID
 const FROM_NAME = "ShramKavach";
-const REPLY_TO_EMAIL = "jaswanthplc@gmail.com";
+const REPLY_TO_EMAIL = "shramkavach@gmail.com";
 
 /**
  * Handle POST requests from the contact form
@@ -230,7 +230,7 @@ function sendDailyEmail(email, name, content) {
             <p style="font-weight: bold; color: #374151; margin-bottom: 15px;">Stay Connected</p>
             
             <div class="footer-links">
-              <a href="mailto:jaswanthplc@gmail.com">Contact Us</a>
+              <a href="mailto:shramkavach@gmail.com">Contact Us</a>
               <a href="https://shramkavach.github.io">Website</a>
               <a href="https://wa.me/+919876543210">WhatsApp</a>
             </div>
@@ -238,7 +238,7 @@ function sendDailyEmail(email, name, content) {
             <div class="unsubscribe">
               <p><strong>ShramKavach</strong> - Empowering workers with knowledge and tools</p>
               <p>You're receiving this because you subscribed to our daily updates.</p>
-              <p><a href="mailto:jaswanthplc@gmail.com?subject=Unsubscribe">Unsubscribe</a> | <a href="https://shramkavach.github.io">Update Preferences</a></p>
+              <p><a href="mailto:shramkavach@gmail.com?subject=Unsubscribe">Unsubscribe</a> | <a href="https://shramkavach.github.io">Update Preferences</a></p>
             </div>
           </div>
         </div>
@@ -273,7 +273,7 @@ Visit ShramKavach: https://shramkavach.github.io
 ---
 ShramKavach - Empowering workers with knowledge and tools
 You're receiving this because you subscribed to our daily updates.
-Unsubscribe: jaswanthplc@gmail.com
+Unsubscribe: shramkavach@gmail.com
     `;
     
     GmailApp.sendEmail(
@@ -572,7 +572,7 @@ function sendWelcomeEmail(email, name) {
  */
 function testDailyEmail() {
   const content = getDailyContent();
-  sendDailyEmail("jaswanthplc@gmail.com", "Test User", content);
+  sendDailyEmail("shramkavach@gmail.com", "Test User", content);
   console.log("Test email sent!");
 }
 

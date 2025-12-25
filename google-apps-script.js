@@ -27,7 +27,7 @@
  */
 
 // Your email address where form submissions will be sent
-const RECIPIENT_EMAIL = "jaswanthplc@gmail.com";
+const RECIPIENT_EMAIL = "shramkavach@gmail.com";
 const FORM_NAME = "ShramKavach Contact Form";
 
 /**
@@ -313,7 +313,7 @@ function sendAutoReply(data) {
             <p style="font-weight: bold; color: #374151; margin-bottom: 15px;">Need Immediate Assistance?</p>
             
             <div class="footer-links">
-              <a href="mailto:jaswanthplc@gmail.com">&#128231; Email Us</a>
+              <a href="mailto:shramkavach@gmail.com">&#128231; Email Us</a>
               <a href="https://wa.me/+919876543210">&#128172; WhatsApp</a>
               <a href="https://shramkavach.github.io">&#127760; Website</a>
               Empowering workers with knowledge, tools, and legal support.<br><br>
@@ -353,7 +353,7 @@ Your Message:
 "${data.message}"
 
 NEED IMMEDIATE ASSISTANCE?
-- Email: jaswanthplc@gmail.com
+- Email: shramkavach@gmail.com
 - WhatsApp: +91 9876543210
 - Website: https://shramkavach.github.io
 
@@ -379,7 +379,7 @@ This is an automated confirmation. Please do not reply to this email.
       {
         htmlBody: htmlBody,
         name: 'ShramKavach Support',
-        replyTo: 'jaswanthplc@gmail.com',
+        replyTo: 'shramkavach@gmail.com',
         noReply: false
       }
     );
