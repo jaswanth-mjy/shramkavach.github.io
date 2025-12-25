@@ -112,38 +112,38 @@ function sendEmail(data) {
       <body>
         <div class="container">
           <div class="header">
-            <h1>🔔 New Contact Form Submission</h1>
+            <h1>&#128276; New Contact Form Submission</h1>
             <p style="margin: 5px 0 0 0; opacity: 0.9;">ShramKavach - Labour Rights Protection</p>
           </div>
           
           <div class="content">
             <div class="field">
-              <div class="label">👤 Name:</div>
+              <div class="label">&#128100; Name:</div>
               <div class="value">${data.name}</div>
             </div>
             
             <div class="field">
-              <div class="label">📧 Email:</div>
+              <div class="label">&#128231; Email:</div>
               <div class="value"><a href="mailto:${data.email}">${data.email}</a></div>
             </div>
             
             <div class="field">
-              <div class="label">📱 Phone:</div>
+              <div class="label">&#128241; Phone:</div>
               <div class="value">${data.phone || 'Not provided'}</div>
             </div>
             
             <div class="field">
-              <div class="label">📋 Query Type:</div>
+              <div class="label">&#128203; Query Type:</div>
               <div class="value">${data.type || 'General'}</div>
             </div>
             
             <div class="field">
-              <div class="label">💬 Message:</div>
+              <div class="label">&#128172; Message:</div>
               <div class="message-box">${data.message.replace(/\n/g, '<br>')}</div>
             </div>
             
             <div class="field">
-              <div class="label">🕒 Submitted:</div>
+              <div class="label">&#128338; Submitted:</div>
               <div class="value">${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })} IST</div>
             </div>
           </div>
@@ -247,7 +247,7 @@ function sendAutoReply(data) {
       <body>
         <div class="container">
           <div class="header">
-            <div class="checkmark">✓</div>
+            <div class="checkmark">&#10003;</div>
             <h1>Query Received Successfully!</h1>
             <p>Your message has been delivered to our team</p>
           </div>
@@ -262,14 +262,14 @@ function sendAutoReply(data) {
             </div>
             
             <div class="info-box">
-              <h3>⏰ What Happens Next?</h3>
-              <p>✓ Our team will review your submission within 2-4 hours</p>
-              <p>✓ You'll receive a detailed response within 24-48 hours</p>
-              <p>✓ For urgent matters, we'll prioritize your request</p>
+              <h3>&#9200; What Happens Next?</h3>
+              <p>&#10003; Our team will review your submission within 2-4 hours</p>
+              <p>&#10003; You'll receive a detailed response within 24-48 hours</p>
+              <p>&#10003; For urgent matters, we'll prioritize your request</p>
             </div>
             
             <div class="details">
-              <h3>📋 Your Submission Details:</h3>
+              <h3>&#128203; Your Submission Details:</h3>
               <div class="detail-row">
                 <span class="detail-label">Query Type:</span>
                 <span class="detail-value">${data.type || 'General'}</span>
@@ -313,13 +313,9 @@ function sendAutoReply(data) {
             <p style="font-weight: bold; color: #374151; margin-bottom: 15px;">Need Immediate Assistance?</p>
             
             <div class="footer-links">
-              <a href="mailto:jaswanthplc@gmail.com">📧 Email Us</a>
-              <a href="https://wa.me/+919876543210">💬 WhatsApp</a>
-              <a href="https://shramkavach.github.io">🌐 Website</a>
-            </div>
-            
-            <div class="disclaimer">
-              <strong>ShramKavach - Labour Rights Protection Platform</strong><br>
+              <a href="mailto:jaswanthplc@gmail.com">&#128231; Email Us</a>
+              <a href="https://wa.me/+919876543210">&#128172; WhatsApp</a>
+              <a href="https://shramkavach.github.io">&#127760; Website</a>
               Empowering workers with knowledge, tools, and legal support.<br><br>
               
               This is an automated confirmation email. Please do not reply to this email.<br>
@@ -343,9 +339,9 @@ Thank you for contacting ShramKavach!
 We've successfully received your ${data.type || 'query'} and our team is reviewing it.
 
 WHAT HAPPENS NEXT:
-✓ Our team will review your submission within 2-4 hours
-✓ You'll receive a detailed response within 24-48 hours
-✓ For urgent matters, we'll prioritize your request
+- Our team will review your submission within 2-4 hours
+- You'll receive a detailed response within 24-48 hours
+- For urgent matters, we'll prioritize your request
 
 YOUR SUBMISSION DETAILS:
 - Query Type: ${data.type || 'General'}
