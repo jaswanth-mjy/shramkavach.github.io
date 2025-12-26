@@ -1716,15 +1716,32 @@
                 const submitBtn = newsletterForm.querySelector('button[type="submit"]');
                 const messageDiv = document.getElementById('newsletterMessage');
                 
-                const email = document.getElementById('subscriberEmail').value;
-                const name = document.getElementById('subscriberName').value;
+                const email = document.getElementById('subscriberEmail').value.trim();
+                const name = document.getElementById('subscriberName').value.trim();
                 const language = document.getElementById('subscriberLanguage').value;
+                
+                // Validation
+                if (!email || !name || !language) {
+                    messageDiv.textContent = '⚠️ कृपया सभी fields भरें';
+                    messageDiv.className = 'text-center p-3 rounded-lg bg-yellow-100 text-yellow-800';
+                    messageDiv.classList.remove('hidden');
+                    return;
+                }
+                
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    messageDiv.textContent = '⚠️ कृपया valid email address दर्ज करें';
+                    messageDiv.className = 'text-center p-3 rounded-lg bg-yellow-100 text-yellow-800';
+                    messageDiv.classList.remove('hidden');
+                    return;
+                }
                 
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Subscribe हो रहा है...';
+                messageDiv.classList.add('hidden');
                 
                 try {
-                    await fetch(SCRIPT_URL, {
+                    const response = await fetch(SCRIPT_URL, {
                         method: 'POST',
                         mode: 'no-cors',
                         headers: { 'Content-Type': 'application/json' },
@@ -1736,19 +1753,28 @@
                         })
                     });
                     
-                    messageDiv.textContent = '✅ Successfully subscribed! Check your email for confirmation.';
+                    // Show success (no-cors mode doesn't return response, assume success)
+                    messageDiv.innerHTML = '✅ Successfully subscribed!<br><small>Check your email for confirmation.</small>';
                     messageDiv.className = 'text-center p-3 rounded-lg bg-green-100 text-green-800';
                     messageDiv.classList.remove('hidden');
                     newsletterForm.reset();
                     
+                    // Track event
                     if (typeof gtag !== 'undefined') {
                         gtag('event', 'newsletter_subscribe', {
                             'event_category': 'engagement',
                             'event_label': language
                         });
                     }
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        messageDiv.classList.add('hidden');
+                    }, 5000);
+                    
                 } catch (error) {
-                    messageDiv.textContent = '❌ Error: Please try again later.';
+                    console.error('Newsletter subscription error:', error);
+                    messageDiv.innerHTML = '❌ Error connecting to server.<br><small>Please email us at support@shramkavach.com</small>';
                     messageDiv.className = 'text-center p-3 rounded-lg bg-red-100 text-red-800';
                     messageDiv.classList.remove('hidden');
                 }
