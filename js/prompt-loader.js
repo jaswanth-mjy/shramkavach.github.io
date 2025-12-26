@@ -5,6 +5,9 @@
 
 let allPrompts = [];
 let totalPromptCount = 0;
+let currentPage = 1;
+let itemsPerPage = 50;
+let currentFilteredPrompts = [];
 
 // Load prompts from multiple sources
 document.addEventListener('DOMContentLoaded', async function() {
@@ -87,8 +90,10 @@ document.addEventListener('DOMContentLoaded', async function() {
         totalPromptCount = allPrompts.length;
         console.log(`✅ Total prompts loaded: ${totalPromptCount}`);
         
+        currentFilteredPrompts = [...allPrompts];
         updatePromptCount(totalPromptCount);
-        displayPrompts(allPrompts);
+        setupPagination();
+        displayPromptsWithPagination();
         setupFilters();
         
         console.log(`✅ Successfully displayed ${totalPromptCount} prompts`);
@@ -115,6 +120,12 @@ function updatePromptCount(count) {
         el.classList.add('animate-pulse');
         setTimeout(() => el.classList.remove('animate-pulse'), 1000);
     });
+    
+    // Update pagination total count
+    const totalPromptsEl = document.getElementById('totalPrompts');
+    if (totalPromptsEl) {
+        totalPromptsEl.textContent = count + '+';
+    }
     
     // Update page title
     document.title = `${count}+ AI Prompts for Gig Workers | ShramSetu`;
@@ -212,12 +223,168 @@ function setupFilters() {
             filtered = filtered.filter(prompt => prompt.language === selectedLanguage);
         }
         
-        displayPrompts(filtered);
+        currentFilteredPrompts = filtered;
+        currentPage = 1; // Reset to first page when filtering
+        displayPromptsWithPagination();
     }
     
     searchInput.addEventListener('input', applyFilters);
     categoryFilter.addEventListener('change', applyFilters);
     languageFilter.addEventListener('change', applyFilters);
+}
+
+function setupPagination() {
+    // Setup items per page selector
+    const itemsPerPageSelect = document.getElementById('itemsPerPage');
+    if (itemsPerPageSelect) {
+        itemsPerPageSelect.addEventListener('change', (e) => {
+            itemsPerPage = parseInt(e.target.value);
+            currentPage = 1;
+            displayPromptsWithPagination();
+        });
+    }
+    
+    // Setup prev/next buttons
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+    
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                displayPromptsWithPagination();
+                scrollToPrompts();
+            }
+        });
+    }
+    
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            const totalPages = Math.ceil(currentFilteredPrompts.length / itemsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                displayPromptsWithPagination();
+                scrollToPrompts();
+            }
+        });
+    }
+}
+
+function displayPromptsWithPagination() {
+    const totalPages = Math.ceil(currentFilteredPrompts.length / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = Math.min(startIndex + itemsPerPage, currentFilteredPrompts.length);
+    
+    // Get prompts for current page
+    const pagePrompts = currentFilteredPrompts.slice(startIndex, endIndex);
+    
+    // Display the prompts
+    displayPrompts(pagePrompts);
+    
+    // Update pagination info
+    updatePaginationInfo(startIndex + 1, endIndex, currentFilteredPrompts.length, totalPages);
+}
+
+function updatePaginationInfo(start, end, total, totalPages) {
+    // Update range display
+    const startRangeEl = document.getElementById('startRange');
+    const endRangeEl = document.getElementById('endRange');
+    const totalPromptsEl = document.getElementById('totalPrompts');
+    
+    if (startRangeEl) startRangeEl.textContent = start;
+    if (endRangeEl) endRangeEl.textContent = end;
+    if (totalPromptsEl) totalPromptsEl.textContent = total + '+';
+    
+    // Update prev/next button states
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+    
+    if (prevButton) {
+        prevButton.disabled = currentPage === 1;
+        if (currentPage === 1) {
+            prevButton.classList.add('opacity-50', 'cursor-not-allowed');
+        } else {
+            prevButton.classList.remove('opacity-50', 'cursor-not-allowed');
+        }
+    }
+    
+    if (nextButton) {
+        nextButton.disabled = currentPage === totalPages;
+        if (currentPage === totalPages) {
+            nextButton.classList.add('opacity-50', 'cursor-not-allowed');
+        } else {
+            nextButton.classList.remove('opacity-50', 'cursor-not-allowed');
+        }
+    }
+    
+    // Generate page numbers
+    generatePageNumbers(totalPages);
+}
+
+function generatePageNumbers(totalPages) {
+    const pageNumbersContainer = document.getElementById('pageNumbers');
+    if (!pageNumbersContainer) return;
+    
+    pageNumbersContainer.innerHTML = '';
+    
+    if (totalPages <= 1) return;
+    
+    // Show max 7 page numbers
+    let startPage = Math.max(1, currentPage - 3);
+    let endPage = Math.min(totalPages, startPage + 6);
+    
+    if (endPage - startPage < 6) {
+        startPage = Math.max(1, endPage - 6);
+    }
+    
+    // Add first page and ellipsis
+    if (startPage > 1) {
+        addPageButton(1, pageNumbersContainer);
+        if (startPage > 2) {
+            const ellipsis = document.createElement('span');
+            ellipsis.className = 'px-3 py-2 text-gray-500';
+            ellipsis.textContent = '...';
+            pageNumbersContainer.appendChild(ellipsis);
+        }
+    }
+    
+    // Add page numbers
+    for (let i = startPage; i <= endPage; i++) {
+        addPageButton(i, pageNumbersContainer);
+    }
+    
+    // Add ellipsis and last page
+    if (endPage < totalPages) {
+        if (endPage < totalPages - 1) {
+            const ellipsis = document.createElement('span');
+            ellipsis.className = 'px-3 py-2 text-gray-500';
+            ellipsis.textContent = '...';
+            pageNumbersContainer.appendChild(ellipsis);
+        }
+        addPageButton(totalPages, pageNumbersContainer);
+    }
+}
+
+function addPageButton(pageNum, container) {
+    const button = document.createElement('button');
+    button.textContent = pageNum;
+    button.className = pageNum === currentPage 
+        ? 'px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium'
+        : 'px-4 py-2 bg-white text-gray-700 rounded-lg hover:bg-gray-100 transition-colors';
+    button.addEventListener('click', () => {
+        currentPage = pageNum;
+        displayPromptsWithPagination();
+        scrollToPrompts();
+    });
+    container.appendChild(button);
+}
+
+function scrollToPrompts() {
+    const promptsSection = document.getElementById('prompts');
+    if (promptsSection) {
+        const offsetTop = promptsSection.offsetTop - 100;
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    }
 }
 
 function copyPrompt(id) {
