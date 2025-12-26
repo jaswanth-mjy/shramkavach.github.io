@@ -7,7 +7,7 @@
  * @param {string} path - Relative path to the page/section
  */
 function shareViaWhatsApp(title, path) {
-    const url = window.location.origin + '/' + path;
+    const url = 'https://shramkavach.com/' + path;
     const emoji = getEmojiForPage(path);
     const text = `${emoji} ${title} - ShramKavach\n\n34+ Free calculators, 1200+ AI prompts for workers and freelancers! 💼\n\n`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text + url)}`;
@@ -20,7 +20,7 @@ function shareViaWhatsApp(title, path) {
  * @param {HTMLElement} button - The button element that triggered the copy (optional)
  */
 function copyCalculatorLink(path, button) {
-    const url = window.location.origin + '/' + path;
+    const url = 'https://shramkavach.com/' + path;
     
     navigator.clipboard.writeText(url).then(() => {
         // Find the button element
@@ -97,7 +97,7 @@ function shareCurrentPage() {
  */
 function copyCurrentPageLink() {
     const url = window.location.href;
-    copyCalculatorLink(url.replace(window.location.origin + '/', ''));
+    copyCalculatorLink(url.replace('https://shramkavach.com/', '').replace(window.location.origin + '/', ''));
 }
 
 // Export for use in other scripts
