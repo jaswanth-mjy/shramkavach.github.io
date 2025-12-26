@@ -1621,6 +1621,70 @@
         </div>
     </footer>
 
+    <!-- Newsletter Subscription Section -->
+    <section class="py-16 bg-gradient-to-br from-purple-600 via-indigo-600 to-purple-700">
+        <div class="max-w-2xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">📬 साप्ताहिक Updates पाएं</h2>
+                <p class="text-purple-100 text-lg">हर सोमवार सुबह latest labour law changes, tax updates, और calculator news सीधे आपके inbox में।</p>
+            </div>
+            
+            <form id="newsletterForm" class="max-w-md mx-auto">
+                <div class="space-y-4">
+                    <input 
+                        type="email" 
+                        id="subscriberEmail" 
+                        name="email" 
+                        placeholder="आपका Email Address" 
+                        required 
+                        class="w-full px-4 py-3 rounded-lg bg-white/95 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    >
+                    <input 
+                        type="text" 
+                        id="subscriberName" 
+                        name="name" 
+                        placeholder="आपका नाम" 
+                        required 
+                        class="w-full px-4 py-3 rounded-lg bg-white/95 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    >
+                    <select 
+                        id="subscriberLanguage" 
+                        name="language" 
+                        required 
+                        class="w-full px-4 py-3 rounded-lg bg-white/95 text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    >
+                        <option value="">भाषा चुनें / Choose Language</option>
+                        <option value="hi">Hindi (हिंदी)</option>
+                        <option value="en">English</option>
+                    </select>
+                    <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105">
+                        Subscribe करें (Free)
+                    </button>
+                    <div id="newsletterMessage" class="hidden text-center p-3 rounded-lg"></div>
+                </div>
+            </form>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 max-w-xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center">
+                    <div class="text-2xl mb-2">📰</div>
+                    <div class="text-white text-sm">साप्ताहिक Updates</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center">
+                    <div class="text-2xl mb-2">🎯</div>
+                    <div class="text-white text-sm">Curated Content</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center">
+                    <div class="text-2xl mb-2">🔒</div>
+                    <div class="text-white text-sm">Privacy First</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center">
+                    <div class="text-2xl mb-2">🚫</div>
+                    <div class="text-white text-sm">No Spam</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Floating Share Buttons -->
     <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
         <button onclick="shareViaWhatsApp('ShramKavach - Worker Empowerment Platform', 'index.html')" class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-110" title="Share on WhatsApp">
@@ -1639,5 +1703,60 @@
     <script src="js/share.js"></script>
     <script src="js/translations.js"></script>
     <script src="js/common.js"></script>
+    
+    <!-- Newsletter Subscription Script -->
+    <script>
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzOrN8TYxH5C-Q9HVE8aN7GB_E2z8M-kgAcciP8Kf4PBr6cAeKA2A7oYnzQbBk4D-1W/exec';
+
+        const newsletterForm = document.getElementById('newsletterForm');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const submitBtn = newsletterForm.querySelector('button[type="submit"]');
+                const messageDiv = document.getElementById('newsletterMessage');
+                
+                const email = document.getElementById('subscriberEmail').value;
+                const name = document.getElementById('subscriberName').value;
+                const language = document.getElementById('subscriberLanguage').value;
+                
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Subscribe हो रहा है...';
+                
+                try {
+                    await fetch(SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            action: 'subscribe',
+                            email: email,
+                            name: name,
+                            language: language
+                        })
+                    });
+                    
+                    messageDiv.textContent = '✅ Successfully subscribed! Check your email for confirmation.';
+                    messageDiv.className = 'text-center p-3 rounded-lg bg-green-100 text-green-800';
+                    messageDiv.classList.remove('hidden');
+                    newsletterForm.reset();
+                    
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'newsletter_subscribe', {
+                            'event_category': 'engagement',
+                            'event_label': language
+                        });
+                    }
+                } catch (error) {
+                    messageDiv.textContent = '❌ Error: Please try again later.';
+                    messageDiv.className = 'text-center p-3 rounded-lg bg-red-100 text-red-800';
+                    messageDiv.classList.remove('hidden');
+                }
+                
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Subscribe करें (Free)';
+            });
+        }
+    </script>
 </body>
 </html>
