@@ -528,30 +528,182 @@ class LegalDocumentGenerator {
 
     // Download as PDF
     downloadAsPDF(content, filename) {
-        // Create a styled document
-        const printWindow = window.open('', '', 'width=800,height=600');
+        // Create a styled A4 document
+        const printWindow = window.open('', '', 'width=210mm,height=297mm');
         printWindow.document.write(`
             <!DOCTYPE html>
             <html>
             <head>
                 <title>${filename}</title>
+                <meta charset="UTF-8">
                 <style>
-                    body { font-family: Arial, sans-serif; padding: 40px; line-height: 1.6; }
-                    h1 { color: #4F46E5; border-bottom: 3px solid #4F46E5; padding-bottom: 10px; }
-                    h2 { color: #6366F1; margin-top: 25px; }
-                    .meta { background: #F3F4F6; padding: 15px; border-radius: 8px; margin: 20px 0; }
-                    .section { margin: 20px 0; }
-                    .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #E5E7EB; font-size: 12px; color: #6B7280; }
-                    ul { margin-left: 20px; }
-                    li { margin: 8px 0; }
-                    strong { color: #1F2937; }
+                    @page {
+                        size: A4;
+                        margin: 20mm;
+                    }
+                    @media print {
+                        body {
+                            width: 210mm;
+                            height: 297mm;
+                        }
+                        .page-break {
+                            page-break-before: always;
+                        }
+                    }
+                    * {
+                        box-sizing: border-box;
+                    }
+                    body { 
+                        font-family: 'Georgia', 'Times New Roman', serif; 
+                        padding: 25mm;
+                        margin: 0;
+                        line-height: 1.6; 
+                        color: #1a1a1a;
+                        font-size: 9pt;
+                        background: white;
+                    }
+                    h1 { 
+                        color: #1e40af; 
+                        border-bottom: 4px solid #1e40af; 
+                        padding-bottom: 10px; 
+                        margin-bottom: 20px;
+                        font-size: 18pt;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                    }
+                    h2 { 
+                        color: #3b82f6; 
+                        margin-top: 25px; 
+                        margin-bottom: 12px;
+                        font-size: 11pt;
+                        font-weight: bold;
+                        border-left: 4px solid #3b82f6;
+                        padding-left: 10px;
+                    }
+                    h3 {
+                        color: #4b5563;
+                        font-size: 10pt;
+                        margin-top: 15px;
+                        margin-bottom: 8px;
+                        font-weight: 600;
+                    }
+                    .meta { 
+                        background: #f0f9ff; 
+                        padding: 15px; 
+                        border-radius: 0;
+                        border-left: 4px solid #1e40af;
+                        margin: 20px 0; 
+                        line-height: 1.6;
+                    }
+                    .meta p {
+                        margin: 6px 0;
+                    }
+                    .section { 
+                        margin: 20px 0; 
+                        text-align: justify;
+                    }
+                    .section p {
+                        margin: 10px 0;
+                        line-height: 1.6;
+                    }
+                    .footer { 
+                        margin-top: 40px; 
+                        padding-top: 20px; 
+                        border-top: 3px double #9ca3af; 
+                        font-size: 7pt; 
+                        color: #6b7280; 
+                        text-align: center;
+                        line-height: 1.4;
+                    }
+                    ul { 
+                        margin-left: 20px; 
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+                    li { 
+                        margin: 8px 0; 
+                        line-height: 1.5;
+                    }
+                    ol {
+                        margin-left: 20px;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+                    ol li {
+                        margin: 8px 0;
+                        line-height: 1.5;
+                    }
+                    strong { 
+                        color: #111827; 
+                        font-weight: 700;
+                    }
+                    .highlight {
+                        background: #fef3c7;
+                        padding: 2px 4px;
+                        border-radius: 2px;
+                    }
+                    .signature-block {
+                        margin-top: 40px;
+                        display: flex;
+                        justify-content: space-between;
+                        page-break-inside: avoid;
+                    }
+                    .signature-box {
+                        width: 45%;
+                        border: 2px solid #d1d5db;
+                        padding: 20px;
+                        min-height: 100px;
+                    }
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        margin: 15px 0;
+                    }
+                    th, td {
+                        border: 1px solid #d1d5db;
+                        padding: 10px;
+                        text-align: left;
+                    }
+                    th {
+                        background: #f3f4f6;
+                        font-weight: bold;
+                    }
+                    .watermark {
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                        font-size: 72pt;
+                        color: rgba(0, 0, 0, 0.03);
+                        z-index: -1;
+                        font-weight: bold;
+                    }
+                    .header-logo {
+                        text-align: center;
+                        margin-bottom: 20px;
+                        color: #1e40af;
+                        font-size: 10pt;
+                        font-weight: 600;
+                    }
                 </style>
             </head>
             <body>
+                <div class="watermark">ShramKavach</div>
+                <div class="header-logo">
+                    ShramKavach - श्रम कवच<br>
+                    Worker Rights & Protection Platform
+                </div>
                 ${content}
                 <div class="footer">
-                    <p><strong>Generated by ShramSetu</strong> - Worker Rights & Protection Platform</p>
-                    <p>Date: ${new Date().toLocaleDateString('en-IN')} | This document was generated client-side. Your data remains private.</p>
+                    <p><strong>Generated by ShramKavach (श्रम कवच)</strong></p>
+                    <p>Worker Rights & Protection Platform | Empowering Indian Gig Workers</p>
+                    <p><strong>Document Generation Date:</strong> ${new Date().toLocaleString('en-IN', { dateStyle: 'full', timeStyle: 'short' })}</p>
+                    <p style="margin-top: 10px; font-size: 8pt;">
+                        ⚡ This document was generated client-side with zero data storage. Your privacy is protected.<br>
+                        🌐 Visit: https://shramkavach.com | 📧 Contact: shramkavach@gmail.com<br>
+                        ⚖️ For legal advice, please consult a qualified attorney. This is a template for informational purposes.
+                    </p>
                 </div>
             </body>
             </html>
@@ -559,7 +711,7 @@ class LegalDocumentGenerator {
         printWindow.document.close();
         setTimeout(() => {
             printWindow.print();
-        }, 250);
+        }, 500);
     }
 
     // 1. Privacy Policy Generator
@@ -583,86 +735,266 @@ class LegalDocumentGenerator {
                 </div>
 
                 <div class="section">
-                    <h2>1. Introduction</h2>
-                    <p>This Privacy Policy explains how ${data.businessName} ("we", "our", or "us") collects, uses, discloses, and protects your personal information in compliance with the Digital Personal Data Protection Act, 2023 (DPDP Act) of India.</p>
+                    <h2>1. Introduction and Scope</h2>
+                    <p>This Privacy Policy ("Policy") sets forth the comprehensive framework governing how ${data.businessName} ("we", "our", "us", or "the Company"), operating as a ${data.businessType}, collects, processes, uses, discloses, stores, and protects your personal information and sensitive personal data. This Policy is formulated in strict compliance with the Digital Personal Data Protection Act, 2023 (DPDP Act) of India, Information Technology Act, 2000 (as amended), and all applicable rules, regulations, and guidelines issued thereunder by the competent authorities.</p>
+                    
+                    <p>By accessing or using our services, website, mobile applications, or engaging with our business in any manner, you acknowledge that you have read, understood, and agree to be bound by the terms of this Privacy Policy. This Policy applies to all users, customers, visitors, and any individual whose personal data we may collect, process, or handle in the course of our business operations.</p>
+                    
+                    <p>We are committed to protecting your privacy and ensuring transparent data handling practices. We recognize the trust you place in us when you share your personal information, and we take this responsibility seriously. This Policy describes in detail our practices concerning data collection, usage, disclosure, retention, security, and your rights as a data principal under Indian law.</p>
                 </div>
 
                 <div class="section">
-                    <h2>2. Information We Collect</h2>
-                    <p>We collect the following types of personal data:</p>
+                    <h2>2. Information We Collect - Categories and Purposes</h2>
+                    <p>In the course of providing our services and operating our business, we may collect, receive, and process various categories of personal data and sensitive personal data from you. The specific types of information we collect include, but are not limited to:</p>
+                    
+                    <h3>2.1 Personal Information Collected:</h3>
                     <ul>
-                        ${data.dataCollected.split(',').map(item => `<li>${item.trim()}</li>`).join('')}
+                        ${data.dataCollected.split(',').map(item => `<li><strong>${item.trim()}</strong> - Collected for service provision, communication, transaction processing, and legal compliance purposes</li>`).join('')}
                     </ul>
+                    
+                    <h3>2.2 Technical and Usage Information:</h3>
+                    <p>We automatically collect certain technical information when you interact with our services, including but not limited to: IP addresses, device identifiers (IMEI, MAC address, device ID), browser type and version, operating system, device type (mobile, desktop, tablet), screen resolution, language preferences, referring/exit pages, clickstream data, pages viewed, time spent on pages, access times, location data (with your consent), and other diagnostic data that helps us improve our services and user experience.</p>
+                    
+                    <h3>2.3 Transaction and Financial Data:</h3>
+                    <p>When you engage in transactions with us, we may collect payment information including bank account details, UPI IDs, digital wallet information, transaction history, billing addresses, and purchase records. However, sensitive financial data such as complete credit/debit card numbers and CVV codes are processed through our PCI-DSS compliant payment processors and are not stored on our servers.</p>
+                    
+                    <h3>2.4 Communication Records:</h3>
+                    <p>We maintain records of all communications between you and our company, including emails, messages, customer support interactions, feedback forms, survey responses, and any other correspondence, for the purposes of providing efficient customer service, resolving disputes, improving our services, and maintaining business records.</p>
                 </div>
 
                 <div class="section">
-                    <h2>3. How We Use Your Information</h2>
+                    <h2>3. How We Use Your Information - Detailed Purposes</h2>
+                    <p>We collect and process your personal data for specific, explicit, and legitimate purposes only. We do not use your data for purposes incompatible with those for which consent was obtained. The purposes for which we process your personal information include:</p>
+                    
+                    <h3>3.1 Service Provision and Fulfillment:</h3>
+                    <p>To create and manage your account, authenticate your identity, provide access to our services, process your orders and transactions, deliver products or services you have requested, manage bookings and appointments, provide customer support, respond to your inquiries, and ensure smooth operation of our business relationship with you.</p>
+                    
+                    <h3>3.2 Transaction Processing and Financial Operations:</h3>
+                    <p>To process payments, verify payment information, prevent fraud and unauthorized transactions, issue invoices and receipts, manage refunds and cancellations, maintain accurate financial records, comply with accounting requirements, and facilitate seamless financial transactions through our authorized payment partners.</p>
+                    
+                    <h3>3.3 Communication and Marketing:</h3>
+                    <p>To communicate with you about your orders, services, account updates, policy changes, and important notices; to send promotional materials, newsletters, special offers, and marketing communications (subject to your consent and opt-out preferences); to conduct surveys and collect feedback to improve our services; and to keep you informed about new features, products, or services that may be of interest to you.</p>
+                    
+                    <h3>3.4 Service Improvement and Analytics:</h3>
+                    <p>To analyze usage patterns and trends, understand customer preferences and behavior, identify areas for improvement, develop new features and services, conduct research and development activities, perform data analytics to enhance user experience, optimize our operations, and make data-driven business decisions that benefit our customers.</p>
+                    
+                    <h3>3.5 Security and Fraud Prevention:</h3>
+                    <p>To protect against fraud, unauthorized transactions, security breaches, and other illegal activities; to verify identity and prevent impersonation; to detect and prevent abuse of our services; to maintain the security and integrity of our systems; to protect the rights, property, and safety of our company, users, and the public; and to comply with our legal obligations regarding security.</p>
+                    
+                    <h3>3.6 Legal Compliance and Regulatory Requirements:</h3>
+                    <p>To comply with applicable laws, regulations, court orders, and legal processes; to respond to lawful requests from government authorities and law enforcement agencies; to enforce our terms of service and other agreements; to protect and defend our legal rights; to maintain necessary business records; to comply with tax obligations, accounting standards, and financial regulations; and to fulfill our obligations under the DPDP Act, 2023 and other relevant legislation.</p>
+                </div>
+
+                <div class="section">
+                    <h2>4. Your Rights Under DPDP Act 2023 - Comprehensive Overview</h2>
+                    <p>As a data principal under the Digital Personal Data Protection Act, 2023, you are entitled to certain fundamental rights concerning your personal data. We are committed to facilitating the exercise of these rights in a transparent, accessible, and timely manner. Your rights include:</p>
+                    
                     <ul>
-                        <li>To provide and maintain our services</li>
-                        <li>To process transactions and send related information</li>
-                        <li>To communicate with you about updates and offers</li>
-                        <li>To improve our services and customer experience</li>
-                        <li>To comply with legal obligations</li>
+                        <li><strong>Right to Information and Access:</strong> You have the right to obtain confirmation whether we are processing your personal data and to access a copy of your personal data along with information about the purposes of processing, categories of data, recipients of data, retention periods, and other relevant details. You may request a summary or complete record of all personal data we hold about you in a structured, commonly used, and machine-readable format.</li>
+                        
+                        <li><strong>Right to Correction and Update:</strong> You have the right to request correction, completion, or updating of your personal data if it is inaccurate, incomplete, or outdated. We will make reasonable efforts to verify the accuracy of the corrected data and update our records promptly. You can update most information directly through your account settings or by contacting us.</li>
+                        
+                        <li><strong>Right to Erasure and Deletion:</strong> You have the right to request deletion or erasure of your personal data when it is no longer necessary for the purposes for which it was collected, when you withdraw consent, when you object to processing, or when we are legally required to delete it. We will comply with deletion requests subject to our legal obligations to retain certain data for specified periods (e.g., for tax, accounting, or legal purposes).</li>
+                        
+                        <li><strong>Right to Data Portability:</strong> You have the right to receive your personal data in a structured, commonly used, and machine-readable format and to transmit this data to another data fiduciary without hindrance. We will provide your data in formats such as CSV, JSON, or PDF, as technically feasible, within a reasonable timeframe.</li>
+                        
+                        <li><strong>Right to Withdraw Consent:</strong> Where processing is based on consent, you have the right to withdraw your consent at any time with the same ease with which it was given. Withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal. You may withdraw consent through your account settings, by contacting us, or by using opt-out mechanisms provided in our communications.</li>
+                        
+                        <li><strong>Right to Grievance Redressal:</strong> You have the right to lodge a complaint with our designated Grievance Officer regarding any violation of your rights under the DPDP Act or concerns about our data processing practices. We are committed to addressing your grievances within the statutory timeframe of 30 days and providing you with a satisfactory resolution.</li>
+                        
+                        <li><strong>Right to Nominate:</strong> You have the right to nominate another individual who may exercise your rights in the event of your death or incapacity. The nominee shall be entitled to exercise all your rights as a data principal, subject to verification procedures.</li>
                     </ul>
+                    
+                    <p><strong>Exercising Your Rights:</strong> To exercise any of these rights, please contact us using the contact information provided in Section 11 of this Policy. We will respond to your request within 30 days or such other period as prescribed by law. We may require additional information to verify your identity before processing certain requests to ensure data security and prevent unauthorized access.</p>
                 </div>
 
                 <div class="section">
-                    <h2>4. Your Rights Under DPDP Act 2023</h2>
+                    <h2>5. Data Retention Policy and Practices</h2>
+                    <p>We retain your personal data only for as long as necessary to fulfill the specific purposes for which it was collected, to comply with our legal and regulatory obligations, to resolve disputes, to enforce our agreements, and to protect our legitimate business interests. Our data retention practices are guided by principles of data minimization and purpose limitation.</p>
+                    
+                    <p><strong>General Retention Period:</strong> Typically, we retain personal data for the duration of our active business relationship with you and for a period of up to 3 years thereafter. However, certain categories of data may be retained for longer or shorter periods based on specific legal requirements, business needs, and the nature of the data.</p>
+                    
+                    <p><strong>Specific Retention Periods:</strong></p>
                     <ul>
-                        <li><strong>Right to Access:</strong> You can request copies of your personal data</li>
-                        <li><strong>Right to Correction:</strong> You can request correction of inaccurate data</li>
-                        <li><strong>Right to Erasure:</strong> You can request deletion of your data</li>
-                        <li><strong>Right to Data Portability:</strong> You can request transfer of your data</li>
-                        <li><strong>Right to Withdraw Consent:</strong> You can withdraw consent at any time</li>
+                        <li><strong>Account Information:</strong> Retained for the duration of account activity plus 3 years after account closure or last activity</li>
+                        <li><strong>Transaction Records:</strong> Retained for 7 years from the date of transaction to comply with tax and accounting regulations</li>
+                        <li><strong>Financial Data:</strong> Retained for 7-10 years as required by the Income Tax Act and Companies Act</li>
+                        <li><strong>Communication Records:</strong> Retained for 2-3 years for customer service quality and dispute resolution purposes</li>
+                        <li><strong>Marketing Consent Records:</strong> Retained until consent is withdrawn plus reasonable period to honor opt-out requests</li>
+                        <li><strong>Legal and Compliance Records:</strong> Retained for periods mandated by specific laws or until resolution of legal matters</li>
                     </ul>
+                    
+                    <p><strong>Secure Deletion:</strong> Upon expiry of the retention period, we securely delete or anonymize your personal data using industry-standard methods including secure erasure, degaussing for physical media, cryptographic erasure, and data destruction protocols that prevent recovery or reconstruction of the data.</p>
                 </div>
 
                 <div class="section">
-                    <h2>5. Data Retention</h2>
-                    <p>We retain your personal data only for as long as necessary to fulfill the purposes for which it was collected or as required by law. Typically, we retain data for the duration of our business relationship and up to 3 years thereafter for legal compliance.</p>
+                    <h2>6. Data Security Measures and Safeguards</h2>
+                    <p>We implement comprehensive technical, physical, and organizational security measures designed to protect your personal data against unauthorized access, alteration, disclosure, destruction, loss, theft, accidental damage, and unlawful processing. Our security framework is regularly reviewed and updated to address emerging threats and technological advancements.</p>
+                    
+                    <h3>6.1 Technical Security Measures:</h3>
+                    <p><strong>Encryption:</strong> We use industry-standard encryption protocols (SSL/TLS) to protect data in transit between your device and our servers. Sensitive data at rest is encrypted using AES-256 encryption or equivalent standards. All payment transactions are processed through encrypted channels.</p>
+                    
+                    <p><strong>Access Controls:</strong> We implement role-based access controls (RBAC) ensuring that only authorized personnel with legitimate business needs can access personal data. Multi-factor authentication (MFA) is required for access to sensitive systems. Access logs are maintained and regularly audited.</p>
+                    
+                    <p><strong>Network Security:</strong> Our infrastructure is protected by firewalls, intrusion detection systems (IDS), intrusion prevention systems (IPS), anti-malware software, and regular security patches. We conduct vulnerability assessments and penetration testing periodically.</p>
+                    
+                    <h3>6.2 Organizational Security Measures:</h3>
+                    <p><strong>Employee Training:</strong> All employees handling personal data receive comprehensive training on data protection, privacy principles, security protocols, and their obligations under the DPDP Act. Confidentiality agreements are signed by all personnel.</p>
+                    
+                    <p><strong>Data Processing Agreements:</strong> We enter into data processing agreements with third-party service providers and vendors who process personal data on our behalf, ensuring they implement adequate security measures and comply with applicable data protection laws.</p>
+                    
+                    <p><strong>Incident Response:</strong> We maintain a data breach response plan and incident management procedures to promptly detect, respond to, and mitigate any security incidents. In the event of a data breach affecting your personal data, we will notify you and the relevant authorities within the timeframes prescribed by law.</p>
                 </div>
 
                 <div class="section">
-                    <h2>6. Data Security</h2>
-                    <p>We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. This includes encryption, secure servers, and regular security audits.</p>
-                </div>
-
-                <div class="section">
-                    <h2>7. Third-Party Sharing</h2>
-                    <p>We do not sell your personal data. We may share data with:</p>
+                    <h2>7. Third-Party Sharing and Disclosure</h2>
+                    <p>We do not sell, rent, or trade your personal data to third parties for their marketing purposes. We may share your personal data with third parties only in the following limited circumstances and subject to appropriate safeguards:</p>
+                    
                     <ul>
-                        <li>Service providers who assist in our operations (payment processors, hosting providers)</li>
-                        <li>Legal authorities when required by law</li>
-                        <li>Business partners with your explicit consent</li>
+                        <li><strong>Service Providers and Business Partners:</strong> We engage trusted third-party service providers to assist in our operations, including but not limited to payment processors, logistics and delivery partners, cloud hosting providers, IT service providers, marketing agencies, customer support platforms, and analytics providers. These parties are contractually obligated to protect your data, use it only for specified purposes, and comply with data protection laws.</li>
+                        
+                        <li><strong>Legal and Regulatory Authorities:</strong> We may disclose your personal data when required by law, court order, legal process, or lawful request from government authorities, law enforcement agencies, regulatory bodies, or tax authorities. We will verify the legitimacy of such requests and disclose only the minimum data necessary to comply with legal obligations.</li>
+                        
+                        <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, reorganization, sale of assets, bankruptcy, or similar business transaction, your personal data may be transferred to the acquiring entity or successor, subject to the same privacy protections and obligations set forth in this Policy. You will be notified of any such transfer.</li>
+                        
+                        <li><strong>Consent-Based Sharing:</strong> We may share your data with business partners, affiliates, or third parties with your explicit consent for specific purposes such as joint promotions, collaborative services, or integrated offerings. You will be informed about the identity of such third parties and the purposes of sharing before obtaining your consent.</li>
+                        
+                        <li><strong>Protection of Rights and Safety:</strong> We may disclose personal data when we believe in good faith that disclosure is necessary to protect our rights, property, or safety, or that of our users or the public, to prevent fraud, to enforce our terms of service, or to defend against legal claims.</li>
                     </ul>
+                    
+                    <p><strong>Cross-Border Transfers:</strong> If we transfer your personal data outside India, we will ensure that adequate safeguards are in place as required by the DPDP Act, such as standard contractual clauses, adequacy decisions, or other legally approved transfer mechanisms, to protect your data in accordance with Indian data protection standards.</p>
                 </div>
 
                 <div class="section">
-                    <h2>8. Cookies and Tracking</h2>
-                    <p>We use cookies and similar technologies to enhance user experience. You can control cookie settings through your browser preferences.</p>
+                    <h2>8. Cookies, Tracking Technologies, and Online Privacy</h2>
+                    <p>We use cookies, web beacons, pixels, tags, local storage, and similar tracking technologies to enhance user experience, analyze usage patterns, personalize content, remember preferences, facilitate authentication, and improve the functionality and performance of our website and services.</p>
+                    
+                    <h3>8.1 Types of Cookies We Use:</h3>
+                    <ul>
+                        <li><strong>Essential Cookies:</strong> These are strictly necessary for the operation of our website and services. They enable core functionality such as security, network management, user authentication, and access to secure areas. You cannot opt-out of these cookies as our services will not function properly without them.</li>
+                        
+                        <li><strong>Performance and Analytics Cookies:</strong> These cookies collect aggregated information about how visitors use our website, including pages visited, time spent, errors encountered, and traffic sources. We use this data to improve website performance, understand user behavior, and optimize user experience. Examples include Google Analytics cookies.</li>
+                        
+                        <li><strong>Functionality Cookies:</strong> These cookies allow our website to remember your choices and preferences (such as language, region, login credentials) to provide enhanced, personalized features and content. They may also be used to provide services you have requested.</li>
+                        
+                        <li><strong>Advertising and Marketing Cookies:</strong> With your consent, we may use cookies to deliver relevant advertisements, limit the number of times you see an ad, measure advertising effectiveness, and understand your interests. These cookies may be placed by us or third-party advertising partners.</li>
+                    </ul>
+                    
+                    <h3>8.2 Managing Cookie Preferences:</h3>
+                    <p>You can control and manage cookies through your browser settings. Most browsers allow you to refuse or accept cookies, delete existing cookies, and set preferences for certain websites. However, please note that disabling certain cookies may affect the functionality of our website and limit your access to some features. You can also opt-out of interest-based advertising through industry opt-out mechanisms or by adjusting your privacy settings.</p>
+                    
+                    <p><strong>Do Not Track Signals:</strong> Some browsers transmit "Do Not Track" (DNT) signals. We currently do not respond to DNT signals due to lack of industry standard on how to interpret such signals. We will update our practices if a uniform standard is established.</p>
                 </div>
 
                 <div class="section">
-                    <h2>9. Children's Privacy</h2>
-                    <p>Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal data from children.</p>
+                    <h2>9. Children's Privacy and Age Restrictions</h2>
+                    <p>Our services are not intended for, nor do we knowingly direct them to, individuals under the age of 18 years. We do not knowingly collect, use, or disclose personal data from children without verifiable parental or guardian consent as required by law. If you are under 18 years of age, you must obtain permission from your parent or legal guardian before using our services or providing any personal information to us.</p>
+                    
+                    <p>If we become aware that we have inadvertently collected personal data from a child under 18 without appropriate parental consent, we will take immediate steps to delete such information from our systems. Parents or guardians who believe that their child has provided personal data to us without consent may contact us using the information provided in Section 11, and we will promptly investigate and take appropriate action.</p>
+                    
+                    <p>We encourage parents and guardians to monitor their children's online activities, educate them about safe internet practices, and participate in their children's use of online services. We support parental involvement in children's online experiences and are committed to protecting the privacy and safety of minors.</p>
                 </div>
 
                 <div class="section">
-                    <h2>10. Changes to This Policy</h2>
-                    <p>We may update this Privacy Policy periodically. The updated version will be posted with a revised effective date. Continued use of our services after changes constitutes acceptance.</p>
+                    <h2>10. Changes and Updates to This Privacy Policy</h2>
+                    <p>We reserve the right to modify, amend, or update this Privacy Policy from time to time to reflect changes in our business practices, legal requirements, regulatory guidelines, technological developments, or for other operational, legal, or regulatory reasons. Any changes to this Policy will be effective immediately upon posting the updated version on our website with a revised "Effective Date" or "Last Updated" date.</p>
+                    
+                    <p><strong>Notification of Material Changes:</strong> If we make material changes that significantly affect your rights or how we process your personal data, we will provide prominent notice through one or more of the following methods: email notification to the address associated with your account, a notification banner on our website or application, an in-app message, or other reasonable means of communication. Material changes may include changes to the purposes of processing, categories of data collected, third-party sharing practices, or your rights.</p>
+                    
+                    <p><strong>Reviewing Updated Policy:</strong> We encourage you to periodically review this Privacy Policy to stay informed about how we protect your personal information and your privacy rights. Your continued use of our services after the effective date of any changes to this Policy constitutes your acknowledgment and acceptance of the updated terms. If you do not agree with the modified Privacy Policy, you should discontinue use of our services and may exercise your right to data deletion.</p>
+                    
+                    <p><strong>Version History:</strong> We maintain a version history of our Privacy Policy to ensure transparency. Previous versions may be made available upon request for your reference and to demonstrate our commitment to privacy evolution.</p>
                 </div>
 
                 <div class="section">
-                    <h2>11. Contact Us</h2>
-                    <p>For privacy-related inquiries, data access requests, or to exercise your rights:</p>
-                    <p><strong>Email:</strong> ${data.email}<br>
-                    <strong>Phone:</strong> ${data.phone}<br>
-                    <strong>Address:</strong> ${data.address}</p>
+                    <h2>11. Contact Information and Data Protection Officer</h2>
+                    <p>We are committed to addressing your privacy concerns, questions, comments, and requests in a timely and transparent manner. If you have any inquiries regarding this Privacy Policy, our data processing practices, wish to exercise your rights as a data principal, or need assistance with privacy-related matters, please contact us through any of the following channels:</p>
+                    
+                    <div class="meta">
+                        <p><strong>Business Name:</strong> ${data.businessName}</p>
+                        <p><strong>Registered Address:</strong> ${data.address}</p>
+                        <p><strong>Email Address:</strong> ${data.email}</p>
+                        <p><strong>Phone Number:</strong> ${data.phone}</p>
+                        <p><strong>Business Hours:</strong> Monday to Saturday, 10:00 AM to 6:00 PM (IST)</p>
+                    </div>
+                    
+                    <p><strong>Data Access and Rights Requests:</strong> To exercise any of your rights under the DPDP Act, including rights to access, correction, erasure, portability, or withdrawal of consent, please submit your request in writing via email or postal mail using the contact information above. Please include your full name, contact information, account details (if applicable), and a clear description of your request. We will verify your identity and respond within 30 days or as prescribed by applicable law.</p>
+                    
+                    <p><strong>Response Timeline:</strong> We aim to respond to all privacy inquiries and rights requests within 30 days of receipt. In cases requiring additional time due to complexity or volume of requests, we will inform you of the extension and the reasons thereof, as permitted by law. Complex requests may take up to 60 days with prior notification.</p>
                 </div>
 
                 <div class="section">
-                    <h2>12. Grievance Officer</h2>
-                    <p>For DPDP Act complaints, contact our Grievance Officer at ${data.email}. We will respond within 30 days as per regulatory requirements.</p>
+                    <h2>12. Grievance Redressal Mechanism and Compliance</h2>
+                    <p>In accordance with Section 10 of the Digital Personal Data Protection Act, 2023, and Rule 3 of the Data Protection Rules, we have appointed a Grievance Officer to address your concerns regarding the processing of your personal data, privacy violations, data breaches, or any other grievances related to compliance with the DPDP Act.</p>
+                    
+                    <div class="meta">
+                        <p><strong>Grievance Officer Details:</strong></p>
+                        <p><strong>Name:</strong> [Grievance Officer Name - To be designated by ${data.businessName}]</p>
+                        <p><strong>Designation:</strong> Grievance Officer (Data Protection)</p>
+                        <p><strong>Email:</strong> ${data.email} (Subject: "Data Protection Grievance - DPDP Act 2023")</p>
+                        <p><strong>Phone:</strong> ${data.phone}</p>
+                        <p><strong>Address:</strong> ${data.address}</p>
+                        <p><strong>Response Timeline:</strong> Within 30 days of receipt of grievance</p>
+                    </div>
+                    
+                    <p><strong>How to File a Grievance:</strong> If you have any complaints or grievances regarding the processing of your personal data or believe that your privacy rights have been violated, you may submit a written grievance to our Grievance Officer using the contact details provided above. Your grievance should include:</p>
+                    <ul>
+                        <li>Your full name and contact information (email address, phone number, postal address)</li>
+                        <li>Description of your account or relationship with us</li>
+                        <li>Detailed description of the grievance or complaint</li>
+                        <li>Nature of the alleged privacy violation or data protection concern</li>
+                        <li>Any supporting documents or evidence relevant to your complaint</li>
+                        <li>Specific relief or action you are seeking</li>
+                        <li>Any previous communications with us regarding the matter</li>
+                    </ul>
+                    
+                    <p><strong>Grievance Resolution Process:</strong> Upon receipt of your grievance, our Grievance Officer will:</p>
+                    <ol>
+                        <li>Acknowledge receipt of your grievance within 48-72 hours via email or other appropriate means</li>
+                        <li>Investigate the matter thoroughly, including reviewing relevant records and consulting with concerned departments</li>
+                        <li>Communicate with you during the investigation process if additional information is required</li>
+                        <li>Provide a written response addressing your grievance within 30 days from the date of receipt, as mandated by the DPDP Act</li>
+                        <li>Take appropriate corrective actions if a violation is found, including remedial measures and policy updates</li>
+                        <li>Maintain confidentiality throughout the grievance resolution process</li>
+                    </ol>
+                    
+                    <p><strong>Escalation to Data Protection Board:</strong> If you are not satisfied with the resolution provided by our Grievance Officer or if you do not receive a response within the stipulated timeframe, you have the right to escalate your complaint to the Data Protection Board of India established under Section 18 of the DPDP Act, 2023. The Board has the authority to investigate complaints, conduct inquiries, and impose penalties for violations of data protection obligations.</p>
+                    
+                    <p><strong>Our Commitment:</strong> We take all grievances seriously and are committed to resolving them fairly, transparently, and in accordance with applicable laws. We will not retaliate against any individual for filing a grievance in good faith and will protect whistleblowers and complainants from any adverse consequences.</p>
+                </div>
+
+                <div class="section">
+                    <h2>13. Consent Management and Withdrawal</h2>
+                    <p>Your consent is fundamental to our processing of personal data. We obtain your free, specific, informed, and unambiguous consent before collecting or processing your personal data, except where processing is permitted by law without consent (such as for legal compliance, contractual necessity, or legitimate interests).</p>
+                    
+                    <p><strong>How We Obtain Consent:</strong> We seek your consent through clear affirmative action such as ticking a checkbox, clicking an "I Agree" button, providing verbal consent (recorded where applicable), signing a consent form, or through your account settings. Pre-ticked boxes, silence, or inactivity do not constitute valid consent.</p>
+                    
+                    <p><strong>Withdrawing Consent:</strong> You have the right to withdraw your consent at any time with the same ease with which it was given. Withdrawal of consent will not affect the lawfulness of any processing we conducted prior to withdrawal. To withdraw consent, you may: (1) Update your preferences in your account settings; (2) Click "Unsubscribe" links in our marketing emails; (3) Contact us at ${data.email}; or (4) Submit a written request to our Grievance Officer. We will process withdrawal requests within 7 business days.</p>
+                </div>
+
+                <div class="section">
+                    <h2>14. Automated Decision-Making and Profiling</h2>
+                    <p>We may use automated decision-making and profiling technologies to enhance personalization, improve service delivery, prevent fraud, and optimize user experience. Automated decisions may include personalized recommendations, dynamic pricing, credit assessments, or fraud detection.</p>
+                    
+                    <p>Where automated processing significantly affects you, you have the right to: (1) Obtain human intervention; (2) Express your point of view; (3) Contest the decision; and (4) Request an explanation of the decision-making logic. If you wish to challenge an automated decision or request manual review, please contact us at ${data.email}.</p>
+                </div>
+
+                <div class="section">
+                    <h2>15. Territorial Scope and Governing Law</h2>
+                    <p>This Privacy Policy applies to the processing of personal data of individuals located in India or whose personal data is processed in connection with our services offered in India. This Policy is governed by and construed in accordance with the laws of India, including the Digital Personal Data Protection Act, 2023, Information Technology Act, 2000 (as amended), and other applicable Indian legislation.</p>
+                    
+                    <p>Any disputes arising out of or relating to this Privacy Policy or our data processing practices shall be subject to the exclusive jurisdiction of the courts in ${data.address.split(',').pop().trim()}, India. However, you may also have the option to approach the Data Protection Board of India for grievance redressal as provided under the DPDP Act.</p>
+                </div>
+
+                <div class="section">
+                    <h2>16. Acceptance and Agreement</h2>
+                    <p>By using our services, accessing our website, or engaging with our business, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy. If you do not agree with any terms of this Policy, please discontinue use of our services immediately.</p>
+                    
+                    <p>This Privacy Policy constitutes a legally binding agreement between you and ${data.businessName}. We reserve the right to update or modify this Policy as necessary to comply with legal requirements or reflect changes in our business practices.</p>
+                    
+                    <p><strong>Effective Date:</strong> ${new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                    
+                    <p><em>This Privacy Policy was generated using ShramKavach's DPDP Act 2023 compliant template. It should be reviewed by a qualified legal professional before use. ShramKavach provides this template for informational purposes only and does not provide legal advice.</em></p>
                 </div>
             `;
             this.downloadAsPDF(content, `Privacy_Policy_${data.businessName.replace(/\s+/g, '_')}.pdf`);
@@ -689,83 +1021,253 @@ class LegalDocumentGenerator {
                 </div>
 
                 <div class="section">
-                    <h2>1. Parties</h2>
-                    <p><strong>Service Provider:</strong> ${data.providerName}<br>
-                    <strong>Client:</strong> ${data.clientName}</p>
+                    <h2>1. Parties to the Agreement</h2>
+                    <p>This Service Agreement ("Agreement") is entered into on ${new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })} ("Effective Date") by and between:</p>
+                    
+                    <p><strong>Service Provider:</strong> ${data.providerName} (hereinafter referred to as "Provider", "Service Provider", "Contractor", or "Vendor"), engaged in providing professional services, and having its principal place of business or residence in India.</p>
+                    
+                    <p><strong>Client:</strong> ${data.clientName} (hereinafter referred to as "Client", "Customer", or "Recipient"), requiring the services of the Provider and having its principal place of business or residence in India.</p>
+                    
+                    <p>The Provider and Client are collectively referred to as the "Parties" and individually as a "Party" to this Agreement. This Agreement sets forth the terms and conditions under which the Provider shall provide services to the Client and establishes the rights, obligations, responsibilities, and liabilities of both Parties.</p>
                 </div>
 
                 <div class="section">
-                    <h2>2. Scope of Work</h2>
+                    <h2>2. Purpose and Recitals</h2>
+                    <p>WHEREAS, the Provider is engaged in the business of providing professional services and possesses the necessary skills, expertise, qualifications, experience, resources, and capabilities to perform the services contemplated under this Agreement;</p>
+                    
+                    <p>WHEREAS, the Client desires to engage the Provider to provide certain professional services as described in this Agreement, and the Provider agrees to provide such services subject to the terms and conditions set forth herein;</p>
+                    
+                    <p>NOW, THEREFORE, in consideration of the mutual covenants, promises, representations, and undertakings contained herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties agree to enter into this Service Agreement upon the terms and conditions set forth below.</p>
+                </div>
+
+                <div class="section">
+                    <h2>3. Scope of Work and Service Description</h2>
+                    <p>The Provider agrees to perform and deliver the following services, work, deliverables, and professional assistance (collectively, the "Services") to the Client in a professional, timely, and workmanlike manner, in accordance with industry standards and best practices:</p>
+                    
+                    <p><strong>Detailed Service Description:</strong></p>
                     <p>${data.serviceDescription}</p>
+                    
+                    <p>The Provider shall perform the Services with due care, skill, and diligence, utilizing qualified personnel and appropriate resources. The Provider warrants that the Services shall be performed in a professional and competent manner, consistent with generally accepted industry standards and practices applicable to similar services. The Provider shall comply with all applicable laws, rules, regulations, and professional codes of conduct in performing the Services.</p>
+                    
+                    <p><strong>Scope Limitations:</strong> Any services, work, or deliverables not explicitly described in this Section shall be considered outside the scope of this Agreement and may be subject to additional charges and separate written agreement between the Parties. The Client acknowledges that changes to the scope of work may result in adjustments to timelines and compensation as mutually agreed.</p>
                 </div>
 
                 <div class="section">
-                    <h2>3. Timeline</h2>
-                    <p><strong>Start Date:</strong> ${new Date(data.startDate).toLocaleDateString('en-IN')}<br>
-                    <strong>Duration:</strong> ${data.duration}</p>
+                    <h2>4. Project Timeline and Milestones</h2>
+                    <p><strong>Commencement Date:</strong> The Provider shall commence performance of the Services on ${new Date(data.startDate).toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })} ("Start Date"), or such other date as may be mutually agreed upon in writing by the Parties.</p>
+                    
+                    <p><strong>Project Duration:</strong> The Provider shall complete and deliver all Services, deliverables, and work products within a period of ${data.duration} from the Start Date, unless otherwise extended by mutual written agreement or delayed due to Force Majeure events, Client-caused delays, or other circumstances beyond the reasonable control of the Provider.</p>
+                    
+                    <p><strong>Milestones and Deadlines:</strong> The Parties may establish specific milestones, intermediate deadlines, and progress checkpoints for the completion of phases or components of the Services. Time shall be of the essence for the performance of obligations under this Agreement, and both Parties agree to cooperate in good faith to adhere to agreed timelines.</p>
+                    
+                    <p><strong>Delays and Extensions:</strong> If either Party anticipates any delay in meeting the agreed timeline, such Party shall promptly notify the other Party in writing, stating the reasons for the delay and proposing a revised timeline. The Parties shall discuss and mutually agree upon any necessary extensions or adjustments to the timeline. Delays caused by the Client's failure to provide timely information, approvals, or cooperation shall entitle the Provider to a corresponding extension of time for performance.</p>
                 </div>
 
                 <div class="section">
-                    <h2>4. Deliverables</h2>
+                    <h2>5. Deliverables and Acceptance Criteria</h2>
+                    <p><strong>Specific Deliverables:</strong> The Provider shall deliver the following specific work products, materials, documents, or outputs ("Deliverables") to the Client as part of the Services:</p>
                     <p>${data.deliverables}</p>
+                    
+                    <p><strong>Delivery Method:</strong> Deliverables shall be delivered electronically via email, cloud storage, file transfer platforms, or other mutually agreed methods, unless physical delivery is specifically required and agreed upon. The Provider shall ensure that all Deliverables are complete, functional, and meet the specifications described in this Agreement.</p>
+                    
+                    <p><strong>Acceptance Process:</strong> Upon delivery of each Deliverable, the Client shall have a period of 7 (seven) business days ("Review Period") to review, test, and evaluate the Deliverable against the agreed specifications and acceptance criteria. The Client shall notify the Provider in writing of any defects, deficiencies, or non-conformities during the Review Period. If no written notice is provided within the Review Period, the Deliverable shall be deemed accepted.</p>
+                    
+                    <p><strong>Revisions and Corrections:</strong> If the Client identifies any legitimate defects or material non-conformities in a Deliverable during the Review Period, the Provider shall promptly correct such defects at no additional charge to the Client, provided that the defects result from the Provider's failure to meet the agreed specifications. Minor revisions and reasonable adjustments are included within the scope of this Agreement as specified in Section 7.</p>
                 </div>
 
                 <div class="section">
-                    <h2>5. Payment Terms</h2>
-                    <p><strong>Total Amount:</strong> ₹${parseFloat(data.totalAmount).toLocaleString('en-IN')}<br>
-                    <strong>Payment Schedule:</strong> ${data.paymentTerms}</p>
+                    <h2>6. Compensation and Payment Terms</h2>
+                    <p><strong>Total Compensation:</strong> In consideration for the Services and Deliverables provided under this Agreement, the Client shall pay the Provider a total fee of Indian Rupees ${parseFloat(data.totalAmount).toLocaleString('en-IN')} (₹${parseFloat(data.totalAmount).toLocaleString('en-IN')}) ("Total Fees"), exclusive of applicable taxes, duties, and government levies.</p>
+                    
+                    <p><strong>Payment Schedule:</strong> The Total Fees shall be paid according to the following payment schedule:</p>
+                    <p>${data.paymentTerms}</p>
+                    
+                    <p><strong>Payment Method and Instructions:</strong> All payments shall be made via bank transfer (NEFT/RTGS/IMPS), Unified Payments Interface (UPI), digital wallets, or other mutually agreed electronic payment methods to the bank account or payment details provided by the Provider. The Client shall make payments within 7 (seven) business days of receipt of a valid invoice from the Provider, unless otherwise specified in the payment schedule.</p>
+                    
+                    <p><strong>Invoicing:</strong> The Provider shall issue properly formatted invoices to the Client indicating the services performed, amount due, payment terms, applicable taxes (if any), GST details (if applicable), and payment instructions. Invoices shall comply with applicable Indian tax laws and regulations.</p>
+                    
+                    <p><strong>Late Payment:</strong> If the Client fails to make any payment when due, the outstanding amount shall accrue interest at the rate of 1.5% per month (18% per annum) or the maximum rate permitted by law, whichever is lower, from the due date until the date of actual payment. The Provider may suspend performance of Services or terminate this Agreement if payments are overdue by more than 15 (fifteen) days, without prejudice to the Provider's rights to recover the outstanding amounts and interest.</p>
+                    
+                    <p><strong>Taxes:</strong> Unless otherwise specified, the Total Fees are exclusive of all applicable taxes, including but not limited to Goods and Services Tax (GST), Tax Deducted at Source (TDS), service tax, and other levies imposed by central, state, or local governments. The Client shall be responsible for payment of all such taxes or shall reimburse the Provider for taxes paid by the Provider on behalf of the Client, as applicable under Indian tax laws.</p>
                 </div>
 
                 <div class="section">
-                    <h2>6. Payment Method</h2>
-                    <p>Payment shall be made via bank transfer, UPI, or other mutually agreed methods within 7 days of invoice issuance.</p>
+                    <h2>7. Revisions, Modifications, and Change Requests</h2>
+                    <p><strong>Included Revisions:</strong> The Services include up to 2 (two) rounds of reasonable revisions or modifications to the Deliverables based on the Client's feedback, provided that such revisions do not constitute a material change to the scope of work, specifications, or project requirements. These revisions are intended to allow for refinement and adjustment of Deliverables to meet the Client's reasonable expectations within the original scope.</p>
+                    
+                    <p><strong>Additional Revisions:</strong> Any revisions beyond the 2 (two) included rounds, or any modifications that constitute a change in scope, specifications, functionality, or requirements, shall be considered additional work and shall be charged at the rate of Indian Rupees ${Math.round(data.totalAmount * 0.1).toLocaleString('en-IN')} (₹${Math.round(data.totalAmount * 0.1).toLocaleString('en-IN')}) per additional revision round, or as otherwise mutually agreed in writing between the Parties.</p>
+                    
+                    <p><strong>Change Order Process:</strong> If the Client requests any changes, additions, deletions, or modifications to the scope of work, specifications, deliverables, or timeline after the commencement of Services ("Change Order"), the Provider shall assess the impact of such changes on the project timeline, resources, and costs. The Provider shall provide the Client with a written estimate of additional fees, time extensions, and any other implications of the proposed Change Order. Change Orders shall be effective only upon written acceptance and approval by both Parties.</p>
+                    
+                    <p><strong>Approval Required:</strong> The Client agrees that requesting revisions or changes does not automatically entitle the Client to unlimited modifications. The Provider reserves the right to decline unreasonable or excessive revision requests that fall outside the scope of this Agreement or that would require disproportionate effort or resources.</p>
                 </div>
 
                 <div class="section">
-                    <h2>7. Revisions</h2>
-                    <p>The service includes up to 2 rounds of revisions. Additional revisions will be charged at ₹${Math.round(data.totalAmount * 0.1)} per revision or as mutually agreed.</p>
+                    <h2>8. Intellectual Property Rights and Ownership</h2>
+                    <p><strong>Transfer of Rights:</strong> Upon receipt of full and final payment of all amounts due under this Agreement, all right, title, and interest in and to the Deliverables, including all intellectual property rights, copyrights, trademarks, patents, trade secrets, and proprietary rights (collectively, "Intellectual Property Rights"), shall automatically transfer and vest in the Client. The Provider hereby assigns, transfers, and conveys to the Client all such Intellectual Property Rights in the Deliverables.</p>
+                    
+                    <p><strong>Provider's Pre-Existing Materials:</strong> Notwithstanding the foregoing, the Provider retains all rights to any pre-existing intellectual property, tools, methodologies, templates, frameworks, software, code libraries, know-how, and materials that were developed by the Provider prior to this Agreement or independently of this engagement ("Pre-Existing Materials"). The Provider grants the Client a non-exclusive, perpetual, irrevocable, worldwide, royalty-free license to use such Pre-Existing Materials solely to the extent necessary to use and enjoy the Deliverables.</p>
+                    
+                    <p><strong>Third-Party Materials:</strong> If the Deliverables incorporate any third-party materials, content, software, or intellectual property, the Provider shall ensure that the Client receives appropriate licenses or permissions to use such third-party materials. The Provider represents and warrants that the use of the Deliverables by the Client will not infringe upon any third-party intellectual property rights.</p>
+                    
+                    <p><strong>Portfolio and Marketing Rights:</strong> The Provider retains the right to display, showcase, and reference the Deliverables, project description, and the Client's name in the Provider's portfolio, website, marketing materials, case studies, and promotional content for the purpose of demonstrating the Provider's capabilities and experience, unless the Client provides written notice objecting to such use due to confidentiality concerns. The Client may restrict such use by providing written notice to the Provider.</p>
+                    
+                    <p><strong>Moral Rights:</strong> To the extent permitted by applicable law, the Provider waives all moral rights, rights of attribution, and rights of integrity in the Deliverables in favor of the Client.</p>
                 </div>
 
                 <div class="section">
-                    <h2>8. Intellectual Property</h2>
-                    <p>Upon full payment, all intellectual property rights in the deliverables shall transfer to the Client. The Service Provider retains the right to showcase the work in their portfolio unless otherwise agreed.</p>
+                    <h2>9. Confidentiality and Non-Disclosure</h2>
+                    <p><strong>Confidential Information:</strong> Both Parties acknowledge that in the course of this engagement, they may have access to or become acquainted with confidential, proprietary, sensitive, or non-public information of the other Party, including but not limited to business plans, strategies, financial information, customer data, technical data, trade secrets, know-how, processes, designs, specifications, and other information that is marked as confidential or should reasonably be understood to be confidential ("Confidential Information").</p>
+                    
+                    <p><strong>Obligations:</strong> Each Party agrees to: (a) hold all Confidential Information of the other Party in strict confidence; (b) not disclose Confidential Information to any third party without the prior written consent of the disclosing Party; (c) use Confidential Information only for the purposes of performing obligations or exercising rights under this Agreement; (d) protect Confidential Information with the same degree of care used to protect its own confidential information, but in no event less than reasonable care; and (e) limit access to Confidential Information to employees, contractors, or agents who have a legitimate need to know and who are bound by confidentiality obligations at least as protective as those set forth herein.</p>
+                    
+                    <p><strong>Exceptions:</strong> Confidential Information does not include information that: (a) is or becomes publicly available through no breach of this Agreement by the receiving Party; (b) was rightfully in the possession of the receiving Party prior to disclosure by the disclosing Party; (c) is independently developed by the receiving Party without use of or reference to the Confidential Information; (d) is rightfully received by the receiving Party from a third party without breach of any confidentiality obligation; or (e) is required to be disclosed by law, regulation, court order, or legal process, provided that the receiving Party provides prompt notice to the disclosing Party and cooperates in any efforts to limit or protect such disclosure.</p>
+                    
+                    <p><strong>Survival:</strong> The confidentiality obligations under this Section shall survive the termination or expiration of this Agreement and shall continue for a period of 3 (three) years from the date of disclosure of the Confidential Information, or for such longer period as may be required by law or the nature of the information.</p>
+                    
+                    <p><strong>Data Protection:</strong> Both Parties agree to comply with all applicable data protection and privacy laws, including the Digital Personal Data Protection Act, 2023, Information Technology Act, 2000 (as amended), and related rules and regulations, in handling any personal data or sensitive personal data obtained or processed in connection with this Agreement.</p>
                 </div>
 
                 <div class="section">
-                    <h2>9. Confidentiality</h2>
-                    <p>Both parties agree to maintain confidentiality of all proprietary information shared during the course of this agreement.</p>
+                    <h2>10. Term and Termination</h2>
+                    <p><strong>Term:</strong> This Agreement shall commence on the Effective Date and shall continue in full force and effect until the completion and acceptance of all Services and Deliverables, or until earlier terminated in accordance with the provisions of this Section ("Term").</p>
+                    
+                    <p><strong>Termination for Convenience:</strong> Either Party may terminate this Agreement for any reason or for convenience by providing 7 (seven) calendar days' prior written notice to the other Party. Written notice may be provided via email to the other Party's designated contact person or representative.</p>
+                    
+                    <p><strong>Termination for Cause:</strong> Either Party may terminate this Agreement immediately upon written notice if the other Party: (a) materially breaches any provision of this Agreement and fails to cure such breach within 15 (fifteen) days after receiving written notice of the breach; (b) becomes insolvent, files for bankruptcy, or enters into liquidation or receivership; (c) ceases business operations; or (d) engages in fraudulent, illegal, or unethical conduct related to this Agreement.</p>
+                    
+                    <p><strong>Payment Upon Termination:</strong> In the event of termination of this Agreement by either Party, regardless of the reason:</p>
+                    <ul>
+                        <li>The Client shall pay the Provider for all Services performed, work completed, and Deliverables provided up to and including the effective date of termination, calculated on a pro-rata basis relative to the total scope of work and Total Fees;</li>
+                        <li>The Provider shall deliver to the Client all completed Deliverables, work-in-progress, materials, documents, and other work product created up to the termination date;</li>
+                        <li>The Client shall reimburse the Provider for any reasonable, documented, non-refundable expenses or third-party costs incurred by the Provider prior to the termination notice;</li>
+                        <li>All amounts due and payable as of the termination date shall become immediately due and payable.</li>
+                    </ul>
+                    
+                    <p><strong>Return of Materials:</strong> Upon termination, each Party shall promptly return or destroy (at the disclosing Party's option) all Confidential Information, documents, materials, and property belonging to the other Party, and shall provide written certification of such return or destruction if requested.</p>
+                    
+                    <p><strong>Survival:</strong> Termination of this Agreement shall not affect any rights, obligations, or liabilities of the Parties that accrued prior to termination. The provisions of this Agreement relating to payment, intellectual property, confidentiality, warranties, limitations of liability, indemnification, governing law, and dispute resolution shall survive termination or expiration of this Agreement.</p>
                 </div>
 
                 <div class="section">
-                    <h2>10. Termination</h2>
-                    <p>Either party may terminate this agreement with 7 days written notice. In case of termination, the Client shall pay for work completed up to the termination date on a pro-rata basis.</p>
+                    <h2>11. Warranties and Representations</h2>
+                    <p><strong>Provider's Warranties:</strong> The Provider represents, warrants, and covenants that:</p>
+                    <ul>
+                        <li>The Provider has the full right, power, and authority to enter into this Agreement and to perform the obligations hereunder;</li>
+                        <li>The Services shall be performed in a professional, competent, and workmanlike manner, consistent with industry standards and best practices;</li>
+                        <li>The Deliverables shall be the original work of the Provider and shall not infringe upon or violate any intellectual property rights, proprietary rights, or other rights of any third party;</li>
+                        <li>The Provider possesses the necessary skills, qualifications, experience, resources, licenses, and permits to perform the Services;</li>
+                        <li>The Provider shall comply with all applicable laws, regulations, and professional standards in performing the Services.</li>
+                    </ul>
+                    
+                    <p><strong>Client's Warranties:</strong> The Client represents, warrants, and covenants that:</p>
+                    <ul>
+                        <li>The Client has the full right, power, and authority to enter into this Agreement;</li>
+                        <li>All information, materials, content, and data provided by the Client to the Provider are accurate, complete, lawful, and do not infringe upon any third-party rights;</li>
+                        <li>The Client shall provide timely cooperation, information, approvals, and access necessary for the Provider to perform the Services;</li>
+                        <li>The Client has the authority to approve the Deliverables and make payment under this Agreement.</li>
+                    </ul>
+                    
+                    <p><strong>Disclaimer:</strong> EXCEPT AS EXPRESSLY PROVIDED IN THIS AGREEMENT, THE PROVIDER MAKES NO OTHER WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. THE SERVICES AND DELIVERABLES ARE PROVIDED "AS IS" EXCEPT AS MODIFIED BY THE EXPRESS WARRANTIES SET FORTH HEREIN.</p>
                 </div>
 
                 <div class="section">
-                    <h2>11. Liability</h2>
-                    <p>The Service Provider's liability is limited to the total amount paid under this agreement. The Service Provider is not liable for indirect, incidental, or consequential damages.</p>
+                    <h2>12. Limitation of Liability and Indemnification</h2>
+                    <p><strong>Limitation of Liability:</strong> Except in cases of gross negligence, willful misconduct, fraud, or intentional breach, the total aggregate liability of the Provider to the Client for any and all claims, damages, losses, liabilities, costs, and expenses arising out of or relating to this Agreement, whether based on contract, tort, negligence, strict liability, or any other legal theory, shall be limited to the total amount of fees actually paid by the Client to the Provider under this Agreement (i.e., ₹${parseFloat(data.totalAmount).toLocaleString('en-IN')}).</p>
+                    
+                    <p><strong>Exclusion of Consequential Damages:</strong> IN NO EVENT SHALL THE PROVIDER BE LIABLE TO THE CLIENT FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, LOSS OF REVENUE, LOSS OF DATA, LOSS OF BUSINESS OPPORTUNITIES, OR LOSS OF GOODWILL, WHETHER OR NOT THE PROVIDER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, AND REGARDLESS OF THE LEGAL THEORY UPON WHICH THE CLAIM IS BASED.</p>
+                    
+                    <p><strong>Provider's Indemnification:</strong> The Provider shall indemnify, defend, and hold harmless the Client from and against any and all third-party claims, demands, actions, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or resulting from: (a) any breach by the Provider of its representations, warranties, or obligations under this Agreement; (b) any infringement or alleged infringement of third-party intellectual property rights by the Deliverables; or (c) any negligent or willful acts or omissions of the Provider.</p>
+                    
+                    <p><strong>Client's Indemnification:</strong> The Client shall indemnify, defend, and hold harmless the Provider from and against any and all third-party claims, demands, actions, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or resulting from: (a) any breach by the Client of its representations, warranties, or obligations under this Agreement; (b) any use of the Deliverables by the Client in a manner not authorized by this Agreement or in violation of applicable laws; or (c) any infringing, unlawful, or unauthorized content or materials provided by the Client to the Provider.</p>
+                    
+                    <p><strong>Indemnification Procedure:</strong> The indemnified Party shall: (a) promptly notify the indemnifying Party in writing of any claim for which indemnification is sought; (b) cooperate with the indemnifying Party in the defense of such claim; and (c) allow the indemnifying Party to control the defense and settlement of the claim, provided that the indemnifying Party shall not settle any claim without the prior written consent of the indemnified Party if such settlement imposes any obligation, liability, or admission on the indemnified Party.</p>
                 </div>
 
                 <div class="section">
-                    <h2>12. Dispute Resolution</h2>
-                    <p>Any disputes arising from this agreement shall be resolved through good faith negotiation. If unresolved, the matter shall be subject to arbitration under the Arbitration and Conciliation Act, 1996, in accordance with Indian law.</p>
+                    <h2>13. Force Majeure</h2>
+                    <p>Neither Party shall be liable for any failure or delay in performing its obligations under this Agreement (except for payment obligations) to the extent that such failure or delay is caused by circumstances beyond the reasonable control of that Party, including but not limited to acts of God, natural disasters, earthquakes, floods, fires, epidemics, pandemics, war, terrorism, civil unrest, strikes, labor disputes, government actions, embargoes, power failures, telecommunications failures, internet disruptions, or similar events ("Force Majeure Event").</p>
+                    
+                    <p>The affected Party shall: (a) promptly notify the other Party in writing of the occurrence of the Force Majeure Event and its expected duration; (b) use commercially reasonable efforts to mitigate the effects of the Force Majeure Event and to resume performance as soon as practicable; and (c) provide periodic updates on the status and expected resolution of the Force Majeure Event.</p>
+                    
+                    <p>If a Force Majeure Event continues for more than 30 (thirty) consecutive days, either Party may terminate this Agreement upon written notice to the other Party, without liability for such termination, except that the Client shall remain obligated to pay for Services performed and expenses incurred prior to the termination.</p>
                 </div>
 
                 <div class="section">
-                    <h2>13. Governing Law</h2>
-                    <p>This agreement shall be governed by the laws of India.</p>
+                    <h2>14. Dispute Resolution and Arbitration</h2>
+                    <p><strong>Negotiation:</strong> In the event of any dispute, controversy, disagreement, or claim arising out of or relating to this Agreement, its interpretation, performance, breach, termination, or validity (collectively, "Dispute"), the Parties shall first attempt to resolve the Dispute amicably through good faith negotiation. Either Party may initiate negotiations by providing written notice to the other Party describing the Dispute in reasonable detail.</p>
+                    
+                    <p><strong>Mediation:</strong> If the Parties are unable to resolve the Dispute through negotiation within 15 (fifteen) days of the initial notice, the Parties may agree to submit the Dispute to non-binding mediation conducted by a mutually agreed neutral mediator. The costs of mediation shall be shared equally by the Parties.</p>
+                    
+                    <p><strong>Arbitration:</strong> If the Dispute is not resolved through negotiation or mediation within 30 (thirty) days of the initial notice, or if the Parties do not agree to mediation, the Dispute shall be finally resolved by binding arbitration in accordance with the provisions of the Arbitration and Conciliation Act, 1996, as amended, and the rules thereunder. The arbitration shall be conducted by a sole arbitrator mutually appointed by the Parties. If the Parties cannot agree on an arbitrator within 15 (fifteen) days, the arbitrator shall be appointed by the competent judicial authority.</p>
+                    
+                    <p><strong>Arbitration Procedure:</strong> The arbitration shall be conducted in the English language (or in Hindi, if both Parties agree). The seat and venue of arbitration shall be [City to be specified based on parties' agreement]. The arbitrator's decision shall be final and binding upon the Parties, and judgment upon the award may be entered in any court of competent jurisdiction. Each Party shall bear its own costs and expenses related to the arbitration, and the Parties shall share equally the fees and expenses of the arbitrator, unless the arbitrator decides otherwise.</p>
+                    
+                    <p><strong>Equitable Relief:</strong> Notwithstanding the foregoing, either Party may seek interim or injunctive relief from a court of competent jurisdiction to prevent irreparable harm, protect confidential information, or preserve the status quo pending resolution of a Dispute through arbitration.</p>
                 </div>
 
                 <div class="section">
-                    <h2>Signatures</h2>
-                    <p>_______________________<br>
-                    <strong>${data.providerName}</strong> (Service Provider)<br>
-                    Date: ___________</p>
-                    <br>
-                    <p>_______________________<br>
-                    <strong>${data.clientName}</strong> (Client)<br>
-                    Date: ___________</p>
+                    <h2>15. Governing Law and Jurisdiction</h2>
+                    <p>This Agreement shall be governed by, construed, and interpreted in accordance with the substantive laws of India, without regard to its conflict of laws principles. The Parties submit to the exclusive jurisdiction of the courts located in [City/State to be specified] for any matters not subject to arbitration, including enforcement of arbitration awards, interim relief, or matters falling outside the scope of the arbitration clause.</p>
+                    
+                    <p>The Parties agree that the United Nations Convention on Contracts for the International Sale of Goods (CISG) shall not apply to this Agreement.</p>
                 </div>
+
+                <div class="section">
+                    <h2>16. Miscellaneous Provisions</h2>
+                    <p><strong>Entire Agreement:</strong> This Agreement, together with any exhibits, schedules, or attachments referenced herein, constitutes the entire agreement and understanding between the Parties with respect to the subject matter hereof and supersedes all prior negotiations, discussions, representations, agreements, or understandings, whether written or oral, relating to such subject matter.</p>
+                    
+                    <p><strong>Amendments:</strong> No amendment, modification, or waiver of any provision of this Agreement shall be effective unless made in writing and signed by authorized representatives of both Parties. Any purported amendment or modification not made in accordance with this provision shall be null and void.</p>
+                    
+                    <p><strong>Severability:</strong> If any provision of this Agreement is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, such provision shall be severed from this Agreement, and the remaining provisions shall continue in full force and effect to the maximum extent permitted by law. The Parties shall negotiate in good faith to replace any invalid provision with a valid provision that most closely approximates the intent and economic effect of the invalid provision.</p>
+                    
+                    <p><strong>Waiver:</strong> No failure or delay by either Party in exercising any right, power, or remedy under this Agreement shall operate as a waiver of such right, power, or remedy. No single or partial exercise of any right, power, or remedy shall preclude any other or further exercise thereof or the exercise of any other right, power, or remedy. Any waiver must be in writing and signed by the Party granting the waiver.</p>
+                    
+                    <p><strong>Assignment:</strong> Neither Party may assign, transfer, delegate, or otherwise dispose of this Agreement or any of its rights or obligations hereunder without the prior written consent of the other Party, except that either Party may assign this Agreement to a successor in connection with a merger, acquisition, or sale of substantially all of its assets, provided that the successor assumes all obligations under this Agreement.</p>
+                    
+                    <p><strong>Notices:</strong> All notices, requests, demands, and other communications required or permitted under this Agreement shall be in writing and shall be deemed to have been duly given: (a) upon personal delivery; (b) upon confirmation of receipt if sent by email; (c) one business day after being sent by reputable overnight courier service; or (d) three business days after being mailed by certified or registered mail, return receipt requested, postage prepaid. Notices shall be sent to the addresses or email contacts provided by the Parties.</p>
+                    
+                    <p><strong>Independent Contractor:</strong> The Provider is an independent contractor and not an employee, agent, partner, or joint venturer of the Client. The Provider shall be solely responsible for all taxes, insurance, benefits, and other obligations related to its performance under this Agreement. Nothing in this Agreement shall create an employment, agency, partnership, or joint venture relationship between the Parties.</p>
+                    
+                    <p><strong>Counterparts:</strong> This Agreement may be executed in counterparts, each of which shall be deemed an original, and all of which together shall constitute one and the same instrument. Electronic signatures and scanned signatures shall have the same legal effect as original signatures.</p>
+                </div>
+
+                <div class="section">
+                    <h2>17. Acknowledgment and Signatures</h2>
+                    <p>By executing this Agreement, the Parties acknowledge that they have read, understood, and agree to be bound by all terms and conditions set forth herein. Each Party represents that it has the authority to enter into this Agreement and that the individual signing on behalf of each Party has been duly authorized to do so.</p>
+                    
+                    <div style="margin-top: 50px;">
+                        <div style="display: inline-block; width: 45%; vertical-align: top;">
+                            <p><strong>SERVICE PROVIDER</strong></p>
+                            <p>Signature: _______________________</p>
+                            <p>Name: ${data.providerName}</p>
+                            <p>Date: ___________</p>
+                            <p>Place: ___________</p>
+                        </div>
+                        <div style="display: inline-block; width: 45%; vertical-align: top; margin-left: 5%;">
+                            <p><strong>CLIENT</strong></p>
+                            <p>Signature: _______________________</p>
+                            <p>Name: ${data.clientName}</p>
+                            <p>Date: ___________</p>
+                            <p>Place: ___________</p>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 30px;"><strong>Witness 1:</strong></p>
+                    <p>Signature: _______________________</p>
+                    <p>Name: _______________________</p>
+                    <p>Date: ___________</p>
+                    
+                    <p style="margin-top: 20px;"><strong>Witness 2:</strong></p>
+                    <p>Signature: _______________________</p>
+                    <p>Name: _______________________</p>
+                    <p>Date: ___________</p>
+                </div>
+                
+                <div class="section" style="margin-top: 40px; padding: 15px; background: #fef3c7; border-left: 4px solid #f59e0b;">
+                    <p style="font-size: 9pt; margin: 0;"><strong>⚖️ Legal Disclaimer:</strong> This Service Agreement template is provided for general informational and educational purposes only. It is automatically generated by ShramKavach and is not a substitute for professional legal advice. Laws and regulations vary by jurisdiction, and specific circumstances may require customization or additional clauses. We strongly recommend that you consult with a qualified attorney or legal professional before using this document to ensure it complies with applicable laws and adequately protects your interests. ShramKavach and its affiliates assume no liability for any legal consequences arising from the use of this template.</p>
+                </div>
+            `;
             `;
             this.downloadAsPDF(content, `Service_Contract_${data.clientName.replace(/\s+/g, '_')}.pdf`);
         });
