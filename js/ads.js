@@ -1,9 +1,8 @@
 // Google AdSense Integration for ShramKavach
-// Replace 'ca-pub-XXXXXXXXXXXXXXXX' with your actual AdSense publisher ID
+// AdSense Publisher ID: ca-pub-2868999138532322
 
 // AdSense Auto Ads (Recommended for beginners)
 (function() {
-    // TODO: Replace with your AdSense publisher ID after approval
     const ADSENSE_ID = 'ca-pub-2868999138532322';
     
     if (ADSENSE_ID !== 'ca-pub-XXXXXXXXXXXXXXXX') {
