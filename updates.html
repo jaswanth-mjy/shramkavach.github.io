@@ -30,6 +30,7 @@
          crossorigin="anonymous"></script>
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- i18n Translation System -->
@@ -57,6 +58,25 @@
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.7; }
+        }
+        
+        .chart-container { 
+            position: relative; 
+            width: 100%; 
+            max-width: 500px; 
+            margin-left: auto; 
+            margin-right: auto; 
+            height: 300px; 
+        }
+        
+        @media (max-width: 768px) {
+            .chart-container { height: 250px; }
+        }
+        
+        .gradient-text { 
+            background: linear-gradient(to right, #0891b2, #2563eb); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
         }
     </style>
 </head>
@@ -197,6 +217,173 @@
 
         <!-- Updates Grid -->
         <div class="grid md:grid-cols-2 gap-6 mb-12" id="updatesGrid">
+            
+            <!-- FEATURED: Financial Calculators Deep Dive (Full Width) -->
+            <div class="md:col-span-2 update-card bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50 rounded-2xl shadow-2xl p-8 border-2 border-cyan-300" data-category="tax benefits">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex items-center gap-3">
+                        <span class="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-4 py-1.5 rounded-full text-xs font-bold badge-new">FEATURED GUIDE</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-bold">📊 DATA INSIGHTS</span>
+                    </div>
+                    <span class="text-sm text-gray-600">Dec 26, 2025</span>
+                </div>
+                
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">🧮</div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+                        <span class="gradient-text">Master Your Money with Financial Calculators</span>
+                    </h2>
+                    <p class="text-lg text-gray-700 max-w-4xl mx-auto">
+                        In 2025's volatile economy, financial precision is not optional—it's survival. Discover how SIP, EMI, Tax, and EPF calculators can transform your wealth trajectory with data-backed insights.
+                    </p>
+                </div>
+
+                <!-- Key Stats Row -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-white rounded-lg p-4 text-center shadow-md">
+                        <div class="text-2xl font-bold text-cyan-600">₹1.76 Cr</div>
+                        <div class="text-xs text-gray-600 mt-1">SIP Growth (30yr)</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 text-center shadow-md">
+                        <div class="text-2xl font-bold text-orange-600">58%</div>
+                        <div class="text-xs text-gray-600 mt-1">Interest on Loan</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 text-center shadow-md">
+                        <div class="text-2xl font-bold text-green-600">8.25%</div>
+                        <div class="text-xs text-gray-600 mt-1">EPF Rate 2025</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 text-center shadow-md">
+                        <div class="text-2xl font-bold text-purple-600">₹12.75L</div>
+                        <div class="text-xs text-gray-600 mt-1">Tax-Free Income</div>
+                    </div>
+                </div>
+
+                <!-- Interactive Visualization Section -->
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <!-- SIP Compounding Chart -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
+                            <span class="text-2xl">📈</span> Power of Compounding: SIP vs Cash
+                        </h3>
+                        <div class="chart-container">
+                            <canvas id="sipCompareChart"></canvas>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4 text-center">₹5,000/month investment @ 12% return over 30 years</p>
+                    </div>
+
+                    <!-- EMI Interest Breakdown -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
+                            <span class="text-2xl">🏠</span> Home Loan Reality Check
+                        </h3>
+                        <div class="chart-container">
+                            <canvas id="emiBreakdownChart"></canvas>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4 text-center">₹50L loan @ 9% for 20 years = ₹1.08 Cr total payment</p>
+                    </div>
+                </div>
+
+                <!-- Key Insights Section -->
+                <div class="grid md:grid-cols-3 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-cyan-500 to-blue-600 text-white rounded-lg p-5 shadow-lg">
+                        <div class="text-3xl mb-2">⚡</div>
+                        <h4 class="font-bold text-sm mb-2">Inflation Alert</h4>
+                        <p class="text-xs opacity-90">CPI at 3.34% in 2025. Static savings lose 6% purchasing power annually. Active investment is mandatory.</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-orange-500 to-red-600 text-white rounded-lg p-5 shadow-lg">
+                        <div class="text-3xl mb-2">💰</div>
+                        <h4 class="font-bold text-sm mb-2">Loan Cost Reality</h4>
+                        <p class="text-xs opacity-90">First-year EMIs are 75-80% interest. Prepayment strategy can save lakhs and cut tenure by 40%.</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-500 to-indigo-600 text-white rounded-lg p-5 shadow-lg">
+                        <div class="text-3xl mb-2">🎯</div>
+                        <h4 class="font-bold text-sm mb-2">New Tax Regime</h4>
+                        <p class="text-xs opacity-90">Income up to ₹12.75L tax-free with ₹75K standard deduction. Use tax calculators to compare regimes.</p>
+                    </div>
+                </div>
+
+                <!-- Calculator Types Overview -->
+                <div class="bg-white rounded-xl p-6 shadow-lg mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Essential Calculator Suite for 2025</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="border-l-4 border-cyan-500 pl-4 py-2">
+                            <h4 class="font-bold text-gray-800 text-sm mb-1">💼 Investment Calculators</h4>
+                            <p class="text-xs text-gray-600">SIP, Lumpsum, PPF, SSY (8.2% rate), NPS Pension, Retirement Corpus</p>
+                        </div>
+                        <div class="border-l-4 border-orange-500 pl-4 py-2">
+                            <h4 class="font-bold text-gray-800 text-sm mb-1">🏦 Loan & EMI Tools</h4>
+                            <p class="text-xs text-gray-600">Home Loan (7.1%), Car Loan, Personal Loan, Prepayment Impact, Refinance Analysis</p>
+                        </div>
+                        <div class="border-l-4 border-green-500 pl-4 py-2">
+                            <h4 class="font-bold text-gray-800 text-sm mb-1">💸 Tax Calculators</h4>
+                            <p class="text-xs text-gray-600">Old vs New Regime, Marginal Relief, TDS, HRA, Section 80C, Capital Gains</p>
+                        </div>
+                        <div class="border-l-4 border-purple-500 pl-4 py-2">
+                            <h4 class="font-bold text-gray-800 text-sm mb-1">🛡️ Social Security</h4>
+                            <p class="text-xs text-gray-600">EPF (8.25%), Gratuity (1-yr rule), Pension, E-Shram Benefits, Minimum Wage</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Policy Updates Integrated -->
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-5 mb-6">
+                    <div class="flex items-start gap-3">
+                        <div class="text-2xl">⚖️</div>
+                        <div>
+                            <h4 class="font-bold text-yellow-900 text-sm mb-2">2025 Policy Changes Affecting Calculations</h4>
+                            <ul class="text-xs text-yellow-800 space-y-1.5">
+                                <li><strong>• GDP Growth:</strong> 6.7-6.9% projected for FY 2025-26 (Deloitte)</li>
+                                <li><strong>• Repo Rate:</strong> Cut to 5.25% by RBI, reducing home loan rates to 7.1%</li>
+                                <li><strong>• New Tax:</strong> ₹12.75L tax-free income with marginal relief mechanism</li>
+                                <li><strong>• Gratuity:</strong> 1-year eligibility for fixed-term employees (Code on Social Security 2020)</li>
+                                <li><strong>• EPF Rate:</strong> 8.25% for FY 2024-25, beating inflation by 4.91%</li>
+                                <li><strong>• SSY Rate:</strong> 8.2% for girl child savings (Q4 2025)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Action Points -->
+                <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl p-6 mb-6">
+                    <h4 class="font-bold text-lg mb-4">🎯 Strategic Actions for ShramKavach Users</h4>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                        <div class="flex items-start gap-2">
+                            <span class="text-lg">✅</span>
+                            <div>
+                                <strong>Lock High Rates:</strong> Maximize SSY (8.2%), EPF (8.25%) before Q1 2026 rate revision
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="text-lg">✅</span>
+                            <div>
+                                <strong>Refinance Debt:</strong> Home loans >8.5% should refinance at 7.1%; break-even <12 months
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="text-lg">✅</span>
+                            <div>
+                                <strong>Tax Optimization:</strong> Use calculators to choose regime; New Regime best for <₹15L income
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="text-lg">✅</span>
+                            <div>
+                                <strong>Claim Gratuity:</strong> Fixed-term/gig workers: Document 1+ year tenure for new benefits
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="text-center">
+                    <a href="calculators.html" class="inline-block bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+                        🧮 Access All Financial Calculators →
+                    </a>
+                    <p class="text-xs text-gray-600 mt-4">
+                        Free, instant, zero data storage • Updated with latest rates & policies
+                    </p>
+                </div>
+            </div>
             
             <!-- Update 1: Social Security -->
             <div class="update-card bg-white rounded-2xl shadow-lg p-6 border-2 border-blue-200" data-category="labour benefits" id="social-security">
@@ -547,6 +734,105 @@
     <script src="js/share.js"></script>
     <script src="js/translations.js"></script>
     <script src="js/common.js"></script>
+    
+    <!-- Chart.js Initialization for Financial Calculators Guide -->
+    <script>
+        // SIP vs Cash Comparison Chart
+        const ctxSIP = document.getElementById('sipCompareChart');
+        if (ctxSIP) {
+            new Chart(ctxSIP.getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: ['0yr', '5yr', '10yr', '15yr', '20yr', '25yr', '30yr'],
+                    datasets: [
+                        {
+                            label: 'SIP @ 12%',
+                            data: [0, 4.08, 11.6, 25.2, 49.9, 94.8, 176],
+                            borderColor: '#0891b2',
+                            backgroundColor: 'rgba(8, 145, 178, 0.1)',
+                            borderWidth: 3,
+                            tension: 0.4,
+                            fill: true,
+                            pointRadius: 4,
+                            pointHoverRadius: 6
+                        },
+                        {
+                            label: 'Cash Savings',
+                            data: [0, 3, 6, 9, 12, 15, 18],
+                            borderColor: '#94a3b8',
+                            borderDash: [5, 5],
+                            borderWidth: 2,
+                            tension: 0,
+                            fill: false,
+                            pointRadius: 3
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { font: { size: 10 } } },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ₹' + context.parsed.y + 'L';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) { return '₹' + value + 'L'; },
+                                font: { size: 9 }
+                            }
+                        },
+                        x: {
+                            ticks: { font: { size: 9 } }
+                        }
+                    }
+                }
+            });
+        }
+
+        // EMI Interest Breakdown Chart
+        const ctxEMI = document.getElementById('emiBreakdownChart');
+        if (ctxEMI) {
+            new Chart(ctxEMI.getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Principal', 'Interest Paid'],
+                    datasets: [{
+                        data: [50, 58],
+                        backgroundColor: ['#06b6d4', '#f97316'],
+                        borderWidth: 0,
+                        hoverOffset: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '65%',
+                    plugins: {
+                        legend: { 
+                            position: 'bottom',
+                            labels: { font: { size: 10 } }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ₹' + context.parsed + 'L';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+    
     <script>
         // Filter functionality
         document.querySelectorAll('.filter-tag').forEach(button => {
