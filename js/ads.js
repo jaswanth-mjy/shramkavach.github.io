@@ -1,7 +1,9 @@
 // Google AdSense Integration for ShramKavach
 // AdSense Publisher ID: ca-pub-2868999138532322
+// DISABLED until approval - uncomment below code after approval
 
 // AdSense Auto Ads (Recommended for beginners)
+/*
 (function() {
     const ADSENSE_ID = 'ca-pub-2868999138532322';
     
@@ -13,8 +15,10 @@
         document.head.appendChild(script);
     }
 })();
+*/
 
 // Manual Ad Initialization (for specific ad slots)
+/*
 function initializeAds() {
     if (typeof adsbygoogle === 'undefined') {
         console.log('⚠️ AdSense not loaded yet. Add your publisher ID in ads.js');
@@ -36,5 +40,6 @@ if (document.readyState === 'loading') {
 } else {
     initializeAds();
 }
+*/
 
-console.log('💰 AdSense module loaded. Update ADSENSE_ID in ads.js after approval.');
+console.log('💰 AdSense disabled until approval. Uncomment code in ads.js after approval.');
