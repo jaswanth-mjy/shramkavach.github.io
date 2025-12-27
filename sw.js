@@ -207,25 +207,3 @@ self.addEventListener('fetch', (event) => {
   // Default: Network only for everything else
   event.respondWith(fetch(request));
 });
-
-        return fetch(fetchRequest).then((response) => {
-          if (!response || response.status !== 200 || response.type !== 'basic') {
-            return response;
-          }
-
-          const responseToCache = response.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(request, responseToCache);
-          });
-
-          return response;
-        }).catch(() => {
-          return new Response('Offline - Please check your connection', {
-            status: 503,
-            statusText: 'Service Unavailable',
-            headers: new Headers({ 'Content-Type': 'text/plain' })
-          });
-        });
-      })
-  );
-});
