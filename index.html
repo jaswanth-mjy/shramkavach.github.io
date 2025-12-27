@@ -181,6 +181,10 @@
          crossorigin="anonymous"></script>
     
     <!-- Tailwind CSS CDN -->
+    <script>
+        // Suppress Tailwind CDN production warning
+        window.tailwindConfig = { corePlugins: { preflight: true } };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Fonts -->
