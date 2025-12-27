@@ -2879,28 +2879,6 @@
     </script>
     
     <script>
-        // Share individual news card
-        function shareNewsCard(button, title, anchor) {
-            const url = 'https://shramkavach.com/updates.html#' + anchor;
-            
-            // Copy to clipboard
-            navigator.clipboard.writeText(url).then(function() {
-                // Visual feedback
-                const originalHTML = button.innerHTML;
-                button.innerHTML = '<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>';
-                button.classList.add('text-green-600');
-                
-                setTimeout(() => {
-                    button.innerHTML = originalHTML;
-                    button.classList.remove('text-green-600');
-                }, 2000);
-            }).catch(function() {
-                alert('Link copied: ' + url);
-            });
-        }
-    </script>
-    
-    <script>
         // News Accordion Functionality - Open one, close others
         document.addEventListener('DOMContentLoaded', function() {
             const newsCards = document.querySelectorAll('.news-card');
@@ -2973,7 +2951,5 @@
             });
         });
     </script>
-    
-    <script src="js/common.js"></script>
 </body>
 </html>

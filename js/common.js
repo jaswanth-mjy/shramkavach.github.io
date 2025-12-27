@@ -5,7 +5,7 @@
 
 // Use translations from i18n.js (already declared there)
 // let translations = {}; // REMOVED - using global from i18n.js
-let currentLanguage = 'en';
+var currentLanguage = currentLanguage || 'en'; // Use var to avoid re-declaration errors
 
 // Initialize language system (delegate to i18n.js)
 document.addEventListener('DOMContentLoaded', function() {
