@@ -3,66 +3,73 @@
 ## Overview
 Created standalone article pages for better SEO and backlinking opportunities while maintaining an aggregated updates page for user convenience.
 
-## All Standalone Article Pages
+## ✅ Complete - All 11 Standalone Article Pages Live and Indexed
 
 ### 1. year-end-2025.html - Year-End Tax Action Plan
    - **URL:** https://shramkavach.com/year-end-2025.html
    - **Topic:** Last 5 days tax savings, EPF claims, gratuity applications, insurance
    - **Target Keywords:** year end tax planning, gig worker tax savings, December tax deadline
-   - **Canonical:** Self-referencing
+   - **Status:** ✅ Live
    
 ### 2. freelancer-tax-2025.html - Freelancer Tax Guide 2025
    - **URL:** https://shramkavach.com/freelancer-tax-2025.html
    - **Topic:** Section 44ADA, presumptive taxation, penalty calculator, advance tax
    - **Target Keywords:** Section 44ADA, freelancer tax, presumptive taxation, ITR-4 filing
-   - **Canonical:** Self-referencing
+   - **Status:** ✅ Live
 
 ### 3. financial-calculators-2025.html - Financial Calculators Guide
    - **URL:** https://shramkavach.com/financial-calculators-2025.html
    - **Topic:** SIP, EMI, Tax, EPF calculators with 2025 policy updates
    - **Target Keywords:** SIP calculator, EMI calculator, tax calculator, financial planning
-   - **Canonical:** Self-referencing
+   - **Status:** ✅ Live
 
-### 4. social-security-2025.html - Gig Worker Social Security ✅
+### 4. social-security-2025.html - Gig Worker Social Security
    - **URL:** https://shramkavach.com/social-security-2025.html
    - **Topic:** ESIC registration, platform workers, SPREE 2025, UAN benefits
    - **Target Keywords:** gig worker social security, ESIC registration, platform workers India
-   - **Canonical:** Self-referencing
+   - **Status:** ✅ Live
 
-### 5. gratuity-rule-2025.html - 1-Year Gratuity Rule ✅
+### 5. gratuity-rule-2025.html - 1-Year Gratuity Rule
    - **URL:** https://shramkavach.com/gratuity-rule-2025.html
    - **Topic:** New gratuity eligibility, calculation formula, claim process
    - **Target Keywords:** gratuity calculator, 1 year gratuity, fixed term employee gratuity
-   - **Canonical:** Self-referencing
+   - **Status:** ✅ Live
 
-### SEO Features (Both Pages)
-- ✅ Complete meta descriptions with keywords
-- ✅ Article schema markup (JSON-LD) with publisher, author, dates
-- ✅ Breadcrumb schema for navigation
-- ✅ Open Graph tags for social sharing
-- ✅ Twitter Card meta tags
-- ✅ Canonical URLs
-- ✅ Mobile-responsive design
-- ✅ Share functionality (native API + WhatsApp)
-- ✅ Related articles sidebar for internal linking
-- ✅ Print functionality
-- ✅ Chart.js visualizations (3 charts each)
+### 6. platform-fees-2025.html - Platform Fee Cap 2026
+   - **URL:** https://shramkavach.com/platform-fees-2025.html
+   - **Topic:** 20-25% commission cap, transparent billing, weekly payments
+   - **Target Keywords:** platform fee cap, commission limit, delivery partner rights, Zomato Swiggy commission
+   - **Status:** ✅ Live
 
-### Sitemap Updates
-Added both articles to sitemap.xml:
-- Priority: 0.9 (high)
-- Change frequency: monthly
-- Last modified: 2025-12-28
-- Auto-updated daily via GitHub Actions workflow
+### 7. section-44ada-2025.html - Section 44ADA Presumptive Tax
+   - **URL:** https://shramkavach.com/section-44ada-2025.html
+   - **Topic:** 50% automatic deduction, ITR-4 filing, eligibility criteria
+   - **Target Keywords:** Section 44ADA, presumptive taxation, 50% deduction, freelancer tax benefits
+   - **Status:** ✅ Live
 
-### Updates Page Integration
-- Both articles remain on updates.html as content cards
-- Added "Full Article →" links to standalone versions
-- Share buttons updated to share standalone URLs
-- Users can:
-  - Read summary on updates page
-  - Click "Read More" to expand on updates page
-  - Click "Full Article" to visit standalone page
+### 8. epfo-gig-workers-2025.html - EPFO Voluntary Scheme
+   - **URL:** https://shramkavach.com/epfo-gig-workers-2025.html
+   - **Topic:** Voluntary PF for gig workers, 8.25% interest, pension scheme
+   - **Target Keywords:** EPFO gig workers, voluntary PF, platform workers benefits, EPF for freelancers
+   - **Status:** ✅ Live
+
+### 9. minimum-wage-2025.html - Minimum Wage Guarantee Proposal
+   - **URL:** https://shramkavach.com/minimum-wage-2025.html
+   - **Topic:** Hourly wage floors, sector-wise rates, platform worker rights
+   - **Target Keywords:** minimum wage gig workers, hourly wage guarantee, platform worker salary
+   - **Status:** ✅ Live
+
+### 10. health-insurance-2025.html - Mandatory Health Insurance
+   - **URL:** https://shramkavach.com/health-insurance-2025.html
+   - **Topic:** ₹5L health coverage, accidental insurance, platform obligations
+   - **Target Keywords:** gig worker health insurance, platform worker benefits, ₹5 lakh coverage
+   - **Status:** ✅ Live
+
+### 11. gst-threshold-2025.html - GST Threshold Increase
+   - **URL:** https://shramkavach.com/gst-threshold-2025.html
+   - **Topic:** ₹40 lakh threshold, state-wise limits, voluntary registration
+   - **Target Keywords:** GST threshold 2026, ₹40 lakh limit, small business GST exemption
+   - **Status:** ✅ Live
 
 ## Backlinking Strategy
 
