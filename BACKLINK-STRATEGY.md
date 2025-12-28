@@ -3,18 +3,37 @@
 ## Overview
 Created standalone article pages for better SEO and backlinking opportunities while maintaining an aggregated updates page for user convenience.
 
-## Implementation
+## All Standalone Article Pages
 
-### Standalone Article Pages
-1. **year-end-2025.html** - Year-End Tax Action Plan for Gig Workers
-   - URL: https://shramkavach.com/year-end-2025.html
-   - Topic: Last 5 days tax savings, EPF claims, gratuity applications
-   - Canonical: Self-referencing
+### 1. year-end-2025.html - Year-End Tax Action Plan
+   - **URL:** https://shramkavach.com/year-end-2025.html
+   - **Topic:** Last 5 days tax savings, EPF claims, gratuity applications, insurance
+   - **Target Keywords:** year end tax planning, gig worker tax savings, December tax deadline
+   - **Canonical:** Self-referencing
    
-2. **freelancer-tax-2025.html** - Freelancer Tax Guide 2025
-   - URL: https://shramkavach.com/freelancer-tax-2025.html
-   - Topic: Section 44ADA, presumptive taxation, penalty calculator
-   - Canonical: Self-referencing
+### 2. freelancer-tax-2025.html - Freelancer Tax Guide 2025
+   - **URL:** https://shramkavach.com/freelancer-tax-2025.html
+   - **Topic:** Section 44ADA, presumptive taxation, penalty calculator, advance tax
+   - **Target Keywords:** Section 44ADA, freelancer tax, presumptive taxation, ITR-4 filing
+   - **Canonical:** Self-referencing
+
+### 3. financial-calculators-2025.html - Financial Calculators Guide
+   - **URL:** https://shramkavach.com/financial-calculators-2025.html
+   - **Topic:** SIP, EMI, Tax, EPF calculators with 2025 policy updates
+   - **Target Keywords:** SIP calculator, EMI calculator, tax calculator, financial planning
+   - **Canonical:** Self-referencing
+
+### 4. social-security-2025.html - Gig Worker Social Security **(To be created)**
+   - **URL:** https://shramkavach.com/social-security-2025.html
+   - **Topic:** ESIC registration, platform workers, SPREE 2025, UAN benefits
+   - **Target Keywords:** gig worker social security, ESIC registration, platform workers India
+   - **Canonical:** Self-referencing
+
+### 5. gratuity-rule-2025.html - 1-Year Gratuity Rule **(To be created)**
+   - **URL:** https://shramkavach.com/gratuity-rule-2025.html
+   - **Topic:** New gratuity eligibility, calculation formula, claim process
+   - **Target Keywords:** gratuity calculator, 1 year gratuity, fixed term employee gratuity
+   - **Canonical:** Self-referencing
 
 ### SEO Features (Both Pages)
 - ✅ Complete meta descriptions with keywords
@@ -201,5 +220,16 @@ Added both articles to sitemap.xml:
 ---
 
 **Last Updated:** December 28, 2025  
-**Status:** ✅ Active - Both articles live and indexed  
-**Next Review:** January 15, 2026
+**Status:** 🟡 In Progress - 3 of 5 articles completed
+**Completed:**
+- ✅ year-end-2025.html
+- ✅ freelancer-tax-2025.html  
+- ✅ financial-calculators-2025.html
+- ✅ Sitemap updated with all 5 URLs
+- ✅ Full Article links added to updates page
+
+**Pending:**
+- ⏳ social-security-2025.html (HTML file creation)
+- ⏳ gratuity-rule-2025.html (HTML file creation)
+
+**Next Review:** January 5, 2026
