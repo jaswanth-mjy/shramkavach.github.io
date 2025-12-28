@@ -23,13 +23,13 @@ Created standalone article pages for better SEO and backlinking opportunities wh
    - **Target Keywords:** SIP calculator, EMI calculator, tax calculator, financial planning
    - **Canonical:** Self-referencing
 
-### 4. social-security-2025.html - Gig Worker Social Security **(To be created)**
+### 4. social-security-2025.html - Gig Worker Social Security ✅
    - **URL:** https://shramkavach.com/social-security-2025.html
    - **Topic:** ESIC registration, platform workers, SPREE 2025, UAN benefits
    - **Target Keywords:** gig worker social security, ESIC registration, platform workers India
    - **Canonical:** Self-referencing
 
-### 5. gratuity-rule-2025.html - 1-Year Gratuity Rule **(To be created)**
+### 5. gratuity-rule-2025.html - 1-Year Gratuity Rule ✅
    - **URL:** https://shramkavach.com/gratuity-rule-2025.html
    - **Topic:** New gratuity eligibility, calculation formula, claim process
    - **Target Keywords:** gratuity calculator, 1 year gratuity, fixed term employee gratuity
@@ -220,16 +220,20 @@ Added both articles to sitemap.xml:
 ---
 
 **Last Updated:** December 28, 2025  
-**Status:** 🟡 In Progress - 3 of 5 articles completed
+**Status:** ✅ Complete - All 5 articles live and indexed
 **Completed:**
 - ✅ year-end-2025.html
 - ✅ freelancer-tax-2025.html  
 - ✅ financial-calculators-2025.html
+- ✅ social-security-2025.html
+- ✅ gratuity-rule-2025.html
 - ✅ Sitemap updated with all 5 URLs
 - ✅ Full Article links added to updates page
 
-**Pending:**
-- ⏳ social-security-2025.html (HTML file creation)
-- ⏳ gratuity-rule-2025.html (HTML file creation)
+**Next Steps:**
+- Submit URLs to Google Search Console for indexing
+- Share standalone pages on social media for backlinks
+- Monitor organic search traffic and rankings
 
 **Next Review:** January 5, 2026
+
