@@ -12,6 +12,8 @@
         <priority>1.0</priority>
     </url>
     
+    <!-- Note: Additional 250+ tools available at https://scribbletools.shramkavach.com (separate sitemap) -->
+    
     <!-- Main Pages -->
     <url>
         <loc>https://shramkavach.com/calculators.html</loc>
