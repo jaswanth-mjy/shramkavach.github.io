@@ -12,7 +12,15 @@
         <priority>1.0</priority>
     </url>
     
-    <!-- Note: Additional 250+ tools available at https://scribbletools.shramkavach.com (separate sitemap) -->
+    <!-- ScribbleTools Subdomain -->
+    <url>
+        <loc>https://scribbletools.shramkavach.com/</loc>
+        <lastmod>2025-12-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Note: Additional 250+ tools available at https://scribbletools.shramkavach.com (separate sitemap at https://scribbletools.shramkavach.com/sitemap.xml) -->
     
     <!-- Main Pages -->
     <url>
