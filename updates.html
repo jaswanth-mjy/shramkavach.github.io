@@ -2668,6 +2668,23 @@
                 });
             });
         });
+
+        // Auto-update current date in header
+        function updateCurrentDate() {
+            const dateElement = document.querySelector('.hidden.md\\:inline.text-gray-300');
+            if (dateElement) {
+                const now = new Date();
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                const formattedDate = now.toLocaleDateString('en-US', options);
+                dateElement.textContent = formattedDate;
+            }
+        }
+
+        // Update date on page load
+        updateCurrentDate();
+
+        // Optional: Update date every hour if page stays open
+        setInterval(updateCurrentDate, 3600000);
     </script>
 </body>
 </html>
