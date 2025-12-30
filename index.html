@@ -198,6 +198,9 @@
     <!-- Prompt Counter -->
     <script src="js/prompt-counter.js" defer></script>
     
+    <!-- ScribbleTools Notification System with Error Logging -->
+    <script src="js/scribbletools-notification.js" defer></script>
+    
     <!-- Google AdSense (TODO: Add your publisher ID in js/ads.js) -->
     <script src="js/ads.js" defer></script>
     
@@ -414,6 +417,50 @@
             menu.classList.toggle('hidden');
         });
     </script>
+
+    <!-- 🚀 NEW CALCULATOR SUITE NOTIFICATION BANNER -->
+    <div id="scribbletools-banner" class="bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white py-4 px-4 shadow-xl border-b-4 border-emerald-600 relative overflow-hidden">
+        <!-- Animated background pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-40 h-40 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full translate-x-1/2 translate-y-1/2"></div>
+        </div>
+        
+        <div class="container mx-auto relative z-10">
+            <div class="flex items-center justify-between flex-wrap gap-3">
+                <div class="flex items-center gap-4 flex-1">
+                    <div class="hidden sm:flex items-center justify-center w-12 h-12 bg-white rounded-xl shadow-lg">
+                        <span class="text-3xl">🧮</span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide">✨ New</span>
+                            <span class="text-sm md:text-base font-black">250+ Advanced Calculators Now Live!</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-white/90 font-medium">
+                            ScribbleTools - Professional financial, health, student & productivity calculators for everyone
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 flex-shrink-0">
+                    <a href="https://scribbletools.shramkavach.com" target="_blank" rel="noopener noreferrer" 
+                       class="group bg-white text-emerald-600 px-5 py-2.5 rounded-xl text-sm md:text-base font-bold hover:bg-yellow-400 hover:text-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center gap-2 whitespace-nowrap">
+                        <span>Try ScribbleTools</span>
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                    <button onclick="document.getElementById('scribbletools-banner').style.display='none'" 
+                            class="text-white/80 hover:text-white p-2 rounded-lg hover:bg-white/20 transition" 
+                            aria-label="Close notification">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Latest Updates Banner -->
     <div class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-3 px-4 shadow-lg">
