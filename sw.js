@@ -1,5 +1,5 @@
 // Service Worker for ShramKavach PWA - High Traffic Optimized
-const CACHE_VERSION = 'v4.0.0';
+const CACHE_VERSION = 'v4.0.1';
 const CACHE_NAME = `shramkavach-${CACHE_VERSION}`;
 const CACHE_STATIC = `shramkavach-static-${CACHE_VERSION}`;
 const CACHE_DYNAMIC = `shramkavach-dynamic-${CACHE_VERSION}`;
@@ -161,6 +161,23 @@ self.addEventListener('fetch', (event) => {
   if (url.pathname.match(/\.(js|css|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|ico)$/)) {
     event.respondWith(
       caches.open(CACHE_STATIC).then(async (cache) => {
+        // If URL has version parameter, always fetch fresh (bypass cache)
+        if (url.searchParams.has('v')) {
+          try {
+            const networkResponse = await fetch(request);
+            if (networkResponse.ok) {
+              const responseWithTimestamp = await addCacheTimestamp(networkResponse.clone());
+              cache.put(request, responseWithTimestamp);
+            }
+            return networkResponse;
+          } catch (error) {
+            const cachedResponse = await cache.match(request);
+            return cachedResponse || new Response('Resource not available', {
+              status: 503
+            });
+          }
+        }
+        
         const cachedResponse = await cache.match(request);
         
         if (cachedResponse && isCacheFresh(cachedResponse, CACHE_DURATION.STATIC)) {
