@@ -9,6 +9,29 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'upi-2026',
+            title: 'The 2026 Reset: New Financial Rules Effective January 1',
+            shortTitle: 'The 2026 Reset',
+            excerpt: 'As we wake up to 2026, the financial landscape has shifted overnight. While the 8th Pay Commission grabs headlines, the "silent" changes in credit reporting and digital payments will impact your daily life.',
+            date: '2026-01-01',
+            displayDate: 'Jan 1, 2026',
+            category: 'finance tax digital',
+            tags: ['🔴 BREAKING', '🆕 2026', '💳 UPI'],
+            tagColors: ['bg-red-600', 'bg-green-600', 'bg-blue-600'],
+            readTime: '12 min read',
+            author: 'ShramKavach',
+            icon: '💳',
+            gradient: 'from-red-50 via-pink-50 to-purple-50',
+            borderColor: 'border-red-600',
+            stats: [
+                { label: 'Tax-Free Income', value: '₹12 Lakh', subtext: 'New tax regime benefits', color: 'text-green-600', icon: '💰' },
+                { label: 'Credit Reporting', value: 'Weekly', subtext: 'CIBIL updates starting now', color: 'text-blue-600', icon: '📊' },
+                { label: 'UPI Changes', value: 'Active', subtext: 'New financial rules in effect', color: 'text-orange-600', icon: '⚡' }
+            ],
+            link: 'UPI-2026.HTML',
+            featured: true
+        },
+        {
             id: 'bond-markets-2026',
             title: 'Bond Markets 2026: Your Complete Financial Survival Guide',
             shortTitle: 'Bond Markets 2026',
