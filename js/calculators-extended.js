@@ -42,6 +42,11 @@ if (document.getElementById('pfForm')) {
             </div>
         `;
         document.getElementById('pfResult').classList.remove('hidden');
+        
+        // Add share button
+        if (typeof addShareButton === 'function') {
+            addShareButton('pfResult', 'pf', { amount: Math.round(maturityAmount) });
+        }
     });
 }
 
@@ -101,6 +106,11 @@ if (document.getElementById('hourlyForm')) {
             </div>
         `;
         document.getElementById('hourlyResult').classList.remove('hidden');
+        
+        // Add share button
+        if (typeof addShareButton === 'function') {
+            addShareButton('hourlyResult', 'pricing', { amount: Math.round(hourlyRate) });
+        }
     });
 }
 
@@ -133,6 +143,11 @@ if (document.getElementById('deliveryForm')) {
             </div>
         `;
         document.getElementById('deliveryResult').classList.remove('hidden');
+        
+        // Add share button
+        if (typeof addShareButton === 'function') {
+            addShareButton('deliveryResult', 'delivery', { amount: monthlyEarnings });
+        }
     });
 }
 
