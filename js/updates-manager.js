@@ -581,11 +581,34 @@
         sidebarContainer.innerHTML = sidebarHtml;
     }
     
+    // Update breaking news ticker with latest 3 articles
+    function updateBreakingNewsTicker() {
+        const tickerElement = document.querySelector('.ticker');
+        if (!tickerElement) return;
+        
+        const sortedArticles = sortArticlesByDate([...articlesDatabase]);
+        const latest3 = sortedArticles.slice(0, 3);
+        
+        const tickerContent = latest3.map((article, index) => {
+            // Extract key highlight from excerpt or title
+            const highlight = article.excerpt.length > 100 
+                ? article.shortTitle 
+                : article.excerpt;
+            
+            return `<span class="mx-4">${index === 0 ? '🔴 BREAKING:' : '•'}</span><span class="mx-8">${highlight}</span>`;
+        }).join('');
+        
+        tickerElement.innerHTML = tickerContent;
+    }
+    
     // Initialize
     function init() {
         // Sort articles by date
         articlesDatabase.sort((a, b) => new Date(b.date) - new Date(a.date));
         filteredArticles = [...articlesDatabase];
+        
+        // Update breaking news ticker
+        updateBreakingNewsTicker();
         
         // Update banner with latest article
         updateBanner();
@@ -628,6 +651,7 @@
         goToPage: goToPage,
         filterArticles: filterArticles,
         changeSortMode: changeSortMode,
+        updateBreakingNewsTicker: updateBreakingNewsTicker,
         init: init
     };
     
