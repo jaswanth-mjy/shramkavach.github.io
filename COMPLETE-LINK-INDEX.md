@@ -228,10 +228,11 @@ https://scribbletools.shramkavach.com/client/tools/other/browser-info.html
 
 | Category | Count | Domain |
 |----------|-------|--------|
-| **Main Site Pages** | 25 | shramkavach.com |
+| **Main Site Pages** | 28 | shramkavach.com |
+| - Homepage | 1 | |
 | - Core Pages | 5 | |
 | - Article Pages | 14 | |
-| - Utility Pages | 2 | |
+| - Utility Pages | 4 | |
 | - Legal Pages | 4 | |
 | **ScribbleTools** | 250+ | scribbletools.shramkavach.com |
 | - Financial Tools | 17 | |
@@ -241,7 +242,7 @@ https://scribbletools.shramkavach.com/client/tools/other/browser-info.html
 | - Text Tools | 30+ | |
 | - Image Tools | 15+ | |
 | - Other Tools | 20+ | |
-| **Total Pages** | 275+ | Both domains |
+| **Total Pages** | 278+ | Both domains |
 
 ---
 
@@ -294,30 +295,22 @@ https://scribbletools.shramkavach.com/sitemap-index.xml
 
 ---
 
-## 🎯 Missing from Current Sitemap (Need to Add)
-
-```
-https://shramkavach.com/UPI-2026.HTML
-https://shramkavach.com/bond-markets-2026.html
-https://shramkavach.com/december-31-2025.html
-https://shramkavach.com/view-counter-demo.html
-```
-
----
-
 ## 🔍 SEO Action Items
 
 1. ✅ Update sitemap.xml with missing 2026 articles
-2. ✅ Submit updated sitemap to Google Search Console
-3. ✅ Request indexing for new articles via URL Inspection
-4. ✅ Add internal links between related articles (in progress)
-5. ✅ Monitor Search Console for crawl errors
-6. ⏳ Build more backlinks to priority pages
-7. ⏳ Create content clusters around main topics
+2. ✅ Update sitemap.xml with all utility pages (index.html, 404.html, google-verification.html, view-counter-demo.html)
+3. ✅ Submit updated sitemap to Google Search Console
+4. ✅ Request indexing for new articles via URL Inspection
+5. ✅ Add internal links between related articles (in progress)
+6. ✅ Monitor Search Console for crawl errors
+7. ⏳ Build more backlinks to priority pages
+8. ⏳ Create content clusters around main topics
 
 ---
 
 **Generated:** 3 January 2026  
-**Total Indexed URLs:** 275+  
+**Last Updated:** 3 January 2026  
+**Total Indexed URLs:** 28 (Main Site) + 250+ (ScribbleTools) = 278+  
+**Sitemap Status:** ✅ All pages included  
 **Primary Domain:** shramkavach.com  
 **Subdomain:** scribbletools.shramkavach.com
