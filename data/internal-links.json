@@ -1,0 +1,101 @@
+{
+  "homepage": {
+    "url": "index.html",
+    "title": "ShramKavach - Home",
+    "keywords": ["home", "main page", "worker rights", "gig workers"]
+  },
+  "calculators": {
+    "url": "calculators.html",
+    "title": "Free Calculators",
+    "keywords": ["calculator", "gratuity", "tax", "EPF", "GST", "earnings"]
+  },
+  "prompts": {
+    "url": "prompts.html",
+    "title": "AI Prompts",
+    "keywords": ["AI prompts", "ChatGPT", "business prompts"]
+  },
+  "protection": {
+    "url": "protection.html",
+    "title": "Worker Protection & Rights",
+    "keywords": ["protection", "legal rights", "worker rights", "documents"]
+  },
+  "updates": {
+    "url": "updates.html",
+    "title": "Latest Updates",
+    "keywords": ["updates", "news", "labour laws", "latest"]
+  },
+  "articles": {
+    "upi-2026": {
+      "url": "UPI-2026.HTML",
+      "title": "The 2026 Reset: New Financial Rules",
+      "keywords": ["UPI", "2026", "tax free", "credit score", "banking"]
+    },
+    "bond-markets-2026": {
+      "url": "bond-markets-2026.html",
+      "title": "Bond Markets 2026 Guide",
+      "keywords": ["bonds", "investment", "tax free income"]
+    },
+    "december-31-2025": {
+      "url": "december-31-2025.html",
+      "title": "December 31 Dispatch",
+      "keywords": ["year end", "tax deadline", "economy"]
+    },
+    "year-end-2025": {
+      "url": "year-end-2025.html",
+      "title": "Year-End 2025 Action Plan",
+      "keywords": ["year end", "tax planning", "deadlines"]
+    },
+    "freelancer-tax-2025": {
+      "url": "freelancer-tax-2025.html",
+      "title": "Freelancer Tax Guide 2025",
+      "keywords": ["freelancer", "tax", "44ADA", "income tax"]
+    },
+    "gratuity-rule-2025": {
+      "url": "gratuity-rule-2025.html",
+      "title": "1-Year Gratuity Rule",
+      "keywords": ["gratuity", "one year", "eligibility"]
+    },
+    "platform-fees-2025": {
+      "url": "platform-fees-2025.html",
+      "title": "Platform Fee Cap 2026",
+      "keywords": ["platform fees", "gig workers", "commission"]
+    },
+    "health-insurance-2025": {
+      "url": "health-insurance-2025.html",
+      "title": "Health Insurance for Platform Workers",
+      "keywords": ["health insurance", "medical coverage", "benefits"]
+    },
+    "epfo-gig-workers-2025": {
+      "url": "epfo-gig-workers-2025.html",
+      "title": "EPFO for Gig Workers",
+      "keywords": ["EPFO", "EPF", "gig workers", "social security"]
+    },
+    "gst-threshold-2025": {
+      "url": "gst-threshold-2025.html",
+      "title": "GST Threshold Updates 2025",
+      "keywords": ["GST", "threshold", "registration"]
+    },
+    "section-44ada-2025": {
+      "url": "section-44ada-2025.html",
+      "title": "Section 44ADA Tax Benefits",
+      "keywords": ["44ADA", "professional", "tax", "presumptive"]
+    },
+    "minimum-wage-2025": {
+      "url": "minimum-wage-2025.html",
+      "title": "Minimum Wage Updates 2025",
+      "keywords": ["minimum wage", "salary", "state wise"]
+    },
+    "financial-calculators-2025": {
+      "url": "financial-calculators-2025.html",
+      "title": "Financial Calculators 2025",
+      "keywords": ["financial", "calculators", "free tools"]
+    }
+  },
+  "tools": {
+    "generator": {
+      "url": "generator.html",
+      "title": "Legal Document Generator",
+      "keywords": ["document", "generator", "legal", "templates"]
+    }
+  }
+}
