@@ -1,18 +1,233 @@
-# 🛡️ ShramKavach (श्रम कवच) - Worker Empowerment & Intelligence Platform
+# ShramKavach - Digital Worker Empowerment Platform
 
-**"हर मजदूर की सुरक्षा, हमारा संकल्प"** | *Every worker's protection, our commitment*
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://shramkavach.com)
+[![Status](https://img.shields.io/badge/status-production-success.svg)](https://shramkavach.com)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-![Version](https://img.shields.io/badge/version-2.0.0-blue.svg) ![PWA](https://img.shields.io/badge/PWA-enabled-purple.svg) ![License](https://img.shields.io/badge/license-MIT-green.svg) ![Live](https://img.shields.io/badge/status-live-success.svg)
+**Website:** [shramkavach.com](https://shramkavach.com)  
+**Target Market:** India's 150M+ gig economy workforce  
+**Architecture:** Static web application with zero server dependencies
 
-ShramKavach is India's most comprehensive worker empowerment platform, providing **34+ free calculators**, **250+ ScribbleTools**, **2761+ AI prompts**, **legal document generators**, and real-time **global intelligence reports** - all with 100% privacy and zero data collection.
+## Executive Summary
 
----
+ShramKavach is a comprehensive digital platform providing financial tools, legal resources, AI-powered productivity solutions, and real-time global market intelligence to India's gig economy workforce. The platform combines compliance calculators, document generation, and intelligence analysis in a privacy-first, mobile-optimized architecture.
 
-## 🎯 Project Vision
+## Platform Capabilities
 
-ShramKavach bridges the critical gap between India's evolving labour laws and the 15 crore+ gig workers who need actionable tools and insights. We combine financial tools, legal protection, AI-powered productivity, and global market intelligence to empower every worker - from delivery partners to freelance professionals.
+### Financial Intelligence Suite
+- 34+ specialized calculators covering labour compliance, taxation, and financial planning
+- Real-time analysis of global markets, technology trends, and geopolitical developments
+- Integration with Indian regulatory frameworks (Code on Social Security 2020, DPDP Act 2023, Income Tax Act)
 
-**Our Differentiator**: We're not just a calculator platform - we provide real-time analysis of global markets, technology trends, and geopolitical events that impact workers' financial decisions.
+### Legal & Compliance Tools
+- DPDP Act 2023 compliant privacy policy generator
+- Service contract templates for gig workers
+- PDF export functionality with professional formatting
+- Worker rights documentation and guidance
+
+### AI Productivity Infrastructure
+- 2,761+ curated AI prompts across 8 professional categories
+- Integration with 250+ ScribbleTools for document automation
+- Multi-language support (Hindi, English, Tamil, Marathi)
+- One-click workflow integration
+
+### Intelligence & Analysis
+- Daily market analysis covering US, Asian, and European markets
+- Technology sector reports (AI trends, agentic systems, DeepSeek developments)
+- Geopolitical risk assessments and energy market analysis
+- Investment strategy guidance and bond market intelligence
+
+## Technical Architecture
+
+### Technology Stack
+```
+Frontend:     HTML5, CSS3, JavaScript (ES6+)
+Framework:    Tailwind CSS (responsive design)
+Visualization: Chart.js (market data)
+PDF Export:   jsPDF
+Data Layer:   JSON (static, no database)
+Typography:   Noto Sans Devanagari, Inter
+Deployment:   GitHub Pages (automatic CI/CD)
+```
+
+### System Design Principles
+1. **Zero-Trust Architecture**: All processing client-side, no data collection
+2. **Performance Optimization**: Sub-second load times on 2G networks
+3. **Progressive Enhancement**: Core functionality without JavaScript
+4. **Mobile-First**: Optimized for entry-level smartphones
+5. **Accessibility**: WCAG 2.1 AA compliance target
+
+### Repository Structure
+```
+shram/
+├── Core Pages
+│   ├── index.html              # Landing page
+│   ├── calculators.html        # Financial tools
+│   ├── protection.html         # Legal resources
+│   ├── prompts.html            # AI productivity
+│   └── updates.html            # Intelligence hub
+│
+├── Intelligence Reports
+│   ├── the-convergence-of-kinetic-force-and-agentic-intelligence.html
+│   ├── the-great-divergence.html
+│   ├── bond-markets-2026.html
+│   └── UPI-2026.HTML
+│
+├── JavaScript Modules
+│   ├── calculators.js          # Core calculation engine
+│   ├── calculators-extended.js # Advanced calculators
+│   ├── legal-generators.js     # Document generation
+│   ├── updates-manager.js      # Content management system
+│   ├── i18n.js                 # Internationalization
+│   └── common.js               # Shared utilities
+│
+├── Data
+│   ├── prompts.json            # AI prompt database
+│   ├── prompts-extended.json   # Extended library
+│   ├── prompts-mega.json       # Complete collection
+│   ├── translations.json       # Multi-language strings
+│   └── internal-links.json     # SEO routing
+│
+└── Automation
+    └── google-apps-script/
+        ├── newsletter-automation.gs
+        └── website-integration.js
+```
+
+## Platform Metrics
+
+| Metric | Value | Status |
+|--------|-------|--------|
+| Financial Calculators | 34+ | Production |
+| AI Prompts | 2,761+ | Production |
+| ScribbleTools Integration | 250+ | Active |
+| Intelligence Reports | 15+ | Weekly Updates |
+| Supported Languages | 4 | Expanding |
+| Target Addressable Market | 150M+ users | India |
+| Data Collection | 0% | Privacy-First |
+| Operating Costs | $0/month | Zero Infrastructure |
+
+## Business Model
+
+### Current Revenue Streams
+- Google AdSense integration (non-intrusive placement)
+- Affiliate infrastructure (ready for financial product partnerships)
+
+### Growth Strategy
+1. **SEO Optimization**: Targeting vernacular search queries in tier 2/3 cities
+2. **Content Marketing**: Daily intelligence reports building authority
+3. **WhatsApp Distribution**: Viral sharing mechanism on every page
+4. **Voice Search**: Optimized for natural language queries
+
+### Compliance & Risk Management
+- DPDP Act 2023 compliant (no personal data storage)
+- Code on Social Security 2020 aligned calculators
+- Income Tax Act FY 2025-26 calculations
+- Regular legal review and updates
+
+## Development Roadmap
+
+### Current Release (v2.0.0)
+- ✓ 34+ financial calculators with Indian regulatory compliance
+- ✓ 2,761+ AI prompts across professional categories
+- ✓ Legal document generation (privacy policies, contracts)
+- ✓ Intelligence reporting system with daily updates
+- ✓ Multi-language support (4 languages)
+- ✓ SEO optimization with structured data
+- ✓ Mobile-responsive design
+
+### Q1 2026 (v2.1.0)
+- Bengali and Telugu language support
+- Enhanced market data visualization
+- Newsletter automation system
+- Progressive Web App (PWA) optimization
+- Voice search integration
+
+### Q2 2026 (v3.0.0)
+- Real-time market data API integration
+- AI-powered financial advisory chatbot
+- Partnership integrations with gig platforms
+- Community forum infrastructure
+- Web3 earnings tracker
+
+## Installation & Deployment
+
+### Local Development
+```bash
+git clone https://github.com/jaswanth-mjy/shramkavach.github.io.git
+cd shram
+# Open index.html in browser or use local server
+```
+
+### Production Deployment
+The platform automatically deploys to production on every commit to the main branch via GitHub Actions. No build process required.
+
+**Live URL:** https://shramkavach.com
+
+## API & Integration
+
+### Adding Intelligence Articles
+Register new articles in `js/updates-manager.js`:
+```javascript
+{
+    id: 'unique-slug',
+    title: 'Article Title',
+    excerpt: 'Brief description',
+    date: 'YYYY-MM-DD',
+    category: 'markets technology',
+    tags: ['TAG1', 'TAG2'],
+    readTime: 'X min read',
+    link: 'article-filename.html'
+}
+```
+
+### Extending Calculators
+Add new calculation modules to `js/calculators-extended.js` following the established pattern for input validation, calculation logic, and result formatting.
+
+### Multi-Language Support
+Extend `data/translations.json` with new language keys and register in `js/i18n.js` language selector.
+
+## Security & Privacy
+
+### Data Protection
+- Zero data collection or storage
+- No cookies (localStorage for preferences only)
+- All calculations performed client-side
+- HTTPS enforced via GitHub Pages
+- No third-party analytics by default
+
+### Compliance
+- DPDP Act 2023 (Digital Personal Data Protection)
+- Code on Social Security 2020
+- Income Tax Act (current fiscal year)
+- GST Act (updated thresholds)
+
+## Contributing
+
+Contributions are welcome in the following areas:
+- Translation (Bengali, Telugu, Kannada, Punjabi)
+- Calculator accuracy verification
+- Intelligence report content
+- Accessibility improvements
+- Cross-browser testing
+
+Submit pull requests with clear descriptions and test coverage.
+
+## Support & Contact
+
+**Technical Issues:** Open an issue on GitHub  
+**Business Inquiries:** support@shramkavach.com  
+**Website:** https://shramkavach.com
+
+## Legal Disclaimer
+
+ShramKavach provides informational tools and analysis. The platform does not provide legal, tax, or financial advice. Users should consult qualified professionals before making financial or legal decisions. All calculations are based on publicly available information and may contain simplifications.
+
+## License
+
+MIT License - See LICENSE file for details.
+
+**Copyright © 2026 ShramKavach. All Rights Reserved.**
 
 ---
 
