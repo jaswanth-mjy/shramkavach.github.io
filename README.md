@@ -1,16 +1,397 @@
-# 🛡️ ShramKavach (श्रम कवच) - Worker Empowerment Platform
+# 🛡️ ShramKavach (श्रम कवच) - Worker Empowerment & Intelligence Platform
 
 **"हर मजदूर की सुरक्षा, हमारा संकल्प"** | *Every worker's protection, our commitment*
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![PWA](https://img.shields.io/badge/PWA-enabled-purple.svg) ![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Version](https://img.shields.io/badge/version-2.0.0-blue.svg) ![PWA](https://img.shields.io/badge/PWA-enabled-purple.svg) ![License](https://img.shields.io/badge/license-MIT-green.svg) ![Live](https://img.shields.io/badge/status-live-success.svg)
 
-ShramKavach is a comprehensive platform empowering Indian gig workers, freelancers, and platform workers with **34+ free calculators**, **25+ legal document generators**, **1561+ AI prompts**, and complete worker rights protection resources - all with 100% privacy.
+ShramKavach is India's most comprehensive worker empowerment platform, providing **34+ free calculators**, **250+ ScribbleTools**, **2761+ AI prompts**, **legal document generators**, and real-time **global intelligence reports** - all with 100% privacy and zero data collection.
 
 ---
 
 ## 🎯 Project Vision
 
-ShramSetu bridges the gap between India's new labour laws (Code on Social Security 2020, DPDP Act 2023) and the millions of vernacular gig workers who need to understand and exercise their rights. Unlike heavy, venture-backed platforms, ShramSetu is a lightweight static utility optimized for Tier-2/3 networks and built with a ₹10,000 budget.
+ShramKavach bridges the critical gap between India's evolving labour laws and the 15 crore+ gig workers who need actionable tools and insights. We combine financial tools, legal protection, AI-powered productivity, and global market intelligence to empower every worker - from delivery partners to freelance professionals.
+
+**Our Differentiator**: We're not just a calculator platform - we provide real-time analysis of global markets, technology trends, and geopolitical events that impact workers' financial decisions.
+
+---
+
+## ✨ Core Pillars
+
+### 🧮 1. Financial Tools (34+ Calculators)
+**Labour Rights & Benefits:**
+- Gratuity Calculator (1-year eligibility, 2025 rules)
+- EPF & Social Security Calculator
+- Leave Encashment Calculator
+- Platform Worker Benefits Estimator
+
+**Earnings & Income:**
+- Delivery Partner Earnings
+- Cab Driver ROI Calculator
+- Freelance Pricing Calculator
+- Hourly Rate & Invoice Generator
+- Platform Fee Impact Calculator
+
+**Tax & Compliance:**
+- GST Calculator (₹20L/₹40L threshold)
+- Section 44ADA Tax Calculator
+- Income Tax (New vs Old Regime)
+- TDS & Advance Tax Calculator
+- Professional Tax Calculator
+
+**Financial Planning:**
+- EMI & Loan Eligibility
+- MUDRA Loan Calculator
+- SIP & FD Returns
+- Break-Even Analysis
+- Business ROI Calculator
+
+### 🛡️ 2. Legal Protection (सुरक्षा)
+**Document Generators:**
+- DPDP Act 2023 compliant Privacy Policy
+- Gig Worker Service Contracts
+- Freelancer Agreement Templates
+- Non-Payment Protection Contracts
+- PDF Export with legal formatting
+
+### 🤖 3. AI Productivity (विकास)
+**2761+ AI Prompts across categories:**
+- Marketing & Growth (500+ prompts)
+- Customer Service Excellence (400+ prompts)
+- Business Planning & Strategy (350+ prompts)
+- Content Creation & Writing (450+ prompts)
+- Sales & Negotiation (300+ prompts)
+- Legal & Compliance (200+ prompts)
+- Financial Planning (200+ prompts)
+- Technical & Development (200+ prompts)
+
+**250+ ScribbleTools Integration:**
+- Connected to ScribbleTools.shramkavach.com
+- Professional document templates
+- Business automation tools
+
+### 📰 4. Intelligence Reports (NEW!)
+**Real-time Global Analysis:**
+- **Market Intelligence**: Daily analysis of global markets (Dow, Nasdaq, Asian markets)
+- **Technology Trends**: AI paradigm shifts, agentic systems, DeepSeek developments
+- **Geopolitical Analysis**: Operation Southern Spear, energy market impacts
+- **Financial Strategies**: Bond markets, tax planning, investment opportunities
+- **Cybersecurity Alerts**: Threat landscapes, scam center warnings
+
+**Recent Reports:**
+- "The Convergence of Kinetic Force and Agentic Intelligence" (Jan 4, 2026)
+- "The Great Divergence: Global Markets & AI Utility" (Jan 3, 2026)
+- "The 2026 Reset: New Financial Rules" (Jan 1, 2026)
+- "Bond Markets 2026: Complete Survival Guide" (Jan 1, 2026)
+
+---
+
+## 🏗️ Technical Architecture
+
+### Tech Stack
+- **Frontend**: HTML5, CSS3, Vanilla JavaScript (ES6+)
+- **Styling**: Tailwind CSS (responsive, mobile-first)
+- **Charts & Visualization**: Chart.js for market data
+- **PDF Generation**: jsPDF for contract exports
+- **Data**: JSON-based (no database, 100% privacy)
+- **Fonts**: Noto Sans Devanagari, Inter (optimized loading)
+- **PWA**: Service worker enabled, offline capable
+
+### Why This Architecture?
+1. **Zero Server Costs**: Static hosting on GitHub Pages
+2. **Lightning Fast**: Sub-second page loads, even on 2G
+3. **Privacy-First**: All processing client-side, zero tracking
+4. **Tier-2/3 Optimized**: Works perfectly on entry-level devices
+5. **Secure by Design**: No database = no data breach risk
+6. **SEO Optimized**: Server-side rendering not needed with proper meta tags
+
+### File Structure
+```
+shram/
+├── index.html                    # Landing page
+├── updates.html                  # Intelligence reports hub
+├── calculators.html              # 34+ financial calculators
+├── protection.html               # Worker rights & legal info
+├── prompts.html                  # 2761+ AI prompts
+├── generator.html                # Legal document generators
+├── the-great-divergence.html     # Market analysis report
+├── the-convergence-of-kinetic-force-and-agentic-intelligence.html
+├── bond-markets-2026.html        # Investment strategies
+├── UPI-2026.HTML                 # Financial rules update
+├── js/
+│   ├── calculators.js            # Core calculator logic
+│   ├── calculators-extended.js   # Advanced calculators
+│   ├── legal-generators.js       # Document generation
+│   ├── prompt-loader.js          # AI prompt system
+│   ├── updates-manager.js        # Dynamic article loading
+│   ├── sidebar-articles-loader.js # Related content
+│   ├── i18n.js                   # Multi-language support
+│   ├── common.js                 # Shared utilities
+│   └── newyear-celebration.js    # Seasonal features
+├── data/
+│   ├── prompts.json              # Base prompts
+│   ├── prompts-extended.json     # Extended library
+│   ├── prompts-mega.json         # Full 2761+ collection
+│   ├── translations.json         # i18n strings (4 languages)
+│   └── internal-links.json       # SEO & navigation
+├── google-apps-script/
+│   ├── newsletter-automation.gs  # Email automation
+│   └── website-integration.js    # Form handlers
+└── README.md                     # This file
+```
+
+---
+
+## 🚀 Quick Start
+
+### Local Development
+```bash
+# Clone the repository
+git clone https://github.com/jaswanth-mjy/shramkavach.github.io.git
+cd shram
+
+# Open in browser (no build step needed!)
+open index.html
+# or use Live Server in VS Code
+```
+
+### Deployment (GitHub Pages - FREE)
+```bash
+# Already deployed at:
+# https://shramkavach.com
+# Repository automatically deploys on push to main branch
+```
+
+### Adding New Intelligence Reports
+1. Create HTML file with article structure
+2. Add to `js/updates-manager.js` articlesDatabase:
+```javascript
+{
+    id: 'your-article-slug',
+    title: 'Your Article Title',
+    excerpt: 'Brief summary...',
+    date: '2026-01-XX',
+    category: 'markets ai technology',
+    tags: ['🔴 BREAKING', '📊 MARKETS'],
+    readTime: 'X min read',
+    link: 'your-article.html',
+    featured: true
+}
+```
+3. Update `data/internal-links.json` for SEO routing
+
+---
+
+## 📊 SEO & Growth Strategy
+
+### Target Keywords
+**Hindi**: "Gig worker calculator Hindi", "Freelancer tax calculator", "Delivery partner EPF"  
+**English**: "Gratuity calculator India 2026", "Section 44ADA calculator", "DPDP privacy policy generator"  
+**Long-tail**: "How to calculate gratuity for 1 year", "Global markets analysis January 2026"
+
+### Current Performance
+- **Google AdSense**: Integrated (ca-pub-2868999138532322)
+- **Structured Data**: JSON-LD schema on all pages
+- **Canonical URLs**: Properly configured
+- **Open Graph**: Full social media optimization
+- **Sitemap**: Auto-generated, submitted to Google
+
+### Content Strategy
+- **Daily Intelligence Reports**: Market updates, AI trends, geopolitical analysis
+- **Evergreen Tools**: Calculators remain relevant year-round
+- **WhatsApp Virality**: Share buttons on every page
+- **Voice Search Optimized**: Natural language meta descriptions
+
+---
+
+## 💰 Revenue Model (Ethical & User-First)
+
+### Current
+- **Google AdSense**: Non-intrusive ads on content pages
+- **Affiliate Ready**: Infrastructure for financial product partnerships
+
+### Potential (Aligned with Mission)
+1. **Financial Product Affiliates**: Insurance, loans, neo-banking (only verified partners)
+2. **Premium AI Tools**: Referrals to Writesonic, Rytr (30% recurring)
+3. **Sponsored Intelligence**: Partner insights (clearly labeled)
+4. **B2B Licensing**: WhatsApp/Telegram bot versions for platforms
+
+**Non-Negotiable**: Zero data selling, zero compromise on privacy
+
+---
+
+## 🌍 Multi-Language Support
+
+### Currently Supported
+- 🇮🇳 **Hindi** (हिंदी)
+- 🇬🇧 **English** 
+- 🇮🇳 **Tamil** (தமிழ்)
+- 🇮🇳 **Marathi** (मराठी)
+
+### Implementation
+- Client-side i18n via `js/i18n.js`
+- Persistent language preference (localStorage)
+- Font optimization for Indic scripts
+
+---
+
+## 🔧 Customization Guide
+
+### Adding New Calculators
+Edit `js/calculators.js` or `js/calculators-extended.js`:
+```javascript
+function newCalculator() {
+    const input1 = parseFloat(document.getElementById('input1').value);
+    const result = input1 * calculationLogic;
+    document.getElementById('result').textContent = `₹${result.toLocaleString('en-IN')}`;
+}
+```
+
+### Adding Intelligence Articles
+1. Create HTML file with proper structure (navbar, breadcrumb, share buttons)
+2. Add article schema (JSON-LD)
+3. Register in `updates-manager.js`
+4. Add to `internal-links.json`
+
+### Updating Legal Templates
+Modify `js/legal-generators.js` for DPDP/contract changes
+
+---
+
+## 🛡️ Privacy & Compliance
+
+### Data Handling Principles
+- ✅ **100% Client-Side Processing**: All calculations in browser
+- ✅ **Zero Server Storage**: No database, no user data collection
+- ✅ **No Cookies**: Only localStorage for language preference
+- ✅ **HTTPS Enforced**: GitHub Pages automatic SSL
+- ✅ **No Tracking Scripts**: Optional analytics (disabled by default)
+
+### Legal Compliance
+- **DPDP Act 2023**: Tool generates compliant policies
+- **Code on Social Security 2020**: Verified calculations
+- **Income Tax Act**: FY 2025-26 slabs
+- **GST Act**: Current thresholds (₹20L/₹40L)
+
+---
+
+## 📈 Roadmap
+
+### ✅ Completed (Phase 1-2)
+- [x] 34+ Financial Calculators
+- [x] 2761+ AI Prompts
+- [x] 250+ ScribbleTools Integration
+- [x] Legal Document Generators
+- [x] Intelligence Reports System
+- [x] Multi-language Support (4 languages)
+- [x] Dynamic Article Loading
+- [x] SEO Optimization
+- [x] Google AdSense Integration
+- [x] WhatsApp Sharing
+- [x] Mobile-First Responsive Design
+
+### 🚧 In Progress (Phase 3 - Q1 2026)
+- [ ] Bengali & Telugu Language Support
+- [ ] Advanced Market Data Visualization
+- [ ] Newsletter Automation (Google Apps Script)
+- [ ] WhatsApp Bot Integration
+- [ ] Voice Search Optimization
+- [ ] Progressive Web App (PWA) Enhancement
+
+### 🔮 Future (Phase 4 - Q2 2026)
+- [ ] Real-time Market Data API Integration
+- [ ] AI-powered financial advice chatbot
+- [ ] Partnership with gig platforms
+- [ ] Mobile app (React Native)
+- [ ] Crypto earnings tracker for Web3 gig workers
+- [ ] Community forum for worker discussions
+
+---
+
+## 🤝 Contributing
+
+### Areas Where We Need Help
+1. **Translation**: Bengali, Telugu, Kannada, Punjabi
+2. **Legal Review**: Verify calculator accuracy
+3. **Content**: More intelligence reports on Indian markets
+4. **Design**: Accessibility improvements
+5. **Testing**: Cross-browser compatibility
+
+### How to Contribute
+```bash
+# Fork the repository
+# Create feature branch
+git checkout -b feature/new-calculator
+
+# Make changes and commit
+git commit -m "Add: New calculator for X"
+
+# Push and create Pull Request
+git push origin feature/new-calculator
+```
+
+---
+
+## 📞 Support & Contact
+
+**Platform**: ShramKavach  
+**Website**: https://shramkavach.com  
+**Email**: support@shramkavach.com  
+**Status**: Live & Production Ready
+
+### Bug Reports
+Open an issue with:
+- Browser/Device details
+- Steps to reproduce
+- Expected vs actual behavior
+- Screenshots (if applicable)
+
+### Feature Requests
+We prioritize features that:
+1. Serve the vernacular/gig worker audience
+2. Maintain privacy-first architecture
+3. Require zero server infrastructure
+4. Add real value to workers' financial decisions
+
+---
+
+## 📜 Legal Disclaimer
+
+**Important**: ShramKavach provides informational tools and analysis only. We are NOT:
+- ❌ Legal advisors (consult a lawyer for legal matters)
+- ❌ Tax consultants (consult a CA for tax filing)
+- ❌ Financial advisors (consult SEBI-registered advisors)
+- ❌ Investment advisors (not SEBI registered)
+
+All calculators are based on publicly available laws and may contain simplifications. Intelligence reports are analysis/opinion, not investment advice. Users must verify with professionals before making financial/legal decisions.
+
+---
+
+## 🙏 Acknowledgments
+
+**Powered By:**
+- Ministry of Labour & Employment (Labour Code research)
+- Ministry of Electronics & IT (DPDP Act reference)
+- Income Tax Department (Tax slabs FY 2025-26)
+- Google Fonts (Noto Sans Devanagari, Inter)
+- Tailwind CSS & Chart.js (Open source libraries)
+- VS Code & GitHub (Development infrastructure)
+
+**Built with ❤️ for Bharat's 15 Crore+ Gig Workers**
+
+---
+
+## 📄 License
+
+MIT License - Free to use, modify, and distribute with attribution.
+
+**Copyright © 2026 ShramKavach. All Rights Reserved.**
+
+---
+
+## 🌟 Star History
+
+If this project helps you, consider giving it a ⭐ on GitHub!
 
 ---
 
