@@ -9,6 +9,29 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'kinetic-agentic-convergence-2026',
+            title: 'The Convergence of Kinetic Force and Agentic Intelligence: Global State of Technology, Finance, and Geopolitics – January 2026',
+            shortTitle: 'Kinetic Force & Agentic Intelligence',
+            excerpt: 'Operation Southern Spear reshapes Venezuela. Meta acquires Manus for $2B+ in the race for agentic AI. DeepSeek challenges Western dominance. The dual singularity of 2026—kinetic military action meets autonomous digital intelligence.',
+            date: '2026-01-04',
+            displayDate: 'Jan 4, 2026',
+            category: 'geopolitics ai technology markets',
+            tags: ['🔴 BREAKING', '⚡ INTELLIGENCE', '🌍 GEOPOLITICS'],
+            tagColors: ['bg-red-600', 'bg-orange-600', 'bg-yellow-600'],
+            readTime: '18 min read',
+            author: 'ShramKavach',
+            icon: '⚔️',
+            gradient: 'from-red-50 via-orange-50 to-yellow-50',
+            borderColor: 'border-red-600',
+            stats: [
+                { label: 'Operation Southern Spear', value: 'Active', subtext: 'US forces capture Maduro in Venezuela', color: 'text-red-600', icon: '🎯' },
+                { label: 'Meta Manus Deal', value: '$2B+', subtext: 'Agentic AI acquisition reshapes tech', color: 'text-blue-600', icon: '🤖' },
+                { label: 'Energy Markets', value: '+15%', subtext: 'Venezuela oil shock ripples globally', color: 'text-green-600', icon: '⚡' }
+            ],
+            link: 'the-convergence-of-kinetic-force-and-agentic-intelligence.html',
+            featured: true
+        },
+        {
             id: 'the-great-divergence',
             title: 'The Great Divergence: Global Markets, Technological Agency, and Digital Resilience in the Dawn of 2026',
             shortTitle: 'The Great Divergence',
