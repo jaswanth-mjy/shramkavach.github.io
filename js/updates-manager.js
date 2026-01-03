@@ -9,6 +9,29 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'the-great-divergence',
+            title: 'The Great Divergence: Global Markets, Technological Agency, and Digital Resilience in the Dawn of 2026',
+            shortTitle: 'The Great Divergence',
+            excerpt: 'January 2026 marks a pivotal inflection point: Industrial resilience vs tech recalibration. AI Hype → AI Utility. Agentic operations redefine productivity while cybercrime industrializes. Tesla tumbles, bond markets rally, and autonomous agents reshape software engineering.',
+            date: '2026-01-03',
+            displayDate: 'Jan 3, 2026',
+            category: 'markets ai technology',
+            tags: ['🌐 ANALYSIS', '🤖 AI SHIFT', '📊 MARKETS'],
+            tagColors: ['bg-indigo-600', 'bg-purple-600', 'bg-blue-600'],
+            readTime: '20 min read',
+            author: 'ShramKavach',
+            icon: '🌐',
+            gradient: 'from-indigo-50 via-purple-50 to-pink-50',
+            borderColor: 'border-indigo-600',
+            stats: [
+                { label: 'Market Divergence', value: 'Dow +0.7%', subtext: 'Nasdaq continues 5-day slide', color: 'text-blue-600', icon: '📈' },
+                { label: 'AI Paradigm', value: 'Agentic Era', subtext: 'From hype to autonomous utility', color: 'text-purple-600', icon: '🤖' },
+                { label: 'Cyber Threats', value: 'Industrial', subtext: 'Ransomware-as-a-Service boom', color: 'text-red-600', icon: '🔒' }
+            ],
+            link: 'the-great-divergence.html',
+            featured: true
+        },
+        {
             id: 'upi-2026',
             title: 'The 2026 Reset: New Financial Rules Effective January 1',
             shortTitle: 'The 2026 Reset',

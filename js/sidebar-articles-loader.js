@@ -10,6 +10,12 @@
     // Articles database (same as updates-manager.js)
     const allArticles = [
         {
+            title: 'The Great Divergence',
+            url: 'the-great-divergence.html',
+            icon: '🌐',
+            date: 'Jan 3, 2026'
+        },
+        {
             title: 'Bond Markets 2026',
             url: 'bond-markets-2026.html',
             icon: '📉',
