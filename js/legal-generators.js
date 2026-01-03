@@ -719,10 +719,10 @@ class LegalDocumentGenerator {
     // Show share prompt after document generation
     showSharePrompt(filename) {
         const shareMessages = [
-            `📄 Just created my ${filename}!\\n\\n🎯 Professional documents बनाने का सबसे आसान तरीका!\\n\\nTry it free 👇\\n`,
-            `✅ ${filename} generated!\\n\\n💯 100% free & private - शून्य data storage\\n\\nCreate yours 👇\\n`,
-            `🚀 Professional ${filename} ready!\\n\\nBest free tool for freelancers 💪\\n\\nCheck it out 👇\\n`,
-            `⚡ ${filename} बना लिया in 2 minutes!\\n\\n📋 Free legal templates for all\\n\\nGenerate yours 👇\\n`
+            `Just created my ${filename}!\\n\\nProfessional documents बनाने का सबसे आसान तरीका!\\n\\nTry it free:\\n`,
+            `${filename} generated!\\n\\n100% free & private - शून्य data storage\\n\\nCreate yours:\\n`,
+            `Professional ${filename} ready!\\n\\nBest free tool for freelancers\\n\\nCheck it out:\\n`,
+            `${filename} बना लिया in 2 minutes!\\n\\nFree legal templates for all\\n\\nGenerate yours:\\n`
         ];
         
         const randomMsg = shareMessages[Math.floor(Math.random() * shareMessages.length)];

@@ -6,45 +6,45 @@
 // Share messages for different calculator types
 const shareMessages = {
     gratuity: [
-        `💰 मैंने अपना gratuity check किया!\\n✅ मुझे मिलेगा: ₹{amount}\\n\\nतुम भी check करो 👇\\n`,
-        `🎉 Wow! मेरा gratuity है ₹{amount}\\n\\nआपका कितना है? जानने के लिए 👇\\n`,
-        `✨ अपने rights जानो!\\nमेरा gratuity: ₹{amount}\\n\\nअपना भी calculate करो 👇\\n`,
-        `💪 Worker rights पता होने चाहिए!\\nMy gratuity: ₹{amount}\\n\\nShare yours too! 👇\\n`
+        `मैंने अपना gratuity check किया!\\nमुझे मिलेगा: ₹{amount}\\n\\nतुम भी check करो:\\n`,
+        `Wow! मेरा gratuity है ₹{amount}\\n\\nआपका कितना है? जानने के लिए:\\n`,
+        `अपने rights जानो!\\nमेरा gratuity: ₹{amount}\\n\\nअपना भी calculate करो:\\n`,
+        `Worker rights पता होने चाहिए!\\nMy gratuity: ₹{amount}\\n\\nShare yours too:\\n`
     ],
     tax: [
-        `💰 Tax planning done!\\n{regime} में ₹{amount} save होंगे!\\n\\nअपना भी check करो 👇\\n`,
-        `📊 Smart tax planning: {regime}\\nSavings: ₹{amount}\\n\\nCalculate yours 👇\\n`,
-        `✅ Section 44ADA checked!\\nBest choice: {regime}\\nSavings: ₹{amount}\\n\\nYour turn 👇\\n`
+        `Tax planning done!\\n{regime} में ₹{amount} save होंगे!\\n\\nअपना भी check करो:\\n`,
+        `Smart tax planning: {regime}\\nSavings: ₹{amount}\\n\\nCalculate yours:\\n`,
+        `Section 44ADA checked!\\nBest choice: {regime}\\nSavings: ₹{amount}\\n\\nYour turn:\\n`
     ],
     pf: [
-        `🏦 My EPF calculation done!\\nTotal: ₹{amount}\\n\\nCheck yours 👇\\n`,
-        `💰 EPF बढ़ रहा है!\\nCurrent total: ₹{amount}\\n\\nCalculate yours 👇\\n`,
-        `✅ Retirement planning: ₹{amount} in EPF\\n\\nYour turn 👇\\n`
+        `My EPF calculation done!\\nTotal: ₹{amount}\\n\\nCheck yours:\\n`,
+        `EPF बढ़ रहा है!\\nCurrent total: ₹{amount}\\n\\nCalculate yours:\\n`,
+        `Retirement planning: ₹{amount} in EPF\\n\\nYour turn:\\n`
     ],
     delivery: [
-        `🛵 My delivery earnings: ₹{amount}/month\\n\\nकितना कमा रहे हो? 👇\\n`,
-        `⚡ Calculated my income: ₹{amount}\\n\\nCheck yours 👇\\n`,
-        `💪 Gig worker earnings: ₹{amount}\\n\\nShare yours 👇\\n`
+        `My delivery earnings: ₹{amount}/month\\n\\nकितना कमा रहे हो?\\n`,
+        `Calculated my income: ₹{amount}\\n\\nCheck yours:\\n`,
+        `Gig worker earnings: ₹{amount}\\n\\nShare yours:\\n`
     ],
     cab: [
-        `🚗 My cab earnings: ₹{amount}/month\\n\\nआप कितना कमाते हो? 👇\\n`,
-        `⚡ Driver income calculated: ₹{amount}\\n\\nCheck yours 👇\\n`,
-        `💰 Monthly earnings: ₹{amount}\\n\\nCalculate yours 👇\\n`
+        `My cab earnings: ₹{amount}/month\\n\\nआप कितना कमाते हो?\\n`,
+        `Driver income calculated: ₹{amount}\\n\\nCheck yours:\\n`,
+        `Monthly earnings: ₹{amount}\\n\\nCalculate yours:\\n`
     ],
     pricing: [
-        `💼 My hourly rate: ₹{amount}/hour\\n\\nक्या सही है? 👇\\n`,
-        `⏰ Freelance pricing done: ₹{amount}/hr\\n\\nCalculate yours 👇\\n`,
-        `✅ Professional rate: ₹{amount}/hour\\n\\nYour turn 👇\\n`
+        `My hourly rate: ₹{amount}/hour\\n\\nक्या सही है?\\n`,
+        `Freelance pricing done: ₹{amount}/hr\\n\\nCalculate yours:\\n`,
+        `Professional rate: ₹{amount}/hour\\n\\nYour turn:\\n`
     ],
     social: [
-        `🏥 Platform मुझे ₹{amount} contribute करेगा!\\n\\nअपना भी check करो 👇\\n`,
-        `💪 My social security: ₹{amount}/year\\n\\nYours कितना है? 👇\\n`,
-        `✅ Gig workers को भी benefits मिलेंगे!\\nMine: ₹{amount}/month\\n\\nCalculate yours 👇\\n`
+        `Platform मुझे ₹{amount} contribute करेगा!\\n\\nअपना भी check करो:\\n`,
+        `My social security: ₹{amount}/year\\n\\nYours कितना है?\\n`,
+        `Gig workers को भी benefits मिलेंगे!\\nMine: ₹{amount}/month\\n\\nCalculate yours:\\n`
     ],
     generic: [
-        `✅ Just used this amazing calculator!\\nResult: ₹{amount}\\n\\nTry it 👇\\n`,
-        `💯 Free calculator से चेक किया!\\nResult: ₹{amount}\\n\\nYour turn 👇\\n`,
-        `🚀 Smart tool for workers!\\nMy result: ₹{amount}\\n\\nCheck yours 👇\\n`
+        `Just used this amazing calculator!\\nResult: ₹{amount}\\n\\nTry it:\\n`,
+        `Free calculator से चेक किया!\\nResult: ₹{amount}\\n\\nYour turn:\\n`,
+        `Smart tool for workers!\\nMy result: ₹{amount}\\n\\nCheck yours:\\n`
     ]
 };
 
