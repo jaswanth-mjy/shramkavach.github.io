@@ -1,64 +1,25 @@
-// Gold Rate India - City-wise rates and charts v3.0 - Real-time accurate pricing
-// API Configuration - Using reliable real-time sources
+// Gold Rate India - City-wise rates and charts v2.0 - Auto-updating
+// API Configuration
 const API_CONFIG = {
-    // Primary: GoldAPI (requires key but has free tier)
-    goldAPI: 'https://www.goldapi.io/api/XAU/INR',
-    // Backup: Gold Price  Org
-    goldPriceOrg: 'https://data-asg.goldprice.org/dbXRates/INR',
-    // Forex for USD to INR
+    goldAPI: 'https://api.metals.live/v1/spot/gold',
+    silverAPI: 'https://api.metals.live/v1/spot/silver',
+    platinumAPI: 'https://api.metals.live/v1/spot/platinum',
     forexAPI: 'https://api.exchangerate-api.com/v4/latest/USD',
-    // Cache settings
+    fallbackGoldAPI: 'https://www.goldapi.io/api/XAU/INR',
     cacheKey: 'goldRatesIndia',
-    dailyHistoryKey: 'goldDailyHistory',
-    cacheDuration: 30 * 60 * 1000 // 30 minutes for real-time
+    cacheDuration: 30 * 60 * 1000 // 30 minutes for more frequent updates
 };
 
-// Current market prices (Jan 2026 - REAL Indian market rates)
-// Based on actual market rates: 22K = ₹12,450/gram
+// Default fallback prices (used if API fails)
 let basePrices = {
-    gold24k: 13590, // per gram in INR (12450 / 0.916)
-    gold22k: 12450, // per gram in INR (ACTUAL market rate)
-    gold18k: 10193, // per gram in INR (75% of 24k)
-    silver: 2450,   // per gram in INR
-    platinum: 14270 // per gram in INR
+    gold24k: 13582, // per gram in INR
+    gold22k: 12450, // per gram in INR
+    gold18k: 10187, // per gram in INR
+    silver: 2400,   // per kg in INR
+    platinum: 79500 // per gram in INR
 };
 
-let USD_TO_INR = 85.5; // Will be updated from API
-let GOLD_USD_PER_OUNCE = 2685; // Current global gold price
-let SILVER_USD_PER_OUNCE = 30.75; // Current global silver price
-
-// Store daily prices for calendar view
-function saveDailyPrice() {
-    const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-    const history = JSON.parse(localStorage.getItem(API_CONFIG.dailyHistoryKey) || '{}');
-    
-    history[today] = {
-        gold24k: basePrices.gold24k,
-        gold22k: basePrices.gold22k,
-        gold18k: basePrices.gold18k,
-        silver: basePrices.silver,
-        timestamp: Date.now()
-    };
-    
-    // Keep only last 90 days
-    const dates = Object.keys(history).sort();
-    if (dates.length > 90) {
-        dates.slice(0, dates.length - 90).forEach(date => delete history[date]);
-    }
-    
-    localStorage.setItem(API_CONFIG.dailyHistoryKey, JSON.stringify(history));
-}
-
-// Get yesterday's price for comparison
-function getYesterdayPrice() {
-    const history = JSON.parse(localStorage.getItem(API_CONFIG.dailyHistoryKey) || '{}');
-    const dates = Object.keys(history).sort();
-    
-    if (dates.length < 2) return null;
-    
-    const yesterday = dates[dates.length - 2];
-    return history[yesterday];
-}
+let USD_TO_INR = 85.42; // Will be updated from API
 
 // City-specific variations (in INR)
 const cityVariations = {
@@ -131,9 +92,33 @@ document.addEventListener('DOMContentLoaded', async function() {
     
     updateHeroPrices();
     updateTicker();
-    updatePriceComparison(); // Show yesterday vs today
     hideLoading();
     updateLastUpdateTime();
+    
+    // Set up auto-refresh every 30 minutes
+    setInterval(async () => {
+        if (!document.hidden) {
+            await fetchLatestPrices();
+            updateHeroPrices();
+            updateTicker();
+            updateLastUpdateTime();
+            updateChartsData();
+            
+            const activeCity = document.querySelector('.city-btn.ring-4');
+            if (activeCity) {
+                const cityName = activeCity.textContent.trim();
+                const variation = cityVariations[cityName];
+                const prices = {
+                    gold24k: basePrices.gold24k + variation.gold24k,
+                    gold22k: basePrices.gold22k + variation.gold22k,
+                    gold18k: basePrices.gold18k + variation.gold18k,
+                    silver: basePrices.silver + variation.silver,
+                    platinum: basePrices.platinum + variation.platinum
+                };
+                displayCityRates(cityName, prices);
+            }
+        }
+    }, API_CONFIG.cacheDuration);
 });
 
 // Auto-refresh when page becomes visible (user returns to tab)
@@ -192,69 +177,40 @@ async function fetchLatestPrices() {
             return;
         }
 
-        console.log('🔄 Fetching fresh INDIAN gold rates...');
+        console.log('Fetching fresh data from APIs');
         
         // Fetch USD to INR exchange rate
-        const forexResponse = await fetch(API_CONFIG.forexAPI);
-        const forexData = await forexResponse.json();
-        USD_TO_INR = forexData.rates.INR;
-        console.log('💱 USD to INR:', USD_TO_INR.toFixed(2));
-
-        // Try to fetch DIRECT Indian gold rates (includes duties/taxes)
-        let indianRatesFetched = false;
-        
         try {
-            // Try GoodReturns API for Indian rates
-            const response = await fetch('https://www.goodreturns.in/gold-rates/');
-            const html = await response.text();
-            
-            // Parse Indian gold rates from HTML
-            const gold24kMatch = html.match(/24.*?Carat.*?₹\s*([\d,]+)/i);
-            const gold22kMatch = html.match(/22.*?Carat.*?₹\s*([\d,]+)/i);
-            
-            if (gold24kMatch && gold22kMatch) {
-                basePrices.gold24k = parseInt(gold24kMatch[1].replace(/,/g, ''));
-                basePrices.gold22k = parseInt(gold22kMatch[1].replace(/,/g, ''));
-                basePrices.gold18k = Math.round(basePrices.gold24k * 0.75);
-                indianRatesFetched = true;
-                console.log('✅ Fetched REAL Indian gold rates from GoodReturns');
-            }
+            const forexResponse = await fetch(API_CONFIG.forexAPI);
+            const forexData = await forexResponse.json();
+            USD_TO_INR = forexData.rates.INR;
         } catch (error) {
-            console.log('GoodReturns fetch failed:', error.message);
+            console.error('Failed to fetch forex rate, using default:', error);
+            // Keep the default USD_TO_INR value
         }
 
-        // If Indian rates not available, calculate from global + duties
-        if (!indianRatesFetched) {
-            const goldPriceUSD = await fetchGoldPrice();
-            GOLD_USD_PER_OUNCE = goldPriceUSD;
-            const goldPriceINRperOunce = goldPriceUSD * USD_TO_INR;
-            const goldPriceINRperGram = goldPriceINRperOunce / 31.1035;
-            
-            // Add Indian import duty (15%) + GST (3%) + local charges (~10%)
-            const indianMultiplier = 1.15 * 1.03 * 1.10; // Total ~30% markup
-            
-            basePrices.gold24k = Math.round(goldPriceINRperGram * indianMultiplier);
-            basePrices.gold22k = Math.round(basePrices.gold24k * 0.916);
-            basePrices.gold18k = Math.round(basePrices.gold24k * 0.75);
-            
-            console.log('⚠️ Using global price + Indian duties:', {
-                globalPrice: goldPriceINRperGram.toFixed(2),
-                withDuties: basePrices.gold24k
-            });
-        }
+        // Fetch gold price (in USD per troy ounce, convert to INR per gram)
+        // Note: 1 troy ounce = 31.1035 grams
+        const goldPriceUSD = await fetchGoldPrice();
+        const goldPriceINRperOunce = goldPriceUSD * USD_TO_INR;
+        const goldPriceINRperGram = goldPriceINRperOunce / 31.1035;
 
-        // Fetch silver price
+        // Calculate different purities
+        basePrices.gold24k = Math.round(goldPriceINRperGram);
+        basePrices.gold22k = Math.round(goldPriceINRperGram * 0.9167); // 22/24
+        basePrices.gold18k = Math.round(goldPriceINRperGram * 0.75);   // 18/24
+
+        // Fetch silver price (in USD per troy ounce, convert to INR per kg)
         const silverPriceUSD = await fetchSilverPrice();
-        SILVER_USD_PER_OUNCE = silverPriceUSD;
         const silverPriceINRperOunce = silverPriceUSD * USD_TO_INR;
         const silverPriceINRperGram = silverPriceINRperOunce / 31.1035;
-        basePrices.silver = Math.round(silverPriceINRperGram * 1.15); // Add 15% for Indian market
+        basePrices.silver = Math.round(silverPriceINRperGram * 1000); // per kg
 
-        // Platinum estimation
-        basePrices.platinum = Math.round(basePrices.gold24k * 1.05);
-
-        // Save today's price to history
-        saveDailyPrice();
+        // Fetch platinum price (in USD per troy ounce, convert to INR per gram)
+        const platinumPriceUSD = await fetchPlatinumPrice();
+        const platinumPriceINRperOunce = platinumPriceUSD * USD_TO_INR;
+        const platinumPriceINRperGram = platinumPriceINRperOunce / 31.1035;
+        basePrices.platinum = Math.round(platinumPriceINRperGram);
 
         // Cache the data
         cacheData({
@@ -263,138 +219,124 @@ async function fetchLatestPrices() {
             timestamp: Date.now()
         });
 
-        console.log('✅ FINAL Indian Prices:', {
-            gold24k: `₹${basePrices.gold24k}/g`,
-            gold22k: `₹${basePrices.gold22k}/g`,
-            gold18k: `₹${basePrices.gold18k}/g`,
-            silver: `₹${basePrices.silver}/g`
-        });
-        
-        // Force update all UI elements immediately
-        updateHeroPrices();
-        updateTicker();
-        updatePriceComparison();
-        
+        console.log('Prices updated successfully', basePrices);
     } catch (error) {
-        console.error('❌ Error fetching prices:', error);
+        console.error('Error fetching prices, using fallback:', error);
         // Will use default fallback prices
     }
 }
 
 // Fetch gold price from multiple sources
 async function fetchGoldPrice() {
-    // Try goldprice.org - FREE and RELIABLE
+    // Try metals.live API first
     try {
-        const response = await fetch('https://data-asg.goldprice.org/dbXRates/USD');
+        const response = await fetch(API_CONFIG.goldAPI);
         const data = await response.json();
-        if (data.items && data.items[0] && data.items[0].xauPrice) {
-            const price = parseFloat(data.items[0].xauPrice);
-            console.log('✅ GoldPrice.org: $' + price.toFixed(2) + '/oz');
-            return price;
-        }
-    } catch (error) {
-        console.log('GoldPrice.org failed:', error.message);
-    }
-
-    // Try metals.live API (no auth required)
-    try {
-        const response = await fetch('https://api.metals.live/v1/spot/gold');
-        const data = await response.json();
-        if (data && data[0] && data[0].price) {
-            console.log('✅ Metals.live: $' + data[0].price.toFixed(2) + '/oz');
-            return data[0].price;
-        }
-    } catch (error) {
-        console.log('Metals.live failed:', error.message);
-    }
-
-    // Try alternative endpoint
-    try {
-        const response = await fetch('https://www.goldapi.io/api/XAU/USD', {
-            headers: {
-                'x-access-token': 'goldapi-1lpe9bk3mzb89n-io',
-                'Content-Type': 'application/json'
-            }
-        });
-        const data = await response.json();
-        if (data.price) {
-            console.log('✅ GoldAPI.io: $' + data.price.toFixed(2) + '/oz');
+        if (data && data.price) {
             return data.price;
         }
     } catch (error) {
-        console.log('GoldAPI.io failed:', error.message);
+        console.log('Metals.live API failed, trying next source');
     }
-    
-    // CRITICAL: Fetch from a working public source
+
+    // Try GoldAPI.io
     try {
-        // Use a CORS proxy to fetch from reliable source
-        const response = await fetch('https://api.allorigins.win/raw?url=https://www.goldprice.org/gold-price-per-ounce.html');
-        const html = await response.text();
-        // Extract price from HTML
-        const match = html.match(/id="gp-spot-price[^>]*>[\s]*\$?([\d,]+\.?\d*)/i);
-        if (match && match[1]) {
-            const price = parseFloat(match[1].replace(/,/g, ''));
-            console.log('✅ Scraped from GoldPrice.org: $' + price.toFixed(2) + '/oz');
-            return price;
+        const response = await fetch('https://www.goldapi.io/api/XAU/USD', {
+            headers: {
+                'x-access-token': 'goldapi-demo'
+            }
+        });
+        const data = await response.json();
+        if (data && data.price) {
+            return data.price;
         }
     } catch (error) {
-        console.log('Scraping failed:', error.message);
+        console.log('GoldAPI failed, trying next source');
+    }
+
+    // Try metals-api.com
+    try {
+        const response = await fetch('https://metals-api.com/api/latest?access_key=demo&base=USD&symbols=XAU');
+        const data = await response.json();
+        if (data && data.rates && data.rates.XAU) {
+            return 1 / data.rates.XAU; // Convert to price per ounce
+        }
+    } catch (error) {
+        console.log('Metals API failed, trying next source');
     }
     
-    // Last resort: use current market estimate
-    console.error('⚠️ ALL APIs FAILED - Using market estimate');
-    console.log('Current gold estimate: $2685/oz (Jan 2026)');
-    return 2685;
+    // Try Open Exchange Rates with commodity data
+    try {
+        const response = await fetch('https://open.er-api.com/v6/latest/XAU');
+        const data = await response.json();
+        if (data && data.rates && data.rates.USD) {
+            return 1 / data.rates.USD;
+        }
+    } catch (error) {
+        console.log('Exchange rates API failed');
+    }
+    
+    // Fallback to approximate current market price
+    console.log('All gold APIs failed, using market estimate');
+    return 2650; // Approximate gold price in USD per ounce
 }
 
 // Fetch silver price
 async function fetchSilverPrice() {
-    // Try goldprice.org for silver - FREE and RELIABLE
+    // Try metals.live API first
     try {
-        const response = await fetch('https://data-asg.goldprice.org/dbXRates/USD');
+        const response = await fetch(API_CONFIG.silverAPI);
         const data = await response.json();
-        if (data.items && data.items[0] && data.items[0].xagPrice) {
-            const price = parseFloat(data.items[0].xagPrice);
-            console.log('✅ Silver (GoldPrice.org): $' + price.toFixed(2) + '/oz');
-            return price;
-        }
-    } catch (error) {
-        console.log('GoldPrice.org silver failed:', error.message);
-    }
-
-    // Try metals.live for silver
-    try {
-        const response = await fetch('https://api.metals.live/v1/spot/silver');
-        const data = await response.json();
-        if (data && data[0] && data[0].price) {
-            console.log('✅ Silver (Metals.live): $' + data[0].price.toFixed(2) + '/oz');
-            return data[0].price;
-        }
-    } catch (error) {
-        console.log('Metals.live silver failed:', error.message);
-    }
-
-    // Try goldapi.io for silver
-    try {
-        const response = await fetch('https://www.goldapi.io/api/XAG/USD', {
-            headers: {
-                'x-access-token': 'goldapi-1lpe9bk3mzb89n-io',
-                'Content-Type': 'application/json'
-            }
-        });
-        const data = await response.json();
-        if (data.price) {
-            console.log('✅ Silver (GoldAPI.io): $' + data.price.toFixed(2) + '/oz');
+        if (data && data.price) {
             return data.price;
         }
     } catch (error) {
-        console.log('GoldAPI silver failed:', error.message);
+        console.log('Metals.live API failed for silver, trying fallback');
+    }
+
+    // Try metals-api.com
+    try {
+        const response = await fetch('https://metals-api.com/api/latest?access_key=demo&base=USD&symbols=XAG');
+        const data = await response.json();
+        if (data && data.rates && data.rates.XAG) {
+            return 1 / data.rates.XAG; // Convert to price per ounce
+        }
+    } catch (error) {
+        console.log('Metals API failed for silver');
     }
     
-    // Fallback
-    console.error('⚠️ Silver APIs failed - using estimate');
-    console.log('Current silver estimate: $30.75/oz (Jan 2026)');
-    return 30.75;
+    // Fallback to approximate current market price
+    console.log('All silver APIs failed, using market estimate');
+    return 30.5; // Approximate silver price in USD per ounce
+}
+
+// Fetch platinum price
+async function fetchPlatinumPrice() {
+    // Try metals.live API first
+    try {
+        const response = await fetch(API_CONFIG.platinumAPI);
+        const data = await response.json();
+        if (data && data.price) {
+            return data.price;
+        }
+    } catch (error) {
+        console.log('Metals.live API failed for platinum, trying fallback');
+    }
+
+    // Try metals-api.com
+    try {
+        const response = await fetch('https://metals-api.com/api/latest?access_key=demo&base=USD&symbols=XPT');
+        const data = await response.json();
+        if (data && data.rates && data.rates.XPT) {
+            return 1 / data.rates.XPT; // Convert to price per ounce
+        }
+    } catch (error) {
+        console.log('Metals API failed for platinum');
+    }
+    
+    // Fallback to approximate current market price
+    console.log('All platinum APIs failed, using market estimate');
+    return 950; // Approximate platinum price in USD per ounce
 }
 
 // Cache management
@@ -455,7 +397,6 @@ window.refreshPrices = async function(evt) {
     // Update all displays
     updateHeroPrices();
     updateTicker();
-    updatePriceComparison(); // Update yesterday vs today
     updateLastUpdateTime();
     
     // Re-select current city to update prices
@@ -654,7 +595,6 @@ function displayCityRates(cityName, prices) {
 }
 
 function updateHeroPrices() {
-    console.log('🔄 Updating hero prices:', basePrices);
     document.getElementById('hero-gold-24k').textContent = basePrices.gold24k.toLocaleString('en-IN');
     document.getElementById('hero-gold-22k').textContent = basePrices.gold22k.toLocaleString('en-IN');
     document.getElementById('hero-silver').textContent = basePrices.silver.toLocaleString('en-IN');
@@ -670,47 +610,6 @@ function updateTicker() {
     document.getElementById('ticker-gold-22k').textContent = basePrices.gold22k.toLocaleString('en-IN');
     document.getElementById('ticker-silver').textContent = basePrices.silver.toLocaleString('en-IN');
     document.getElementById('ticker-platinum').textContent = basePrices.platinum.toLocaleString('en-IN');
-}
-
-// Update yesterday vs today comparison
-function updatePriceComparison() {
-    const yesterday = getYesterdayPrice();
-    const today = basePrices;
-    
-    if (!yesterday) {
-        // Hide comparison section if no yesterday data
-        const compSection = document.getElementById('price-comparison');
-        if (compSection) {
-            compSection.style.display = 'none';
-        }
-        return;
-    }
-    
-    // Show comparison section
-    const compSection = document.getElementById('price-comparison');
-    if (compSection) {
-        compSection.style.display = 'block';
-    }
-    
-    // Update values
-    document.getElementById('yesterday-22k').textContent = yesterday.gold22k.toLocaleString('en-IN');
-    document.getElementById('today-22k').textContent = today.gold22k.toLocaleString('en-IN');
-    
-    // Calculate change
-    const change = today.gold22k - yesterday.gold22k;
-    const changePercent = ((change / yesterday.gold22k) * 100).toFixed(2);
-    
-    const changeElement = document.getElementById('change-amount');
-    if (change > 0) {
-        changeElement.innerHTML = `<span class="text-green-600">▲ ₹${change.toLocaleString('en-IN')} (+${changePercent}%)</span>`;
-        changeElement.className = 'text-lg font-semibold mt-1 text-green-600';
-    } else if (change < 0) {
-        changeElement.innerHTML = `<span class="text-red-600">▼ ₹${Math.abs(change).toLocaleString('en-IN')} (${changePercent}%)</span>`;
-        changeElement.className = 'text-lg font-semibold mt-1 text-red-600';
-    } else {
-        changeElement.innerHTML = `<span class="text-gray-600">− No change</span>`;
-        changeElement.className = 'text-lg font-semibold mt-1 text-gray-600';
-    }
 }
 
 function initializeCharts() {
