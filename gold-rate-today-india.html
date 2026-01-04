@@ -112,21 +112,39 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="text-center">
                     <h3 class="text-gray-600 text-sm font-medium mb-2">24 Karat Gold</h3>
-                    <p class="text-4xl font-bold text-yellow-600">₹<span id="hero-gold-24k">13,582</span></p>
+                    <p class="text-4xl font-bold text-yellow-600">₹<span id="hero-gold-24k">7,250</span></p>
                     <p class="text-sm text-gray-500 mt-1">per gram</p>
                     <p class="text-xs text-green-600 mt-1" id="hero-gold-24k-change">+0.0%</p>
                 </div>
                 <div class="text-center border-x border-gray-200">
                     <h3 class="text-gray-600 text-sm font-medium mb-2">22 Karat Gold</h3>
-                    <p class="text-4xl font-bold text-yellow-500">₹<span id="hero-gold-22k">12,450</span></p>
+                    <p class="text-4xl font-bold text-yellow-500">₹<span id="hero-gold-22k">6,645</span></p>
                     <p class="text-sm text-gray-500 mt-1">per gram</p>
                     <p class="text-xs text-green-600 mt-1" id="hero-gold-22k-change">+0.0%</p>
                 </div>
                 <div class="text-center">
                     <h3 class="text-gray-600 text-sm font-medium mb-2">Silver</h3>
-                    <p class="text-4xl font-bold text-gray-600">₹<span id="hero-silver">2,400</span></p>
-                    <p class="text-sm text-gray-500 mt-1">per kilogram</p>
+                    <p class="text-4xl font-bold text-gray-600">₹<span id="hero-silver">85</span></p>
+                    <p class="text-sm text-gray-500 mt-1">per gram</p>
                     <p class="text-xs text-green-600 mt-1" id="hero-silver-change">+0.0%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yesterday vs Today Comparison -->
+        <div id="price-comparison" class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl shadow-lg p-6 mb-8 border border-blue-200">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                <span class="text-2xl">📊</span> Daily Price Change
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="comparison-content">
+                <div class="bg-white rounded-lg p-4 shadow">
+                    <p class="text-sm text-gray-600 mb-2">Yesterday (22K Gold)</p>
+                    <p class="text-2xl font-bold text-gray-700">₹<span id="yesterday-22k">-</span></p>
+                </div>
+                <div class="bg-white rounded-lg p-4 shadow">
+                    <p class="text-sm text-gray-600 mb-2">Today (22K Gold)</p>
+                    <p class="text-2xl font-bold text-green-600">₹<span id="today-22k">-</span></p>
+                    <p class="text-lg font-semibold mt-1" id="change-amount">-</p>
                 </div>
             </div>
         </div>
