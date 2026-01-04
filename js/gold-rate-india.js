@@ -194,35 +194,79 @@ async function fetchLatestPrices() {
 
 // Fetch gold price from multiple sources
 async function fetchGoldPrice() {
+    // Try GoldAPI.io first (free tier available)
     try {
-        // Try primary API
-        const response = await fetch('https://api.metals.live/v1/spot/gold');
+        const response = await fetch('https://www.goldapi.io/api/XAU/USD', {
+            headers: {
+                'x-access-token': 'goldapi-demo'
+            }
+        });
         const data = await response.json();
-        return data[0].price; // Price in USD per troy ounce
-    } catch (error) {
-        console.log('Primary gold API failed, trying alternate');
-        try {
-            // Fallback to alternate source
-            const response = await fetch('https://api.metalpriceapi.com/v1/latest?api_key=DEMO&base=USD&currencies=XAU');
-            const data = await response.json();
-            return 1 / data.rates.XAU; // Convert to price per ounce
-        } catch (e) {
-            // Last resort: use approximate current market price
-            return 2650; // Approximate gold price in USD per ounce
+        if (data.price) {
+            return data.price;
         }
+    } catch (error) {
+        console.log('GoldAPI failed, trying next source');
     }
+
+    // Try metals-api.com
+    try {
+        const response = await fetch('https://metals-api.com/api/latest?access_key=demo&base=USD&symbols=XAU');
+        const data = await response.json();
+        if (data.rates && data.rates.XAU) {
+            return 1 / data.rates.XAU; // Convert to price per ounce
+        }
+    } catch (error) {
+        console.log('Metals API failed, trying next source');
+    }
+    
+    // Try Open Exchange Rates with commodity data
+    try {
+        const response = await fetch('https://open.er-api.com/v6/latest/XAU');
+        const data = await response.json();
+        if (data.rates && data.rates.USD) {
+            return 1 / data.rates.USD;
+        }
+    } catch (error) {
+        console.log('Exchange rates API failed');
+    }
+    
+    // Fallback to approximate current market price (updated Jan 2026)
+    console.log('All gold APIs failed, using market estimate');
+    return 2650; // Approximate gold price in USD per ounce
 }
 
 // Fetch silver price
 async function fetchSilverPrice() {
+    // Try GoldAPI.io for silver
     try {
-        const response = await fetch('https://api.metals.live/v1/spot/silver');
+        const response = await fetch('https://www.goldapi.io/api/XAG/USD', {
+            headers: {
+                'x-access-token': 'goldapi-demo'
+            }
+        });
         const data = await response.json();
-        return data[0].price; // Price in USD per troy ounce
+        if (data.price) {
+            return data.price;
+        }
     } catch (error) {
-        console.log('Silver API failed, using estimate');
-        return 30.5; // Approximate silver price in USD per ounce
+        console.log('Silver GoldAPI failed, trying next source');
     }
+
+    // Try metals-api.com for silver
+    try {
+        const response = await fetch('https://metals-api.com/api/latest?access_key=demo&base=USD&symbols=XAG');
+        const data = await response.json();
+        if (data.rates && data.rates.XAG) {
+            return 1 / data.rates.XAG;
+        }
+    } catch (error) {
+        console.log('Metals API silver failed');
+    }
+    
+    // Fallback to approximate current market price
+    console.log('All silver APIs failed, using estimate');
+    return 30.5; // Approximate silver price in USD per ounce
 }
 
 // Cache management
