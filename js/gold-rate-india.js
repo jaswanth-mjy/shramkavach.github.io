@@ -14,13 +14,13 @@ const API_CONFIG = {
 };
 
 // Current market prices (Jan 2026 - REAL Indian market rates)
-// Based on actual market rates: 10g 22K = ₹70,000-72,000 = ₹7,000-7,200/gram
+// Based on actual market rates: 22K = ₹12,450/gram
 let basePrices = {
-    gold24k: 7850, // per gram in INR (actual Indian market Jan 2026)
-    gold22k: 7190, // per gram in INR (actual Indian market Jan 2026)
-    gold18k: 5890, // per gram in INR (75% of 24k)
-    silver: 98,    // per gram in INR (actual market rate)
-    platinum: 3100 // per gram in INR
+    gold24k: 13590, // per gram in INR (12450 / 0.916)
+    gold22k: 12450, // per gram in INR (ACTUAL market rate)
+    gold18k: 10193, // per gram in INR (75% of 24k)
+    silver: 2450,   // per gram in INR
+    platinum: 14270 // per gram in INR
 };
 
 let USD_TO_INR = 85.5; // Will be updated from API
