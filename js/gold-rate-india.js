@@ -237,6 +237,12 @@ async function fetchLatestPrices() {
             usdToInr: USD_TO_INR.toFixed(2),
             goldUSD: `$${goldPriceUSD.toFixed(2)}/oz`
         });
+        
+        // Force update all UI elements immediately
+        updateHeroPrices();
+        updateTicker();
+        updatePriceComparison();
+        
     } catch (error) {
         console.error('Error fetching prices, using fallback:', error);
         // Will use default fallback prices
@@ -610,6 +616,7 @@ function displayCityRates(cityName, prices) {
 }
 
 function updateHeroPrices() {
+    console.log('🔄 Updating hero prices:', basePrices);
     document.getElementById('hero-gold-24k').textContent = basePrices.gold24k.toLocaleString('en-IN');
     document.getElementById('hero-gold-22k').textContent = basePrices.gold22k.toLocaleString('en-IN');
     document.getElementById('hero-silver').textContent = basePrices.silver.toLocaleString('en-IN');
