@@ -73,7 +73,22 @@ document.addEventListener('DOMContentLoaded', async function() {
     showLoading();
     await fetchLatestPrices();
     initializeCharts();
-    selectCity('Mumbai'); // Default city
+    
+    // Select Mumbai as default
+    const mumbaiBtn = Array.from(document.querySelectorAll('.city-btn')).find(btn => btn.textContent.trim() === 'Mumbai');
+    if (mumbaiBtn) {
+        mumbaiBtn.classList.add('ring-4', 'ring-white', 'ring-offset-2');
+    }
+    const variation = cityVariations['Mumbai'];
+    const prices = {
+        gold24k: basePrices.gold24k + variation.gold24k,
+        gold22k: basePrices.gold22k + variation.gold22k,
+        gold18k: basePrices.gold18k + variation.gold18k,
+        silver: basePrices.silver + variation.silver,
+        platinum: basePrices.platinum + variation.platinum
+    };
+    displayCityRates('Mumbai', prices);
+    
     updateHeroPrices();
     updateTicker();
     hideLoading();
@@ -251,8 +266,8 @@ function updateLastUpdateTime() {
 }
 
 // Manual refresh function
-async function refreshPrices() {
-    const button = event.target.closest('button');
+window.refreshPrices = async function(evt) {
+    const button = evt.target.closest('button');
     const originalHTML = button.innerHTML;
     
     // Show loading state
@@ -275,7 +290,11 @@ async function refreshPrices() {
     if (activeCity) {
         activeCity.click();
     } else {
-        selectCity('Mumbai');
+        // Fallback to Mumbai
+        const mumbaiBtn = Array.from(document.querySelectorAll('.city-btn')).find(btn => btn.textContent.trim() === 'Mumbai');
+        if (mumbaiBtn) {
+            mumbaiBtn.click();
+        }
     }
     
     // Update charts
@@ -320,12 +339,14 @@ function updateChartsData() {
     }
 }
 
-function selectCity(cityName) {
+function selectCity(cityName, evt) {
     // Update button states
     document.querySelectorAll('.city-btn').forEach(btn => {
         btn.classList.remove('ring-4', 'ring-white', 'ring-offset-2');
     });
-    event.target.classList.add('ring-4', 'ring-white', 'ring-offset-2');
+    if (evt && evt.target) {
+        evt.target.classList.add('ring-4', 'ring-white', 'ring-offset-2');
+    }
     
     const variation = cityVariations[cityName];
     const prices = {
