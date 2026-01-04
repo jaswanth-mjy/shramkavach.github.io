@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Precious Metals Prices - Gold, Silver, Platinum, Diamond | ShramKavach</title>
+    <meta name="description" content="Real-time prices for Gold, Silver, Platinum, Palladium, and Diamond. Updated daily with global market rates. Track precious metals prices for investment decisions.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .pulse-ring {
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-yellow-600 via-gray-400 to-blue-600 text-white py-6 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold mb-2">💰 Precious Metals Tracker</h1>
+                    <p class="text-yellow-100">Live prices updated daily from global markets</p>
+                </div>
+                <a href="index.html" class="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                    ← Back to Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        
+        <!-- Live Indicator -->
+        <div class="flex items-center justify-center gap-2 mb-8">
+            <div class="w-3 h-3 bg-green-500 rounded-full pulse-ring"></div>
+            <span class="text-green-600 font-semibold">LIVE - Updates every 24 hours</span>
+        </div>
+
+        <!-- Precious Metals Widget -->
+        <div id="precious-metals-widget" class="mb-8">
+            <!-- Prices will be loaded here by JavaScript -->
+            <div class="text-center py-12">
+                <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
+                <p class="mt-4 text-gray-600">Loading latest prices...</p>
+            </div>
+        </div>
+
+        <!-- Market Insights -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">📊 Market Insights</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-bold text-yellow-600 mb-2">🥇 Gold</h3>
+                    <p class="text-gray-700 text-sm">Gold continues its historic rally, breaking $4,300 as the 'debasement trade' accelerates globally. Central banks in Poland, China, and Kazakhstan driving demand.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-600 mb-2">🥈 Silver</h3>
+                    <p class="text-gray-700 text-sm">Silver tracking gold's momentum with strong industrial demand from solar and EV sectors. Trading at multi-year highs.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-600 mb-2">⚪ Platinum</h3>
+                    <p class="text-gray-700 text-sm">Stable with modest gains. Industrial applications in automotive catalysts remain primary driver of demand.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-blue-600 mb-2">💎 Diamond</h3>
+                    <p class="text-gray-700 text-sm">Investment-grade diamonds showing steady appreciation, increasingly treated as alternative store of value alongside precious metals.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Historical Performance -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">📈 Historical Performance (2025)</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b">
+                            <th class="text-left py-2">Metal</th>
+                            <th class="text-right py-2">Current</th>
+                            <th class="text-right py-2">1 Week Ago</th>
+                            <th class="text-right py-2">1 Month Ago</th>
+                            <th class="text-right py-2">1 Year Ago</th>
+                            <th class="text-right py-2">Annual Change</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="py-2 font-semibold">🥇 Gold</td>
+                            <td class="text-right">$4,332.00</td>
+                            <td class="text-right text-gray-600">$4,280.00</td>
+                            <td class="text-right text-gray-600">$4,100.00</td>
+                            <td class="text-right text-gray-600">$2,640.00</td>
+                            <td class="text-right text-green-600 font-bold">+64.09%</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-2 font-semibold">🥈 Silver</td>
+                            <td class="text-right">$73.00</td>
+                            <td class="text-right text-gray-600">$72.00</td>
+                            <td class="text-right text-gray-600">$68.50</td>
+                            <td class="text-right text-gray-600">$50.00</td>
+                            <td class="text-right text-green-600 font-bold">+46.00%</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-2 font-semibold">⚪ Platinum</td>
+                            <td class="text-right">$950.00</td>
+                            <td class="text-right text-gray-600">$945.00</td>
+                            <td class="text-right text-gray-600">$920.00</td>
+                            <td class="text-right text-gray-600">$890.00</td>
+                            <td class="text-right text-green-600 font-bold">+6.74%</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 font-semibold">💎 Diamond</td>
+                            <td class="text-right">$65,000/ct</td>
+                            <td class="text-right text-gray-600">$64,800/ct</td>
+                            <td class="text-right text-gray-600">$64,500/ct</td>
+                            <td class="text-right text-gray-600">$63,000/ct</td>
+                            <td class="text-right text-green-600 font-bold">+3.17%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="text-sm text-gray-700">
+                <strong>⚠️ Disclaimer:</strong> Prices are indicative and may vary by market, dealer, and quality. Diamond prices represent average investment-grade stones (1ct, D-IF, Excellent cut). Always verify with official sources before trading. This is for informational purposes only and not financial advice.
+            </p>
+        </div>
+
+        <!-- Links -->
+        <div class="mt-8 text-center">
+            <a href="calculators.html" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition mr-4">
+                📊 Financial Calculators
+            </a>
+            <a href="updates.html" class="inline-block bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition">
+                📰 Latest Updates
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 ShramKavach. All rights reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">Precious metals data sourced from global markets</p>
+        </div>
+    </footer>
+
+    <!-- Load the tracker script -->
+    <script src="js/precious-metals-tracker.js?v=1.0"></script>
+</body>
+</html>

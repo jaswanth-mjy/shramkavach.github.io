@@ -1,0 +1,93 @@
+{
+  "lastUpdated": "2026-01-04T12:00:00Z",
+  "prices": {
+    "gold": {
+      "price": 4332.00,
+      "unit": "USD/oz",
+      "change": "+0.28%",
+      "previousClose": 4320.00,
+      "dayHigh": 4345.00,
+      "dayLow": 4318.00,
+      "lastUpdate": "2026-01-04",
+      "source": "Global Markets"
+    },
+    "silver": {
+      "price": 73.00,
+      "unit": "USD/oz",
+      "change": "+0.15%",
+      "previousClose": 72.89,
+      "dayHigh": 73.25,
+      "dayLow": 72.50,
+      "lastUpdate": "2026-01-04",
+      "source": "Global Markets"
+    },
+    "platinum": {
+      "price": 950.00,
+      "unit": "USD/oz",
+      "change": "-0.10%",
+      "previousClose": 950.95,
+      "dayHigh": 955.00,
+      "dayLow": 945.00,
+      "lastUpdate": "2026-01-04",
+      "source": "Global Markets"
+    },
+    "palladium": {
+      "price": 1050.00,
+      "unit": "USD/oz",
+      "change": "+0.45%",
+      "previousClose": 1045.30,
+      "dayHigh": 1055.00,
+      "dayLow": 1042.00,
+      "lastUpdate": "2026-01-04",
+      "source": "Global Markets"
+    },
+    "diamond": {
+      "price": 65000.00,
+      "unit": "USD/carat",
+      "change": "+0.05%",
+      "previousClose": 64967.50,
+      "description": "1-carat D-Flawless Round Brilliant",
+      "note": "Average price for investment-grade diamonds (1ct, D-IF, Excellent cut)",
+      "lastUpdate": "2026-01-04",
+      "source": "Rapaport Diamond Report"
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "updateFrequency": "daily",
+    "nextUpdate": "2026-01-05T00:00:00Z",
+    "disclaimer": "Prices are indicative and may vary by market, dealer, and quality. Diamond prices represent average investment-grade stones. Always verify with official sources before trading."
+  },
+  "historicalData": {
+    "gold": {
+      "weekAgo": 4280.00,
+      "monthAgo": 4100.00,
+      "yearAgo": 2640.00,
+      "yearChange": "+64.09%"
+    },
+    "silver": {
+      "weekAgo": 72.00,
+      "monthAgo": 68.50,
+      "yearAgo": 50.00,
+      "yearChange": "+46.00%"
+    },
+    "platinum": {
+      "weekAgo": 945.00,
+      "monthAgo": 920.00,
+      "yearAgo": 890.00,
+      "yearChange": "+6.74%"
+    },
+    "diamond": {
+      "weekAgo": 64800.00,
+      "monthAgo": 64500.00,
+      "yearAgo": 63000.00,
+      "yearChange": "+3.17%"
+    }
+  },
+  "marketInsights": {
+    "gold": "Gold continues its historic rally, breaking $4,300 as the 'debasement trade' accelerates globally. Central banks in Poland, China, and Kazakhstan driving demand.",
+    "silver": "Silver tracking gold's momentum with strong industrial demand from solar and EV sectors.",
+    "platinum": "Stable with modest gains, industrial applications remain primary driver.",
+    "diamond": "Investment-grade diamonds showing steady appreciation, treated as alternative store of value."
+  }
+}
