@@ -9,6 +9,29 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'twenty-twenties-inflection-point',
+            title: 'The Inflection Point of the Twenty-Twenties: A Comprehensive Analysis of the Convergence of Kinetic Geopolitics, Algorithmic Sovereignty, and Financial Dislocation',
+            shortTitle: 'The Inflection Point of the Twenty-Twenties',
+            excerpt: 'Sunday, January 4, 2026, marks a distinct inflection point—where technological acceleration, geopolitical tension, and financial structural shifts catalyzed into a new global reality. Venezuelan intervention, DeepSeek mHC breakthrough, Gold at $4,332, and the Oracle Problem converge.',
+            date: '2026-01-04',
+            displayDate: 'Jan 4, 2026',
+            category: 'geopolitics ai technology markets finance',
+            tags: ['🔴 ANALYSIS', '⚡ INFLECTION', '🌍 GLOBAL'],
+            tagColors: ['bg-red-600', 'bg-orange-600', 'bg-indigo-600'],
+            readTime: '25 min read',
+            author: 'ShramKavach',
+            icon: '📊',
+            gradient: 'from-red-50 via-orange-50 to-indigo-50',
+            borderColor: 'border-red-600',
+            stats: [
+                { label: 'Gold Price', value: '$4,332', subtext: 'Debasement trade accelerates globally', color: 'text-yellow-600', icon: '💰' },
+                { label: 'Venezuelan Oil', value: '300B bbl', subtext: 'Largest proven reserves now US-accessible', color: 'text-orange-600', icon: '⚡' },
+                { label: 'DeepSeek mHC', value: 'Breakthrough', subtext: 'China bypasses chip sanctions via math', color: 'text-blue-600', icon: '🧮' }
+            ],
+            link: 'twenty-twenties.html',
+            featured: true
+        },
+        {
             id: 'kinetic-agentic-convergence-2026',
             title: 'The Convergence of Kinetic Force and Agentic Intelligence: Global State of Technology, Finance, and Geopolitics – January 2026',
             shortTitle: 'Kinetic Force & Agentic Intelligence',
