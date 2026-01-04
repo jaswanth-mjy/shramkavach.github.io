@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Rate Today in India - Live Gold, Silver, Platinum Prices 4 Jan 2026 | ShramKavach</title>
+    <meta name="description" content="Gold rate today in India: Get live 24K, 22K, 18K gold prices per gram in major Indian cities including Mumbai, Delhi, Bangalore, Chennai, Kolkata. Updated silver and platinum rates in INR with 12-month price charts.">
+    <meta name="keywords" content="gold rate today, gold price india, 24k gold rate, 22k gold rate, silver rate today, platinum price india, gold rate mumbai, gold rate delhi, gold rate bangalore, live gold price, gold price per gram">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shramkavach.com/gold-rate-today-india.html">
+    <meta property="og:title" content="Gold Rate Today in India - Live Gold, Silver Prices 4 Jan 2026">
+    <meta property="og:description" content="Check today's gold rate in India for 24K, 22K, 18K gold per gram. Live prices for all major cities with 12-month performance charts in INR.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://shramkavach.com/gold-rate-today-india.html">
+    <meta property="twitter:title" content="Gold Rate Today in India - Live Prices 4 Jan 2026">
+    <meta property="twitter:description" content="24K Gold ₹13,582/g, 22K Gold ₹12,450/g, Silver ₹2,400/kg. Live rates for all Indian cities with historical charts.">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Gold Rate Today in India",
+      "description": "Live gold, silver, and platinum prices for major Indian cities",
+      "url": "https://shramkavach.com/gold-rate-today-india.html",
+      "datePublished": "2026-01-04",
+      "dateModified": "2026-01-04"
+    }
+    </script>
+    
+    <link rel="canonical" href="https://shramkavach.com/gold-rate-today-india.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .ticker-content {
+            display: inline-flex;
+            animation: ticker 30s linear infinite;
+        }
+        .ticker-container {
+            overflow: hidden;
+        }
+        .ticker-content > span {
+            margin-right: 3rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Ticker Bar -->
+    <div class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-2 overflow-hidden">
+        <div class="ticker-container">
+            <div class="ticker-content flex items-center gap-8 text-sm font-semibold whitespace-nowrap">
+                <span>24K Gold: ₹<span id="ticker-gold-24k">13,582</span>/g</span>
+                <span class="text-yellow-300">|</span>
+                <span>22K Gold: ₹<span id="ticker-gold-22k">12,450</span>/g</span>
+                <span class="text-yellow-300">|</span>
+                <span>Silver: ₹<span id="ticker-silver">2,400</span>/kg</span>
+                <span class="text-yellow-300">|</span>
+                <span>Platinum: ₹<span id="ticker-platinum">79,500</span>/g</span>
+                <span class="text-yellow-300">|</span>
+                <span class="text-green-300">Updated: 4 Jan 2026</span>
+                <!-- Duplicate for continuous scroll -->
+                <span>24K Gold: ₹<span>13,582</span>/g</span>
+                <span class="text-yellow-300">|</span>
+                <span>22K Gold: ₹<span>12,450</span>/g</span>
+                <span class="text-yellow-300">|</span>
+                <span>Silver: ₹<span>2,400</span>/kg</span>
+                <span class="text-yellow-300">|</span>
+                <span>Platinum: ₹<span>79,500</span>/g</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-yellow-500 via-yellow-600 to-orange-500 text-white py-8 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between flex-wrap gap-4">
+                <div>
+                    <h1 class="text-3xl sm:text-5xl font-bold flex items-center gap-3 mb-2">
+                        💰 Gold Rate Today in India
+                    </h1>
+                    <p class="text-yellow-100 text-base sm:text-lg">Live prices for 24K, 22K, 18K Gold | Silver | Platinum - 4 January 2026</p>
+                    <p class="mt-1 text-yellow-200 text-sm">All prices in Indian Rupees (₹) • Updated daily at 6:00 AM IST</p>
+                </div>
+                <a href="index.html" class="bg-white text-yellow-600 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-50 transition shadow-lg">
+                    ← Back to Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Top Highlight Prices -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8 border-l-4 border-yellow-500">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <h3 class="text-gray-600 text-sm font-medium mb-2">24 Karat Gold</h3>
+                    <p class="text-4xl font-bold text-yellow-600">₹<span id="hero-gold-24k">13,582</span></p>
+                    <p class="text-sm text-gray-500 mt-1">per gram</p>
+                    <p class="text-xs text-green-600 mt-1" id="hero-gold-24k-change">+0.0%</p>
+                </div>
+                <div class="text-center border-x border-gray-200">
+                    <h3 class="text-gray-600 text-sm font-medium mb-2">22 Karat Gold</h3>
+                    <p class="text-4xl font-bold text-yellow-500">₹<span id="hero-gold-22k">12,450</span></p>
+                    <p class="text-sm text-gray-500 mt-1">per gram</p>
+                    <p class="text-xs text-green-600 mt-1" id="hero-gold-22k-change">+0.0%</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-gray-600 text-sm font-medium mb-2">Silver</h3>
+                    <p class="text-4xl font-bold text-gray-600">₹<span id="hero-silver">2,400</span></p>
+                    <p class="text-sm text-gray-500 mt-1">per kilogram</p>
+                    <p class="text-xs text-green-600 mt-1" id="hero-silver-change">+0.0%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- City Selector -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                <span class="text-2xl">📍</span> Select Your City
+            </h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                <button onclick="selectCity('Mumbai')" class="city-btn active bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition shadow">Mumbai</button>
+                <button onclick="selectCity('Delhi')" class="city-btn bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-red-700 transition shadow">Delhi</button>
+                <button onclick="selectCity('Bangalore')" class="city-btn bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-purple-700 transition shadow">Bangalore</button>
+                <button onclick="selectCity('Chennai')" class="city-btn bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition shadow">Chennai</button>
+                <button onclick="selectCity('Kolkata')" class="city-btn bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-yellow-600 hover:to-yellow-700 transition shadow">Kolkata</button>
+                <button onclick="selectCity('Hyderabad')" class="city-btn bg-gradient-to-r from-pink-500 to-pink-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-pink-600 hover:to-pink-700 transition shadow">Hyderabad</button>
+                <button onclick="selectCity('Pune')" class="city-btn bg-gradient-to-r from-indigo-500 to-indigo-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-indigo-600 hover:to-indigo-700 transition shadow">Pune</button>
+                <button onclick="selectCity('Ahmedabad')" class="city-btn bg-gradient-to-r from-teal-500 to-teal-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-teal-600 hover:to-teal-700 transition shadow">Ahmedabad</button>
+                <button onclick="selectCity('Jaipur')" class="city-btn bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition shadow">Jaipur</button>
+                <button onclick="selectCity('Lucknow')" class="city-btn bg-gradient-to-r from-cyan-500 to-cyan-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-cyan-700 transition shadow">Lucknow</button>
+                <button onclick="selectCity('Chandigarh')" class="city-btn bg-gradient-to-r from-lime-500 to-lime-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-lime-600 hover:to-lime-700 transition shadow">Chandigarh</button>
+                <button onclick="selectCity('Kochi')" class="city-btn bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-emerald-600 hover:to-emerald-700 transition shadow">Kochi</button>
+            </div>
+        </div>
+
+        <!-- Selected City Rates -->
+        <div id="city-rates" class="mb-8">
+            <!-- Will be populated by JavaScript -->
+        </div>
+
+        <!-- 12 Month Performance Charts -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                <span class="text-2xl">📊</span> 12-Month Price Performance in India
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                <!-- Gold Chart -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-3">24K Gold Price Trend (₹/gram)</h3>
+                    <canvas id="goldChart" height="250"></canvas>
+                </div>
+                
+                <!-- Silver Chart -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-3">Silver Price Trend (₹/kg)</h3>
+                    <canvas id="silverChart" height="250"></canvas>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Platinum Chart -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-3">Platinum Price Trend (₹/gram)</h3>
+                    <canvas id="platinumChart" height="250"></canvas>
+                </div>
+                
+                <!-- Performance Summary -->
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">12-Month Performance Summary</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                            <span class="font-medium text-gray-700">24K Gold</span>
+                            <span class="text-lg font-bold text-green-600" id="gold-12m-change">+8.5%</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                            <span class="font-medium text-gray-700">22K Gold</span>
+                            <span class="text-lg font-bold text-green-600" id="gold22k-12m-change">+8.5%</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                            <span class="font-medium text-gray-700">Silver</span>
+                            <span class="text-lg font-bold text-green-600" id="silver-12m-change">+12.3%</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                            <span class="font-medium text-gray-700">Platinum</span>
+                            <span class="text-lg font-bold text-red-600" id="platinum-12m-change">-2.1%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Gold in India -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">About Gold Prices in India</h2>
+            <div class="prose max-w-none text-gray-600">
+                <p class="mb-3">The price of gold in India is influenced by various factors including international gold prices, currency exchange rates (USD to INR), import duties, and GST. Gold rates vary across different Indian cities due to local taxes, transportation costs, and regional demand.</p>
+                <p class="mb-3"><strong>24 Karat Gold:</strong> 24K gold is 99.9% pure gold and is considered the purest form. It's softer and primarily used for investment purposes like gold coins and bars.</p>
+                <p class="mb-3"><strong>22 Karat Gold:</strong> 22K gold contains 91.6% pure gold mixed with other metals for durability. It's the most popular choice for jewelry in India.</p>
+                <p><strong>18 Karat Gold:</strong> 18K gold has 75% gold content and is commonly used in designer and lightweight jewelry.</p>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="text-sm text-gray-700"><strong>Disclaimer:</strong> The above gold rates are indicative and do not include GST (3%), TCS (Tax Collected at Source), and other levies. Actual prices may vary by jeweler. For exact rates, please contact your local jeweler. Prices are sourced from market data and updated daily at 6:00 AM IST.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2026 ShramKavach. All rights reserved. | <a href="index.html" class="text-yellow-400 hover:text-yellow-300">Home</a> | <a href="calculators.html" class="text-yellow-400 hover:text-yellow-300">Calculators</a></p>
+        </div>
+    </footer>
+
+    <script src="js/gold-rate-india.js?v=1.0"></script>
+</body>
+</html>
