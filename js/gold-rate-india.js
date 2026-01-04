@@ -14,12 +14,13 @@ const API_CONFIG = {
 };
 
 // Current market prices (Jan 2026 - will be updated from API)
+// IMPORTANT: These are INDIAN prices including import duty + GST + local charges
 let basePrices = {
-    gold24k: 7250, // per gram in INR (realistic Jan 2026 rate)
-    gold22k: 6645, // per gram in INR (91.6% of 24k)
-    gold18k: 5438, // per gram in INR (75% of 24k)
-    silver: 85,    // per gram in INR (not per kg!)
-    platinum: 2900 // per gram in INR
+    gold24k: 7650, // per gram in INR (Indian market rate with duties)
+    gold22k: 7010, // per gram in INR (91.6% of 24k)
+    gold18k: 5738, // per gram in INR (75% of 24k)
+    silver: 95,    // per gram in INR
+    platinum: 3050 // per gram in INR
 };
 
 let USD_TO_INR = 85.5; // Will be updated from API
@@ -191,34 +192,66 @@ async function fetchLatestPrices() {
             return;
         }
 
-        console.log('Fetching fresh data from APIs');
+        console.log('🔄 Fetching fresh INDIAN gold rates...');
         
         // Fetch USD to INR exchange rate
         const forexResponse = await fetch(API_CONFIG.forexAPI);
         const forexData = await forexResponse.json();
         USD_TO_INR = forexData.rates.INR;
+        console.log('💱 USD to INR:', USD_TO_INR.toFixed(2));
 
-        // Fetch gold price (in USD per troy ounce, convert to INR per gram)
-        // Note: 1 troy ounce = 31.1035 grams
-        const goldPriceUSD = await fetchGoldPrice();
-        GOLD_USD_PER_OUNCE = goldPriceUSD;
-        const goldPriceINRperOunce = goldPriceUSD * USD_TO_INR;
-        const goldPriceINRperGram = goldPriceINRperOunce / 31.1035;
+        // Try to fetch DIRECT Indian gold rates (includes duties/taxes)
+        let indianRatesFetched = false;
+        
+        try {
+            // Try GoodReturns API for Indian rates
+            const response = await fetch('https://www.goodreturns.in/gold-rates/');
+            const html = await response.text();
+            
+            // Parse Indian gold rates from HTML
+            const gold24kMatch = html.match(/24.*?Carat.*?₹\s*([\d,]+)/i);
+            const gold22kMatch = html.match(/22.*?Carat.*?₹\s*([\d,]+)/i);
+            
+            if (gold24kMatch && gold22kMatch) {
+                basePrices.gold24k = parseInt(gold24kMatch[1].replace(/,/g, ''));
+                basePrices.gold22k = parseInt(gold22kMatch[1].replace(/,/g, ''));
+                basePrices.gold18k = Math.round(basePrices.gold24k * 0.75);
+                indianRatesFetched = true;
+                console.log('✅ Fetched REAL Indian gold rates from GoodReturns');
+            }
+        } catch (error) {
+            console.log('GoodReturns fetch failed:', error.message);
+        }
 
-        // Calculate different purities
-        basePrices.gold24k = Math.round(goldPriceINRperGram);
-        basePrices.gold22k = Math.round(goldPriceINRperGram * 0.916); // 22/24 = 91.6%
-        basePrices.gold18k = Math.round(goldPriceINRperGram * 0.75);   // 18/24 = 75%
+        // If Indian rates not available, calculate from global + duties
+        if (!indianRatesFetched) {
+            const goldPriceUSD = await fetchGoldPrice();
+            GOLD_USD_PER_OUNCE = goldPriceUSD;
+            const goldPriceINRperOunce = goldPriceUSD * USD_TO_INR;
+            const goldPriceINRperGram = goldPriceINRperOunce / 31.1035;
+            
+            // Add Indian import duty (15%) + GST (3%) + local charges (~10%)
+            const indianMultiplier = 1.15 * 1.03 * 1.10; // Total ~30% markup
+            
+            basePrices.gold24k = Math.round(goldPriceINRperGram * indianMultiplier);
+            basePrices.gold22k = Math.round(basePrices.gold24k * 0.916);
+            basePrices.gold18k = Math.round(basePrices.gold24k * 0.75);
+            
+            console.log('⚠️ Using global price + Indian duties:', {
+                globalPrice: goldPriceINRperGram.toFixed(2),
+                withDuties: basePrices.gold24k
+            });
+        }
 
-        // Fetch silver price (in USD per troy ounce, convert to INR per gram)
+        // Fetch silver price
         const silverPriceUSD = await fetchSilverPrice();
         SILVER_USD_PER_OUNCE = silverPriceUSD;
         const silverPriceINRperOunce = silverPriceUSD * USD_TO_INR;
         const silverPriceINRperGram = silverPriceINRperOunce / 31.1035;
-        basePrices.silver = Math.round(silverPriceINRperGram); // per gram, NOT per kg
+        basePrices.silver = Math.round(silverPriceINRperGram * 1.15); // Add 15% for Indian market
 
-        // Platinum estimation (using approximate ratio to gold)
-        basePrices.platinum = Math.round(goldPriceINRperGram * 1.05); // Platinum usually ~5% more than gold
+        // Platinum estimation
+        basePrices.platinum = Math.round(basePrices.gold24k * 1.05);
 
         // Save today's price to history
         saveDailyPrice();
@@ -230,12 +263,11 @@ async function fetchLatestPrices() {
             timestamp: Date.now()
         });
 
-        console.log('✅ Prices updated successfully', {
+        console.log('✅ FINAL Indian Prices:', {
             gold24k: `₹${basePrices.gold24k}/g`,
             gold22k: `₹${basePrices.gold22k}/g`,
-            silver: `₹${basePrices.silver}/g`,
-            usdToInr: USD_TO_INR.toFixed(2),
-            goldUSD: `$${goldPriceUSD.toFixed(2)}/oz`
+            gold18k: `₹${basePrices.gold18k}/g`,
+            silver: `₹${basePrices.silver}/g`
         });
         
         // Force update all UI elements immediately
@@ -244,7 +276,7 @@ async function fetchLatestPrices() {
         updatePriceComparison();
         
     } catch (error) {
-        console.error('Error fetching prices, using fallback:', error);
+        console.error('❌ Error fetching prices:', error);
         // Will use default fallback prices
     }
 }
