@@ -251,7 +251,32 @@ async function fetchLatestPrices() {
 
 // Fetch gold price from multiple sources
 async function fetchGoldPrice() {
-    // Try goldapi.io with public demo key
+    // Try goldprice.org - FREE and RELIABLE
+    try {
+        const response = await fetch('https://data-asg.goldprice.org/dbXRates/USD');
+        const data = await response.json();
+        if (data.items && data.items[0] && data.items[0].xauPrice) {
+            const price = parseFloat(data.items[0].xauPrice);
+            console.log('✅ GoldPrice.org: $' + price.toFixed(2) + '/oz');
+            return price;
+        }
+    } catch (error) {
+        console.log('GoldPrice.org failed:', error.message);
+    }
+
+    // Try metals.live API (no auth required)
+    try {
+        const response = await fetch('https://api.metals.live/v1/spot/gold');
+        const data = await response.json();
+        if (data && data[0] && data[0].price) {
+            console.log('✅ Metals.live: $' + data[0].price.toFixed(2) + '/oz');
+            return data[0].price;
+        }
+    } catch (error) {
+        console.log('Metals.live failed:', error.message);
+    }
+
+    // Try alternative endpoint
     try {
         const response = await fetch('https://www.goldapi.io/api/XAU/USD', {
             headers: {
@@ -261,57 +286,62 @@ async function fetchGoldPrice() {
         });
         const data = await response.json();
         if (data.price) {
-            console.log('✅ GoldAPI.io: $' + data.price + '/oz');
+            console.log('✅ GoldAPI.io: $' + data.price.toFixed(2) + '/oz');
             return data.price;
         }
     } catch (error) {
-        console.log('GoldAPI.io failed, trying next...');
+        console.log('GoldAPI.io failed:', error.message);
     }
-
-    // Try metals.live API
+    
+    // CRITICAL: Fetch from a working public source
     try {
-        const response = await fetch('https://api.metals.live/v1/spot/gold');
-        const data = await response.json();
-        if (data && data[0] && data[0].price) {
-            console.log('✅ Metals.live: $' + data[0].price + '/oz');
-            return data[0].price;
-        }
-    } catch (error) {
-        console.log('Metals.live failed, trying next...');
-    }
-
-    // Try goldprice.org JSON API
-    try {
-        const response = await fetch('https://data-asg.goldprice.org/dbXRates/USD');
-        const data = await response.json();
-        if (data.items && data.items[0] && data.items[0].xauPrice) {
-            const price = parseFloat(data.items[0].xauPrice);
-            console.log('✅ GoldPrice.org: $' + price + '/oz');
+        // Use a CORS proxy to fetch from reliable source
+        const response = await fetch('https://api.allorigins.win/raw?url=https://www.goldprice.org/gold-price-per-ounce.html');
+        const html = await response.text();
+        // Extract price from HTML
+        const match = html.match(/id="gp-spot-price[^>]*>[\s]*\$?([\d,]+\.?\d*)/i);
+        if (match && match[1]) {
+            const price = parseFloat(match[1].replace(/,/g, ''));
+            console.log('✅ Scraped from GoldPrice.org: $' + price.toFixed(2) + '/oz');
             return price;
         }
     } catch (error) {
-        console.log('GoldPrice.org failed, trying next...');
-    }
-    
-    // Try alternative free API
-    try {
-        const response = await fetch('https://api.gold-api.com/price/XAU');
-        const data = await response.json();
-        if (data.price) {
-            console.log('✅ Gold-API.com: $' + data.price + '/oz');
-            return data.price;
-        }
-    } catch (error) {
-        console.log('Gold-API.com failed');
+        console.log('Scraping failed:', error.message);
     }
     
     // Last resort: use current market estimate
-    console.warn('⚠️ All APIs failed - using market estimate');
-    return 2685; // Current Jan 2026 estimate
+    console.error('⚠️ ALL APIs FAILED - Using market estimate');
+    console.log('Current gold estimate: $2685/oz (Jan 2026)');
+    return 2685;
 }
 
 // Fetch silver price
 async function fetchSilverPrice() {
+    // Try goldprice.org for silver - FREE and RELIABLE
+    try {
+        const response = await fetch('https://data-asg.goldprice.org/dbXRates/USD');
+        const data = await response.json();
+        if (data.items && data.items[0] && data.items[0].xagPrice) {
+            const price = parseFloat(data.items[0].xagPrice);
+            console.log('✅ Silver (GoldPrice.org): $' + price.toFixed(2) + '/oz');
+            return price;
+        }
+    } catch (error) {
+        console.log('GoldPrice.org silver failed:', error.message);
+    }
+
+    // Try metals.live for silver
+    try {
+        const response = await fetch('https://api.metals.live/v1/spot/silver');
+        const data = await response.json();
+        if (data && data[0] && data[0].price) {
+            console.log('✅ Silver (Metals.live): $' + data[0].price.toFixed(2) + '/oz');
+            return data[0].price;
+        }
+    } catch (error) {
+        console.log('Metals.live silver failed:', error.message);
+    }
+
     // Try goldapi.io for silver
     try {
         const response = await fetch('https://www.goldapi.io/api/XAG/USD', {
@@ -322,41 +352,17 @@ async function fetchSilverPrice() {
         });
         const data = await response.json();
         if (data.price) {
-            console.log('✅ Silver API: $' + data.price + '/oz');
+            console.log('✅ Silver (GoldAPI.io): $' + data.price.toFixed(2) + '/oz');
             return data.price;
         }
     } catch (error) {
-        console.log('GoldAPI silver failed, trying metals.live...');
-    }
-
-    // Try metals.live for silver
-    try {
-        const response = await fetch('https://api.metals.live/v1/spot/silver');
-        const data = await response.json();
-        if (data && data[0] && data[0].price) {
-            console.log('✅ Metals.live silver: $' + data[0].price + '/oz');
-            return data[0].price;
-        }
-    } catch (error) {
-        console.log('Metals.live silver failed');
-    }
-
-    // Try goldprice.org for silver
-    try {
-        const response = await fetch('https://data-asg.goldprice.org/dbXRates/USD');
-        const data = await response.json();
-        if (data.items && data.items[0] && data.items[0].xagPrice) {
-            const price = parseFloat(data.items[0].xagPrice);
-            console.log('✅ GoldPrice.org silver: $' + price + '/oz');
-            return price;
-        }
-    } catch (error) {
-        console.log('GoldPrice.org silver failed');
+        console.log('GoldAPI silver failed:', error.message);
     }
     
-    // Fallback to current market estimate
-    console.warn('⚠️ Silver APIs failed - using estimate');
-    return 30.75; // Jan 2026 estimate
+    // Fallback
+    console.error('⚠️ Silver APIs failed - using estimate');
+    console.log('Current silver estimate: $30.75/oz (Jan 2026)');
+    return 30.75;
 }
 
 // Cache management
