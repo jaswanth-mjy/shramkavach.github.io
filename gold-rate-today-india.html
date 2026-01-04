@@ -88,11 +88,19 @@
                         💰 Gold Rate Today in India
                     </h1>
                     <p class="text-yellow-100 text-base sm:text-lg">Live prices for 24K, 22K, 18K Gold | Silver | Platinum - 4 January 2026</p>
-                    <p class="mt-1 text-yellow-200 text-sm">All prices in Indian Rupees (₹) • Updated daily at 6:00 AM IST</p>
+                    <p class="mt-1 text-yellow-200 text-sm">All prices in Indian Rupees (₹) • Last updated: <span id="last-update-time">Loading...</span></p>
                 </div>
-                <a href="index.html" class="bg-white text-yellow-600 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-50 transition shadow-lg">
-                    ← Back to Home
-                </a>
+                <div class="flex gap-3">
+                    <button onclick="refreshPrices()" class="bg-white text-yellow-600 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-50 transition shadow-lg flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                        Refresh
+                    </button>
+                    <a href="index.html" class="bg-white text-yellow-600 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-50 transition shadow-lg">
+                        ← Back to Home
+                    </a>
+                </div>
             </div>
         </div>
     </header>
