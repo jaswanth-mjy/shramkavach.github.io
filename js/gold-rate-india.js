@@ -245,87 +245,112 @@ async function fetchLatestPrices() {
 
 // Fetch gold price from multiple sources
 async function fetchGoldPrice() {
-    // Try GoldPrice.org - most accurate real-time data
+    // Try goldapi.io with public demo key
     try {
-        const response = await fetch(API_CONFIG.goldPriceOrg);
+        const response = await fetch('https://www.goldapi.io/api/XAU/USD', {
+            headers: {
+                'x-access-token': 'goldapi-1lpe9bk3mzb89n-io',
+                'Content-Type': 'application/json'
+            }
+        });
         const data = await response.json();
-        // GoldPrice.org returns price per troy ounce in various currencies
-        if (data.items && data.items[0] && data.items[0].xauPrice) {
-            const pricePerOunce = parseFloat(data.items[0].xauPrice);
-            return pricePerOunce;
+        if (data.price) {
+            console.log('✅ GoldAPI.io: $' + data.price + '/oz');
+            return data.price;
         }
     } catch (error) {
-        console.log('GoldPrice.org failed, trying MetalPrice API');
+        console.log('GoldAPI.io failed, trying next...');
     }
 
-    // Try MetalPrice API
+    // Try metals.live API
     try {
-        const response = await fetch('https://api.metalpriceapi.com/v1/latest?api_key=8f6e4c5d2a3b1f9e7c5d2a3b&base=XAU&currencies=USD');
+        const response = await fetch('https://api.metals.live/v1/spot/gold');
         const data = await response.json();
-        if (data.rates && data.rates.USD) {
-            return 1 / data.rates.USD; // Convert to USD per ounce
+        if (data && data[0] && data[0].price) {
+            console.log('✅ Metals.live: $' + data[0].price + '/oz');
+            return data[0].price;
         }
     } catch (error) {
-        console.log('MetalPrice API failed, trying fallback');
+        console.log('Metals.live failed, trying next...');
     }
-    
-    // Use OANDA-like public API
+
+    // Try goldprice.org JSON API
     try {
-        const response = await fetch('https://www.goldapi.io/api/XAU/USD');
+        const response = await fetch('https://data-asg.goldprice.org/dbXRates/USD');
         const data = await response.json();
-        if (data.price_gram_24k) {
-            return data.price_gram_24k * 31.1035; // Convert gram price to ounce
+        if (data.items && data.items[0] && data.items[0].xauPrice) {
+            const price = parseFloat(data.items[0].xauPrice);
+            console.log('✅ GoldPrice.org: $' + price + '/oz');
+            return price;
         }
     } catch (error) {
-        console.log('All APIs failed - THIS SHOULD NOT HAPPEN');
+        console.log('GoldPrice.org failed, trying next...');
     }
     
-    // Emergency fallback - fetch from alternative source
+    // Try alternative free API
     try {
-        const response = await fetch('https://www.live-rates.com/rates');
-        const text = await response.text();
-        // Parse HTML for gold price (this is a last resort)
-        const match = text.match(/gold.*?(\d+\.?\d*)/i);
-        if (match) {
-            return parseFloat(match[1]);
+        const response = await fetch('https://api.gold-api.com/price/XAU');
+        const data = await response.json();
+        if (data.price) {
+            console.log('✅ Gold-API.com: $' + data.price + '/oz');
+            return data.price;
         }
     } catch (error) {
-        console.error('All gold price sources failed');
+        console.log('Gold-API.com failed');
     }
     
-    // Absolute fallback: Use current market estimate (Jan 2026)
-    console.warn('Using estimated gold price - please check internet connection');
-    return 2685; // Current approximate gold price USD per ounce
+    // Last resort: use current market estimate
+    console.warn('⚠️ All APIs failed - using market estimate');
+    return 2685; // Current Jan 2026 estimate
 }
 
 // Fetch silver price
 async function fetchSilverPrice() {
-    // Try GoldPrice.org for silver
+    // Try goldapi.io for silver
     try {
-        const response = await fetch(API_CONFIG.goldPriceOrg);
+        const response = await fetch('https://www.goldapi.io/api/XAG/USD', {
+            headers: {
+                'x-access-token': 'goldapi-1lpe9bk3mzb89n-io',
+                'Content-Type': 'application/json'
+            }
+        });
         const data = await response.json();
-        if (data.items && data.items[0] && data.items[0].xagPrice) {
-            const pricePerOunce = parseFloat(data.items[0].xagPrice);
-            return pricePerOunce;
+        if (data.price) {
+            console.log('✅ Silver API: $' + data.price + '/oz');
+            return data.price;
         }
     } catch (error) {
-        console.log('GoldPrice.org silver failed, trying MetalPrice');
+        console.log('GoldAPI silver failed, trying metals.live...');
     }
 
-    // Try MetalPrice API for silver
+    // Try metals.live for silver
     try {
-        const response = await fetch('https://api.metalpriceapi.com/v1/latest?api_key=8f6e4c5d2a3b1f9e7c5d2a3b&base=XAG&currencies=USD');
+        const response = await fetch('https://api.metals.live/v1/spot/silver');
         const data = await response.json();
-        if (data.rates && data.rates.USD) {
-            return 1 / data.rates.USD;
+        if (data && data[0] && data[0].price) {
+            console.log('✅ Metals.live silver: $' + data[0].price + '/oz');
+            return data[0].price;
         }
     } catch (error) {
-        console.log('MetalPrice silver failed');
+        console.log('Metals.live silver failed');
+    }
+
+    // Try goldprice.org for silver
+    try {
+        const response = await fetch('https://data-asg.goldprice.org/dbXRates/USD');
+        const data = await response.json();
+        if (data.items && data.items[0] && data.items[0].xagPrice) {
+            const price = parseFloat(data.items[0].xagPrice);
+            console.log('✅ GoldPrice.org silver: $' + price + '/oz');
+            return price;
+        }
+    } catch (error) {
+        console.log('GoldPrice.org silver failed');
     }
     
     // Fallback to current market estimate
-    console.warn('Using estimated silver price');
-    return 30.75; // Current approximate silver price USD per ounce (Jan 2026)
+    console.warn('⚠️ Silver APIs failed - using estimate');
+    return 30.75; // Jan 2026 estimate
 }
 
 // Cache management
