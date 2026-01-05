@@ -1,5 +1,5 @@
 // Service Worker for ShramKavach PWA - High Traffic Optimized
-const CACHE_VERSION = 'v4.0.1';
+const CACHE_VERSION = 'v4.1.0';
 const CACHE_NAME = `shramkavach-${CACHE_VERSION}`;
 const CACHE_STATIC = `shramkavach-static-${CACHE_VERSION}`;
 const CACHE_DYNAMIC = `shramkavach-dynamic-${CACHE_VERSION}`;
