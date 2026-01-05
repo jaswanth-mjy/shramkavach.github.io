@@ -5,7 +5,7 @@ Allow: /
 # Sitemaps
 Sitemap: https://shramkavach.com/sitemap.xml
 Sitemap: https://shramkavach.com/sitemap-index.xml
-Sitemap: https://scribbletools.shramkavach.com/sitemap.xml
+Sitemap: https://shramtools.shramkavach.com/sitemap.xml
 
 # Disallow admin or sensitive paths (if any in future)
 # Disallow: /admin/

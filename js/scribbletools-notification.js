@@ -12,7 +12,7 @@
         BANNER_ID: 'scribbletools-banner',
         STORAGE_KEY: 'scribbletools_banner_dismissed',
         LOG_KEY: 'scribbletools_interaction_log',
-        SCRIBBLETOOLS_URL: 'https://scribbletools.shramkavach.com',
+        SCRIBBLETOOLS_URL: 'https://shramtools.shramkavach.com',
         AUTO_DISMISS_DAYS: 7, // Auto-show banner again after 7 days
         ENABLE_LOGGING: true
     };

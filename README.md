@@ -281,7 +281,7 @@ MIT License - See LICENSE file for details.
 - Technical & Development (200+ prompts)
 
 **250+ ScribbleTools Integration:**
-- Connected to ScribbleTools.shramkavach.com
+- Connected to ShramTools.shramkavach.com
 - Professional document templates
 - Business automation tools
 

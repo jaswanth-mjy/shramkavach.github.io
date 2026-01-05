@@ -19,15 +19,15 @@
         <priority>1.0</priority>
     </url>
     
-    <!-- ScribbleTools Subdomain -->
+    <!-- ShramTools Subdomain -->
     <url>
-        <loc>https://scribbletools.shramkavach.com/</loc>
+        <loc>https://shramtools.shramkavach.com/</loc>
         <lastmod>2026-01-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
-    <!-- Note: Additional 250+ tools available at https://scribbletools.shramkavach.com (separate sitemap at https://scribbletools.shramkavach.com/sitemap.xml) -->
+    <!-- Note: Additional 250+ tools available at https://shramtools.shramkavach.com (separate sitemap at https://shramtools.shramkavach.com/sitemap.xml) -->
     
     <!-- Main Pages -->
     <url>
