@@ -9,6 +9,29 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'state-of-technosphere-2026',
+            title: 'State of the Technosphere 2026: The Convergence of Autonomy, Capital, and Risk',
+            shortTitle: 'State of the Technosphere 2026',
+            excerpt: 'As the first trading week of 2026 commences, the global technology landscape undergoes a profound transformation from "AI hype" to "industrial execution." The Great Rebalancing: Meta\'s $2B Manus acquisition, DeepSeek\'s mHC breakthrough, CES 2026 physical AI, and the labor market paradox converge.',
+            date: '2026-01-05',
+            displayDate: 'Jan 5, 2026',
+            category: 'technology ai markets finance cybersecurity',
+            tags: ['🔴 BREAKING', '🌐 TECHNOSPHERE', '📊 ANALYSIS'],
+            tagColors: ['bg-red-600', 'bg-blue-600', 'bg-purple-600'],
+            readTime: '30 min read',
+            author: 'ShramKavach',
+            icon: '🌐',
+            gradient: 'from-blue-50 via-indigo-50 to-purple-50',
+            borderColor: 'border-blue-600',
+            stats: [
+                { label: 'Meta-Manus Deal', value: '$2B', subtext: 'Agentic AI acquisition reshapes tech', color: 'text-green-600', icon: '🤝' },
+                { label: 'DeepSeek mHC', value: 'Breakthrough', subtext: 'AI training efficiency revolution', color: 'text-blue-600', icon: '🧮' },
+                { label: 'Labor Market', value: '200K Jobs', subtext: 'Banking jobs at risk from AI adoption', color: 'text-orange-600', icon: '⚠️' }
+            ],
+            link: 'state-of-the-technosphere.html',
+            featured: true
+        },
+        {
             id: 'twenty-twenties-inflection-point',
             title: 'The Inflection Point of the Twenty-Twenties: A Comprehensive Analysis of the Convergence of Kinetic Geopolitics, Algorithmic Sovereignty, and Financial Dislocation',
             shortTitle: 'The Inflection Point of the Twenty-Twenties',
