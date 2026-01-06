@@ -159,6 +159,32 @@
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: 0.8; transform: scale(1.05); }
         }
+        
+        /* Custom Scrollbar Styles */
+        .scrollbar-thin::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .scrollbar-thin::-webkit-scrollbar-track {
+            background: #f3f4f6;
+            border-radius: 10px;
+        }
+        
+        .scrollbar-thin::-webkit-scrollbar-thumb {
+            background: #6366f1;
+            border-radius: 10px;
+            transition: background 0.2s;
+        }
+        
+        .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+            background: #4f46e5;
+        }
+        
+        /* Firefox scrollbar */
+        .scrollbar-thin {
+            scrollbar-width: thin;
+            scrollbar-color: #6366f1 #f3f4f6;
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -225,13 +251,13 @@
     <div class="ticker-wrap py-2">
         <div class="ticker">
             <span class="mx-4">🔴 BREAKING:</span>
+            <span class="mx-8">Convergence of Capital & Code: The Post-Digital Economy 2026 | NVIDIA Rubin Platform | Agentic Intelligence Era | Vibe Coding Revolution</span>
+            <span class="mx-4">•</span>
             <span class="mx-8">State of the Technosphere 2026: AI Hype → Industrial Execution | DeepSeek mHC Breakthrough | CES 2026 Consumer Tech</span>
             <span class="mx-4">•</span>
-            <span class="mx-8">The Inflection Point: Jan 4, 2026 - Geopolitical, AI & Financial Convergence</span>
+            <span class="mx-8">Dow Jones → 50K | Gold Hits $4,332 | Economic Experimentation Warnings</span>
             <span class="mx-4">•</span>
-            <span class="mx-8">Gold Hits $4,332 - Debasement Trade Accelerates</span>
-            <span class="mx-4">•</span>
-            <span class="mx-8">Meta Acquires Manus - $2B+ Agentic AI Race Intensifies</span>
+            <span class="mx-8">TridentLocker Breach | Sedgwick Data Exposed | Cybersecurity Supply Chain Risks</span>
         </div>
     </div>
 
@@ -242,7 +268,7 @@
                 <div class="flex items-center gap-6">
                     <span class="font-bold text-orange-400">📰 ShramKavach News</span>
                     <span class="hidden md:inline text-gray-400">|</span>
-                    <span class="hidden md:inline text-gray-300">Saturday, January 4, 2026</span>
+                    <span class="hidden md:inline text-gray-300">Monday, January 6, 2026</span>
                 </div>
                 <div class="flex items-center gap-4">
                     <span class="hidden md:inline text-gray-400">Latest Updates</span>
@@ -262,24 +288,24 @@
                 <div>
                     <div class="flex items-center gap-2 mb-4">
                         <span class="category-pill bg-red-600 text-white badge-live">🔴 BREAKING</span>
-                        <span class="category-pill bg-blue-600 text-white badge-live">🌐 TECHNOSPHERE</span>
+                        <span class="category-pill bg-blue-600 text-white badge-live">💹 STRATEGIC</span>
                         <span class="category-pill bg-purple-600 text-white badge-live">📊 ANALYSIS</span>
-                        <span class="text-sm text-gray-300">• Jan 5, 2026</span>
+                        <span class="text-sm text-gray-300">• Jan 6, 2026</span>
                     </div>
                     <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold news-title mb-3 sm:mb-4 leading-tight">
-                        State of the Technosphere 2026: The Convergence of Autonomy, Capital, and Risk
+                        The Convergence of Capital and Code: A Strategic Analysis of the Post-Digital Economy in 2026
                     </h1>
                     <p class="text-sm sm:text-base md:text-lg text-gray-200 mb-4 sm:mb-6 leading-relaxed">
-                        As the first trading week of 2026 commences, the global technology landscape undergoes a profound transformation from "AI hype" to "industrial execution." Meta's $2B Manus acquisition, DeepSeek's mHC breakthrough, CES 2026 innovations, and the labor market paradox converge.
+                        On January 6, 2026, the global trajectory of finance and technology intersected at a definitive fulcrum, marking the transition from "Generative AI" to the age of "Agentic Intelligence." Analysis of financial markets, NVIDIA's Rubin platform, cybersecurity threats, and the vibe coding revolution.
                     </p>
                     <div class="flex items-center gap-4">
-                        <a href="state-of-the-technosphere.html" class="bg-white text-blue-900 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-lg font-bold hover:bg-gray-100 transition inline-flex items-center gap-2">
+                        <a href="capital-and-code.html" class="bg-white text-blue-900 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-lg font-bold hover:bg-gray-100 transition inline-flex items-center gap-2">
                             Read Full Analysis
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                         <span class="reading-time flex items-center gap-1">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            30 min read
+                            35 min read
                         </span>
                     </div>
                 </div>
@@ -287,20 +313,20 @@
                     <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                         <div class="grid grid-cols-2 gap-4">
                             <div class="text-center p-4 bg-white/10 rounded-lg">
-                                <div class="text-3xl font-bold text-green-400">$2B</div>
-                                <div class="text-xs text-gray-300 mt-1">Meta-Manus Deal</div>
+                                <div class="text-3xl font-bold text-green-400">50K</div>
+                                <div class="text-xs text-gray-300 mt-1">Dow Jones Target</div>
                             </div>
                             <div class="text-center p-4 bg-white/10 rounded-lg">
-                                <div class="text-3xl font-bold text-blue-400">mHC</div>
-                                <div class="text-xs text-gray-300 mt-1">DeepSeek Breakthrough</div>
+                                <div class="text-3xl font-bold text-blue-400">Rubin</div>
+                                <div class="text-xs text-gray-300 mt-1">NVIDIA Platform</div>
                             </div>
                             <div class="text-center p-4 bg-white/10 rounded-lg">
-                                <div class="text-3xl font-bold text-purple-400">CES 2026</div>
-                                <div class="text-xs text-gray-300 mt-1">Physical AI Era</div>
+                                <div class="text-3xl font-bold text-yellow-400">$4,332</div>
+                                <div class="text-xs text-gray-300 mt-1">Gold Price</div>
                             </div>
                             <div class="text-center p-4 bg-white/10 rounded-lg">
-                                <div class="text-3xl font-bold text-orange-400">200K</div>
-                                <div class="text-xs text-gray-300 mt-1">Jobs at Risk</div>
+                                <div class="text-3xl font-bold text-orange-400">Agentic</div>
+                                <div class="text-xs text-gray-300 mt-1">Intelligence Era</div>
                             </div>
                         </div>
                     </div>
@@ -348,8 +374,10 @@
                             <h3 class="text-lg font-bold mb-4 flex items-center gap-2 text-gray-900">
                                 <span class="text-2xl">📚</span> All Articles
                             </h3>
-                            <div class="space-y-2 text-sm" id="sidebar-articles">
-                                <!-- Dynamically populated by updates-manager.js -->
+                            <div class="max-h-96 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-indigo-500 scrollbar-track-gray-100 hover:scrollbar-thumb-indigo-600">
+                                <div class="space-y-2 text-sm" id="sidebar-articles">
+                                    <!-- Dynamically populated by updates-manager.js -->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -546,11 +574,11 @@
     </div>
 
     <!-- Scripts -->
-    <script src="js/share.js?v=2.0"></script>
-    <script src="js/translations.js?v=2.0"></script>
-    <script src="js/common.js?v=2.0"></script>
-    <script src="js/updates-manager.js?v=2.0"></script>
-    <script src="js/newyear-celebration.js?v=2.0"></script>
+    <script src="js/share.js?v=2.2"></script>
+    <script src="js/translations.js?v=2.2"></script>
+    <script src="js/common.js?v=2.2"></script>
+    <script src="js/updates-manager.js?v=2.2"></script>
+    <script src="js/newyear-celebration.js?v=2.2"></script>
     
     <!-- Chart.js Initialization for Financial Calculators Guide -->
     <script>

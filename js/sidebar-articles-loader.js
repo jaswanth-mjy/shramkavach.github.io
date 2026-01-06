@@ -42,6 +42,20 @@
     function loadFallbackArticles() {
         allArticles = [
             {
+                title: 'The Convergence of Capital and Code',
+                shortTitle: 'Capital & Code 2026',
+                url: 'capital-and-code.html',
+                icon: '💹',
+                displayDate: 'Jan 6, 2026'
+            },
+            {
+                title: 'State of the Technosphere 2026',
+                shortTitle: 'Technosphere 2026',
+                url: 'state-of-the-technosphere.html',
+                icon: '🌐',
+                displayDate: 'Jan 5, 2026'
+            },
+            {
                 title: 'The Inflection Point of the Twenty-Twenties',
                 shortTitle: 'Inflection Point',
                 url: 'twenty-twenties.html',

@@ -1,6 +1,21 @@
 {
   "articles": [
     {
+      "id": "convergence-capital-code-2026",
+      "title": "The Convergence of Capital and Code: A Strategic Analysis of the Post-Digital Economy in 2026",
+      "shortTitle": "Capital & Code 2026",
+      "url": "capital-and-code.html",
+      "icon": "💹",
+      "date": "2026-01-06",
+      "displayDate": "Jan 6, 2026",
+      "category": "finance ai technology markets cybersecurity",
+      "tags": ["BREAKING", "STRATEGIC", "ANALYSIS"],
+      "readTime": "35 min",
+      "excerpt": "On January 6, 2026, the global trajectory of finance and technology intersected at a definitive fulcrum, marking the transition from 'Generative AI' to the age of 'Agentic Intelligence.' Analysis of financial markets, NVIDIA's Rubin platform, cybersecurity threats, and the vibe coding revolution.",
+      "featured": true,
+      "priority": 1
+    },
+    {
       "id": "state-of-technosphere-2026",
       "title": "State of the Technosphere 2026: The Convergence of Autonomy, Capital, and Risk",
       "shortTitle": "State of Technosphere 2026",
@@ -13,7 +28,7 @@
       "readTime": "30 min",
       "excerpt": "As the first trading week of 2026 commences, the global technology landscape is undergoing a profound structural transformation characterized by a decisive shift from speculative 'AI hype' to 'industrial execution.'",
       "featured": true,
-      "priority": 1
+      "priority": 2
     },
     {
       "id": "twenty-twenties-inflection-point",
@@ -28,7 +43,7 @@
       "readTime": "25 min",
       "excerpt": "Sunday, January 4, 2026 marks a distinct inflection point—where technological acceleration, geopolitical tension, and financial structural shifts catalyzed into a new global reality.",
       "featured": true,
-      "priority": 2
+      "priority": 3
     },
     {
       "id": "kinetic-agentic-convergence-2026",
@@ -43,7 +58,7 @@
       "readTime": "18 min",
       "excerpt": "Operation Southern Spear reshapes Venezuela. Meta acquires Manus for $2B+ in the race for agentic AI. The dual singularity of 2026 has arrived.",
       "featured": true,
-      "priority": 3
+      "priority": 4
     },
     {
       "id": "the-great-divergence",
@@ -58,7 +73,7 @@
       "readTime": "20 min",
       "excerpt": "Industrial resilience vs tech recalibration. AI Hype → AI Utility. Agentic operations redefine productivity while cybercrime industrializes.",
       "featured": true,
-      "priority": 4
+      "priority": 5
     },
     {
       "id": "upi-2026",
@@ -73,7 +88,7 @@
       "readTime": "12 min",
       "excerpt": "Weekly credit reporting, ₹12 Lakh tax-free income, and new UPI limits active now.",
       "featured": true,
-      "priority": 5
+      "priority": 6
     },
     {
       "id": "bond-markets-2026",
@@ -88,7 +103,7 @@
       "readTime": "15 min",
       "excerpt": "Zero tax up to ₹12 Lakh income! Complete strategy for Bonds vs FDs, credit score updates, and 2026 compliance.",
       "featured": true,
-      "priority": 6
+      "priority": 7
     },
     {
       "id": "december-31-2025",
@@ -272,8 +287,8 @@
     }
   ],
   "metadata": {
-    "lastUpdated": "2026-01-05T12:00:00Z",
-    "totalArticles": 18,
-    "version": "1.2"
+    "lastUpdated": "2026-01-06T12:00:00Z",
+    "totalArticles": 19,
+    "version": "1.3"
   }
 }

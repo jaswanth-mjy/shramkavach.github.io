@@ -9,6 +9,29 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'convergence-capital-code-2026',
+            title: 'The Convergence of Capital and Code: A Strategic Analysis of the Post-Digital Economy in 2026',
+            shortTitle: 'Capital & Code Convergence 2026',
+            excerpt: 'On January 6, 2026, the global trajectory of finance and technology intersected at a definitive fulcrum, marking the transition from "Generative AI" to the age of "Agentic Intelligence." Wall Street rallies toward Dow 50K, NVIDIA unveils Rubin platform, cybersecurity threats escalate, and vibe coding democratizes software.',
+            date: '2026-01-06',
+            displayDate: 'Jan 6, 2026',
+            category: 'finance ai technology markets cybersecurity',
+            tags: ['🔴 BREAKING', '💹 STRATEGIC', '📊 ANALYSIS'],
+            tagColors: ['bg-red-600', 'bg-indigo-600', 'bg-purple-600'],
+            readTime: '35 min read',
+            author: 'ShramKavach',
+            icon: '💹',
+            gradient: 'from-indigo-50 via-blue-50 to-purple-50',
+            borderColor: 'border-indigo-600',
+            stats: [
+                { label: 'Dow Jones Target', value: '50K', subtext: 'Wall Street rallies on risk-on sentiment', color: 'text-green-600', icon: '📈' },
+                { label: 'NVIDIA Rubin', value: 'Platform', subtext: 'Agentic Intelligence infrastructure unveiled', color: 'text-blue-600', icon: '🔮' },
+                { label: 'Gold Price', value: '$4,332', subtext: 'Debasement trade accelerates globally', color: 'text-yellow-600', icon: '💰' }
+            ],
+            link: 'capital-and-code.html',
+            featured: true
+        },
+        {
             id: 'state-of-technosphere-2026',
             title: 'State of the Technosphere 2026: The Convergence of Autonomy, Capital, and Risk',
             shortTitle: 'State of the Technosphere 2026',
