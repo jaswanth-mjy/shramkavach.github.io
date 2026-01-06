@@ -71,12 +71,15 @@
         .ticker {
             display: inline-block;
             white-space: nowrap;
-            padding-right: 100%;
-            animation: ticker 30s linear infinite;
+            animation: ticker 40s linear infinite;
+        }
+        
+        .ticker span {
+            display: inline-block;
         }
         
         @keyframes ticker {
-            0% { transform: translate3d(0, 0, 0); }
+            0% { transform: translate3d(100%, 0, 0); }
             100% { transform: translate3d(-100%, 0, 0); }
         }
         
@@ -253,6 +256,13 @@
     <!-- Breaking News Ticker -->
     <div class="ticker-wrap py-2">
         <div class="ticker">
+            <span class="mx-4">🔴 BREAKING:</span>
+            <span class="mx-8">The Convergence of Capital and Code: Post-Digital Economy 2026 | NVIDIA Rubin Platform | Agentic Intelligence Era Begins</span>
+            <span class="mx-4">•</span>
+            <span class="mx-8">State of the Technosphere 2026: AI Hype → Industrial Execution | DeepSeek mHC Breakthrough | CES Tech Shifts</span>
+            <span class="mx-4">•</span>
+            <span class="mx-8">The Inflection Point of the Twenty-Twenties: Geopolitical Tension | Tech Acceleration | Financial Structural Shifts</span>
+            <span class="mx-4">•</span>
             <span class="mx-4">🔴 BREAKING:</span>
             <span class="mx-8">The Convergence of Capital and Code: Post-Digital Economy 2026 | NVIDIA Rubin Platform | Agentic Intelligence Era Begins</span>
             <span class="mx-4">•</span>
