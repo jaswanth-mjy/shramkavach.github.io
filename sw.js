@@ -1,51 +1,39 @@
-// Service Worker for ShramKavach PWA - High Traffic Optimized
-const CACHE_VERSION = 'v4.1.0';
-const CACHE_NAME = `shramkavach-${CACHE_VERSION}`;
-const CACHE_STATIC = `shramkavach-static-${CACHE_VERSION}`;
-const CACHE_DYNAMIC = `shramkavach-dynamic-${CACHE_VERSION}`;
-const CACHE_JSON = `shramkavach-json-${CACHE_VERSION}`;
+// Service Worker DISABLED - No Caching
+// This service worker only unregisters itself and clears all caches
 
-// Cache duration settings (in milliseconds)
-const CACHE_DURATION = {
-  HTML: 1000 * 60 * 60 * 24,      // 24 hours
-  JSON: 1000 * 60 * 60 * 24 * 7,  // 7 days
-  STATIC: 1000 * 60 * 60 * 24 * 30, // 30 days
-  CDN: 1000 * 60 * 60 * 24 * 7     // 7 days
-};
+const CACHE_VERSION = 'disabled';
 
-// Essential resources to cache immediately
-const STATIC_CACHE = [
-  '/',
-  '/index.html',
-  '/calculators.html',
-  '/prompts.html',
-  '/protection.html',
-  '/logo.png',
-  '/manifest.json',
-  '/js/common.js',
-  '/js/calculators.js',
-  '/js/prompt-counter.js'
-];
-
-// JSON files to cache with longer expiry
-const JSON_CACHE = [
-  '/data/prompts.json',
-  '/data/prompts-mega.json',
-  '/data/prompts-extended.json',
-  '/data/translations.json'
-];
-
-// Install event - cache critical resources
+// Install event - skip and clear
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    Promise.all([
-      caches.open(CACHE_STATIC).then((cache) => cache.addAll(STATIC_CACHE)),
-      caches.open(CACHE_JSON).then((cache) => cache.addAll(JSON_CACHE))
-    ]).catch(() => {
-      // Silent fail - don't block installation
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => caches.delete(cacheName))
+      );
     })
   );
   self.skipWaiting();
+});
+
+// Activate event - clear all caches and claim clients
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => caches.delete(cacheName))
+      );
+    }).then(() => self.clients.claim())
+  );
+});
+
+// Fetch event - always fetch from network, no caching
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    fetch(event.request).catch(() => {
+      // Return basic error response if network fails
+      return new Response('Network error', { status: 408 });
+    })
+  );
 });
 
 // Activate event - clean up old caches

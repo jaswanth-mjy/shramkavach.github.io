@@ -209,10 +209,19 @@
     
     <!-- Service Worker Registration -->
     <script>
+        // Unregister service worker to prevent caching
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js').catch(() => {});
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for(let registration of registrations) {
+                    registration.unregister();
+                }
             });
+            // Clear all caches
+            if ('caches' in window) {
+                caches.keys().then(function(names) {
+                    for (let name of names) caches.delete(name);
+                });
+            }
         }
     </script>
     
@@ -1854,5 +1863,13 @@
     <script src="js/translations.js"></script>
     <script src="js/common.js"></script>
     <script src="js/newyear-celebration.js"></script>
+    <script>
+        // Clear all caches on page load
+        if ('caches' in window) {
+            caches.keys().then(function(names) {
+                for (let name of names) caches.delete(name);
+            });
+        }
+    </script>
 </body>
 </html>

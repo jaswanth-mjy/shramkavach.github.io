@@ -581,6 +581,22 @@
     <script src="js/translations.js?v=2.2"></script>
     <script src="js/common.js?v=2.2"></script>
     <script src="js/updates-manager.js?v=2.2"></script>
+    <script>
+        // Clear all caches on page load
+        if ('caches' in window) {
+            caches.keys().then(function(names) {
+                for (let name of names) caches.delete(name);
+            });
+        }
+        // Unregister all service workers
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for(let registration of registrations) {
+                    registration.unregister();
+                }
+            });
+        }
+    </script>
     <script src="js/newyear-celebration.js?v=2.2"></script>
     
     <!-- Chart.js Initialization for Financial Calculators Guide -->

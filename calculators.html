@@ -4778,6 +4778,22 @@
     <script src="js/calculators-extended.js"></script>
     <script src="js/calculators-extended-part2.js"></script>
     <script src="js/common.js"></script>
+    <script>
+        // Clear all caches on page load
+        if ('caches' in window) {
+            caches.keys().then(function(names) {
+                for (let name of names) caches.delete(name);
+            });
+        }
+        // Unregister all service workers
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for(let registration of registrations) {
+                    registration.unregister();
+                }
+            });
+        }
+    </script>
 <!-- Modal Controls and Calculator Scripts -->
     <script>
         // Modal open/close helpers

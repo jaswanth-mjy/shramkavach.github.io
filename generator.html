@@ -474,5 +474,21 @@
     <script src="js/common.js"></script>
     <script src="js/privacy-gen.js"></script>
     <script src="js/newyear-celebration.js"></script>
+    <script>
+        // Clear all caches on page load
+        if ('caches' in window) {
+            caches.keys().then(function(names) {
+                for (let name of names) caches.delete(name);
+            });
+        }
+        // Unregister all service workers
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for(let registration of registrations) {
+                    registration.unregister();
+                }
+            });
+        }
+    </script>
 </body>
 </html>
