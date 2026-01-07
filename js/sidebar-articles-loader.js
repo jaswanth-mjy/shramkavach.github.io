@@ -42,6 +42,13 @@
     function loadFallbackArticles() {
         allArticles = [
             {
+                title: 'The Great Recalibration',
+                shortTitle: 'Great Recalibration',
+                url: 'great-recalibration-2026.html',
+                icon: '⚖️',
+                displayDate: 'Jan 7, 2026'
+            },
+            {
                 title: 'The Convergence of Capital and Code',
                 shortTitle: 'Capital & Code 2026',
                 url: 'capital-and-code.html',

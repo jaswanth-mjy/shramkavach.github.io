@@ -9,6 +9,29 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'great-recalibration-2026',
+            title: 'The Great Recalibration: Converging Trajectories of Physical AI, Economic Stasis, and Digital Fragility on January 7, 2026',
+            shortTitle: 'The Great Recalibration',
+            excerpt: 'January 7, 2026 serves as a singular moment where high-technology ambition, macroeconomic realignment, and systemic digital vulnerability became inextricably knotted. Labor market stasis, CES 2026 Physical AI surge, vibe coding democratization, and industrial-scale ransomware converge.',
+            date: '2026-01-07',
+            displayDate: 'Jan 7, 2026',
+            category: 'technology ai labor markets cybersecurity',
+            tags: ['🔴 BREAKING', '📊 ANALYSIS', '⚖️ PHYSICAL AI'],
+            tagColors: ['bg-red-600', 'bg-purple-600', 'bg-indigo-600'],
+            readTime: '40 min read',
+            author: 'ShramKavach',
+            icon: '⚖️',
+            gradient: 'from-purple-50 via-indigo-50 to-blue-50',
+            borderColor: 'border-purple-600',
+            stats: [
+                { label: 'ISM Services PMI', value: '54.4', subtext: 'Service sector strength beats expectations', color: 'text-green-600', icon: '📈' },
+                { label: 'JOLTS Openings', value: '7.1M', subtext: 'Labor market stasis continues', color: 'text-blue-600', icon: '💼' },
+                { label: 'CES 2026', value: 'Physical AI', subtext: 'Embodied intelligence takes center stage', color: 'text-purple-600', icon: '🤖' }
+            ],
+            link: 'great-recalibration-2026.html',
+            featured: true
+        },
+        {
             id: 'convergence-capital-code-2026',
             title: 'The Convergence of Capital and Code: A Strategic Analysis of the Post-Digital Economy in 2026',
             shortTitle: 'Capital & Code Convergence 2026',

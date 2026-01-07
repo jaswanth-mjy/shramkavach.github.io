@@ -1,6 +1,21 @@
 {
   "articles": [
     {
+      "id": "great-recalibration-2026",
+      "title": "The Great Recalibration: Converging Trajectories of Physical AI, Economic Stasis, and Digital Fragility on January 7, 2026",
+      "shortTitle": "The Great Recalibration",
+      "url": "great-recalibration-2026.html",
+      "icon": "⚖️",
+      "date": "2026-01-07",
+      "displayDate": "Jan 7, 2026",
+      "category": "technology ai labor markets cybersecurity",
+      "tags": ["BREAKING", "ANALYSIS", "PHYSICAL AI"],
+      "readTime": "40 min",
+      "excerpt": "The date of January 7, 2026, serves as a singular moment where high-technology ambition, macroeconomic realignment, and systemic digital vulnerability became inextricably knotted. Analysis of labor markets, CES 2026, vibe coding, and cybersecurity threats.",
+      "featured": true,
+      "priority": 1
+    },
+    {
       "id": "convergence-capital-code-2026",
       "title": "The Convergence of Capital and Code: A Strategic Analysis of the Post-Digital Economy in 2026",
       "shortTitle": "Capital & Code 2026",
@@ -13,7 +28,7 @@
       "readTime": "35 min",
       "excerpt": "On January 6, 2026, the global trajectory of finance and technology intersected at a definitive fulcrum, marking the transition from 'Generative AI' to the age of 'Agentic Intelligence.' Analysis of financial markets, NVIDIA's Rubin platform, cybersecurity threats, and the vibe coding revolution.",
       "featured": true,
-      "priority": 1
+      "priority": 2
     },
     {
       "id": "state-of-technosphere-2026",
@@ -287,8 +302,8 @@
     }
   ],
   "metadata": {
-    "lastUpdated": "2026-01-06T12:00:00Z",
-    "totalArticles": 19,
-    "version": "1.3"
+    "lastUpdated": "2026-01-07T12:00:00Z",
+    "totalArticles": 20,
+    "version": "1.4"
   }
 }
