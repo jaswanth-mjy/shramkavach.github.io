@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="description" content="The Great Recalibration: Converging Trajectories of Physical AI, Economic Stasis, and Digital Fragility on January 7, 2026 - Analysis of labor market trends, CES 2026 highlights, vibe coding phenomenon, and cybersecurity threats">
     <meta name="keywords" content="Great Recalibration 2026, Physical AI, Economic Stasis, Digital Fragility, Vibe Coding, CES 2026, Cybersecurity, Labor Market, NVIDIA, Caterpillar">
     <meta name="author" content="ShramKavach">
@@ -666,9 +669,9 @@
             <aside class="lg:col-span-1 space-y-6 no-print">
                 <!-- Related Articles (Dynamic) -->
                 <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">📚� All Articles</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">📚 All Articles</h3>
                     <div class="space-y-3" id="sidebar-all-articles" data-sidebar-articles>
-                        <!-- Dynamically loaded by sidebar-archives-loader.js -->
+                        <!-- Dynamically loaded by sidebar-articles-loader.js -->
                     </div>
                     <div id="sidebar-articles-pagination" data-articles-pagination></div>
                 </div>
@@ -761,9 +764,25 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="js/common.js?v=1.1"></script>
-    <script src="js/sidebar-archives.js?v=1.0"></script>
-    <script src="js/newyear-celebration.js?v=1.8"></script>
+    <script src="js/common.js?v=2.2"></script>
+    <script src="js/sidebar-articles-loader.js?v=2.2"></script>
+    <script src="js/newyear-celebration.js?v=2.2"></script>
+    <script>
+        // Clear all caches on page load
+        if ('caches' in window) {
+            caches.keys().then(function(names) {
+                for (let name of names) caches.delete(name);
+            });
+        }
+        // Unregister all service workers
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for(let registration of registrations) {
+                    registration.unregister();
+                }
+            });
+        }
+    </script>
     <script>
         // Share functionality
         function shareArticle() {
