@@ -1,6 +1,21 @@
 {
   "articles": [
     {
+      "id": "jan-8-pivot-2026",
+      "title": "The Jan 8 Pivot: A Comprehensive Analysis of Market Dynamics, Geopolitical Realignment, and Technological Evolution in Early 2026",
+      "shortTitle": "The Jan 8 Pivot",
+      "url": "jan-8-pivot-2026.html",
+      "icon": "🔄",
+      "date": "2026-01-08",
+      "displayDate": "Jan 8, 2026",
+      "category": "markets geopolitics defense technology labor",
+      "tags": ["BREAKING", "ANALYSIS", "PIVOT MOMENT"],
+      "readTime": "45 min",
+      "excerpt": "Thursday, January 8, 2026, represents a singular moment where macroeconomic reality, geopolitical power, and technological innovation converged. Analysis of defense sector rotation, Venezuela intervention, jobless claims, and the vibe coding phenomenon.",
+      "featured": true,
+      "priority": 1
+    },
+    {
       "id": "great-recalibration-2026",
       "title": "The Great Recalibration: Converging Trajectories of Physical AI, Economic Stasis, and Digital Fragility on January 7, 2026",
       "shortTitle": "The Great Recalibration",
@@ -13,7 +28,7 @@
       "readTime": "40 min",
       "excerpt": "The date of January 7, 2026, serves as a singular moment where high-technology ambition, macroeconomic realignment, and systemic digital vulnerability became inextricably knotted. Analysis of labor markets, CES 2026, vibe coding, and cybersecurity threats.",
       "featured": true,
-      "priority": 1
+      "priority": 2
     },
     {
       "id": "convergence-capital-code-2026",

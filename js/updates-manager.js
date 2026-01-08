@@ -9,6 +9,29 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'jan-8-pivot-2026',
+            title: 'The Jan 8 Pivot: A Comprehensive Analysis of Market Dynamics, Geopolitical Realignment, and Technological Evolution in Early 2026',
+            shortTitle: 'The Jan 8 Pivot',
+            excerpt: 'Thursday, January 8, 2026 represents a singular moment where macroeconomic reality, geopolitical power, and technological innovation converged. Defense sector rotation, Venezuela intervention, jobless claims at 201K, and the vibe coding phenomenon mark a decisive pivot in market dynamics.',
+            date: '2026-01-08',
+            displayDate: 'Jan 8, 2026',
+            category: 'markets geopolitics defense technology labor',
+            tags: ['🔴 BREAKING', '📊 ANALYSIS', '🔄 PIVOT MOMENT'],
+            tagColors: ['bg-red-600', 'bg-purple-600', 'bg-blue-600'],
+            readTime: '45 min read',
+            author: 'ShramKavach',
+            icon: '🔄',
+            gradient: 'from-blue-50 via-indigo-50 to-purple-50',
+            borderColor: 'border-blue-600',
+            stats: [
+                { label: 'Jobless Claims', value: '201K', subtext: 'Labor market resilience continues', color: 'text-green-600', icon: '📊' },
+                { label: 'Defense Sector', value: 'Rotation', subtext: 'Geopolitical shift drives capital flows', color: 'text-blue-600', icon: '🛡️' },
+                { label: 'Venezuela', value: 'Intervention', subtext: 'Energy markets recalibrate', color: 'text-purple-600', icon: '🌍' }
+            ],
+            link: 'jan-8-pivot-2026.html',
+            featured: true
+        },
+        {
             id: 'great-recalibration-2026',
             title: 'The Great Recalibration: Converging Trajectories of Physical AI, Economic Stasis, and Digital Fragility on January 7, 2026',
             shortTitle: 'The Great Recalibration',
