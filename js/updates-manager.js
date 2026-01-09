@@ -9,6 +9,29 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'jan-9-pivot-2026',
+            title: 'Global Convergence: The January 9, 2026 Pivot Point - A Comprehensive Analysis of Macroeconomic Shifts, Financial Market Dynamics, and Technological Paradigms',
+            shortTitle: 'Global Convergence: Jan 9, 2026',
+            excerpt: 'Friday, January 9, 2026, will be recorded in economic history as a day of converging volatilities that resolved into a surprising equilibrium. Analysis of the Goldilocks jobs report (50K nonfarm payrolls), Supreme Court tariff deferral, CES 2026 Physical AI conclusion, and evolving technological paradigms.',
+            date: '2026-01-09',
+            displayDate: 'Jan 9, 2026',
+            category: 'markets labor geopolitics technology ai',
+            tags: ['🔴 BREAKING', '📊 ANALYSIS', '🌐 GOLDILOCKS MOMENT'],
+            tagColors: ['bg-red-600', 'bg-purple-600', 'bg-green-600'],
+            readTime: '50 min read',
+            author: 'ShramKavach',
+            icon: '🌐',
+            gradient: 'from-green-50 via-blue-50 to-purple-50',
+            borderColor: 'border-green-600',
+            stats: [
+                { label: 'Nonfarm Payrolls', value: '50K', subtext: 'Goldilocks scenario - cooling but not collapsing', color: 'text-blue-600', icon: '📊' },
+                { label: 'Supreme Court', value: 'Deferred', subtext: 'Tariff ruling postponed, status quo maintained', color: 'text-purple-600', icon: '⚖️' },
+                { label: 'Physical AI', value: 'CES 2026', subtext: 'From generative AI to embodied intelligence', color: 'text-green-600', icon: '🤖' }
+            ],
+            link: 'jan-9-pivot-2026.html',
+            featured: true
+        },
+        {
             id: 'jan-8-pivot-2026',
             title: 'The Jan 8 Pivot: A Comprehensive Analysis of Market Dynamics, Geopolitical Realignment, and Technological Evolution in Early 2026',
             shortTitle: 'The Jan 8 Pivot',
