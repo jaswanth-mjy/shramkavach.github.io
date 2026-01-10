@@ -1093,7 +1093,7 @@ class LegalDocumentGenerator {
 
     // 2. Contract Generator
     generateContract() {
-        window.location.href = 'Privacy/service-contract-generator.html';
+        window.location.href = 'privacy/service-contract-generator.html';
     }
 
     generateContractOld() {
