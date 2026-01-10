@@ -1093,6 +1093,10 @@ class LegalDocumentGenerator {
 
     // 2. Contract Generator
     generateContract() {
+        window.location.href = 'Privacy/service-contract-generator.html';
+    }
+
+    generateContractOld() {
         this.showInputModal('Service Contract Generator', [
             { name: 'clientName', label: 'Client Name', placeholder: 'Client or Company name' },
             { name: 'providerName', label: 'Service Provider Name', placeholder: 'Your name/business' },
