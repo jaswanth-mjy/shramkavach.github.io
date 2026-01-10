@@ -1,6 +1,21 @@
 {
   "articles": [
     {
+      "id": "global-strategic-intelligence-2026",
+      "title": "Global Strategic Intelligence Report: The Convergence of Kinetic Geopolitics, Physical AI, and Financial Recalibration – January 10, 2026",
+      "shortTitle": "Global Strategic Intelligence Report",
+      "url": "global-strategic-intelligence-2026.html",
+      "icon": "🎯",
+      "date": "2026-01-10",
+      "displayDate": "Jan 10, 2026",
+      "category": "intelligence geopolitics defense energy crypto ai",
+      "tags": ["INTELLIGENCE", "GEOPOLITICS", "DEFENSE STIMULUS"],
+      "readTime": "55 min",
+      "excerpt": "The first ten days of 2026 have catalyzed a paradigm shift across global markets, defined by the re-emergence of kinetic geopolitical intervention, the maturation of artificial intelligence into physical reality, and a frantic repricing of risk assets. Venezuela reconstruction summit, $1.5T defense budget shock, Physical AI era.",
+      "featured": true,
+      "priority": 1
+    },
+    {
       "id": "jan-9-pivot-2026",
       "title": "Global Convergence: The January 9, 2026 Pivot Point - A Comprehensive Analysis of Macroeconomic Shifts, Financial Market Dynamics, and Technological Paradigms",
       "shortTitle": "Global Convergence: Jan 9, 2026",
@@ -13,7 +28,7 @@
       "readTime": "50 min",
       "excerpt": "Friday, January 9, 2026, will be recorded in economic history as a day of converging volatilities that resolved into a surprising equilibrium. Analysis of nonfarm payrolls, Supreme Court tariff ruling, CES 2026, Physical AI, and cybersecurity.",
       "featured": true,
-      "priority": 1
+      "priority": 2
     },
     {
       "id": "jan-8-pivot-2026",
@@ -28,7 +43,7 @@
       "readTime": "45 min",
       "excerpt": "Thursday, January 8, 2026, represents a singular moment where macroeconomic reality, geopolitical power, and technological innovation converged. Analysis of defense sector rotation, Venezuela intervention, jobless claims, and the vibe coding phenomenon.",
       "featured": true,
-      "priority": 2
+      "priority": 3
     },
     {
       "id": "great-recalibration-2026",
@@ -43,7 +58,7 @@
       "readTime": "40 min",
       "excerpt": "The date of January 7, 2026, serves as a singular moment where high-technology ambition, macroeconomic realignment, and systemic digital vulnerability became inextricably knotted. Analysis of labor markets, CES 2026, vibe coding, and cybersecurity threats.",
       "featured": true,
-      "priority": 3
+      "priority": 4
     },
     {
       "id": "convergence-capital-code-2026",

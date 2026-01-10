@@ -9,6 +9,29 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-strategic-intelligence-2026',
+            title: 'Global Strategic Intelligence Report: The Convergence of Kinetic Geopolitics, Physical AI, and Financial Recalibration – January 10, 2026',
+            shortTitle: 'Global Strategic Intelligence Report',
+            excerpt: 'The first ten days of 2026 have catalyzed a paradigm shift across global markets, defined by the re-emergence of kinetic geopolitical intervention, the maturation of artificial intelligence into physical reality, and a frantic repricing of risk assets. Venezuela reconstruction summit, $1.5T defense budget shock, Physical AI era, and crypto market volatility.',
+            date: '2026-01-10',
+            displayDate: 'Jan 10, 2026',
+            category: 'intelligence geopolitics defense energy crypto ai',
+            tags: ['🎯 INTELLIGENCE', '🌍 GEOPOLITICS', '🛡️ DEFENSE STIMULUS'],
+            tagColors: ['bg-red-600', 'bg-purple-600', 'bg-blue-600'],
+            readTime: '55 min read',
+            author: 'ShramKavach',
+            icon: '🎯',
+            gradient: 'from-red-50 via-purple-50 to-blue-50',
+            borderColor: 'border-red-600',
+            stats: [
+                { label: 'Venezuela', value: 'Reconstruction', subtext: 'US-led energy summit with global titans', color: 'text-blue-600', icon: '🌍' },
+                { label: 'Defense Budget', value: '$1.5T', subtext: 'Proposed military spending triggers market rotation', color: 'text-green-600', icon: '🛡️' },
+                { label: 'Physical AI', value: 'CES 2026', subtext: 'Intelligence enters the physical world', color: 'text-purple-600', icon: '🤖' }
+            ],
+            link: 'global-strategic-intelligence-2026.html',
+            featured: true
+        },
+        {
             id: 'jan-9-pivot-2026',
             title: 'Global Convergence: The January 9, 2026 Pivot Point - A Comprehensive Analysis of Macroeconomic Shifts, Financial Market Dynamics, and Technological Paradigms',
             shortTitle: 'Global Convergence: Jan 9, 2026',
