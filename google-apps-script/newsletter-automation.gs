@@ -239,7 +239,6 @@ function generateNewsletterHTML(userName, language, userEmail) {
                 <a href="${CONFIG.WEBSITE_URL}/updates.html" class="footer-link">Updates</a>
                 <a href="${CONFIG.WEBSITE_URL}/calculators.html" class="footer-link">Calculators</a>
                 <a href="${CONFIG.WEBSITE_URL}/prompts.html" class="footer-link">AI Prompts</a>
-                <a href="${CONFIG.WEBSITE_URL}/generator.html" class="footer-link">Documents</a>
             </div>
             <div class="social-icons">
                 <a href="#" class="social-icon">📧</a>

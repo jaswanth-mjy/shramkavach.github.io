@@ -328,7 +328,6 @@ shram/
 ├── calculators.html              # 34+ financial calculators
 ├── protection.html               # Worker rights & legal info
 ├── prompts.html                  # 2761+ AI prompts
-├── generator.html                # Legal document generators
 ├── the-great-divergence.html     # Market analysis report
 ├── the-convergence-of-kinetic-force-and-agentic-intelligence.html
 ├── bond-markets-2026.html        # Investment strategies
@@ -658,7 +657,6 @@ If this project helps you, consider giving it a ⭐ on GitHub!
 shram/
 ├── index.html              # Landing page
 ├── calculators.html        # Gratuity, Social Security, Tax tools
-├── generator.html          # Privacy Policy & Contract builders
 ├── prompts.html            # AI Prompt library
 ├── js/
 │   ├── calculators.js      # Calculator logic (gratuity, tax, social security)
