@@ -426,9 +426,8 @@ open index.html
 
 ### Potential (Aligned with Mission)
 1. **Financial Product Affiliates**: Insurance, loans, neo-banking (only verified partners)
-2. **Premium AI Tools**: Referrals to Writesonic, Rytr (30% recurring)
-3. **Sponsored Intelligence**: Partner insights (clearly labeled)
-4. **B2B Licensing**: WhatsApp/Telegram bot versions for platforms
+2. **Sponsored Intelligence**: Partner insights (clearly labeled)
+3. **B2B Licensing**: WhatsApp/Telegram bot versions for platforms
 
 **Non-Negotiable**: Zero data selling, zero compromise on privacy
 
@@ -717,8 +716,7 @@ ShramSetu operates on a **high-intent affiliate model**. Users engaging with cal
 ### Affiliate Partners (To Implement)
 1. **CreditSea / Paisabazaar**: Gig worker loans (₹200-500 CPA)
 2. **Acko / Zuno**: Micro-insurance (10-15% commission)
-3. **Writesonic / Rytr**: AI writing tools (30% recurring)
-4. **Jupiter / Open**: Neo-banking for freelancers
+3. **Jupiter / Open**: Neo-banking for freelancers
 
 ### Integration Steps
 1. Sign up for affiliate programs
