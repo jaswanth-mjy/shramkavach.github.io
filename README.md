@@ -422,12 +422,10 @@ open index.html
 
 ### Current
 - **Google AdSense**: Non-intrusive ads on content pages
-- **Affiliate Ready**: Infrastructure for financial product partnerships
 
 ### Potential (Aligned with Mission)
-1. **Financial Product Affiliates**: Insurance, loans, neo-banking (only verified partners)
-2. **Sponsored Intelligence**: Partner insights (clearly labeled)
-3. **B2B Licensing**: WhatsApp/Telegram bot versions for platforms
+1. **Sponsored Intelligence**: Partner insights (clearly labeled)
+2. **B2B Licensing**: WhatsApp/Telegram bot versions for platforms
 
 **Non-Negotiable**: Zero data selling, zero compromise on privacy
 
@@ -709,25 +707,6 @@ shram/
 
 ---
 
-## 💰 Monetization Strategy
-
-ShramSetu operates on a **high-intent affiliate model**. Users engaging with calculators/tools are self-identifying financial needs.
-
-### Affiliate Partners (To Implement)
-1. **CreditSea / Paisabazaar**: Gig worker loans (₹200-500 CPA)
-2. **Acko / Zuno**: Micro-insurance (10-15% commission)
-3. **Jupiter / Open**: Neo-banking for freelancers
-
-### Integration Steps
-1. Sign up for affiliate programs
-2. Replace placeholder links in HTML:
-   - `calculators.html` → After gratuity result (loan widget)
-   - `calculators.html` → After social security (insurance widget)
-   - `prompts.html` → Bottom CTA (AI tools)
-3. Track conversions via affiliate dashboards
-
----
-
 ## 📊 SEO Strategy
 
 ### Target Keywords
@@ -767,13 +746,6 @@ Edit `data/prompts.json`:
 Edit `js/privacy-gen.js`:
 - Modify `privacyPolicyTemplate` object for DPDP changes
 - Update `contractTemplate` for new legal clauses
-
-### Affiliate Link Integration
-Search for `href="#"` placeholders and replace with actual affiliate URLs:
-```html
-<!-- Example -->
-<a href="https://creditsea.com?ref=shramsetu" class="...">
-```
 
 ---
 
