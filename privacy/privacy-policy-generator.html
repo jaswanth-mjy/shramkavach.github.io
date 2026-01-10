@@ -821,14 +821,6 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 mt-16">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-400">© 2026 ShramKavach. Made with ❤️ for Indian Workers & Freelancers</p>
-            <p class="text-sm text-gray-500 mt-2">All processing happens client-side. Your data never leaves your browser.</p>
-        </div>
-    </footer>
-
     <script>
         const form = document.getElementById('privacyForm');
         const outputSection = document.getElementById('outputSection');
@@ -847,17 +839,6 @@
             const contactPhone = document.getElementById('contactPhone').value;
             const businessAddress = document.getElementById('businessAddress').value;
             const retentionPeriod = document.getElementById('retentionPeriod').value;
-            const grievanceOfficer = document.getElementById('grievanceOfficer').value;
-            const dpoEmail = document.getElementById('dpoEmail').value || contactEmail;
-            
-            // Get checked values
-            const dataTypes = Array.from(document.querySelectorAll('input[name="dataType"]:checked'))
-                .map(cb => cb.value);
-            const usagePurposes = Array.from(document.querySelectorAll('input[name="usagePurpose"]:checked'))
-                .map(cb => cb.value);
-            const thirdParties = Array.from(document.querySelectorAll('input[name="thirdParty"]:checked'))
-                .map(cb => cb.value);
-            
             const grievanceOfficer = document.getElementById('grievanceOfficer').value;
             const dpoEmail = document.getElementById('dpoEmail').value || contactEmail;
             
