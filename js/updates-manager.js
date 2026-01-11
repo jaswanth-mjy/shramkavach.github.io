@@ -833,9 +833,9 @@
     
     // Initialize
     function init() {
-        // Sort articles by date
+        // Sort articles by date (newest first - latest at top)
         articlesDatabase.sort((a, b) => new Date(b.date) - new Date(a.date));
-        filteredArticles = [...articlesDatabase];
+        filteredArticles = sortArticlesByDate([...articlesDatabase]);
         
         // Update breaking news ticker
         updateBreakingNewsTicker();
