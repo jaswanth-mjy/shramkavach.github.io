@@ -9,6 +9,29 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-strategic-assessment-2026',
+            title: 'Global Strategic Assessment: Market Dynamics, Geopolitical Realignment, and Digital Asset Trajectories – January 11, 2026',
+            shortTitle: 'Global Strategic Assessment',
+            excerpt: 'The global geopolitical and financial architecture is currently undergoing a stress test of a magnitude not seen since the early 2020s. Analysis of Venezuela intervention phase two, Indo-Pacific trade dynamics, crypto market volatility, and defense industrial realignment.',
+            date: '2026-01-11',
+            displayDate: 'Jan 11, 2026',
+            category: 'markets geopolitics crypto trade venezuela indo-pacific',
+            tags: ['📊 STRATEGIC ASSESSMENT', '🌎 MARKETS', '💰 CRYPTO'],
+            tagColors: ['bg-blue-600', 'bg-purple-600', 'bg-orange-600'],
+            readTime: '50 min read',
+            author: 'ShramKavach',
+            icon: '📊',
+            gradient: 'from-blue-50 via-purple-50 to-orange-50',
+            borderColor: 'border-blue-600',
+            stats: [
+                { label: 'Venezuela', value: 'Phase 2', subtext: 'Reconstruction effort enters critical phase', color: 'text-blue-600', icon: '🌍' },
+                { label: 'Indo-Pacific', value: 'Trade', subtext: 'Regional trade dynamics reshaping', color: 'text-green-600', icon: '🌏' },
+                { label: 'Crypto', value: 'Volatility', subtext: 'Digital assets under pressure', color: 'text-orange-600', icon: '💰' }
+            ],
+            link: 'global-strategic-assessment-2026.html',
+            featured: true
+        },
+        {
             id: 'global-strategic-intelligence-2026',
             title: 'Global Strategic Intelligence Report: The Convergence of Kinetic Geopolitics, Physical AI, and Financial Recalibration – January 10, 2026',
             shortTitle: 'Global Strategic Intelligence Report',

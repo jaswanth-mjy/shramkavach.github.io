@@ -1,6 +1,21 @@
 {
   "articles": [
     {
+      "id": "global-strategic-assessment-2026",
+      "title": "Global Strategic Assessment: Market Dynamics, Geopolitical Realignment, and Digital Asset Trajectories – January 11, 2026",
+      "shortTitle": "Global Strategic Assessment",
+      "url": "global-strategic-assessment-2026.html",
+      "icon": "📊",
+      "date": "2026-01-11",
+      "displayDate": "Jan 11, 2026",
+      "category": "markets geopolitics crypto trade venezuela indo-pacific",
+      "tags": ["STRATEGIC ASSESSMENT", "MARKETS", "CRYPTO"],
+      "readTime": "50 min",
+      "excerpt": "The global geopolitical and financial architecture is currently undergoing a stress test of a magnitude not seen since the early 2020s. Analysis of Venezuela intervention phase two, Indo-Pacific trade dynamics, crypto market volatility, and defense industrial realignment.",
+      "featured": true,
+      "priority": 1
+    },
+    {
       "id": "global-strategic-intelligence-2026",
       "title": "Global Strategic Intelligence Report: The Convergence of Kinetic Geopolitics, Physical AI, and Financial Recalibration – January 10, 2026",
       "shortTitle": "Global Strategic Intelligence Report",
@@ -13,7 +28,7 @@
       "readTime": "55 min",
       "excerpt": "The first ten days of 2026 have catalyzed a paradigm shift across global markets, defined by the re-emergence of kinetic geopolitical intervention, the maturation of artificial intelligence into physical reality, and a frantic repricing of risk assets. Venezuela reconstruction summit, $1.5T defense budget shock, Physical AI era.",
       "featured": true,
-      "priority": 1
+      "priority": 2
     },
     {
       "id": "jan-9-pivot-2026",
@@ -28,7 +43,7 @@
       "readTime": "50 min",
       "excerpt": "Friday, January 9, 2026, will be recorded in economic history as a day of converging volatilities that resolved into a surprising equilibrium. Analysis of nonfarm payrolls, Supreme Court tariff ruling, CES 2026, Physical AI, and cybersecurity.",
       "featured": true,
-      "priority": 2
+      "priority": 3
     },
     {
       "id": "jan-8-pivot-2026",
