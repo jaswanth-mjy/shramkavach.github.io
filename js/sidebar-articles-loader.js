@@ -18,13 +18,8 @@
             const response = await fetch('data/articles-database.json?v=' + Date.now());
             const data = await response.json();
             
-            // Sort articles by date (newest first) and priority
+            // Sort articles by date only (newest first) - ignore priority for "All Articles" display
             allArticles = data.articles.sort((a, b) => {
-                // First sort by priority (lower number = higher priority)
-                if (a.priority !== b.priority) {
-                    return a.priority - b.priority;
-                }
-                // Then by date (newest first)
                 return new Date(b.date) - new Date(a.date);
             });
             
