@@ -1084,6 +1084,18 @@
     </script>
 
     <!-- Sidebar Articles Loader -->
+    <script>
+        // Override the fetch path for subdirectory pages
+        (function() {
+            const originalFetch = window.fetch;
+            window.fetch = function(url, options) {
+                if (url.includes('data/articles-database.json')) {
+                    url = '../data/articles-database.json' + (url.includes('?') ? url.substring(url.indexOf('?')) : '');
+                }
+                return originalFetch(url, options);
+            };
+        })();
+    </script>
     <script src="../js/sidebar-articles-loader.js?v=2.2"></script>
 
 </body>
