@@ -1,14 +1,60 @@
-<!DOCTYPE html>
+#!/usr/bin/env node
+
+/**
+ * Batch Update Script for Privacy Tools
+ * Adds standardized header, banners, breadcrumb, and sidebar to all Privacy tool pages
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const PRIVACY_DIR = path.join(__dirname, 'Privacy');
+
+// List of tools to update (excluding already completed ones)
+const toolsToUpdate = [
+    { file: 'character-certificate.html', title: 'Character Certificate Generator', icon: '📋', description: 'Generate professional character certificates for employees' },
+    { file: 'complaint-letter.html', title: 'Complaint Letter Generator', icon: '✉️', description: 'Create formal complaint letters for workplace issues' },
+    { file: 'contract-generator.html', title: 'Service Contract Generator', icon: '📝', description: 'Generate legally compliant service contracts' },
+    { file: 'expense-reimbursement.html', title: 'Expense Reimbursement Request', icon: '💵', description: 'Request reimbursement for work-related expenses' },
+    { file: 'experience-letter.html', title: 'Experience Letter Generator', icon: '📜', description: 'Generate professional experience certificates' },
+    { file: 'grievance-submission.html', title: 'Grievance Submission Form', icon: '⚠️', description: 'Submit formal workplace grievances' },
+    { file: 'income-certificate.html', title: 'Income Certificate Generator', icon: '💰', description: 'Generate income certificates for various purposes' },
+    { file: 'invoice-generator.html', title: 'Professional Invoice Generator', icon: '📄', description: 'Create GST-compliant invoices for freelancers' },
+    { file: 'ip-rights-transfer.html', title: 'IP Rights Transfer Agreement', icon: '©️', description: 'Transfer intellectual property rights formally' },
+    { file: 'legal-notice-generator.html', title: 'Legal Notice Generator', icon: '⚖️', description: 'Generate legal notices for payment recovery' },
+    { file: 'liability-waiver.html', title: 'Liability Waiver Generator', icon: '🛡️', description: 'Create liability waiver forms' },
+    { file: 'nda-agreement.html', title: 'NDA Agreement Generator', icon: '🤐', description: 'Generate Non-Disclosure Agreements' },
+    { file: 'no-due-certificate.html', title: 'No Due Certificate', icon: '✅', description: 'Generate no dues certificates' },
+    { file: 'non-compete-clause.html', title: 'Non-Compete Agreement', icon: '🚫', description: 'Create non-compete clauses' },
+    { file: 'partnership-agreement.html', title: 'Partnership Agreement', icon: '🤝', description: 'Generate partnership agreements' },
+    { file: 'payment-reminder.html', title: 'Payment Reminder Generator', icon: '⏰', description: 'Send professional payment reminders' },
+    { file: 'payment-terms-agreement.html', title: 'Payment Terms Agreement', icon: '💳', description: 'Define payment terms clearly' },
+    { file: 'privacy-policy-generator.html', title: 'Privacy Policy Generator', icon: '🔒', description: 'DPDP Act 2023 compliant privacy policies' },
+    { file: 'professional-rate-card.html', title: 'Professional Rate Card', icon: '💼', description: 'Create service rate cards' },
+    { file: 'quotation-maker.html', title: 'Quotation Generator', icon: '📊', description: 'Generate professional quotations' },
+    { file: 'refund-policy-generator.html', title: 'Refund Policy Generator', icon: '↩️', description: 'Create refund policies' },
+    { file: 'service-contract-generator.html', title: 'Service Contract Generator', icon: '📋', description: 'Generate service agreements' },
+    { file: 'service-level-agreement.html', title: 'SLA Generator', icon: '⚡', description: 'Create Service Level Agreements' },
+    { file: 'termination-letter.html', title: 'Termination Letter', icon: '📝', description: 'Generate employment termination letters' },
+    { file: 'terms-conditions.html', title: 'Terms & Conditions Generator', icon: '📜', description: 'Create T&C for services' },
+    { file: 'testimonial-release.html', title: 'Testimonial Release Form', icon: '⭐', description: 'Get client testimonial permissions' },
+    { file: 'work-agreement.html', title: 'Work Agreement Generator', icon: '📄', description: 'Generate freelance work agreements' },
+    { file: 'work-log-timesheet.html', title: 'Work Log Timesheet', icon: '⏱️', description: 'Track work hours professionally' }
+];
+
+// Generate HTML template for each tool
+function generateHTML(tool) {
+    return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Transfer intellectual property rights formally - Free professional tool by ShramKavach for Indian workers and freelancers.">
-    <meta name="keywords" content="ip rights transfer agreement, free tool, ShramKavach, Indian workers">
+    <meta name="description" content="${tool.description} - Free professional tool by ShramKavach for Indian workers and freelancers.">
+    <meta name="keywords" content="${tool.title.toLowerCase()}, free tool, ShramKavach, Indian workers">
     <meta name="author" content="ShramKavach">
     <meta name="robots" content="index, follow">
     
-    <title>IP Rights Transfer Agreement | ShramKavach - श्रम कवच</title>
+    <title>${tool.title} | ShramKavach - श्रम कवच</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -151,7 +197,7 @@
                 <span>/</span>
                 <a href="https://shramkavach.com/protection.html" class="hover:text-indigo-600">Protection</a>
                 <span>/</span>
-                <span class="text-gray-900 font-semibold">IP Rights Transfer Agreement</span>
+                <span class="text-gray-900 font-semibold">${tool.title}</span>
             </div>
         </div>
     </nav>
@@ -168,10 +214,10 @@
                         <i class="fas fa-tools mr-2"></i>Professional Tool
                     </div>
                     <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                        ©️ IP Rights Transfer Agreement
+                        ${tool.icon} ${tool.title}
                     </h1>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Transfer intellectual property rights formally
+                        ${tool.description}
                         <span class="text-blue-600 font-semibold block mt-2">100% Free · Privacy First · No Login Required</span>
                     </p>
                 </div>
@@ -179,7 +225,7 @@
                 <!-- Tool Content -->
                 <div class="bg-white rounded-2xl shadow-2xl p-8 mb-8">
                     <div class="text-center py-16">
-                        <div class="text-6xl mb-4">©️</div>
+                        <div class="text-6xl mb-4">${tool.icon}</div>
                         <h2 class="text-2xl font-bold text-gray-800 mb-4">Tool Under Development</h2>
                         <p class="text-gray-600 mb-6">This professional tool is currently being built. Check back soon!</p>
                         <div class="flex flex-wrap justify-center gap-4">
@@ -327,4 +373,45 @@
     <script src="../js/sidebar-articles-loader.js?v=2.2"></script>
 
 </body>
-</html>
+</html>`;
+}
+
+// Main execution
+console.log('🚀 Starting batch update of Privacy tools...\n');
+
+let successCount = 0;
+let skipCount = 0;
+let errorCount = 0;
+
+toolsToUpdate.forEach(tool => {
+    const filePath = path.join(PRIVACY_DIR, tool.file);
+    
+    try {
+        // Check if file exists and is mostly empty (less than 500 characters)
+        if (fs.existsSync(filePath)) {
+            const currentContent = fs.readFileSync(filePath, 'utf8');
+            if (currentContent.length < 500) {
+                const html = generateHTML(tool);
+                fs.writeFileSync(filePath, html, 'utf8');
+                console.log(`✅ Updated: ${tool.file}`);
+                successCount++;
+            } else {
+                console.log(`⏭️  Skipped: ${tool.file} (already has content)`);
+                skipCount++;
+            }
+        } else {
+            console.log(`❌ Not found: ${tool.file}`);
+            errorCount++;
+        }
+    } catch (error) {
+        console.log(`❌ Error updating ${tool.file}: ${error.message}`);
+        errorCount++;
+    }
+});
+
+console.log('\n📊 Summary:');
+console.log(`   ✅ Successfully updated: ${successCount}`);
+console.log(`   ⏭️  Skipped (has content): ${skipCount}`);
+console.log(`   ❌ Errors: ${errorCount}`);
+console.log(`   📁 Total processed: ${toolsToUpdate.length}`);
+console.log('\n✨ Batch update complete!');
