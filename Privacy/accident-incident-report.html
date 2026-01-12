@@ -173,6 +173,77 @@
         });
     </script>
 
+    <!-- ShramTools Notification Banner -->
+    <div id="scribbletools-banner" class="bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white py-4 px-4 shadow-xl border-b-4 border-emerald-600 relative overflow-hidden no-print">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-40 h-40 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full translate-x-1/2 translate-y-1/2"></div>
+        </div>
+        
+        <div class="container mx-auto relative z-10">
+            <div class="flex items-center justify-between flex-wrap gap-3">
+                <div class="flex items-center gap-4 flex-1">
+                    <div class="hidden sm:flex items-center justify-center w-12 h-12 bg-white rounded-xl shadow-lg">
+                        <span class="text-3xl">🧮</span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide">✨ New</span>
+                            <span class="text-sm md:text-base font-black">250+ Advanced Calculators Now Live!</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-white/90 font-medium">
+                            ShramTools - Professional financial, health, student & productivity calculators
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 flex-shrink-0">
+                    <a href="https://shramtools.shramkavach.com" target="_blank" rel="noopener noreferrer" 
+                       class="group bg-white text-emerald-600 px-5 py-2.5 rounded-xl text-sm md:text-base font-bold hover:bg-yellow-400 hover:text-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center gap-2 whitespace-nowrap">
+                        <span>Try ShramTools</span>
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                    <button onclick="document.getElementById('scribbletools-banner').style.display='none'" 
+                            class="text-white/80 hover:text-white p-2 rounded-lg hover:bg-white/20 transition" 
+                            aria-label="Close notification">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest Updates Banner -->
+    <div class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-3 px-4 shadow-lg no-print">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between flex-wrap gap-2">
+                <div class="flex items-center gap-3">
+                    <span class="text-xl animate-pulse">🔔</span>
+                    <span class="font-semibold text-sm md:text-base">Latest: Global Strategic Assessment | Indo-Pacific Trade | Worker Rights Updates</span>
+                </div>
+                <a href="../updates.html" class="bg-white text-indigo-600 px-4 py-1.5 rounded-full text-xs md:text-sm font-bold hover:bg-gray-100 transition whitespace-nowrap">
+                    View All Updates →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="bg-white border-b border-gray-200 py-2 no-print">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center gap-2 text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-indigo-600">Home</a>
+                <span>/</span>
+                <a href="../protection.html" class="hover:text-indigo-600">Protection</a>
+                <span>/</span>
+                <span class="text-gray-900 font-semibold">Accident/Incident Report</span>
+            </div>
+        </div>
+    </nav>
+
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8 max-w-6xl">
         
@@ -558,7 +629,8 @@
 
             <!-- Info Sidebar -->
             <div class="md:col-span-1">
-                <div class="bg-white rounded-xl shadow-lg p-6 sticky top-24 no-print">
+                <!-- Report Guidelines -->
+                <div class="bg-white rounded-xl shadow-lg p-6 mb-6 no-print">
                     <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
                         <i class="fas fa-info-circle text-indigo-600"></i>
                         Report Guidelines
@@ -567,43 +639,69 @@
                     <div class="space-y-4 text-sm text-gray-600">
                         <div class="bg-red-50 border-l-4 border-red-500 p-3 rounded">
                             <p class="font-semibold text-red-800 mb-1">⚠️ Important</p>
-                            <p>Report all accidents and incidents within 24 hours as per Factory Act, 1948 & OSH guidelines.</p>
+                            <p>Report all accidents within 24 hours as per Factory Act, 1948</p>
                         </div>
 
                         <div>
                             <p class="font-semibold text-gray-800 mb-2">✓ Best Practices:</p>
-                            <ul class="list-disc list-inside space-y-1">
+                            <ul class="list-disc list-inside space-y-1 text-xs">
                                 <li>Be objective and factual</li>
                                 <li>Avoid blame or speculation</li>
                                 <li>Include all relevant details</li>
-                                <li>Note environmental conditions</li>
                                 <li>Document witnesses immediately</li>
-                                <li>Take photos if possible</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <p class="font-semibold text-gray-800 mb-2">📋 Required Information:</p>
-                            <ul class="list-disc list-inside space-y-1">
-                                <li>Date, time, and location</li>
-                                <li>Persons involved</li>
-                                <li>Detailed description</li>
-                                <li>Root cause analysis</li>
-                                <li>Corrective actions</li>
-                                <li>Prevention measures</li>
                             </ul>
                         </div>
 
                         <div class="bg-green-50 border-l-4 border-green-500 p-3 rounded">
                             <p class="font-semibold text-green-800 mb-1">✓ Compliance</p>
-                            <p>This format follows Indian labor laws, Factory Act 1948, and ISO 45001:2018 standards.</p>
-                        </div>
-
-                        <div class="bg-blue-50 border-l-4 border-blue-500 p-3 rounded">
-                            <p class="font-semibold text-blue-800 mb-1">🔒 Privacy</p>
-                            <p>All data is processed locally in your browser. Nothing is stored or transmitted.</p>
+                            <p>ISO 45001:2018 standards</p>
                         </div>
                     </div>
+                </div>
+
+                <!-- Related Tools -->
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-6 no-print">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-tools text-indigo-600"></i>
+                        Related Tools
+                    </h3>
+                    <div class="space-y-3">
+                        <a href="advance-payment-request.html" class="block p-3 bg-gray-50 hover:bg-indigo-50 rounded-lg transition group">
+                            <div class="font-semibold text-gray-800 group-hover:text-indigo-600">💰 Advance Payment Request</div>
+                            <p class="text-xs text-gray-600 mt-1">Request salary advance</p>
+                        </a>
+                        <a href="invoice-generator.html" class="block p-3 bg-gray-50 hover:bg-indigo-50 rounded-lg transition group">
+                            <div class="font-semibold text-gray-800 group-hover:text-indigo-600">📄 Invoice Generator</div>
+                            <p class="text-xs text-gray-600 mt-1">Create professional invoices</p>
+                        </a>
+                        <a href="expense-reimbursement.html" class="block p-3 bg-gray-50 hover:bg-indigo-50 rounded-lg transition group">
+                            <div class="font-semibold text-gray-800 group-hover:text-indigo-600">💵 Expense Reimbursement</div>
+                            <p class="text-xs text-gray-600 mt-1">Claim work expenses</p>
+                        </a>
+                        <a href="contract-generator.html" class="block p-3 bg-gray-50 hover:bg-indigo-50 rounded-lg transition group">
+                            <div class="font-semibold text-gray-800 group-hover:text-indigo-600">📝 Contract Generator</div>
+                            <p class="text-xs text-gray-600 mt-1">Generate service contracts</p>
+                        </a>
+                        <a href="legal-notice-generator.html" class="block p-3 bg-gray-50 hover:bg-indigo-50 rounded-lg transition group">
+                            <div class="font-semibold text-gray-800 group-hover:text-indigo-600">⚖️ Legal Notice</div>
+                            <p class="text-xs text-gray-600 mt-1">Create legal notices</p>
+                        </a>
+                    </div>
+                    <a href="../protection.html" class="block mt-4 text-center bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition font-semibold text-sm">
+                        View All Tools →
+                    </a>
+                </div>
+
+                <!-- Latest Articles -->
+                <div class="bg-white rounded-lg shadow-lg p-6 no-print">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-newspaper text-indigo-600"></i>
+                        Latest Updates
+                    </h3>
+                    <div class="space-y-3" id="sidebar-all-articles" data-sidebar-articles>
+                        <!-- Dynamically loaded by sidebar-articles-loader.js -->
+                    </div>
+                    <div id="sidebar-articles-pagination" data-articles-pagination></div>
                 </div>
             </div>
         </div>
@@ -1295,5 +1393,21 @@
             };
         }
     </script>
+
+    <!-- Sidebar Articles Loader -->
+    <script>
+        // Override the fetch path for subdirectory pages
+        (function() {
+            const originalFetch = window.fetch;
+            window.fetch = function(url, options) {
+                if (url.includes('data/articles-database.json')) {
+                    url = '../data/articles-database.json' + (url.includes('?') ? url.substring(url.indexOf('?')) : '');
+                }
+                return originalFetch(url, options);
+            };
+        })();
+    </script>
+    <script src="../js/sidebar-articles-loader.js?v=2.2"></script>
+
 </body>
 </html>
