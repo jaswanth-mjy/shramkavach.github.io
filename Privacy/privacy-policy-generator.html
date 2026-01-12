@@ -249,6 +249,77 @@
         });
     </script>
 
+    <!-- ShramTools Notification Banner -->
+    <div id="scribbletools-banner" class="bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white py-4 px-4 shadow-xl border-b-4 border-emerald-600 relative overflow-hidden no-print">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-40 h-40 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full translate-x-1/2 translate-y-1/2"></div>
+        </div>
+        
+        <div class="container mx-auto relative z-10">
+            <div class="flex items-center justify-between flex-wrap gap-3">
+                <div class="flex items-center gap-4 flex-1">
+                    <div class="hidden sm:flex items-center justify-center w-12 h-12 bg-white rounded-xl shadow-lg">
+                        <span class="text-3xl">🧮</span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide">✨ New</span>
+                            <span class="text-sm md:text-base font-black">250+ Advanced Calculators Now Live!</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-white/90 font-medium">
+                            ShramTools - Professional financial, health, student & productivity calculators
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 flex-shrink-0">
+                    <a href="https://shramtools.shramkavach.com" target="_blank" rel="noopener noreferrer" 
+                       class="group bg-white text-emerald-600 px-5 py-2.5 rounded-xl text-sm md:text-base font-bold hover:bg-yellow-400 hover:text-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center gap-2 whitespace-nowrap">
+                        <span>Try ShramTools</span>
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                    <button onclick="document.getElementById('scribbletools-banner').style.display='none'" 
+                            class="text-white/80 hover:text-white p-2 rounded-lg hover:bg-white/20 transition" 
+                            aria-label="Close notification">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest Updates Banner -->
+    <div class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-3 px-4 shadow-lg no-print">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between flex-wrap gap-2">
+                <div class="flex items-center gap-3">
+                    <span class="text-xl animate-pulse">🔔</span>
+                    <span class="font-semibold text-sm md:text-base">Latest: Global Strategic Assessment | Indo-Pacific Trade | Worker Rights Updates</span>
+                </div>
+                <a href="../updates.html" class="bg-white text-indigo-600 px-4 py-1.5 rounded-full text-xs md:text-sm font-bold hover:bg-gray-100 transition whitespace-nowrap">
+                    View All Updates →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="bg-white border-b border-gray-200 py-2 no-print">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center gap-2 text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-indigo-600">Home</a>
+                <span>/</span>
+                <a href="../protection.html" class="hover:text-indigo-600">Protection</a>
+                <span>/</span>
+                <span class="text-gray-900 font-semibold">Privacy Policy Generator</span>
+            </div>
+        </div>
+    </nav>
+
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8 max-w-6xl">
         
@@ -909,6 +980,57 @@
                             <i class="fas fa-exclamation-triangle mr-2"></i>
                             <strong>Legal Disclaimer:</strong> This is a comprehensive template generator. For specific legal advice or complex requirements, consult with a qualified privacy attorney.
                         </p>
+                    </div>
+                </div>
+
+                <!-- Related Tools Sidebar -->
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl shadow-lg p-6 border-2 border-indigo-100">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <span class="text-2xl">🛠️</span>
+                        <span>Related Tools</span>
+                    </h3>
+                    <div class="space-y-3">
+                        <a href="service-contract-generator.html" class="block p-3 bg-white rounded-lg hover:shadow-md transition group">
+                            <div class="flex items-start gap-3">
+                                <span class="text-2xl group-hover:scale-110 transition-transform">📝</span>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-gray-800 group-hover:text-indigo-600 transition text-sm">Service Contract Generator</h4>
+                                    <p class="text-xs text-gray-600 mt-1">Professional service agreements with 30+ provisions</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="terms-conditions-generator.html" class="block p-3 bg-white rounded-lg hover:shadow-md transition group">
+                            <div class="flex items-start gap-3">
+                                <span class="text-2xl group-hover:scale-110 transition-transform">📋</span>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-gray-800 group-hover:text-indigo-600 transition text-sm">Terms & Conditions Generator</h4>
+                                    <p class="text-xs text-gray-600 mt-1">Comprehensive T&C for websites and apps</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="disclaimer-generator.html" class="block p-3 bg-white rounded-lg hover:shadow-md transition group">
+                            <div class="flex items-start gap-3">
+                                <span class="text-2xl group-hover:scale-110 transition-transform">⚠️</span>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-gray-800 group-hover:text-indigo-600 transition text-sm">Disclaimer Generator</h4>
+                                    <p class="text-xs text-gray-600 mt-1">Limit liability with professional disclaimers</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="../protection.html" class="mt-4 block text-center text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition">
+                        View All Tools →
+                    </a>
+                </div>
+
+                <!-- Latest Articles Sidebar -->
+                <div id="latest-articles-sidebar" class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg p-6 border-2 border-blue-100">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <span class="text-2xl">📰</span>
+                        <span>Latest Articles</span>
+                    </h3>
+                    <div class="space-y-3 text-sm text-gray-600">
+                        <p>Loading latest articles...</p>
                     </div>
                 </div>
 
@@ -2614,6 +2736,18 @@ END OF PRIVACY POLICY
             });
         }
     </script>
+
+    <script>
+        // Override fetch for subdirectory pages
+        const originalFetch = window.fetch;
+        window.fetch = function(url, options) {
+            if (url.startsWith('data/')) {
+                url = '../' + url;
+            }
+            return originalFetch(url, options);
+        };
+    </script>
+    <script src="../js/sidebar-articles-loader.js"></script>
 
 </body>
 </html>
