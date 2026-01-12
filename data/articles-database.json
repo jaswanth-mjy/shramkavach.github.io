@@ -1,6 +1,21 @@
 {
   "articles": [
     {
+      "id": "great-decoupling-2026",
+      "title": "The Great Decoupling of 2026: Institutional Crisis, The Biological Pivot, and the Redefinition of Human Value – January 12, 2026",
+      "shortTitle": "The Great Decoupling",
+      "url": "great-decoupling-2026.html",
+      "icon": "🌪️",
+      "date": "2026-01-12",
+      "displayDate": "Jan 12, 2026",
+      "category": "institutional crisis biological ai human value fed emergency aeo",
+      "tags": ["INSTITUTIONAL CRISIS", "BIOLOGICAL PIVOT", "AI"],
+      "readTime": "45 min",
+      "excerpt": "The events of January 12, 2026, represent a singular, jagged fracture in the continuity of the global economic and technological order. Federal Reserve emergency meeting, AI lab crisis, vibe coding revolution, and the biological pivot redefining human value.",
+      "featured": true,
+      "priority": 1
+    },
+    {
       "id": "global-strategic-assessment-2026",
       "title": "Global Strategic Assessment: Market Dynamics, Geopolitical Realignment, and Digital Asset Trajectories – January 11, 2026",
       "shortTitle": "Global Strategic Assessment",
@@ -13,7 +28,7 @@
       "readTime": "50 min",
       "excerpt": "The global geopolitical and financial architecture is currently undergoing a stress test of a magnitude not seen since the early 2020s. Analysis of Venezuela intervention phase two, Indo-Pacific trade dynamics, crypto market volatility, and defense industrial realignment.",
       "featured": true,
-      "priority": 1
+      "priority": 2
     },
     {
       "id": "global-strategic-intelligence-2026",

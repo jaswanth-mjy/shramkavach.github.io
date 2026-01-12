@@ -9,6 +9,29 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'great-decoupling-2026',
+            title: 'The Great Decoupling of 2026: Institutional Crisis, The Biological Pivot, and the Redefinition of Human Value – January 12, 2026',
+            shortTitle: 'The Great Decoupling',
+            excerpt: 'The events of January 12, 2026, represent a singular, jagged fracture in the continuity of the global economic and technological order. Federal Reserve emergency meeting, AI lab crisis, vibe coding revolution, and the biological pivot redefining human value.',
+            date: '2026-01-12',
+            displayDate: 'Jan 12, 2026',
+            category: 'institutional crisis biological ai human value fed emergency aeo',
+            tags: ['🌪️ INSTITUTIONAL CRISIS', '🧬 BIOLOGICAL PIVOT', '🤖 AI'],
+            tagColors: ['bg-red-600', 'bg-purple-600', 'bg-blue-600'],
+            readTime: '45 min read',
+            author: 'ShramKavach',
+            icon: '🌪️',
+            gradient: 'from-red-50 via-purple-50 to-blue-50',
+            borderColor: 'border-red-600',
+            stats: [
+                { label: 'Fed', value: 'Emergency', subtext: 'Federal Reserve convenes crisis meeting', color: 'text-red-600', icon: '🏛️' },
+                { label: 'AI Lab', value: 'Crisis', subtext: 'Lab management institutional collapse', color: 'text-purple-600', icon: '🔬' },
+                { label: 'Vibe', value: 'Coding', subtext: 'AEO and vibe-driven development surge', color: 'text-blue-600', icon: '💻' }
+            ],
+            link: 'great-decoupling-2026.html',
+            featured: true
+        },
+        {
             id: 'global-strategic-assessment-2026',
             title: 'Global Strategic Assessment: Market Dynamics, Geopolitical Realignment, and Digital Asset Trajectories – January 11, 2026',
             shortTitle: 'Global Strategic Assessment',
