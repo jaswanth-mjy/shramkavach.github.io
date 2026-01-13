@@ -9,6 +9,29 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-situation-jan13-2026',
+            title: 'Global Situation Report: January 13, 2026 - Fed Crisis, AI Infrastructure, Gold Rally',
+            shortTitle: 'Global Situation Report',
+            excerpt: 'Analysis of Federal Reserve\'s extraordinary emergency meeting, gold price surge to $4,600+, SK Hynix\'s $5B AI infrastructure investment, and the accelerating shift in global geopolitical tensions.',
+            date: '2026-01-13',
+            displayDate: 'Jan 13, 2026',
+            category: 'global situation federal reserve ai infrastructure gold crisis sk hynix',
+            tags: ['🌍 GLOBAL SITUATION', '🏛️ FEDERAL RESERVE', '💻 AI INFRASTRUCTURE'],
+            tagColors: ['bg-red-600', 'bg-orange-600', 'bg-purple-600'],
+            readTime: '48 min read',
+            author: 'ShramKavach',
+            icon: '🌍',
+            gradient: 'from-red-50 via-yellow-50 to-purple-50',
+            borderColor: 'border-red-600',
+            stats: [
+                { label: 'Fed', value: 'Crisis', subtext: 'Emergency meeting addresses systemic concerns', color: 'text-red-600', icon: '🏛️' },
+                { label: 'Gold', value: '$4,600+', subtext: 'Gold price surge amid financial uncertainty', color: 'text-yellow-600', icon: '💰' },
+                { label: 'SK Hynix', value: '$5B', subtext: 'AI infrastructure investment announcement', color: 'text-purple-600', icon: '🔌' }
+            ],
+            link: 'global-situation-jan13-2026.html',
+            featured: true
+        },
+        {
             id: 'great-decoupling-2026',
             title: 'The Great Decoupling of 2026: Institutional Crisis, The Biological Pivot, and the Redefinition of Human Value – January 12, 2026',
             shortTitle: 'The Great Decoupling',
