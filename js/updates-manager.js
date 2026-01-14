@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-strategic-intelligence-report-2026',
+            title: 'Global Strategic Intelligence Report: Convergence of Crisis, Capital, and Code – January 14, 2026',
+            shortTitle: 'Strategic Intelligence Report',
+            excerpt: 'Comprehensive analysis of geopolitical instability, financial market volatility, agentic AI emergence, and regulatory fortification. Iran execution crisis, Golden Dome doctrine, Claude Computer Use, and crypto regulation convergence.',
+            date: '2026-01-14',
+            displayDate: 'Jan 14, 2026',
+            category: 'intelligence iran greenland agentic ai crypto regulation crisis',
+            tags: ['🎯 INTELLIGENCE', '🌍 GEOPOLITICS', '🤖 AGENTIC AI'],
+            tagColors: ['bg-red-600', 'bg-orange-600', 'bg-purple-600'],
+            readTime: '52 min read',
+            author: 'ShramKavach',
+            icon: '🎯',
+            gradient: 'from-red-50 via-purple-50 to-indigo-50',
+            borderColor: 'border-red-600',
+            stats: [
+                { label: 'Iran', value: 'Crisis', subtext: 'Execution crisis destabilizes region', color: 'text-red-600', icon: '⚠️' },
+                { label: 'Golden', value: 'Dome', subtext: 'Greenland Golden Dome doctrine emerges', color: 'text-yellow-600', icon: '🏛️' },
+                { label: 'Claude', value: 'AI Agent', subtext: 'Computer Use capabilities breakthrough', color: 'text-purple-600', icon: '🤖' },
+                { label: 'Crypto', value: 'Regulation', subtext: 'Regulatory fortification accelerates', color: 'text-blue-600', icon: '💰' }
+            ],
+            link: 'global-strategic-intelligence-report-2026.html',
+            featured: true
+        },
+        {
             id: 'global-situation-jan13-2026',
             title: 'Global Situation Report: January 13, 2026 - Fed Crisis, AI Infrastructure, Gold Rally',
             shortTitle: 'Global Situation Report',
