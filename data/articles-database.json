@@ -1,6 +1,21 @@
 {
   "articles": [
     {
+      "id": "global-strategic-intelligence-report-2026",
+      "title": "Global Strategic Intelligence Report: Convergence of Crisis, Capital, and Code – January 14, 2026",
+      "shortTitle": "Strategic Intelligence Report",
+      "url": "global-strategic-intelligence-report-2026.html",
+      "icon": "🎯",
+      "date": "2026-01-14",
+      "displayDate": "Jan 14, 2026",
+      "category": "intelligence iran greenland agentic ai crypto regulation crisis",
+      "tags": ["INTELLIGENCE", "GEOPOLITICS", "AGENTIC AI"],
+      "readTime": "52 min",
+      "excerpt": "Comprehensive analysis of geopolitical instability, financial market volatility, agentic AI emergence, and regulatory fortification. Iran execution crisis, Golden Dome doctrine, Claude Computer Use, and vibe coding convergence.",
+      "featured": true,
+      "priority": 1
+    },
+    {
       "id": "global-situation-jan13-2026",
       "title": "Global Situation Report: January 13, 2026 - Fed Crisis, AI Infrastructure, Gold Rally",
       "shortTitle": "Global Situation Report",
@@ -13,7 +28,7 @@
       "readTime": "48 min",
       "excerpt": "Analysis of Federal Reserve's extraordinary emergency meeting, gold price surge to $4,600+, SK Hynix's $5B AI infrastructure investment, and the accelerating shift in global geopolitical tensions.",
       "featured": true,
-      "priority": 1
+      "priority": 2
     },
     {
       "id": "great-decoupling-2026",
@@ -28,7 +43,7 @@
       "readTime": "45 min",
       "excerpt": "The events of January 12, 2026, represent a singular, jagged fracture in the continuity of the global economic and technological order. Federal Reserve emergency meeting, AI lab crisis, vibe coding revolution, and the biological pivot redefining human value.",
       "featured": true,
-      "priority": 2
+      "priority": 3
     },
     {
       "id": "global-strategic-assessment-2026",
@@ -43,7 +58,7 @@
       "readTime": "50 min",
       "excerpt": "The global geopolitical and financial architecture is currently undergoing a stress test of a magnitude not seen since the early 2020s. Analysis of Venezuela intervention phase two, Indo-Pacific trade dynamics, crypto market volatility, and defense industrial realignment.",
       "featured": true,
-      "priority": 3
+      "priority": 4
     },
     {
       "id": "global-strategic-intelligence-2026",
@@ -58,7 +73,7 @@
       "readTime": "55 min",
       "excerpt": "The first ten days of 2026 have catalyzed a paradigm shift across global markets, defined by the re-emergence of kinetic geopolitical intervention, the maturation of artificial intelligence into physical reality, and a frantic repricing of risk assets. Venezuela reconstruction summit, $1.5T defense budget shock, Physical AI era.",
       "featured": true,
-      "priority": 4
+      "priority": 5
     },
     {
       "id": "jan-9-pivot-2026",
@@ -73,7 +88,7 @@
       "readTime": "50 min",
       "excerpt": "Friday, January 9, 2026, will be recorded in economic history as a day of converging volatilities that resolved into a surprising equilibrium. Analysis of nonfarm payrolls, Supreme Court tariff ruling, CES 2026, Physical AI, and cybersecurity.",
       "featured": true,
-      "priority": 5
+      "priority": 6
     },
     {
       "id": "jan-8-pivot-2026",
@@ -88,7 +103,7 @@
       "readTime": "45 min",
       "excerpt": "Thursday, January 8, 2026, represents a singular moment where macroeconomic reality, geopolitical power, and technological innovation converged. Analysis of defense sector rotation, Venezuela intervention, jobless claims, and the vibe coding phenomenon.",
       "featured": true,
-      "priority": 6
+      "priority": 7
     },
     {
       "id": "great-recalibration-2026",
@@ -103,7 +118,7 @@
       "readTime": "40 min",
       "excerpt": "The date of January 7, 2026, serves as a singular moment where high-technology ambition, macroeconomic realignment, and systemic digital vulnerability became inextricably knotted. Analysis of labor markets, CES 2026, vibe coding, and cybersecurity threats.",
       "featured": true,
-      "priority": 7
+      "priority": 8
     },
     {
       "id": "convergence-capital-code-2026",
