@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-strategic-assessment-15-01-26',
+            title: 'Global Strategic Assessment: The Convergence of Kinetic, Financial, and Technological Risks – January 15, 2026',
+            shortTitle: 'Strategic Assessment Jan 15',
+            excerpt: 'The international system navigates a confluence of crises testing the resilience of global institutions, the stability of financial markets, and the very definition of sovereignty in the digital age.',
+            date: '2026-01-15',
+            displayDate: 'Jan 15, 2026',
+            category: 'strategic assessment kinetic risks financial crisis technological risks iran greenland fed ai',
+            tags: ['📊 STRATEGIC ASSESSMENT', '⚔️ KINETIC RISKS', '💵 FINANCIAL CRISIS'],
+            tagColors: ['bg-emerald-600', 'bg-red-600', 'bg-orange-600'],
+            readTime: '48 min read',
+            author: 'ShramKavach',
+            icon: '📊',
+            gradient: 'from-emerald-50 via-teal-50 to-cyan-50',
+            borderColor: 'border-emerald-600',
+            stats: [
+                { label: 'Iran', value: 'Crisis', subtext: 'Execution crisis continues to destabilize', color: 'text-red-600', icon: '⚠️' },
+                { label: 'Greenland', value: 'Sovereignty', subtext: 'Territorial sovereignty tensions escalate', color: 'text-yellow-600', icon: '🌍' },
+                { label: 'Fed', value: 'Investigation', subtext: 'Federal Reserve under scrutiny', color: 'text-blue-600', icon: '🏛️' },
+                { label: 'Agentic', value: 'AI', subtext: 'AI autonomy reaches new capabilities', color: 'text-purple-600', icon: '🤖' }
+            ],
+            link: 'global-strategic-assessment-15-01-26.html',
+            featured: true
+        },
+        {
             id: 'global-strategic-intelligence-report-2026',
             title: 'Global Strategic Intelligence Report: Convergence of Crisis, Capital, and Code – January 14, 2026',
             shortTitle: 'Strategic Intelligence Report',
