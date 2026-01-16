@@ -1,8 +1,13 @@
 # ShramKavach - Digital Worker Empowerment Platform
 
+> **Empowering India's 150M+ gig economy workforce with financial tools, legal resources, AI productivity solutions, and real-time global market intelligence. A privacy-first, mobile-optimized platform with zero server dependencies.**
+
 [![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://shramkavach.com)
 [![Status](https://img.shields.io/badge/status-production-success.svg)](https://shramkavach.com)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-contributor%20covenant-purple.svg)](CODE_OF_CONDUCT.md)
+[![Contributing](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Security](https://img.shields.io/badge/security-policy-red.svg)](SECURITY.md)
 
 **Website:** [shramkavach.com](https://shramkavach.com)  
 **Target Market:** India's 150M+ gig economy workforce  

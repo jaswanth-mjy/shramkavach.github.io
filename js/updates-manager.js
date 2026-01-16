@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-strategic-intelligence-jan16-2026',
+            title: 'Global Strategic Intelligence Assessment: Operational, Technological, and Geopolitical Dynamics – January 16, 2026',
+            shortTitle: 'Intelligence Assessment Jan 16',
+            excerpt: 'The global operational landscape presents a striking dichotomy between the accelerating sophistication of digital automation and the persistent, often chaotic, fragility of physical and biological systems.',
+            date: '2026-01-16',
+            displayDate: 'Jan 16, 2026',
+            category: 'intelligence assessment agentic ai operational iss parloa drone economy digital sovereignty',
+            tags: ['🎯 INTELLIGENCE', '🤖 AGENTIC AI', '🔬 OPERATIONAL'],
+            tagColors: ['bg-purple-600', 'bg-blue-600', 'bg-indigo-600'],
+            readTime: '50 min read',
+            author: 'ShramKavach',
+            icon: '🎯',
+            gradient: 'from-purple-50 via-blue-50 to-indigo-50',
+            borderColor: 'border-purple-600',
+            stats: [
+                { label: 'Agentic', value: 'AI', subtext: 'Enterprise autonomous agents era', color: 'text-purple-600', icon: '🤖' },
+                { label: 'Parloa', value: '$350M', subtext: 'Series D funding milestone', color: 'text-blue-600', icon: '💰' },
+                { label: 'ISS', value: 'Evacuation', subtext: 'Aerospace security concerns', color: 'text-red-600', icon: '🚀' },
+                { label: 'Digital', value: 'Sovereignty', subtext: 'Cyber security legislation', color: 'text-indigo-600', icon: '🔒' }
+            ],
+            link: 'global-strategic-intelligence-jan16-2026.html',
+            featured: true
+        },
+        {
             id: 'global-strategic-assessment-15-01-26',
             title: 'Global Strategic Assessment: The Convergence of Kinetic, Financial, and Technological Risks – January 15, 2026',
             shortTitle: 'Strategic Assessment Jan 15',
