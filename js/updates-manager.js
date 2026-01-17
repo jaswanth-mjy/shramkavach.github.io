@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'technology-gaming-science-intelligence-2026',
+            title: 'Global Technology, Gaming, & Scientific Strategic Intelligence Report – January 17, 2026',
+            shortTitle: 'Technology Intelligence Jan 17',
+            excerpt: 'The global technology landscape is defined by a paradoxical state of mature stability in hardware cycles and radical disruption in software infrastructure.',
+            date: '2026-01-17',
+            displayDate: 'Jan 17, 2026',
+            category: 'technology intelligence consumer electronics ai gaming science innovation',
+            tags: ['🎮 TECHNOLOGY', '🎯 GAMING', '🔬 SCIENCE'],
+            tagColors: ['bg-teal-600', 'bg-cyan-600', 'bg-blue-600'],
+            readTime: '55 min read',
+            author: 'ShramKavach',
+            icon: '🎮',
+            gradient: 'from-teal-50 via-cyan-50 to-blue-50',
+            borderColor: 'border-teal-600',
+            stats: [
+                { label: 'iPhone 17', value: 'Launch', subtext: 'Consumer electronics evolution', color: 'text-teal-600', icon: '📱' },
+                { label: 'AI', value: 'Regulation', subtext: 'Infrastructure compliance era', color: 'text-blue-600', icon: '🤖' },
+                { label: 'Gaming', value: 'Ecosystem', subtext: 'Market consolidation trends', color: 'text-cyan-600', icon: '🎮' },
+                { label: 'Science', value: 'Innovation', subtext: 'Fusion, gene editing advances', color: 'text-purple-600', icon: '🔬' }
+            ],
+            link: 'technology-gaming-science-intelligence-2026.html',
+            featured: true
+        },
+        {
             id: 'global-strategic-intelligence-jan16-2026',
             title: 'Global Strategic Intelligence Assessment: Operational, Technological, and Geopolitical Dynamics – January 16, 2026',
             shortTitle: 'Intelligence Assessment Jan 16',
