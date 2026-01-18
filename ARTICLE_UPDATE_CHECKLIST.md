@@ -126,6 +126,17 @@ Update banner text with new article summary
    - Updated banners on calculators.html, prompts.html, protection.html
    - Added to sitemap.xml
 
+## Commits Made (Jan 18, 2026 Session)
+
+10. **83510c4** - Jan 18 article integration: The Sunday Fracture - WEF, Atmospheric Separation, Cultural Dynamics
+   - Added Contact Us link to article footer
+   - Updated articles-database.json with Jan 18 article (priority 1)
+   - Updated updates-manager.js with Jan 18 article
+   - Updated index.html featured article and banner (red-orange-yellow gradient)
+   - Updated updates.html ticker, date (Jan 18), and hero section
+   - Updated banners on calculators.html, prompts.html, protection.html
+   - Added to sitemap.xml
+
 ---
 
 ## Template for Next Article Update
@@ -141,6 +152,7 @@ New article: priority 1
 Previous articles: increment by 1
 
 # Gradient themes used
+Jan 18: red-orange-yellow (Global Analysis)
 Jan 17: teal-cyan-blue (Technology Intelligence)
 Jan 16: purple-blue-indigo (Intelligence Assessment)
 Jan 15: emerald-teal-cyan (Strategic Assessment)
