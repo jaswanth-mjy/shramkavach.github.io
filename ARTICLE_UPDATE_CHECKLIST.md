@@ -8,6 +8,7 @@
 - [x] Fix Open Graph URLs
 - [x] Fix structured data schema URLs (mainEntityOfPage)
 - [x] Fix breadcrumb URLs
+- [x] Add Google AdSense code to head section (after canonical URL, before title)
 - [x] Add Contact Us link to footer (Legal & Trust section)
 
 ### STEP 2: Data Files Update
@@ -136,6 +137,10 @@ Update banner text with new article summary
    - Updated updates.html ticker, date (Jan 18), and hero section
    - Updated banners on calculators.html, prompts.html, protection.html
    - Added to sitemap.xml
+
+11. **[PENDING]** - Add Google AdSense code to sunday-fracture-2026.html
+   - Added AdSense script to head section
+   - Updated checklist to include AdSense as standard step
 
 ---
 
