@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'sunday-fracture-2026',
+            title: 'The Sunday Fracture: Storms, Summits, and the Science of Survival – January 18, 2026',
+            shortTitle: 'The Sunday Fracture',
+            excerpt: 'The date represents a singular, volatile node in the trajectory of the mid-2020s, characterized by extreme duality between elite diplomacy and ground-level reality.',
+            date: '2026-01-18',
+            displayDate: 'Jan 18, 2026',
+            category: 'global analysis wef davos atmospheric separation nfl cultural dynamics world economic forum',
+            tags: ['🌪️ GLOBAL ANALYSIS', '🏛️ WEF', '🎭 CULTURAL'],
+            tagColors: ['bg-red-600', 'bg-orange-600', 'bg-yellow-600'],
+            readTime: '52 min read',
+            author: 'ShramKavach',
+            icon: '🌪️',
+            gradient: 'from-red-50 via-orange-50 to-yellow-50',
+            borderColor: 'border-red-600',
+            stats: [
+                { label: 'WEF', value: 'Davos', subtext: 'Elite summit amid global fractures', color: 'text-red-600', icon: '🏛️' },
+                { label: 'Atmospheric', value: 'Separation', subtext: 'Great Eurasian weather divide', color: 'text-orange-600', icon: '🌪️' },
+                { label: 'NFL', value: 'Playoffs', subtext: 'Sports culture at peak intensity', color: 'text-yellow-600', icon: '🏈' },
+                { label: 'Cultural', value: 'Dynamics', subtext: 'Ground-level reality vs elite', color: 'text-purple-600', icon: '🎭' }
+            ],
+            link: 'sunday-fracture-2026.html',
+            featured: true
+        },
+        {
             id: 'technology-gaming-science-intelligence-2026',
             title: 'Global Technology, Gaming, & Scientific Strategic Intelligence Report – January 17, 2026',
             shortTitle: 'Technology Intelligence Jan 17',
