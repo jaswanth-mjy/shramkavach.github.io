@@ -1,5 +1,10 @@
 # Security and Performance Headers for Netlify
 
+# Redirect for about.html
+/about.html
+  Location: https://shramkavach.com/#contact
+  Status: 302
+
 /*
   # Security Headers
   X-Frame-Options: SAMEORIGIN
