@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-convergence-jan19-2026',
+            title: 'Global Convergence: The January 19, 2026 Report on Geopolitics, Markets, and Cultural Shifts',
+            shortTitle: 'Global Convergence Jan 19',
+            excerpt: 'A Monday of fracture and resilience, characterized by a sharp juxtaposition between high-level diplomatic aspirations and the coercive reality of geoeconomics.',
+            date: '2026-01-19',
+            displayDate: 'Jan 19, 2026',
+            category: 'global convergence geopolitics greenland crisis trade war financial markets davos iranian protests',
+            tags: ['🌐 GLOBAL CONVERGENCE', '🌍 GEOPOLITICS', '📈 MARKETS'],
+            tagColors: ['bg-orange-600', 'bg-amber-600', 'bg-yellow-600'],
+            readTime: '48 min read',
+            author: 'ShramKavach',
+            icon: '🌐',
+            gradient: 'from-orange-50 via-amber-50 to-yellow-50',
+            borderColor: 'border-orange-600',
+            stats: [
+                { label: 'Greenland', value: 'Crisis', subtext: 'US-EU tariff confrontation', color: 'text-orange-600', icon: '🌐' },
+                { label: 'Markets', value: 'Volatility', subtext: 'BSE, Bitcoin, bonds react', color: 'text-amber-600', icon: '📈' },
+                { label: 'Davos', value: 'Dialogue', subtext: 'Elite summit amid tensions', color: 'text-yellow-600', icon: '🏛️' },
+                { label: 'Iranian', value: 'Protests', subtext: 'Youth defiance escalates', color: 'text-red-600', icon: '🔥' }
+            ],
+            link: 'global-convergence-jan19-2026.html',
+            featured: true
+        },
+        {
             id: 'sunday-fracture-2026',
             title: 'The Sunday Fracture: Storms, Summits, and the Science of Survival – January 18, 2026',
             shortTitle: 'The Sunday Fracture',
