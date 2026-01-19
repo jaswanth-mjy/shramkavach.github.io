@@ -32,7 +32,21 @@ const CONFIG = {
  */
 function doPost(e) {
   try {
+    // Check if event object exists
+    if (!e) {
+      Logger.log('Error: No event object received');
+      return createResponse(false, 'Invalid request: No event data');
+    }
+    
+    // Check if postData exists
+    if (!e.postData || !e.postData.contents) {
+      Logger.log('Error: No postData in event object');
+      Logger.log('Event object: ' + JSON.stringify(e));
+      return createResponse(false, 'Invalid request: No post data');
+    }
+    
     // Parse the incoming data
+    Logger.log('Received data: ' + e.postData.contents);
     const data = JSON.parse(e.postData.contents);
     
     // Validate required fields
@@ -60,6 +74,7 @@ function doPost(e) {
     
     // Append to sheet
     sheet.appendRow(rowData);
+    Logger.log('Data saved to sheet successfully');
     
     // Send email notification if enabled
     if (CONFIG.SEND_EMAIL_NOTIFICATIONS) {
@@ -71,6 +86,7 @@ function doPost(e) {
     
   } catch (error) {
     Logger.log('Error processing form: ' + error.toString());
+    Logger.log('Error stack: ' + error.stack);
     return createResponse(false, 'An error occurred. Please try again later.');
   }
 }
