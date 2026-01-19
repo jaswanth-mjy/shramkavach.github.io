@@ -435,15 +435,33 @@
                 </div>
 
                 <div class="cta-section">
-                    <a href="#" class="cta-button">Coming Soon →</a>
+                    <a href="#contact" class="cta-button">Get in Touch →</a>
+                </div>
+
+                <!-- Contact Form -->
+                <div id="contact" class="contact-form" style="margin-top: 3rem;">
+                    <h3 style="color: #00ffff; margin-bottom: 1.5rem; text-align: center; font-size: 1.2rem;">Contact Us</h3>
+                    <form id="contactForm" style="max-width: 500px; margin: 0 auto;">
+                        <div style="margin-bottom: 1rem;">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required
+                                style="width: 100%; padding: 0.75rem; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.3); color: #fff; border-radius: 4px; font-family: inherit; font-size: 0.9rem;">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required
+                                style="width: 100%; padding: 0.75rem; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.3); color: #fff; border-radius: 4px; font-family: inherit; font-size: 0.9rem;">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <textarea id="message" name="message" placeholder="Your Message" required rows="4"
+                                style="width: 100%; padding: 0.75rem; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.3); color: #fff; border-radius: 4px; font-family: inherit; font-size: 0.9rem; resize: vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%; margin: 0;">
+                            Send Message →
+                        </button>
+                        <div id="formMessage" style="margin-top: 1rem; text-align: center; font-size: 0.9rem;"></div>
+                    </form>
                 </div>
 
                 <div class="footer">
-                    <div class="social-links">
-                        <a href="#" class="social-link">GitHub</a>
-                        <a href="#" class="social-link">Twitter</a>
-                        <a href="#" class="social-link">LinkedIn</a>
-                    </div>
                     <p>© 2026 Project Shram. Built for student innovators.</p>
                 </div>
             </div>
@@ -537,9 +555,37 @@
         // Keyboard shortcuts
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Enter') {
-                // Placeholder - Project Shram not yet launched
-                alert('Project Shram is launching soon! Stay tuned.');
+                // Scroll to contact form
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
             }
+        });
+
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('formMessage');
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Show loading message
+            formMessage.style.color = '#00ffff';
+            formMessage.textContent = 'Sending message...';
+            
+            // Simulate form submission (replace with actual backend call)
+            setTimeout(() => {
+                formMessage.style.color = '#27c93f';
+                formMessage.textContent = '✓ Message sent successfully! We\'ll get back to you soon.';
+                
+                // Reset form
+                document.getElementById('contactForm').reset();
+                
+                // Clear message after 5 seconds
+                setTimeout(() => {
+                    formMessage.textContent = '';
+                }, 5000);
+            }, 1000);
         });
     </script>
 </body>
