@@ -22,7 +22,7 @@
 // Configuration - Update these values
 const CONFIG = {
   SHEET_NAME: 'Submissions',
-  NOTIFICATION_EMAIL: 'your-email@example.com', // Change this to your email
+  NOTIFICATION_EMAIL: 'shramkavach@gmail.com', // Change this to your email
   SEND_EMAIL_NOTIFICATIONS: true, // Set to false to disable email notifications
   ALLOW_CORS: true // Allow cross-origin requests
 };
