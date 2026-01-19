@@ -565,18 +565,29 @@
             e.preventDefault();
             
             const formMessage = document.getElementById('formMessage');
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             
-            // Show loading message
+            // Disable submit button and show loading
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.style.opacity = '0.6';
             formMessage.style.color = '#00ffff';
             formMessage.textContent = 'Sending message...';
             
             try {
-                // Replace this URL with your Google Apps Script web app URL after deployment
-                // Instructions in google-apps-script/project-shram-contact-form.gs
+                // IMPORTANT: Replace this URL with your Google Apps Script web app URL
+                // Get it from: Apps Script > Deploy > New deployment > Web app URL
+                // Full setup instructions: google-apps-script/SETUP-INSTRUCTIONS.md
                 const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+                
+                // Check if URL is configured
+                if (SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
+                    throw new Error('Please configure SCRIPT_URL in launch.html');
+                }
                 
                 const formData = {
                     name: name,
@@ -596,23 +607,46 @@
                 // Note: With 'no-cors', we can't read the response, but the request will complete
                 // The form submission is successful if no error is thrown
                 formMessage.style.color = '#27c93f';
-                formMessage.textContent = '✓ Message sent successfully! We\'ll get back to you soon.';
+                formMessage.textContent = '✓ Message sent! Check your email for confirmation.';
                 
                 // Reset form
                 document.getElementById('contactForm').reset();
                 
-                // Clear message after 5 seconds
+                // Show success animation
+                submitBtn.textContent = '✓ Sent!';
+                submitBtn.style.background = 'linear-gradient(135deg, #00ff00, #00cc00)';
+                
+                // Reset button after 5 seconds
                 setTimeout(() => {
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.style.background = 'linear-gradient(135deg, #00ffff, #00cccc)';
+                    submitBtn.style.opacity = '1';
+                    submitBtn.disabled = false;
                     formMessage.textContent = '';
                 }, 5000);
                 
             } catch (error) {
                 console.error('Form submission error:', error);
-                formMessage.style.color = '#ff0000';
-                formMessage.textContent = '✗ Failed to send. Please try again later.';
                 
-                // Clear error message after 5 seconds
+                // Check if it's a configuration error
+                if (error.message.includes('configure SCRIPT_URL')) {
+                    formMessage.style.color = '#ffaa00';
+                    formMessage.textContent = '⚠ Form not configured yet. Please check setup instructions.';
+                } else {
+                    formMessage.style.color = '#ff0000';
+                    formMessage.textContent = '✗ Failed to send. Please try again or email us directly.';
+                }
+                
+                // Show error state on button
+                submitBtn.textContent = '✗ Error';
+                submitBtn.style.background = 'linear-gradient(135deg, #ff0000, #cc0000)';
+                
+                // Reset button after 5 seconds
                 setTimeout(() => {
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.style.background = 'linear-gradient(135deg, #00ffff, #00cccc)';
+                    submitBtn.style.opacity = '1';
+                    submitBtn.disabled = false;
                     formMessage.textContent = '';
                 }, 5000);
             }
