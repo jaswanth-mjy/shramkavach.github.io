@@ -24,6 +24,7 @@ const CONFIG = {
   SHEET_NAME: 'Submissions',
   NOTIFICATION_EMAIL: 'shramkavach@gmail.com', // Change this to your email
   SEND_EMAIL_NOTIFICATIONS: true, // Set to false to disable email notifications
+  SEND_AUTO_REPLY: true, // Set to false to disable auto-reply to submitters
   ALLOW_CORS: true // Allow cross-origin requests
 };
 
@@ -79,6 +80,11 @@ function doPost(e) {
     // Send email notification if enabled
     if (CONFIG.SEND_EMAIL_NOTIFICATIONS) {
       sendEmailNotification(data, timestamp);
+    }
+    
+    // Send auto-reply to submitter if enabled
+    if (CONFIG.SEND_AUTO_REPLY) {
+      sendAutoReply(data);
     }
     
     // Return success response
@@ -188,6 +194,74 @@ Automated Notification
     
   } catch (error) {
     Logger.log('Error sending email: ' + error.toString());
+    // Don't throw error - form submission should still succeed
+  }
+}
+
+/**
+ * Send auto-reply to the person who submitted the form
+ */
+function sendAutoReply(data) {
+  try {
+    const subject = `Thank you for contacting Project Shram`;
+    
+    const htmlBody = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #00ffff; background: #000; padding: 15px; text-align: center;">
+          Project Shram
+        </h2>
+        <div style="padding: 20px; border: 1px solid #ddd;">
+          <p>Hi ${data.name},</p>
+          
+          <p>Thank you for reaching out to <strong>Project Shram</strong>! We've received your message and will get back to you as soon as possible.</p>
+          
+          <div style="background: #f5f5f5; padding: 15px; border-left: 3px solid #00ffff; margin: 20px 0;">
+            <p style="margin: 0;"><strong>Your message:</strong></p>
+            <p style="margin: 10px 0 0 0;">${data.message.replace(/\n/g, '<br>')}</p>
+          </div>
+          
+          <p>We typically respond within 24-48 hours. If your inquiry is urgent, feel free to reply directly to this email.</p>
+          
+          <p>Best regards,<br>
+          <strong>Project Shram Team</strong></p>
+        </div>
+        <div style="padding: 15px; text-align: center; color: #666; font-size: 12px;">
+          Project Shram - Student Innovation Platform<br>
+          This is an automated message. Please do not reply to this email.
+        </div>
+      </div>
+    `;
+    
+    const plainBody = `
+Hi ${data.name},
+
+Thank you for reaching out to Project Shram! We've received your message and will get back to you as soon as possible.
+
+Your message:
+${data.message}
+
+We typically respond within 24-48 hours. If your inquiry is urgent, feel free to reply directly to this email.
+
+Best regards,
+Project Shram Team
+
+---
+Project Shram - Student Innovation Platform
+This is an automated message.
+    `;
+    
+    MailApp.sendEmail({
+      to: data.email,
+      replyTo: CONFIG.NOTIFICATION_EMAIL,
+      subject: subject,
+      body: plainBody,
+      htmlBody: htmlBody
+    });
+    
+    Logger.log('Auto-reply sent to: ' + data.email);
+    
+  } catch (error) {
+    Logger.log('Error sending auto-reply: ' + error.toString());
     // Don't throw error - form submission should still succeed
   }
 }
