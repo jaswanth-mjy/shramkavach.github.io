@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_prompts": 1200,
+    "total_prompts": 1300,
     "categories": 25,
     "languages": ["hi", "en", "hinglish"],
-    "last_updated": "2025-12-19"
+    "last_updated": "2026-01-19"
   },
   "categories": {
     "marketing": {
@@ -367,6 +367,456 @@
       "tags": ["influencer", "collaboration", "marketing"],
       "description": "Small influencer ko collaboration pitch",
       "prompt": "Pitch to micro-influencer for collaboration:\n\nInfluencer: [Name]\nTheir niche: [Topic/Industry]\nFollowers: [Approximate count]\nMy business: [What I sell/offer]\n\nDM/Email pitch (200-250 words):\n1. Personalized intro (show you follow them)\n2. Compliment their content (specific)\n3. Why collaboration makes sense\n4. What you're offering:\n   - Free product/service\n   - OR fixed payment ₹[Amount]\n   - OR affiliate commission [%]\n5. What you expect (post/story/reel)\n6. Creative freedom mention\n7. Easy next step\n\nTone: Friendly, professional, mutual-benefit\nAvoid: Demanding, entitled language"
+    },
+    {
+      "id": 31,
+      "title": "Festival Sale Announcement - Diwali",
+      "category": "marketing",
+      "language": "hi",
+      "tags": ["festival", "sale", "diwali"],
+      "description": "Diwali special sale ke liye announcement",
+      "prompt": "Diwali sale announce करना है:\n\nDiscount: [Percentage]% OFF\nDuration: [Start Date] to [End Date]\nProducts: [Category/All products]\n\nCreate 3 versions:\n1. WhatsApp message (4-5 lines)\n2. Instagram post caption (100 words)\n3. SMS text (160 characters)\n\nInclude:\n- Festival wishes\n- Offer details\n- Urgency factor\n- Contact/shop details\n- Festive emojis\n\nTone: Celebratory, warm, exciting"
+    },
+    {
+      "id": 32,
+      "title": "Client Testimonial Request",
+      "category": "customer_service",
+      "language": "en",
+      "tags": ["testimonial", "review", "feedback"],
+      "description": "Happy client se testimonial request karna",
+      "prompt": "Request testimonial from satisfied client:\n\nClient: [Name]\nProject: [What you did for them]\nResult: [Outcome achieved]\n\nWrite polite request message:\n1. Thank them for business\n2. Express happiness with outcome\n3. Explain value of testimonial\n4. Make it easy (specific questions)\n5. Offer to write draft\n6. Mention where it'll be used\n\nQuestions to guide them:\n- What problem did we solve?\n- How was the experience?\n- What results did you get?\n- Would you recommend us?\n\nTone: Grateful, helpful\nLength: 150-200 words"
+    },
+    {
+      "id": 33,
+      "title": "LinkedIn Post - Business Milestone",
+      "category": "social_media",
+      "language": "en",
+      "tags": ["linkedin", "milestone", "achievement"],
+      "description": "Business milestone celebrate करने के lिए LinkedIn post",
+      "prompt": "Announce business milestone on LinkedIn:\n\nMilestone: [e.g., 1000 customers, 5 years, ₹1Cr revenue]\nBusiness: [Name & Type]\nJourney started: [When]\n\nPost structure (300-400 words):\n1. Exciting opening line\n2. Share the number/milestone\n3. Thank customers/team\n4. Brief journey story:\n   - Where you started\n   - Challenges faced\n   - Key learnings\n5. What's next\n6. Call to action\n\nTone: Professional yet personal, humble, inspiring\nAdd: 3-5 relevant hashtags"
+    },
+    {
+      "id": 34,
+      "title": "Product Description - E-commerce",
+      "category": "content_creation",
+      "language": "hi",
+      "tags": ["ecommerce", "product", "copywriting"],
+      "description": "E-commerce product listing ke lिए description",
+      "prompt": "Product description लिखना है:\n\nProduct: [Name]\nCategory: [Type]\nPrice: ₹[Amount]\nKey features: [List 3-5]\nTarget audience: [Who will buy]\n\nDescription format:\n\n**Headline** (10-15 words):\nAttention-grabbing, benefit-focused\n\n**Description** (150-200 words):\n- Opening hook\n- Main features & benefits\n- Usage/application\n- Quality/material details\n- Social proof hint\n\n**Bullet Points**:\n- 5-7 key features\n- Start with benefit\n\n**Call to Action**:\nUrgency + action\n\nTone: Persuasive, clear, trust-building\nSEO: Include relevant keywords naturally"
+    },
+    {
+      "id": 35,
+      "title": "Employee Leave Request Response",
+      "category": "business_planning",
+      "language": "hi",
+      "tags": ["hr", "employee", "management"],
+      "description": "Employee ke leave request ka response",
+      "prompt": "Employee ne leave request ki hai:\n\nEmployee: [Name]\nPosition: [Role]\nLeave type: [Casual/Medical/Emergency]\nDuration: [Dates]\nReason: [Brief reason]\n\nDo responses लिखो:\n\n**Approved**:\n1. Confirm approval\n2. Mention dates\n3. Discuss handover if needed\n4. Wish them well\n5. Return joining confirmation\n\n**Denied/Postponed**:\n1. Express understanding\n2. Explain reason (workload/timing)\n3. Suggest alternative dates\n4. Show willingness to discuss\n5. Maintain positive tone\n\nLength: 80-100 words each\nTone: Professional, respectful"
+    },
+    {
+      "id": 36,
+      "title": "YouTube Video Script - Tutorial",
+      "category": "content_creation",
+      "language": "hinglish",
+      "tags": ["youtube", "video", "tutorial"],
+      "description": "YouTube tutorial video ke lिए script",
+      "prompt": "YouTube tutorial video script:\n\nTopic: [What you're teaching]\nDuration: [5/10/15 minutes]\nAudience: [Beginners/Intermediate]\n\nScript structure:\n\n**INTRO (30 sec)**:\n- Hook question\n- Quick intro\n- What they'll learn\n- CTA: Like & Subscribe\n\n**MAIN CONTENT**:\n- Step 1: [Topic]\n  - Explain\n  - Show\n  - Common mistakes\n- Step 2: [Continue]\n- Step 3: [Continue]\n\n**TIPS Section**:\n- Pro tips\n- Things to avoid\n\n**OUTRO (30 sec)**:\n- Quick recap\n- Next video teaser\n- Comment question\n- Subscribe reminder\n\nInclude: [SHOW ON SCREEN] cues\nTone: Friendly, clear, encouraging"
+    },
+    {
+      "id": 37,
+      "title": "Supplier Price Negotiation Email",
+      "category": "negotiation",
+      "language": "en",
+      "tags": ["supplier", "pricing", "business"],
+      "description": "Supplier se better price negotiate karna",
+      "prompt": "Negotiate with supplier for better rates:\n\nSupplier: [Name]\nProduct: [What you buy]\nCurrent price: ₹[Amount] per unit\nMonthly purchase: [Quantity]\nRelationship: [How long]\n\nEmail for negotiation (250 words):\n1. Appreciate quality/service\n2. Mention long relationship\n3. Present your case:\n   - Increased order volume\n   - Competitor prices (if applicable)\n   - Market conditions\n   - Business growth plans\n4. Propose new price: ₹[Amount]\n5. Show mutual benefit\n6. Request meeting/call\n7. Positive closing\n\nTone: Professional, firm but respectful\nAvoid: Threatening, demanding"
+    },
+    {
+      "id": 38,
+      "title": "WhatsApp Group Rules - Community",
+      "category": "customer_service",
+      "language": "hi",
+      "tags": ["whatsapp", "community", "rules"],
+      "description": "WhatsApp business group ke lिए rules",
+      "prompt": "WhatsApp business/community group rules:\n\nGroup purpose: [Why group exists]\nMembers: [Type of people]\nSize: [Approximate]\n\nCreate group rules message:\n\n**Welcome Note** (2-3 lines)\n\n**Group Rules** (8-10 points):\n1. Group purpose\n2. What to share\n3. What NOT to share\n4. Timing considerations\n5. Language preference\n6. Respect & etiquette\n7. Spam policy\n8. Privacy guidelines\n9. Admin contact for issues\n10. Violation consequences\n\n**Thank You Note**\n\nTone: Friendly but firm\nUse: Emojis for readability\nLength: Keep concise, scannable"
+    },
+    {
+      "id": 39,
+      "title": "Job Posting - Small Business",
+      "category": "business_planning",
+      "language": "hi",
+      "tags": ["hiring", "job", "recruitment"],
+      "description": "Small business ke lिए job posting",
+      "prompt": "Job opening post करना है:\n\nPosition: [Job Title]\nLocation: [City/Area]\nSalary: ₹[Range] per month\nExperience: [Years required]\nEducation: [Qualification]\n\nJob posting (200-250 words):\n\n**About Us** (2-3 lines):\nCompany brief\n\n**Role Overview**:\nWhat they'll do\n\n**Responsibilities** (5-7 points):\nKey duties\n\n**Requirements**:\n- Education\n- Experience\n- Skills needed\n- Language proficiency\n\n**We Offer**:\n- Salary\n- Benefits\n- Work culture\n\n**Application Process**:\n- Where to apply\n- Documents needed\n- Deadline\n- Contact info\n\nTone: Professional, welcoming\nPlatforms: Facebook, LinkedIn, WhatsApp status"
+    },
+    {
+      "id": 40,
+      "title": "Refund Policy - Customer Friendly",
+      "category": "legal",
+      "language": "en",
+      "tags": ["policy", "refund", "legal"],
+      "description": "Clear aur fair refund policy draft karna",
+      "prompt": "Draft customer-friendly refund policy:\n\nBusiness: [Type]\nProducts/Services: [What you sell]\nAverage ticket size: ₹[Amount]\n\nPolicy sections:\n\n**1. Refund Eligibility**:\n- Time window (days)\n- Conditions\n- What's covered\n- What's not covered\n\n**2. Refund Process**:\n- How to request\n- Documents needed\n- Processing time\n- Refund method\n\n**3. Partial Refunds**:\n- When applicable\n- Calculation\n\n**4. Exchange Option**:\n- Alternative to refund\n\n**5. Contact Info**:\n- Support details\n\nTone: Clear, fair, easy to understand\nAvoid: Complex legal jargon\nBalance: Customer satisfaction + business protection"
+    },
+    {
+      "id": 41,
+      "title": "Facebook Ad Copy - Local Business",
+      "category": "marketing",
+      "language": "hinglish",
+      "tags": ["facebook-ads", "advertising", "local"],
+      "description": "Local business ke lिए Facebook ad copy",
+      "prompt": "Facebook ad copy for local business:\n\nBusiness: [Name & Type]\nLocation: [Area, City]\nOffer: [What's special]\nTarget: [Local audience profile]\nBudget: ₹[Daily budget]\n\n3 ad variations:\n\n**Variant 1 - Problem-Solution**:\n- Headline (5 words)\n- Primary text (100 words)\n- Description (50 words)\n- CTA button text\n\n**Variant 2 - Offer-Focused**:\n- Headline\n- Primary text\n- Description\n- CTA button\n\n**Variant 3 - Trust-Building**:\n- Headline\n- Primary text\n- Description\n- CTA button\n\nInclude:\n- Local references\n- Urgency\n- Clear benefit\n- Action step\n- Contact info\n\nTone: Conversational, trustworthy"
+    },
+    {
+      "id": 42,
+      "title": "Thank You Note - After Purchase",
+      "category": "customer_service",
+      "language": "hi",
+      "tags": ["thankyou", "customer", "retention"],
+      "description": "Purchase ke baad thank you message",
+      "prompt": "Post-purchase thank you message:\n\nCustomer: [Name]\nProduct/Service: [What they bought]\nOrder value: ₹[Amount]\nFirst time customer: [Yes/No]\n\nThank you message (100-150 words):\n1. Warm thank you\n2. Order confirmation\n3. What to expect next:\n   - Delivery timeline (if product)\n   - Usage tips (if service)\n4. Support availability\n5. Request feedback\n6. Future discount hint (optional)\n7. Social media follow invite\n\nSend via:\n- WhatsApp\n- Email\n- SMS\n\nTone: Grateful, warm, helpful\nGoal: Make them feel valued\nAdd: Personal touch if possible"
+    },
+    {
+      "id": 43,
+      "title": "Invoice Reminder - Professional",
+      "category": "finance",
+      "language": "en",
+      "tags": ["invoice", "payment", "followup"],
+      "description": "Professional invoice reminder bhejना",
+      "prompt": "Send invoice payment reminder:\n\nClient: [Name]\nInvoice: [Number]\nAmount: ₹[Amount]\nDue date: [Date]\nDays overdue: [Number]\n\nWrite 3 reminder levels:\n\n**1st Reminder (Due date):**\n- Gentle, assume they forgot\n- 60-80 words\n\n**2nd Reminder (+7 days):**\n- More direct, offer help\n- 80-100 words\n- Ask if there's an issue\n\n**3rd Reminder (+14 days):**\n- Firm but professional\n- 100-120 words\n- Mention next steps\n- Maintain relationship\n\nEach should include:\n- Invoice details\n- Amount due\n- Payment methods\n- Contact for queries\n\nTone: Professional, progressively firm\nAvoid: Aggressive language"
+    },
+    {
+      "id": 44,
+      "title": "Instagram Bio - Business Profile",
+      "category": "social_media",
+      "language": "hinglish",
+      "tags": ["instagram", "bio", "profile"],
+      "description": "Effective Instagram business bio",
+      "prompt": "Create Instagram business bio:\n\nBusiness: [Name]\nWhat you do: [Service/Product]\nLocation: [City]\nUSP: [What makes you different]\n\nBio template (150 characters max):\n\nLine 1: [What you do] (with emoji)\nLine 2: [Key benefit/USP]\nLine 3: [Location/Delivery info]\nLine 4: [CTA with emoji]\nLine 5: [Link or 'DM for orders']\n\n3 variations:\n1. Problem-solution focused\n2. Value proposition focused\n3. Personality-driven\n\nInclude:\n- Relevant emojis\n- Searchable keywords\n- Clear CTA\n- Link in bio reference\n\nMake it: Scannable, clear, compelling\nTest different approaches"
+    },
+    {
+      "id": 45,
+      "title": "Price Increase Notice - Clients",
+      "category": "negotiation",
+      "language": "hi",
+      "tags": ["pricing", "increase", "communication"],
+      "description": "Existing clients ko price increase inform करना",
+      "prompt": "Inform clients about price increase:\n\nService: [What you provide]\nCurrent rate: ₹[Amount]\nNew rate: ₹[Amount]\nIncrease: [Percentage]%\nEffective from: [Date]\nReason: [Brief - costs, inflation, etc.]\n\nAnnouncement message (200 words):\n\n1. **Value Reminder**:\n   - Your service quality\n   - What clients get\n\n2. **The News**:\n   - Clear statement\n   - New pricing\n   - Effective date\n\n3. **Justification**:\n   - Reasons (honest)\n   - Market context\n   - Continued value promise\n\n4. **Grandfathering** (optional):\n   - Current clients benefit\n   - Limited time offer\n\n5. **Next Steps**:\n   - How it affects them\n   - Support availability\n\n6. **Appreciation**:\n   - Thank their loyalty\n\nTone: Transparent, confident, respectful\nAdvance notice: 30-45 days"
+    },
+    {
+      "id": 46,
+      "title": "Email Newsletter - Monthly Update",
+      "category": "email_writing",
+      "language": "en",
+      "tags": ["newsletter", "email", "marketing"],
+      "description": "Monthly business newsletter template",
+      "prompt": "Create monthly newsletter:\n\nBusiness: [Name]\nMonth: [Which month]\nSubscribers: [Customers/Community]\n\nNewsletter structure:\n\n**Subject Line** (5 options):\nCreate curiosity\n\n**Header Image/Banner**:\nDescription of visual\n\n**Opening Note** (50 words):\nPersonal greeting\n\n**Section 1 - This Month's Highlights**:\n- 3 key updates\n- New products/services\n- Achievements\n\n**Section 2 - Featured Content**:\n- Helpful tip/article\n- Case study/testimonial\n\n**Section 3 - Special Offer**:\n- Exclusive for subscribers\n- Time-limited\n\n**Section 4 - Behind the Scenes**:\n- Personal story\n- Team spotlight\n\n**Closing CTA**:\n- Clear action\n- Social links\n- Unsubscribe\n\nTone: Friendly, value-driven\nLength: 400-500 words"
+    },
+    {
+      "id": 47,
+      "title": "Competitor Analysis - Quick Framework",
+      "category": "business_planning",
+      "language": "hi",
+      "tags": ["competitor", "analysis", "strategy"],
+      "description": "Competitor analysis karne ka framework",
+      "prompt": "Analyze your competitors:\n\nYour business: [Type]\nLocation: [Area]\nCompetitors: [List 2-3 names]\n\nAnalysis framework:\n\n**1. Basic Info**:\n- Years in business\n- Size (team/outlets)\n- Location coverage\n\n**2. Offerings**:\n- Products/services\n- Price range\n- Unique features\n\n**3. Marketing**:\n- Online presence\n- Social media activity\n- Review ratings\n- Customer engagement\n\n**4. Strengths**:\n- What they do well\n- Why customers choose them\n\n**5. Weaknesses**:\n- Gaps in their offering\n- Customer complaints\n- Service gaps\n\n**6. Your Advantage**:\n- How you're different\n- What you can offer better\n\n**7. Action Plan**:\n- What to adopt\n- What to avoid\n- Your differentiation strategy\n\nFormat: Simple comparison table\nGoal: Find your unique position"
+    },
+    {
+      "id": 48,
+      "title": "Cold Email - B2B Sales",
+      "category": "sales",
+      "language": "en",
+      "tags": ["cold-email", "b2b", "outreach"],
+      "description": "B2B cold email template for sales",
+      "prompt": "B2B cold outreach email:\n\nYour company: [Name]\nYour solution: [What you offer]\nTarget: [Their company type]\nTheir pain point: [Problem you solve]\n\nEmail template (150-200 words):\n\n**Subject Line** (3 options):\n- Personalized\n- Value-focused\n- Curiosity-driven\n\n**Email Body**:\n1. **Opening** (2 lines):\n   - Personalized observation\n   - About their company\n\n2. **Problem Statement**:\n   - Their likely challenge\n   - Industry context\n\n3. **Your Solution**:\n   - Brief intro\n   - Key benefit (1-2)\n   - Quick proof (number/result)\n\n4. **Social Proof**:\n   - Similar client result\n\n5. **Soft CTA**:\n   - Low-commitment ask\n   - Quick call/demo\n   - Specific time option\n\n6. **Sign-off**:\n   - Professional\n   - Contact details\n\nTone: Professional, helpful, not pushy\nKey: Make it about THEM, not you"
+    },
+    {
+      "id": 49,
+      "title": "Product Launch Announcement",
+      "category": "marketing",
+      "language": "hinglish",
+      "tags": ["launch", "product", "announcement"],
+      "description": "New product launch ke lिए announcement",
+      "prompt": "New product launch announcement:\n\nProduct: [Name]\nCategory: [Type]\nLaunch date: [Date]\nPrice: ₹[Amount]\nKey feature: [Main benefit]\nTarget audience: [Who it's for]\n\nCreate launch campaign:\n\n**1. Teaser Post** (Pre-launch -3 days):\n- Build curiosity\n- Don't reveal everything\n- Coming soon message\n\n**2. Launch Day Post**:\n- Big reveal\n- All details\n- Limited offer\n- Multiple CTAs\n\n**3. Behind-the-Scenes**:\n- Story of creation\n- Why you made it\n- Problem it solves\n\n**4. User Benefits**:\n- How it helps\n- Real scenarios\n- Comparison\n\n**5. Launch Offer**:\n- Early bird discount\n- Bundle deal\n- Time-limited bonus\n\nFormats:\n- Instagram carousel\n- WhatsApp message\n- Email\n- Stories\n\nTone: Exciting, confident, clear"
+    },
+    {
+      "id": 50,
+      "title": "Customer Feedback Form Questions",
+      "category": "customer_service",
+      "language": "hi",
+      "tags": ["feedback", "survey", "customer"],
+      "description": "Customer feedback लेने के lिए questions",
+      "prompt": "Customer feedback form design:\n\nBusiness: [Type]\nFeedback goal: [What you want to learn]\nExpected time: [2-3 minutes]\n\nForm structure:\n\n**Introduction** (30 words):\n- Thank them\n- Purpose\n- Time estimate\n- Privacy assurance\n\n**Questions** (8-10):\n\n1. **Overall Satisfaction**:\n   - Rating scale 1-5\n\n2. **Product/Service Quality**:\n   - Specific rating\n\n3. **Customer Service**:\n   - Experience rating\n\n4. **Price-Value**:\n   - Worth for money\n\n5. **Delivery/Timeliness**:\n   - If applicable\n\n6. **What did you like most?**:\n   - Open text\n\n7. **What can we improve?**:\n   - Open text\n\n8. **Would you recommend us?**:\n   - Yes/No + Why\n\n9. **Future needs**:\n   - What else they want\n\n**Closing**:\n- Thank you\n- Incentive mention (if any)\n- Contact option\n\nKeep: Short, specific, actionable"
+    },
+    {
+      "id": 51,
+      "title": "Partnership Proposal - Business Collaboration",
+      "category": "business_planning",
+      "language": "en",
+      "tags": ["partnership", "collaboration", "proposal"],
+      "description": "Business partnership propose करने का proposal",
+      "prompt": "Partnership proposal template:\n\nYour business: [Name & Type]\nTheir business: [Name & Type]\nProposed collaboration: [What you suggest]\nMutual benefit: [Why it works]\n\nProposal structure (500-600 words):\n\n**1. Executive Summary**:\n- Proposal overview\n- Key benefits for both\n\n**2. Introduction**:\n- About your business\n- Achievements/credentials\n- Why you're approaching them\n\n**3. Partnership Vision**:\n- What you propose\n- How it works\n- Partnership model\n\n**4. Benefits Analysis**:\n- For them\n- For you\n- For customers\n\n**5. Implementation Plan**:\n- Phase 1, 2, 3\n- Timeline\n- Resources needed\n\n**6. Financial Arrangement**:\n- Revenue sharing\n- Cost splitting\n- Investment (if any)\n\n**7. Success Metrics**:\n- How to measure\n- KPIs\n\n**8. Next Steps**:\n- Meeting request\n- Discussion points\n- Decision timeline\n\n**9. Contact Info**:\n- Your details\n\nTone: Professional, confident, collaborative\nAttach: Relevant documents"
+    },
+    {
+      "id": 52,
+      "title": "Restaurant Menu Description",
+      "category": "food_business",
+      "language": "hi",
+      "tags": ["restaurant", "menu", "food"],
+      "description": "Restaurant menu items ke lिए tasty descriptions",
+      "prompt": "Menu item descriptions likho:\n\nRestaurant: [Name & Cuisine]\nDish: [Name]\nIngredients: [Main items]\nSpice level: [Mild/Medium/Spicy]\nPrice: ₹[Amount]\nSpecialty: [What makes it special]\n\nDescription format:\n\n**Name with tagline** (10 words):\nAppetizing, descriptive\n\n**Description** (30-40 words):\n- Ingredients highlight\n- Cooking method\n- Taste profile\n- Serving style\n- Recommendation (when/with what)\n\n**Dietary Info**:\n- 🌱 Veg / Non-veg\n- 🌶️ Spice level\n- Allergen info\n- Customization options\n\n**Pairing Suggestion**:\n- Goes well with\n\n5 dishes ke descriptions create karo:\n1. Starter\n2. Main course\n3. Bread/rice\n4. Dessert\n5. Beverage\n\nTone: Mouthwatering, descriptive\nGoal: Make them order"
+    },
+    {
+      "id": 53,
+      "title": "Salon Service Package Description",
+      "category": "beauty_salon",
+      "language": "hinglish",
+      "tags": ["salon", "beauty", "packages"],
+      "description": "Salon packages ko attractive tarike se describe करना",
+      "prompt": "Salon service package description:\n\nSalon: [Name]\nPackage: [Name]\nServices included: [List]\nDuration: [Time]\nPrice: ₹[Amount]\nSavings: [vs individual]\n\n3 packages create karo:\n\n**Package 1 - Basic/Express**:\n- Name (catchy)\n- What's included\n- Duration\n- Perfect for whom\n- Price\n\n**Package 2 - Premium**:\n- Name\n- Services\n- Duration\n- Ideal for\n- Price\n- Most popular badge\n\n**Package 3 - Luxury/Bridal**:\n- Name\n- Complete services\n- Duration\n- Special inclusions\n- Price\n- Value highlight\n\nFor each:\n- Benefits\n- Who should choose\n- Add-ons available\n- Booking process\n\nDescriptive words use:\n- Pamper, relax, rejuvenate\n- Transform, glow, radiant\n- Expert, premium, luxury\n\nTone: Aspirational, caring, professional"
+    },
+    {
+      "id": 54,
+      "title": "Delivery Partner - Order Delay Message",
+      "category": "delivery",
+      "language": "hi",
+      "tags": ["delivery", "delay", "customer-service"],
+      "description": "Delivery delay ho jaye toh customer ko inform करना",
+      "prompt": "Delivery delay notification:\n\nOrder: [Number]\nOriginal ETA: [Time]\nNew ETA: [Time]\nDelay: [Minutes]\nReason: [Traffic/Weather/High volume]\n\nMessage template:\n\n**Immediate Notification**:\n1. Apologize first\n2. Order number\n3. Current status\n4. Revised time\n5. Reason (brief)\n6. Compensation (if any)\n7. Tracking link\n8. Support contact\n\nLength: 60-80 words\n\n**Follow-up if further delay**:\n1. Update again\n2. Stronger apology\n3. Better compensation\n4. Option to cancel\n\nLength: 80-100 words\n\nTone: Apologetic, transparent, solution-oriented\n\nCompensation ideas:\n- Discount on next order\n- Free delivery\n- Partial refund\n- Loyalty points\n\nSend via:\n- SMS\n- WhatsApp\n- App notification"
+    },
+    {
+      "id": 55,
+      "title": "Cab Driver - Passenger Rating Response",
+      "category": "cab_driver",
+      "language": "hi",
+      "tags": ["cab", "driver", "rating"],
+      "description": "Low rating milne par passenger ko message",
+      "prompt": "Respond to low passenger rating:\n\nTrip: [Date, Route]\nRating received: [Stars]\nComment (if any): [What they said]\n\nDo scenarios:\n\n**Scenario 1 - Unfair Rating**:\n(If you feel rating is unjustified)\n- Polite appeal message\n- State your side\n- Request reconsideration\n- Offer to explain\n- Length: 100 words\n\n**Scenario 2 - Fair Criticism**:\n(If mistake was yours)\n- Sincere apology\n- Acknowledge issue\n- Explain what went wrong\n- Assure improvement\n- Request another chance\n- Length: 100 words\n\n**Scenario 3 - Support Ticket**:\n(Appeal to platform)\n- Professional format\n- Trip details\n- Your version of events\n- Request review\n- Length: 150 words\n\nTone: Professional, respectful, not defensive\nGoal: Maintain reputation, learn, improve"
+    },
+    {
+      "id": 56,
+      "title": "Home Services - Booking Confirmation",
+      "category": "home_services",
+      "language": "hi",
+      "tags": ["home-service", "booking", "confirmation"],
+      "description": "Service booking confirm करने का message",
+      "prompt": "Service booking confirmation:\n\nService: [Plumber/Electrician/Cleaner etc.]\nCustomer: [Name]\nDate: [Scheduled]\nTime: [Slot]\nAddress: [Location]\nEstimated duration: [Hours]\nEstimated cost: ₹[Range]\n\nConfirmation message structure:\n\n**Part 1 - Booking Confirmed**:\n- Thank you note\n- Service details\n- Date & time\n- Address confirmation\n\n**Part 2 - Service Person Details**:\n- Name\n- Experience\n- Photo (if app)\n- Contact number\n\n**Part 3 - What to Expect**:\n- Arrival time\n- What they'll bring\n- What customer should arrange\n- Duration\n- Preliminary cost estimate\n\n**Part 4 - Policies**:\n- Cancellation policy\n- Rescheduling option\n- Payment method\n- Safety measures\n\n**Part 5 - Support**:\n- Contact for queries\n- Helpline number\n\nLength: 150-200 words\nTone: Professional, reassuring, clear\nSend: WhatsApp + SMS"
+    },
+    {
+      "id": 57,
+      "title": "Tuition Classes - Fee Reminder",
+      "category": "education",
+      "language": "hi",
+      "tags": ["education", "tuition", "fee"],
+      "description": "Fee pending hone par reminder message",
+      "prompt": "Tuition fee reminder message:\n\nStudent: [Name]\nClass: [Standard/Subject]\nFee amount: ₹[Amount]\nMonth: [Which month]\nDue date: [Date]\nDays overdue: [Number]\n\n3 progressive reminders:\n\n**Reminder 1 - Gentle** (Due date):\n- Polite reminder\n- Student progress mention\n- Fee details\n- Payment methods\n- Length: 60 words\n\n**Reminder 2 - Firmer** (+5 days):\n- More direct\n- Importance of timely payment\n- Policy mention\n- Request immediate action\n- Length: 80 words\n\n**Reminder 3 - Final** (+10 days):\n- Clear statement\n- Attendance suspension warning\n- Request meeting\n- Maintain relationship\n- Length: 100 words\n\nFor each:\n- Student's achievement mention (positive)\n- Multiple payment options\n- Contact for difficulty discussion\n\nTone: Professional, firm but caring\nAvoid: Embarrassing student"
+    },
+    {
+      "id": 58,
+      "title": "Grocery Store - Weekly Offers WhatsApp",
+      "category": "marketing",
+      "language": "hi",
+      "tags": ["grocery", "offers", "whatsapp"],
+      "description": "Weekly grocery offers ka message",
+      "prompt": "Weekly grocery offers message:\n\nStore: [Name]\nLocation: [Area]\nOffer period: [Dates]\nTop deals: [3-5 items with prices]\n\nWhatsApp message format:\n\n**Header** (Eye-catching):\n🛒 [Store Name]\n📍 [Location]\n\n**Opening Line**:\nExciting greeting\n\n**This Week's Best Deals** 🔥:\n\n1️⃣ [Item] - ₹[Price] (Regular ₹[Price])\n2️⃣ [Item] - ₹[Price] (Save [%])\n3️⃣ [Item] - ₹[Price] [Special note]\n4️⃣ [Item] - ₹[Price]\n5️⃣ [Item] - ₹[Price]\n\n**Combo Offers** 🎁:\n- [Item 1] + [Item 2] = ₹[Price]\n\n**Free Home Delivery** 🏠:\n- Orders above ₹[Amount]\n\n**Timing** ⏰:\n- [Days & Hours]\n\n**Order Now** 📞:\n- [Phone number]\n- [WhatsApp link]\n\n**Valid Till**: [Date]\n\nTone: Friendly, value-focused\nEmojis: Strategic use\nLength: 120-150 words\nFormat: Easy to scan"
+    },
+    {
+      "id": 59,
+      "title": "Freelancer - Project Completion Email",
+      "category": "business_planning",
+      "language": "en",
+      "tags": ["freelance", "project", "completion"],
+      "description": "Project complete होने पर client ko final email",
+      "prompt": "Project completion email to client:\n\nProject: [Name]\nClient: [Name]\nDuration: [Weeks/Months]\nFinal deliverables: [What you're sending]\n\nEmail structure (300 words):\n\n**1. Opening**:\n- Pleasure working with them\n- Project completion announcement\n\n**2. Deliverables Summary**:\n- List what's included\n- Where to access\n- Login details (if any)\n- Documentation link\n\n**3. Project Recap**:\n- Initial goals\n- What was achieved\n- Key features/outcomes\n- Timeline adherence\n\n**4. Usage Instructions**:\n- Quick start guide\n- Important notes\n- Best practices\n\n**5. Post-Project Support**:\n- Support period details\n- How to reach you\n- Response time\n- After support options\n\n**6. Future Collaboration**:\n- Additional services mention\n- Maintenance packages\n- Upgrade possibilities\n\n**7. Requests**:\n- Testimonial request\n- Referral request\n- Portfolio permission\n- LinkedIn recommendation\n\n**8. Thank You**:\n- Appreciation\n- Hope for future work\n\n**9. Next Steps**:\n- Final payment (if pending)\n- Review meeting (optional)\n\nAttachments:\n- All deliverables\n- Documentation\n- Source files (if applicable)\n- Invoice\n\nTone: Professional, helpful, grateful"
+    },
+    {
+      "id": 60,
+      "title": "Event Invitation - Business Networking",
+      "category": "marketing",
+      "language": "en",
+      "tags": ["event", "networking", "invitation"],
+      "description": "Business networking event ka invitation",
+      "prompt": "Business networking event invitation:\n\nEvent: [Name]\nDate: [Date]\nTime: [Start - End]\nVenue: [Location]\nExpected attendees: [Number & profile]\nEntry: [Free/Paid ₹Amount]\n\nInvitation design:\n\n**Email Version** (250 words):\n\n**Subject Lines** (5 options):\n- Personalized\n- Benefit-focused\n- Curiosity-driven\n- FOMO-based\n- Question-based\n\n**Email Body**:\n\n1. **Hook**:\n   - Why they should care\n\n2. **Event Details**:\n   - What, where, when\n   - Agenda overview\n\n3. **Why Attend**:\n   - Networking opportunities\n   - Learning takeaways\n   - Potential connections\n   - Industry insights\n\n4. **Speakers/Guests**:\n   - Notable attendees\n   - Guest speakers\n\n5. **Agenda Highlights**:\n   - Key sessions\n   - Activities\n\n6. **Registration**:\n   - How to register\n   - Deadline\n   - Cost (if any)\n   - Early bird benefits\n\n7. **CTA**:\n   - Clear action button\n\n**WhatsApp Version** (100 words):\n- Shorter format\n- Key details\n- Quick RSVP link\n\n**Social Media Post** (80 words):\n- Engaging copy\n- Event graphic description\n- Hashtags\n- Tag partners\n\nTone: Professional, exciting, valuable"
+    },
+    {
+      "id": 61,
+      "title": "Gym Membership Renewal Offer",
+      "category": "marketing",
+      "language": "hinglish",
+      "tags": ["gym", "fitness", "membership"],
+      "description": "Gym membership renewal ke lिए offer",
+      "prompt": "Gym membership renewal campaign:\n\nGym: [Name]\nMember: [Name]\nMembership expiry: [Date]\nCurrent plan: [Type & Price]\nRenewal offer: [Discount/Bonus]\n\nRenewal message (150-200 words):\n\n**Part 1 - Progress Recognition**:\n- Acknowledge their journey\n- Mention their attendance/progress\n- Celebrate achievements\n\n**Part 2 - Membership Status**:\n- Expiry reminder\n- Current plan details\n\n**Part 3 - Renewal Offer** 🎁:\n- Special renewal discount\n- Percentage/amount off\n- Additional benefits:\n  - Extra months free\n  - Personal training sessions\n  - Diet consultation\n  - Merchandise\n\n**Part 4 - Upgraded Options**:\n- Premium plan benefits\n- New facilities/classes\n- Exclusive perks\n\n**Part 5 - Time Sensitivity**:\n- Offer valid till [Date]\n- Limited slots (if applicable)\n\n**Part 6 - Action**:\n- How to renew\n- Contact person\n- Payment options\n\n**Closing**:\n- Motivational note\n- We value you message\n\nTone: Motivating, appreciative, urgent\nEmojis: Fitness-themed 💪🏋️‍♂️🔥"
+    },
+    {
+      "id": 62,
+      "title": "Legal Notice - Payment Default",
+      "category": "legal",
+      "language": "en",
+      "tags": ["legal", "payment", "notice"],
+      "description": "Payment default ke lिए legal notice draft",
+      "prompt": "Draft legal notice for payment default:\n\n⚠️ DISCLAIMER: This is a template. Consult a lawyer for legal matters.\n\nCreditor: [Your business]\nDebtor: [Client/Company]\nAmount owed: ₹[Amount]\nInvoice date: [Date]\nDue date: [Date]\nDays overdue: [Number]\nPrevious reminders: [Count]\n\nNotice structure:\n\n**LEGAL NOTICE**\n**[Date]**\n\n**To:**\n[Debtor name & address]\n\n**From:**\n[Your name & address]\n\n**Subject:** Legal Notice for Recovery of Outstanding Payment\n\n**1. Introduction**:\n- Your client relationship\n- Service/product provided\n- Agreement reference (if any)\n\n**2. Payment Details**:\n- Invoice number\n- Amount\n- Due date\n- Total outstanding\n\n**3. Reminder History**:\n- Previous attempts to collect\n- Communication record\n\n**4. Legal Position**:\n- Breach of contract/agreement\n- Your right to recover\n\n**5. Demand**:\n- Clear payment demand\n- Amount including interest (if applicable)\n- Payment timeline: [7/15 days]\n\n**6. Consequences**:\n- Legal action warning\n- Additional costs\n- Credit rating impact\n\n**7. Resolution Preference**:\n- Willingness to discuss\n- Alternative arrangements\n\n**8. Contact**:\n- Response deadline\n- Your contact details\n\n**Signature:**\n[Your name]\n[Designation]\n\nTone: Formal, firm, legally sound\nAdvice: Send via registered post"
+    },
+    {
+      "id": 63,
+      "title": "Blog Post Outline - Business Topic",
+      "category": "content_creation",
+      "language": "en",
+      "tags": ["blog", "content", "seo"],
+      "description": "Business blog post ka detailed outline",
+      "prompt": "Create blog post outline:\n\nTopic: [Your topic]\nTarget audience: [Who will read]\nKeyword: [Primary SEO keyword]\nWord count target: [1000/1500/2000]\nGoal: [Educate/Convert/Traffic]\n\nBlog outline:\n\n**Title Options** (5 versions):\n- Include keyword\n- Compelling\n- Search-friendly\n\n**Meta Description** (150 characters):\n- Keyword included\n- Benefit clear\n- Click-worthy\n\n**Introduction** (100-150 words):\n- Hook sentence\n- Problem statement\n- What reader will learn\n- Credibility element\n\n**Table of Contents**:\n[Auto-generate from H2s]\n\n**Main Content Structure**:\n\n**H2: [Section 1]**\n- Point 1\n- Point 2\n- Point 3\n- Example/Data\n\n**H2: [Section 2]**\n- Subpoints\n- Visual suggestion\n- Quote/Stat\n\n**H2: [Section 3]**\n- Key takeaways\n- Action steps\n\n**H2: [FAQ Section]**\n- Question 1\n- Question 2\n- Question 3\n\n**Conclusion** (100 words):\n- Summary\n- Key message\n- CTA\n\n**CTA Box**:\n- Offer related to topic\n- Clear action\n\n**Internal Links**: [3-5 related posts]\n**External Links**: [2-3 authority sources]\n**Images Needed**: [List types]\n**Keywords to include**: [LSI keywords]\n\nSEO: Optimize naturally"
+    },
+    {
+      "id": 64,
+      "title": "Webinar Promotion - Registration Drive",
+      "category": "marketing",
+      "language": "en",
+      "tags": ["webinar", "promotion", "registration"],
+      "description": "Webinar registrations बढ़ाने के lिए campaign",
+      "prompt": "Webinar promotion campaign:\n\nWebinar: [Title]\nTopic: [What you'll teach]\nDate: [Date]\nTime: [Time & Duration]\nSpeaker: [Name & Credentials]\nTarget registrations: [Number]\nPlatform: [Zoom/Google Meet etc.]\n\nPromotion strategy:\n\n**1. Landing Page Copy** (400 words):\n- Compelling headline\n- Problem statement\n- Solution promise\n- Speaker bio\n- Agenda\n- Testimonials (if past webinar)\n- Registration form\n- FAQ\n\n**2. Email Campaign**:\n\n**Email 1 - Launch** (200 words):\n- Announcement\n- Key benefits\n- Early bird benefit\n\n**Email 2 - Reminder** (-3 days):\n- Last chance\n- Social proof\n- Agenda highlight\n\n**Email 3 - Final** (-1 day):\n- Closing soon\n- FOMO\n- Quick register\n\n**3. Social Media Posts**:\n\n**LinkedIn** (150 words):\n- Professional tone\n- Value proposition\n- Hashtags\n\n**Instagram** (80 words + image):\n- Visual description\n- Story series ideas\n- Countdown stickers\n\n**Facebook** (120 words):\n- Community sharing\n- Event page link\n\n**Twitter Thread** (5 tweets):\n- Hook\n- Value points\n- Speaker intro\n- Registration link\n- Hashtags\n\n**4. WhatsApp Message** (100 words):\n- Personal invite\n- Share-worthy\n\nInclude:\n- Clear benefits\n- Free registration (if yes)\n- Recording availability\n- Certificate mention\n- Limited seats (if true)\n\nTone: Educational, valuable, urgent"
+    },
+    {
+      "id": 65,
+      "title": "Testimonial Writing - Self Drafted",
+      "category": "content_creation",
+      "language": "en",
+      "tags": ["testimonial", "social-proof", "marketing"],
+      "description": "Client ke lिए testimonial draft karna (approval ke lिए)",
+      "prompt": "Draft testimonial for client approval:\n\nClient: [Name]\nBusiness: [Their business]\nService provided: [What you did]\nDuration: [Project length]\nResult achieved: [Specific outcome]\n\nWrite 3 testimonial versions:\n\n**Version 1 - Brief** (50 words):\n- Quick recommendation\n- Key benefit\n- Result\n- Recommendation\n\n**Version 2 - Medium** (100 words):\n- Problem they had\n- Why they chose you\n- Experience working together\n- Result achieved\n- Would recommend\n\n**Version 3 - Detailed** (150-200 words):\n- Background context\n- Initial situation\n- Decision process\n- Collaboration experience\n- Specific results:\n  - Numbers/percentages\n  - Before/after\n  - Timeline\n- What stood out\n- Why recommend\n- Who should hire you\n\nFor each version:\n- Write in client's voice\n- Include specific details\n- Mention measurable results\n- Sound authentic (not salesy)\n- Use their industry language\n\nPresent to client:\n\"Hi [Name],\n\nThank you for agreeing to provide a testimonial. To make it easy, I've drafted a few versions based on our project results. Please feel free to:\n- Choose one and approve\n- Edit as you see fit\n- Write your own using these as inspiration\n\nWhatever feels most authentic to you!\"\n\nTone: Authentic, result-focused, specific"
+    },
+    {
+      "id": 66,
+      "title": "Crisis Communication - Business Emergency",
+      "category": "customer_service",
+      "language": "en",
+      "tags": ["crisis", "communication", "emergency"],
+      "description": "Business emergency me customers ko communicate करना",
+      "prompt": "Crisis communication template:\n\nSituation: [What happened]\nExamples:\n- Data breach\n- Service outage\n- Product recall\n- Staff incident\n- Fire/damage\n- Supply chain issue\n\nImpact: [How it affects customers]\nExpected resolution: [Timeline]\n\nCrisis communication plan:\n\n**Immediate Response** (1-2 hours):\n\n**Statement 1 - Acknowledgment**:\n- Confirm the issue\n- What we know so far\n- Immediate actions taken\n- Customer safety priority\n- Updates promise\n- Length: 150 words\n\n**Update Communication** (4-6 hours):\n\n**Statement 2 - Details**:\n- Full situation explanation\n- Root cause (if known)\n- Who's affected\n- What we're doing:\n  - Technical team\n  - External experts\n  - Authorities (if involved)\n- Timeline expectations\n- What customers should do\n- Compensation/remedy plan\n- Length: 250 words\n\n**Resolution Communication**:\n\n**Statement 3 - Closure**:\n- Issue resolved\n- What was done\n- Preventive measures\n- How to verify\n- Apology\n- Compensation details\n- Rebuilding trust\n- Contact for concerns\n- Length: 300 words\n\n**Follow-up** (1 week later):\n- Lessons learned\n- System improvements\n- Thank customers for patience\n- Reaffirm commitment\n- Length: 150 words\n\nChannels:\n- Email (all customers)\n- Website banner\n- Social media\n- SMS (critical)\n- Press release (if major)\n\nTone: Transparent, responsible, empathetic\nKey: Honest communication, frequent updates"
+    },
+    {
+      "id": 67,
+      "title": "Affiliate Program Launch",
+      "category": "sales",
+      "language": "en",
+      "tags": ["affiliate", "program", "marketing"],
+      "description": "Affiliate marketing program launch karna",
+      "prompt": "Launch affiliate program:\n\nBusiness: [Name]\nProduct/Service: [What you sell]\nCommission: [Percentage or fixed amount]\nCookie duration: [Days]\nPayment terms: [When/how]\n\nProgram documentation:\n\n**1. Affiliate Program Page** (500 words):\n\n**Header**:\n- Catchy headline\n- Subheading about earning potential\n\n**Program Overview**:\n- What is it\n- Why join\n- Who it's for\n\n**Commission Structure**:\n- Rates clearly stated\n- Payment schedule\n- Payout methods\n- Minimum threshold\n\n**How It Works**:\n- Step 1: Sign up\n- Step 2: Get your link\n- Step 3: Promote\n- Step 4: Earn\n\n**Marketing Materials Provided**:\n- Banners\n- Email templates\n- Social media posts\n- Product images\n- Landing pages\n\n**Terms & Conditions**:\n- Approval process\n- Cookie duration\n- Prohibited practices\n- Payment terms\n- Termination clause\n\n**FAQ Section**:\n8-10 common questions\n\n**Join CTA**:\n- Sign up button\n- Application form\n\n**2. Affiliate Welcome Email**:\n- Congratulations\n- Login details\n- Dashboard tour\n- First steps\n- Support contact\n- Length: 200 words\n\n**3. Promotion Email to Potential Affiliates**:\n- Opportunity pitch\n- Earning potential\n- Why promote your product\n- Easy application\n- Length: 250 words\n\nTone: Opportunity-focused, clear, supportive"
+    },
+    {
+      "id": 68,
+      "title": "Recruitment Ad - Small Business",
+      "category": "business_planning",
+      "language": "hinglish",
+      "tags": ["recruitment", "hiring", "job"],
+      "description": "Small business ke lिए attractive job posting",
+      "prompt": "Recruitment advertisement:\n\nPosition: [Job Title]\nBusiness: [Name & Type]\nLocation: [City/Area]\nExperience: [Years]\nSalary: ₹[Range]/month\nOpenings: [Number]\n\nJob ad (250-300 words):\n\n**Attention-Grabbing Opening**:\n- \"Join Our Growing Team!\"\n- Or relevant hook\n\n**About Us** (50 words):\n- What you do\n- Company culture\n- Why work here\n\n**Role Title**: [Position]\n\n**What You'll Do**:\n- Main responsibility 1\n- Main responsibility 2\n- Main responsibility 3\n- Main responsibility 4\n- Main responsibility 5\n\n**What We're Looking For**:\n\n**Must Have**:\n- Education: [Degree]\n- Experience: [Years in relevant field]\n- Skills: [Technical skills]\n- Language: [Hindi/English proficiency]\n- Age: [If applicable, within legal limits]\n\n**Good to Have**:\n- Additional skills\n- Certifications\n- Industry knowledge\n\n**What We Offer**:\n- Salary: ₹[Range] (negotiable for right candidate)\n- Working hours: [Timings]\n- Days off: [Weekly offs]\n- Benefits:\n  - PF/ESI (if applicable)\n  - Health insurance\n  - Performance bonuses\n  - Festival bonuses\n  - Career growth\n  - Training provided\n\n**Work Environment**:\n- Team size\n- Culture\n- Facilities\n\n**How to Apply**:\n- Send CV to: [Email]\n- WhatsApp: [Number]\n- Visit: [Address with timing]\n- Deadline: [Date]\n\n**Interview Process**:\n- What to bring\n- Documents needed\n- When to expect call\n\nClose: \"We're an equal opportunity employer\"\n\nTone: Welcoming, clear, professional\nAvoid: Discrimination, unrealistic expectations"
+    },
+    {
+      "id": 69,
+      "title": "Customer Loyalty Program Launch",
+      "category": "marketing",
+      "language": "hi",
+      "tags": ["loyalty", "rewards", "retention"],
+      "description": "Customer loyalty program शुरू करना",
+      "prompt": "Launch customer loyalty program:\n\nBusiness: [Name]\nProgram name: [Creative name]\nHow it works: [Points/Visits/Spending]\nRewards: [What they get]\nTarget: [Repeat customers]\n\nProgram launch plan:\n\n**1. Program Announcement** (200 words):\n\n**Headline**:\n- Exciting news\n- Program name reveal\n\n**What is it**:\n- Loyalty program intro\n- Why we started it\n\n**How It Works**:\n- Earn: [e.g., ₹100 = 1 point]\n- Redeem: [e.g., 100 points = ₹50 off]\n- Every purchase counts\n- No expiry (or mention expiry)\n\n**Rewards Tiers** (if applicable):\n- Bronze: [Benefits]\n- Silver: [Benefits]\n- Gold: [Benefits]\n\n**Exclusive Benefits**:\n- Early access to sales\n- Birthday rewards\n- Special discounts\n- Free delivery\n- Priority support\n\n**How to Join**:\n- Free sign up\n- Just provide: [phone/email]\n- Instant activation\n\n**Existing Customer Bonus**:\n- Retroactive points\n- Joining bonus\n\n**2. In-Store Poster**:\n- Visual design description\n- Key program points\n- QR code for details\n\n**3. WhatsApp Broadcast**:\n- Program summary\n- \"Reply JOIN to enroll\"\n- Length: 100 words\n\n**4. Reminder at Checkout**:\n- Staff script\n- \"Have you joined our loyalty program?\"\n- Quick benefits mention\n\n**5. FAQ Document**:\n- 10 common questions\n- Clear answers\n\nTone: Exciting, rewarding, appreciative\nGoal: Drive enrollment, increase retention"
+    },
+    {
+      "id": 70,
+      "title": "Business Plan Executive Summary",
+      "category": "business_planning",
+      "language": "en",
+      "tags": ["business-plan", "startup", "planning"],
+      "description": "Business plan ka executive summary likhना",
+      "prompt": "Write business plan executive summary:\n\nBusiness: [Name]\nIndustry: [Sector]\nLocation: [City/Region]\nFounding date: [Month, Year]\nFounders: [Names]\nFunding need: ₹[Amount] (if seeking)\n\nExecutive summary (500-600 words):\n\n**1. Business Concept** (100 words):\n- What you do\n- Products/services\n- Value proposition\n- What problem you solve\n- Target market\n\n**2. Business Opportunity** (100 words):\n- Market size\n- Growth trends\n- Why now\n- Gap you're filling\n- Competitive advantage\n\n**3. Target Market** (80 words):\n- Primary audience\n- Demographics\n- Geographic focus\n- Market segments\n- Customer pain points\n\n**4. Marketing & Sales** (80 words):\n- How you'll reach customers\n- Sales channels\n- Pricing strategy\n- Customer acquisition plan\n\n**5. Competition** (60 words):\n- Main competitors\n- Your differentiation\n- Competitive advantages\n\n**6. Management Team** (80 words):\n- Founder backgrounds\n- Key team members\n- Relevant experience\n- Advisors (if any)\n\n**7. Financial Projections** (80 words):\n- Revenue model\n- Year 1-3 projections\n- Break-even timeline\n- Profitability path\n- Key assumptions\n\n**8. Funding Requirements** (if applicable):\n- Amount needed\n- Use of funds breakdown:\n  - Product development\n  - Marketing\n  - Operations\n  - Team\n  - Working capital\n- Expected ROI\n- Exit strategy (if investor pitch)\n\n**9. Current Status & Milestones**:\n- Where you are now\n- What's been achieved\n- Next milestones\n- Timeline\n\n**10. Conclusion** (50 words):\n- Vision statement\n- Why you'll succeed\n- Call to action\n\nTone: Professional, confident, factual\nGoal: Make reader want to read full plan\nKey: Be specific with numbers, realistic with projections"
+    },
+    {
+      "id": 71,
+      "title": "Press Release - Business Announcement",
+      "category": "marketing",
+      "language": "en",
+      "tags": ["press-release", "media", "announcement"],
+      "description": "Professional press release likhना",
+      "prompt": "Write press release:\n\nAnnouncement type:\n- New business launch\n- Product launch\n- Funding raised\n- Partnership\n- Milestone achieved\n- Award won\n- Expansion\n\nDetails: [Fill your specifics]\n\nPress release format:\n\n**[Your Company Letterhead]**\n\n**FOR IMMEDIATE RELEASE**\n\n**Date**: [Date]\n\n**Headline** (10-15 words):\n- Clear, newsworthy\n- Active voice\n- Include key info\n\n**Subheadline** (20-30 words):\n- Supporting detail\n- Expand on headline\n\n**[City, Date]** – **Lead Paragraph** (50 words):\n- Who\n- What\n- When\n- Where\n- Why\n- How (optional)\n\n**Body Paragraph 1** (100 words):\n- Expand on announcement\n- Key details\n- Significance\n- Context\n\n**Body Paragraph 2** (100 words):\n- Supporting information\n- Background\n- Statistics/data\n- Market context\n\n**Quote 1** - Founder/CEO:\n\"[Inspiring quote about announcement]\"\n- [Name, Designation]\n\n**Body Paragraph 3** (80 words):\n- Additional details\n- Benefits\n- Future plans\n\n**Quote 2** - Partner/Customer (optional):\n\"[Testimonial or validation]\"\n- [Name, Company]\n\n**About [Company Name]** (80 words):\n- Boilerplate\n- Founded\n- What you do\n- Achievements\n- Website\n\n**Media Contact**:\n[Name]\n[Title]\n[Phone]\n[Email]\n[Website]\n\n**###**\n(Indicates end of release)\n\nTips:\n- Write in third person\n- Use quotes for opinions\n- Facts in body text\n- Include multimedia (mention available)\n- AP style formatting\n- Keep under 500 words\n\nDistribution:\n- Email to journalists\n- Press release websites\n- Company website/newsroom\n- Social media\n\nTone: Professional, newsworthy, objective"
+    },
+    {
+      "id": 72,
+      "title": "SaaS Free Trial Email Sequence",
+      "category": "email_writing",
+      "language": "en",
+      "tags": ["saas", "email-sequence", "conversion"],
+      "description": "SaaS free trial users ke lिए email sequence",
+      "prompt": "SaaS trial email sequence:\n\nProduct: [SaaS name]\nTrial duration: [Days]\nKey features: [List 3-5]\nPricing: [Plans after trial]\nTarget: Convert trial to paid\n\n7-email sequence:\n\n**Day 0 - Welcome Email** (200 words):\n- Thank you for signing up\n- What to expect from trial\n- Quick start guide\n- First task/action\n- Support contact\n- Video tutorial link\n\n**Day 1 - Getting Started** (150 words):\n- Check-in\n- Did you complete setup?\n- Feature highlight #1 (most important)\n- Use case example\n- Quick win promise\n- Help available\n\n**Day 3 - Feature Deep Dive** (180 words):\n- Feature highlight #2\n- How it solves problem\n- Case study mini\n- Tips for best results\n- FAQ link\n\n**Day 5 - Social Proof** (160 words):\n- Customer success story\n- Results achieved\n- Similar business example\n- \"You can too\" message\n- Feature highlight #3\n\n**Day 7 - Midpoint Check** (170 words):\n- Halfway through trial\n- What have you achieved?\n- Need help? (offer call/demo)\n- Advanced tips\n- Community invite\n\n**Day 10 - Urgency Building** (150 words):\n- Trial ending soon\n- What you'll miss\n- Pricing plans intro\n- Special offer for trial users\n- Comparison table link\n\n**Day 13 - Last Day** (200 words):\n- Trial expires tomorrow\n- Quick recap of benefits\n- Exclusive discount (20% off first month)\n- Easy upgrade process\n- Testimonials\n- Risk-free guarantee\n- Payment FAQ\n- Last chance CTA\n\nBonus:\n**Day 15 - Win-back** (if didn't convert):\n- We miss you\n- What stopped you?\n- Survey link\n- Extended trial offer\n- Personal help offer\n\nTone: Helpful, not pushy\nGoal: Education → Activation → Conversion"
+    },
+    {
+      "id": 73,
+      "title": "Podcast Episode Description",
+      "category": "content_creation",
+      "language": "en",
+      "tags": ["podcast", "description", "marketing"],
+      "description": "Podcast episode ke lिए engaging description",
+      "prompt": "Podcast episode description:\n\nPodcast: [Show name]\nEpisode #: [Number]\nTitle: [Episode title]\nGuest: [Name & credentials] (if applicable)\nDuration: [Minutes]\nTopic: [What you discuss]\nKey takeaways: [List 3-5]\n\nDescription format (300-400 words):\n\n**Hook Paragraph** (50 words):\n- Attention-grabbing opening\n- Why listener should care\n- Problem or question posed\n\n**Episode Overview** (100 words):\n- What's covered\n- Main discussion points\n- Why it matters\n- Who should listen\n\n**Guest Introduction** (if applicable, 50 words):\n- Who they are\n- Credentials\n- Why they're qualified\n- Previous achievements\n\n**What You'll Learn** (bullet format):\n- Takeaway 1\n- Takeaway 2\n- Takeaway 3\n- Takeaway 4\n- Takeaway 5\n\n**Timestamps** (for YouTube/detailed platforms):\n00:00 - Intro\n02:30 - [Topic]\n08:45 - [Topic]\n15:20 - [Topic]\n25:10 - [Topic]\n32:00 - Outro\n\n**Resources Mentioned**:\n- Link 1: [Description]\n- Link 2: [Description]\n- Link 3: [Description]\n\n**Connect with Guest** (if applicable):\n- Website: [URL]\n- LinkedIn: [Handle]\n- Twitter: [Handle]\n- Instagram: [Handle]\n\n**Sponsor Message** (if applicable, 50 words):\n- Sponsored by [Brand]\n- Offer/discount code\n\n**Call to Action**:\n- Subscribe\n- Rate & review\n- Share episode\n- Join community\n- Next episode teaser\n\n**Connect with Show**:\n- Website: [URL]\n- Email: [Address]\n- Social media: [Handles]\n- Newsletter: [Sign up link]\n\n**Hashtags**:\n#Podcast #[Topic] #[Industry] #[Relevant tags]\n\n**Episode Categories/Tags**:\n- For discoverability\n\nTone: Conversational, valuable\nGoal: Intrigue potential listeners, help current listeners navigate\nSEO: Include relevant keywords naturally"
+    },
+    {
+      "id": 74,
+      "title": "Vendor Contract Template",
+      "category": "legal",
+      "language": "en",
+      "tags": ["contract", "vendor", "legal"],
+      "description": "Vendor/Supplier के साथ contract draft करना",
+      "prompt": "⚠️ DISCLAIMER: For reference only. Consult lawyer for legal contracts.\n\nVendor contract draft:\n\n**Your company**: [Name]\n**Vendor**: [Name]\n**Services/Products**: [What they'll supply]\n**Duration**: [Contract period]\n**Value**: ₹[Amount]\n\nContract structure:\n\n**VENDOR AGREEMENT**\n\n**Date**: [Date]\n\n**BETWEEN**:\n[Your Company Name]\n[Address]\n(\"Buyer\")\n\n**AND**:\n[Vendor Company Name]\n[Address]\n(\"Vendor\")\n\n**1. SCOPE OF WORK**:\n- Detailed description of products/services\n- Specifications\n- Quality standards\n- Deliverables\n\n**2. TERM**:\n- Start date\n- End date\n- Renewal terms\n\n**3. PRICING & PAYMENT**:\n- Unit price: ₹[Amount]\n- Payment terms: [Net 30/60]\n- Payment method\n- Price escalation clause\n- GST/tax treatment\n\n**4. DELIVERY**:\n- Delivery schedule\n- Location\n- Shipping terms\n- Acceptance criteria\n\n**5. QUALITY ASSURANCE**:\n- Quality standards\n- Inspection rights\n- Rejection process\n- Replacement/refund policy\n\n**6. WARRANTIES**:\n- Vendor warranties\n- Warranty period\n- Remedies\n\n**7. CONFIDENTIALITY**:\n- Non-disclosure terms\n- Protected information\n- Duration\n\n**8. TERMINATION**:\n- Notice period\n- Termination conditions\n- Consequences\n- Outstanding obligations\n\n**9. LIABILITY**:\n- Limitation of liability\n- Indemnification\n- Insurance requirements\n\n**10. FORCE MAJEURE**:\n- Unforeseen events\n- Obligations during\n\n**11. DISPUTE RESOLUTION**:\n- Negotiation first\n- Arbitration\n- Jurisdiction\n\n**12. GENERAL PROVISIONS**:\n- Governing law\n- Entire agreement\n- Amendments process\n- Assignment restrictions\n- Notices address\n\n**SIGNATURES**:\n\n**Buyer**:\nName: ___________\nDesignation: ___________\nDate: ___________\nSignature: ___________\n\n**Vendor**:\nName: ___________\nDesignation: ___________\nDate: ___________\nSignature: ___________\n\n**ANNEXURES**:\n- Annexure A: Detailed specifications\n- Annexure B: Price list\n- Annexure C: Delivery schedule\n\nNote: Have both parties initial each page"
+    },
+    {
+      "id": 75,
+      "title": "Performance Review Self-Assessment",
+      "category": "business_planning",
+      "language": "en",
+      "tags": ["performance", "review", "self-assessment"],
+      "description": "Appraisal के lिए self-assessment लिखना",
+      "prompt": "Self-assessment for performance review:\n\nEmployee: [Your name]\nPosition: [Role]\nDepartment: [Department]\nReview period: [Date range]\nManager: [Name]\n\nSelf-assessment structure:\n\n**1. ROLE SUMMARY** (50 words):\n- Your position\n- Key responsibilities\n- Team/projects\n\n**2. KEY ACHIEVEMENTS** (200 words):\nList 5-7 major accomplishments:\n\n**Achievement 1**:\n- What you did\n- How you did it\n- Result/impact (quantify)\n- Skills demonstrated\n\n**Achievement 2**:\n[Continue format]\n\nExamples of quantification:\n- Revenue increased by X%\n- Cost saved ₹X\n- Process improved by X%\n- Completed X projects\n- Reduced time by X hours\n\n**3. GOALS REVIEW** (150 words):\nFor each goal set last review:\n- Goal stated\n- Status: Achieved/Partially/Not achieved\n- Explanation\n- Learnings\n\n**4. CORE COMPETENCIES** (100 words):\nRate yourself (1-5) with evidence:\n\n- **Technical Skills**: [Rating]\n  Example: [Specific instance]\n\n- **Communication**: [Rating]\n  Example: [Specific instance]\n\n- **Teamwork**: [Rating]\n  Example: [Specific instance]\n\n- **Leadership**: [Rating]\n  Example: [Specific instance]\n\n- **Problem-solving**: [Rating]\n  Example: [Specific instance]\n\n**5. CHALLENGES FACED** (100 words):\n- Challenge 1: [What it was]\n  - How you overcame it\n  - Outcome\n  - Learning\n\n- Challenge 2: [Continue]\n\n**6. AREAS FOR DEVELOPMENT** (100 words):\n- Skills to improve\n- Knowledge gaps\n- What you're working on\n- Training needs\n- How you'll develop\n\n**7. CONTRIBUTIONS TO TEAM/COMPANY** (80 words):\n- Collaboration examples\n- Knowledge sharing\n- Mentoring\n- Process improvements\n- Innovation suggestions\n\n**8. GOALS FOR NEXT PERIOD** (120 words):\n\n**Professional Goals**:\n- Goal 1: [Specific, measurable]\n- Goal 2\n- Goal 3\n\n**Development Goals**:\n- Skill 1 to acquire\n- Certification/training\n- Responsibility to take on\n\n**9. SUPPORT NEEDED** (60 words):\n- Resources required\n- Training needed\n- Tools/software\n- Mentorship\n- Team support\n\n**10. COMPENSATION DISCUSSION** (if applicable):\n- Market research data\n- Increased responsibilities\n- Additional qualifications\n- Request (if any)\n\n**11. ADDITIONAL COMMENTS** (50 words):\n- Anything else\n- Suggestions\n- Feedback on role\n\nTone: Professional, honest, balanced\nKey: Be specific with examples\nAvoid: Vague statements, over-confidence, negativity\nProof: Review for grammar, clarity"
+    },
+    {
+      "id": 76,
+      "title": "Apology Email - Service Failure",
+      "category": "customer_service",
+      "language": "en",
+      "tags": ["apology", "service-recovery", "customer"],
+      "description": "Major service failure ke baad apology",
+      "prompt": "Service failure apology email:\n\nIncident: [What went wrong]\nCustomer: [Name]\nImpact: [How it affected them]\nDate: [When it happened]\nCompensation: [What you're offering]\n\nApology email (300-350 words):\n\n**Subject Line Options**:\n- \"Our Sincere Apology - [Order/Reference #]\"\n- \"We Let You Down - Here's How We'll Make It Right\"\n- \"Sorry for [Specific Issue] - Compensation Inside\"\n\n**Email Body**:\n\n**Opening** (50 words):\n- Direct apology\n- Acknowledge specific issue\n- Take responsibility\n- No excuses\n\n**What Happened** (80 words):\n- Explain the situation\n- Root cause (if known)\n- Why it shouldn't have happened\n- Be transparent\n- Don't blame others\n\n**Impact Recognition** (60 words):\n- Acknowledge their inconvenience\n- Show you understand the frustration\n- Empathy statements:\n  - \"We understand this caused...\"\n  - \"We know how important...\"\n  - \"This is not the experience...\"\n\n**Resolution** (80 words):\n- What we've done to fix it\n- Current status\n- What happens next\n- Timeline\n- Confirmation of completion\n\n**Prevention** (50 words):\n- Steps taken to prevent recurrence\n- Process improvements\n- Team training\n- System upgrades\n- Show you've learned\n\n**Compensation** (60 words):\n- What you're offering:\n  - Full refund\n  - Discount on next order\n  - Free upgrade\n  - Store credit\n  - Additional services\n- How to redeem\n- Validity period\n- No obligations attached\n\n**Rebuilding Trust** (40 words):\n- Express value of their business\n- Request another chance\n- Commitment to better service\n- Personal touch\n\n**Closing** (30 words):\n- Thank them for patience\n- Apologize again\n- Personal sign-off\n- Direct contact offered\n\n**Contact Information**:\n- Direct line/email\n- Priority support\n- Manager contact\n\n**Signature**:\n[Your Name]\n[Title - preferably senior]\n[Phone]\n[Email]\n\nTone: Humble, sincere, responsible\nAvoid:\n- Defensive language\n- Minimizing the issue\n- Generic templates\n- Shifting blame\n- Legal jargon\n\nFollow-up: Call customer personally if high-value"
+    },
+    {
+      "id": 77,
+      "title": "Upsell Email - Existing Customer",
+      "category": "sales",
+      "language": "en",
+      "tags": ["upsell", "sales", "customer"],
+      "description": "Existing customer ko premium plan upgrade karwana",
+      "prompt": "Upsell email to existing customer:\n\nCustomer: [Name]\nCurrent plan: [Basic/Standard]\nUsage: [How they use it]\nUpgrade to: [Premium/Enterprise]\nBenefit: [Main advantage]\nPricing: Current ₹[X], Upgrade ₹[Y]\n\nUpsell email (250-300 words):\n\n**Subject Lines** (5 options):\n- \"[Name], Ready to [Achieve specific goal]?\"\n- \"You're Missing Out on [Feature]\"\n- \"Unlock [Benefit] with [Plan Name]\"\n- \"Your [Current Plan] is Great, But...\"\n- \"Special Upgrade Offer Inside - 20% Off\"\n\n**Email Body**:\n\n**Personalized Opening** (40 words):\n- Acknowledge their current usage\n- Appreciate their loyalty\n- Specific detail about their activity\n  - \"We noticed you've been using [feature] frequently\"\n  - \"You've achieved [milestone]\"\n  - \"Your team has grown to [size]\"\n\n**The Limitation** (50 words):\n- Gentle mention of current plan limits\n- What they're missing out on\n- Not criticizing their choice\n- Opportunity framing:\n  - \"Your current plan is great for...\"\n  - \"But as you grow...\"\n  - \"To take it to the next level...\"\n\n**The Upgrade Benefits** (100 words):\nFocus on THEIR specific needs:\n\n- **Benefit 1**: [Feature]\n  - How it helps them specifically\n  - Use case for their business\n\n- **Benefit 2**: [Feature]\n  - Time/money saved\n  - Efficiency gain\n\n- **Benefit 3**: [Feature]\n  - Competitive advantage\n  - Growth enabler\n\n- **Benefit 4**: [Support/Service]\n  - Enhanced support\n  - Priority access\n\n**Social Proof** (40 words):\n- \"Customers like you who upgraded saw...\"\n- Specific result/testimonial\n- Similar business success\n\n**Pricing** (40 words):\n- Current: ₹[Amount]\n- Upgrade: ₹[Amount]\n- Difference: Only ₹[X] more\n- Frame as value: \"For just ₹[X]/day\"\n- ROI mention if applicable\n\n**Special Offer** (40 words):\n- Limited time discount\n- First 3 months 20% off\n- Free migration/onboarding\n- Money-back guarantee\n- No long-term commitment\n\n**CTA** (30 words):\n- Clear button: \"Upgrade Now\"\n- Or \"See Comparison\"\n- Or \"Schedule Demo\"\n- Low-pressure alternative: \"Learn More\"\n\n**FAQ Mini**:\n- Can I downgrade? Yes\n- When charged? After trial/discount period\n- Support during transition? Yes, white-glove\n\n**Closing** (20 words):\n- Available for questions\n- No pressure\n- Here to help grow\n\nTone: Helpful advisor, not pushy salesperson\nKey: Focus on THEIR growth, not YOUR features"
+    },
+    {
+      "id": 78,
+      "title": "Exit Interview Questions",
+      "category": "business_planning",
+      "language": "en",
+      "tags": ["exit-interview", "hr", "employee"],
+      "description": "Leaving employee ke lिए exit interview questions",
+      "prompt": "Exit interview questionnaire:\n\nEmployee: [Name]\nPosition: [Role]\nDepartment: [Department]\nTenure: [Duration]\nReason for leaving: [If known]\nLast day: [Date]\n\nExit interview structure:\n\n**Introduction** (Spoken):\n\"Thank you for your time. This conversation is confidential and will help us improve. Your honest feedback is valuable. There are no right or wrong answers.\"\n\n**SECTION 1: ROLE & RESPONSIBILITIES** (5 questions)\n\n1. How would you describe your role in your own words?\n\n2. Did your actual responsibilities match the job description?\n   - If no, what was different?\n\n3. Were you provided with adequate tools and resources?\n   - What was missing?\n\n4. How would you rate the clarity of expectations?\n   - Scale 1-5\n   - What could have been clearer?\n\n5. Were you able to use your skills and strengths?\n   - What skills were underutilized?\n\n**SECTION 2: MANAGEMENT & SUPPORT** (6 questions)\n\n6. How would you describe your relationship with your direct manager?\n\n7. Did you receive regular feedback on your performance?\n   - Frequency?\n   - Quality?\n\n8. Were your achievements recognized and rewarded?\n   - Examples?\n\n9. Did you feel supported in your professional development?\n   - Training provided?\n   - Career growth opportunities?\n\n10. How effective was communication from leadership?\n    - What could improve?\n\n11. Did you feel comfortable raising concerns?\n    - Were they addressed?\n\n**SECTION 3: WORK ENVIRONMENT** (5 questions)\n\n12. How would you describe the company culture?\n\n13. How was your work-life balance?\n    - Scale 1-5\n    - What affected it?\n\n14. How were team dynamics?\n    - Collaboration level?\n    - Any conflicts?\n\n15. Did you feel included and valued?\n    - Diversity & inclusion feedback?\n\n16. How was the physical/remote work environment?\n    - What worked/didn't work?\n\n**SECTION 4: COMPENSATION & BENEFITS** (4 questions)\n\n17. Was your compensation fair for your role and experience?\n    - Market comparison?\n\n18. Which benefits did you value most?\n\n19. What benefits were missing?\n\n20. Did compensation factor into your decision to leave?\n\n**SECTION 5: REASON FOR LEAVING** (5 questions)\n\n21. What is the primary reason you're leaving?\n\n22. What triggered your decision to start looking?\n\n23. Did you consider staying? What would have changed your mind?\n\n24. What does your new opportunity offer that we don't?\n\n25. Was there a specific incident that influenced your decision?\n\n**SECTION 6: SUGGESTIONS FOR IMPROVEMENT** (5 questions)\n\n26. What did the company do really well?\n\n27. What is the ONE thing we should change immediately?\n\n28. What would you tell someone considering working here?\n\n29. Would you consider returning in the future?\n    - Under what conditions?\n\n30. Any final thoughts or suggestions?\n\n**CLOSING QUESTIONS**\n\n31. May we contact you for follow-up if needed?\n\n32. Would you be willing to provide a reference for current employees?\n\n33. Can we stay connected on LinkedIn?\n\n**Closing Statement**:\n\"Thank you for your honesty and your contributions. We wish you the best in your next role. Here are your exit paperwork details...\"\n\n**INTERVIEWER NOTES**:\n- Employee demeanor\n- Body language\n- Hesitations\n- Areas of emotion\n- Follow-up needed\n- Patterns with other exits\n\n**ACTION ITEMS**:\n- Issues to address\n- Changes to consider\n- Trends to watch\n\nConducted by: [HR/Manager]\nDuration: 45-60 minutes\nFormat: In-person preferred, video acceptable\nTiming: Last week but not last day\nDocumentation: Notes, not recording (unless consented)\nConfidentiality: Assured and maintained"
+    },
+    {
+      "id": 79,
+      "title": "Referral Program Promotion",
+      "category": "marketing",
+      "language": "hi",
+      "tags": ["referral", "program", "growth"],
+      "description": "Customer referral program promote करना",
+      "prompt": "Referral program campaign:\n\nBusiness: [Name]\nReferral reward: [What referrer gets]\nReferee benefit: [What new customer gets]\nHow it works: [Process]\nGoal: [Acquisition target]\n\nReferral program promotion:\n\n**1. Program Announcement Email** (200 words):\n\n**Subject**: \"Earn ₹[Amount] for Every Friend You Refer!\"\n\n**Body**:\n- Exciting news intro\n- What: Referral program launch\n- Why: Share what you love, earn rewards\n\n**How It Works**:\n1. Share your unique link\n2. Friend signs up/purchases\n3. They get [Benefit]\n4. You get [Reward]\n\n**Your Rewards**:\n- Cash: ₹[Amount] per referral\n- OR Credit: ₹[Amount] store credit\n- OR Discount: [%] off next purchase\n- Unlimited referrals\n- No cap on earnings\n\n**Their Benefits**:\n- [%] off first order\n- Free trial extension\n- Bonus feature\n\n**Your Unique Link**:\n[Display their personal link]\n\n**Tracking**:\n- Dashboard to track referrals\n- Real-time updates\n- Automatic rewards\n\n**Sharing Made Easy**:\n- WhatsApp button\n- Email template\n- Social media posts\n\n**Terms**: [Link]\n\n**CTA**: \"Start Referring Now\"\n\n**2. In-App Banner**:\n- Eye-catching design\n- \"Refer & Earn ₹[Amount]\"\n- One-click sharing\n\n**3. WhatsApp Share Template**:\n\"Hey! मैं [Business Name] use कर रहा/रही हूँ और बहुत अच्छा experience है। तुम भी try करो:\n\n✅ [Key benefit 1]\n✅ [Key benefit 2]\n✅ [Key benefit 3]\n\nमेरे link से sign up करो और [Benefit] पाओ:\n[Personal referral link]\n\nऔर मुझे भी [Reward] मिलेगा! Win-win! 🎉\"\n\n**4. Social Media Post** (Hindi/Hinglish):\n\"🎁 अच्छी चीज़ें दोस्तों के साथ share करनी चाहिए!\n\n[Business Name] का referral program launch हो गया!\n\n👉 तुम्हें मिलेगा: ₹[Amount] per referral\n👉 तुम्हारे dost को मिलेगा: [Benefit]\n\nUnlimited referrals = Unlimited rewards! 💰\n\nLink bio में है! #ReferAndEarn #[BusinessName]\"\n\n**5. Email Reminder** (100 words):\nSubject: \"You Have [X] Unused Referrals!\"\n\n- Gentle reminder\n- Show potential earnings\n- Easy sharing buttons\n- Success story of top referrer\n\n**6. Thank You for Referral** (80 words):\nWhen they make a referral:\n\n- Immediate thank you\n- Referral status\n- Reward confirmation\n- Encourage more\n\n**7. Reward Notification** (60 words):\nWhen referee converts:\n\n- Congratulations\n- Reward amount\n- How to use/withdraw\n- Keep referring\n\n**8. Leaderboard** (if gamification):\n- Top referrers\n- Monthly contest\n- Extra prizes\n\n**9. FAQ Section**:\nQ: How many people can I refer?\nA: Unlimited!\n\nQ: When do I get my reward?\nA: Immediately after friend's first [purchase/signup]\n\nQ: How do I track my referrals?\nA: In your dashboard under 'Referrals'\n\nQ: Can I refer family?\nA: Yes! Anyone can be referred\n\nQ: Is there an expiry?\nA: No, your link is permanent\n\nQ: How do I share my link?\nA: Copy-paste, or use our share buttons\n\n**10. Success Story Feature** (100 words):\nHighlight top referrer:\n\n- [Customer Name] earned ₹[Amount] in [Timeframe]\n- How they did it\n- Their tips\n- \"You can too!\"\n\nTone: Exciting, rewarding, social\nVisuals: Money/gift icons, happy customers\nKey: Make sharing easy, rewards clear"
+    },
+    {
+      "id": 130,
+      "title": "Marketplace Seller Profile Optimization",
+      "category": "marketing",
+      "language": "en",
+      "tags": ["marketplace", "seller", "optimization"],
+      "description": "E-commerce marketplace pe seller profile optimize करना",
+      "prompt": "Optimize marketplace seller profile:\n\nMarketplace: [Amazon/Flipkart/Meesho etc.]\nBusiness: [Name]\nCategory: [What you sell]\nMonthly volume: [Orders]\nRating: [Current]\nTarget: [Improvement goals]\n\nProfile optimization guide:\n\n**1. SELLER NAME**:\n- Business name\n- Clear, professional\n- Memorable\n- Category hint (if allowed)\n- Avoid special characters\n\n**2. STORE LOGO**:\n- High resolution (minimum 500x500px)\n- Clear brand mark\n- Professional design\n- Works in small size\n- Consistent with brand\n\n**3. STORE BANNER**:\n- Eye-catching header\n- Brand colors\n- Key USP visible:\n  - \"Fastest Delivery\"\n  - \"100% Authentic\"\n  - \"Best Prices\"\n- Current offers\n- Professional quality\n\n**4. BUSINESS DESCRIPTION** (500 words):\n\n**Opening** (100 words):\n- Welcome message\n- What you sell\n- Years in business\n- Unique selling proposition\n\n**Story** (150 words):\n- How you started\n- Your mission\n- Why customers trust you\n- Achievements/milestones\n\n**Product Range** (100 words):\n- Categories you offer\n- Number of products\n- Exclusive items\n- Brand partnerships\n\n**Quality Commitment** (100 words):\n- Authenticity guarantee\n- Quality checks\n- Return/exchange policy\n- Customer satisfaction focus\n\n**Service Promise** (50 words):\n- Fast shipping\n- Careful packaging\n- Responsive support\n- Easy returns\n\n**5. BUSINESS INFORMATION**:\n- Complete address\n- GST number\n- Business registration\n- Contact details\n- Operating hours\n- Return address\n\n**6. POLICIES - Return Policy** (200 words):\n\n**Eligibility**:\n- Return window: [X] days\n- Condition requirements\n- Original packaging needed\n- Tags attached\n\n**Process**:\n1. Raise return request\n2. Upload issue images\n3. Pack item securely\n4. Pickup scheduled\n5. Refund/replacement processed\n\n**Timeline**:\n- Return approval: 24-48 hours\n- Pickup: 2-3 days\n- Refund: 5-7 days after receipt\n\n**Exclusions**:\n- Used/damaged items\n- Hygiene products\n- Final sale items\n\n**7. SHIPPING POLICY** (150 words):\n\n**Delivery Time**:\n- Metro cities: [X] days\n- Other cities: [Y] days\n- Remote areas: [Z] days\n\n**Shipping Partners**:\n- [Courier names]\n- Tracking provided\n\n**Charges**:\n- Free above ₹[Amount]\n- ₹[X] below that\n- COD available: Yes/No\n\n**Packaging**:\n- Secure packaging\n- Tamper-proof\n- Unboxing experience\n\n**8. SELLER FAQ** (10 questions):\n\nQ1: Are products genuine?\nA: 100% authentic, sourced directly from [manufacturers/authorized distributors]\n\nQ2: Do you offer warranties?\nA: Yes, [standard/manufacturer] warranty on all products\n\nQ3: How to contact seller?\nA: Through marketplace messaging or [phone/email]\n\nQ4: Exchange policy?\nA: Yes, within [X] days for size/color issues\n\nQ5: Bulk order discounts?\nA: Contact us for orders above [quantity]\n\nQ6: COD available?\nA: Yes, on orders below ₹[Amount]\n\nQ7: International shipping?\nA: Currently serving India only\n\nQ8: Order cancellation?\nA: Free cancellation before dispatch\n\nQ9: Track my order?\nA: Tracking link sent via SMS/email\n\nQ10: Custom requests?\nA: Message us, we'll try to help\n\n**9. SELLER RATINGS STRATEGY**:\n\n**Get More Reviews**:\n- Post-delivery follow-up\n- Quality product photos\n- Accurate descriptions\n- Fast shipping\n- Careful packaging\n- Quick responses\n\n**Handle Negative Reviews**:\n- Respond within 24 hours\n- Apologize sincerely\n- Offer solution publicly\n- Take conversation private\n- Request review update after resolution\n\n**Template Response to Negative Review**:\n\"Dear [Name], we sincerely apologize for [issue]. This is not our standard. We've immediately [action taken]. Please contact us at [details] so we can make this right with [specific solution]. Your satisfaction is our priority. - [Your Name], Customer Care\"\n\n**10. SELLER BADGES TO ACHIEVE**:\n- Super Seller/Preferred Seller\n- Fast Delivery Badge\n- Top Rated\n- Fulfilled by [Platform]\n- Verified Seller\n\n**Requirements**:\n- Minimum rating: 4.5+\n- Order fulfillment: 95%+\n- Cancellation rate: <1%\n- Return rate: <5%\n- Response time: <12 hours\n- Timely dispatch: 99%\n\n**11. PRODUCT LISTINGS OPTIMIZATION**:\n\n**For each product**:\n- Clear, keyword-rich title\n- High-quality images (6-7)\n- Detailed bullet points\n- Comprehensive description\n- Accurate specifications\n- Competitive pricing\n- Offers/discounts\n- Inventory maintained\n\n**12. CUSTOMER SERVICE STANDARDS**:\n\n**Response Time**:\n- Messages: Within 6 hours\n- Calls: Answer rate 90%+\n- Issues: Resolve within 24 hours\n\n**Communication**:\n- Polite, professional\n- Clear information\n- Proactive updates\n- Order confirmation\n- Dispatch notification\n- Delivery confirmation\n- Post-delivery check\n\n**13. PROMOTIONAL STRATEGY**:\n\n**Participate in**:\n- Platform sales events\n- Sponsored listings\n- Deals of the day\n- Lightning deals\n- Festive campaigns\n\n**Offer Management**:\n- Competitive pricing\n- Bundle offers\n- Buy 1 Get 1\n- Seasonal discounts\n- New customer offers\n\n**14. ANALYTICS TO TRACK**:\n- Total visitors\n- Conversion rate\n- Average order value\n- Return rate\n- Customer satisfaction\n- Response time\n- Seller rating\n- Top products\n- Revenue trends\n\n**15. IMPROVEMENT PLAN**:\n\n**Monthly**:\n- Review analytics\n- Update product photos\n- Refresh descriptions\n- Adjust pricing\n- Run promotions\n\n**Quarterly**:\n- Profile refresh\n- Policy review\n- Competitor analysis\n- Customer feedback implementation\n\nGoal: Become top-rated seller\nMaintain: Quality, speed, service\nFocus: Customer satisfaction"
     }
   ]
 }
