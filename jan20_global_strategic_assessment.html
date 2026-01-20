@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Strategic Assessment: Geopolitical Fractures, Market Volatility, and Sectoral Shifts</title>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2868999138532322"
+         crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 1.5rem 0;
+        }
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .chart-box {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        @media print {
+            .no-print { display: none !important; }
+            .print-break { page-break-before: always; }
+        }
+        .hover-scale {
+            transition: transform 0.2s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .glass-effect {
+            background: rgba(0, 0, 0, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .scroll-hidden::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll-hidden {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-6 px-4 shadow-lg">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold">Global Strategic Assessment</h1>
+                    <p class="text-purple-100 mt-2">Geopolitical Fractures, Market Volatility, and Sectoral Shifts</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-sm text-purple-100">January 20, 2026</p>
+                    <p class="text-xs text-purple-200">Comprehensive Situational Analysis & Strategic Outlook</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Column -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Executive Overview -->
+                <section class="bg-white rounded-lg shadow-md p-6 hover-scale">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-purple-500 pb-2">1. Executive Strategic Overview</h2>
+                    <div class="prose prose-lg max-w-none">
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            The global operating environment on January 20, 2026, is characterized by a high-velocity collision between geopolitical revisionism and global economic integration. The defining narrative of the current cycle is the rapid deterioration of the Transatlantic alliance structure, precipitated by the United States' coercive diplomatic maneuvering regarding the acquisition of Greenland.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Simultaneously, the internal stability of the Middle East is undergoing a critical stress test. The Iranian regime's deployment of a permanent "whitelist" internet architecture represents a paradigm shift in digital authoritarianism, effectively severing the populace from the global information grid in response to the most significant uprising since 1979.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Amidst this macro-instability, the global economy demonstrates paradoxical currents. While financial markets are in a "risk-off" rout—evidenced by the surge in gold prices and the plummeting of major indices—structural indicators in the technology and consumer hardware sectors show resilience.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Geopolitical Flashpoint -->
+                <section class="bg-white rounded-lg shadow-md p-6 hover-scale">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-red-500 pb-2">2. Geopolitical Flashpoint: The North Atlantic Crisis</h2>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">2.1 The Greenland Ultimatum: A New Era of Transactional Diplomacy</h3>
+                        <p class="text-gray-700 mb-4">
+                            President Donald Trump explicitly linked United States trade policy to territorial expansionism in the Arctic. The administration has issued a formal ultimatum: the United States will impose a 10% import tariff on goods from eight specific European nations starting February 1, 2026, rising to 25% by June 1, 2026, unless a deal is reached for the "Complete and Total purchase of Greenland".
+                        </p>
+                        <div class="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+                            <p class="text-red-800 font-medium">Critical Development:</p>
+                            <p class="text-red-700">This marks a significant escalation from previous U.S. attempts to acquire the territory, utilizing economic coercion against treaty allies to force a sovereign transfer.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">2.2 Target Selection and Alliance Implications</h3>
+                        <p class="text-gray-700 mb-4">
+                            The selection of the eight targeted nations—Denmark, Norway, Sweden, France, Germany, the United Kingdom, the Netherlands, and Finland—is strategically calibrated to pressure the core of the Northern European security architecture.
+                        </p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">2.3 The European Response: "Unflinching and Proportional"</h3>
+                        <p class="text-gray-700 mb-4">
+                            European Commission President Ursula von der Leyen delivered a stinging rebuke during her special address, characterizing the tariffs as a betrayal of trust. Her statement, "When friends shake hands, it must mean something," underscores the deep sense of grievance in European capitals.
+                        </p>
+                    </div>
+
+                    <!-- Chart: Tariff Impact Analysis -->
+                    <div class="chart-container">
+                        <canvas id="tariffImpactChart"></canvas>
+                    </div>
+                </section>
+
+                <!-- Middle East Crisis -->
+                <section class="bg-white rounded-lg shadow-md p-6 hover-scale">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-orange-500 pb-2">3. The Middle East Crisis: Iran's Digital Iron Curtain</h2>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">3.1 The 2025-2026 Uprising: A Regime Challenge</h3>
+                        <p class="text-gray-700 mb-4">
+                            Since December 28, 2025, the Islamic Republic of Iran has faced a sustained existential challenge. What began as scattered demonstrations over economic mismanagement has evolved into a nationwide revolutionary movement. As of January 20, 2026, protests have been recorded in over 512 locations across all 31 provinces.
+                        </p>
+                        <div class="bg-orange-50 border-l-4 border-orange-500 p-4 my-4">
+                            <p class="text-orange-800 font-medium">Human Rights Crisis:</p>
+                            <p class="text-orange-700">The crackdown has been brutal with "urban warfare" conditions, security forces employing live ammunition against unarmed crowds, and hundreds of cases of blinding due to "birdshot" fired at close range.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">3.2 The "Whitelist" Strategy: A Permanent Digital Severance</h3>
+                        <p class="text-gray-700 mb-4">
+                            Evidence emerged confirming that the Iranian regime is moving beyond temporary internet shutdowns toward a permanent restructuring of its digital infrastructure. This strategy, long in development as the "National Information Network" (SHOMA), is now being fully implemented.
+                        </p>
+                    </div>
+
+                    <!-- Chart: Iran Internet Restriction Timeline -->
+                    <div class="chart-container">
+                        <canvas id="iranInternetChart"></canvas>
+                    </div>
+                </section>
+
+                <!-- Global Economic Meltdown -->
+                <section class="bg-white rounded-lg shadow-md p-6 hover-scale">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-green-500 pb-2">4. Global Economic Meltdown: The January 20 Market Crash</h2>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">4.1 "Black Tuesday" Market Dynamics</h3>
+                        <p class="text-gray-700 mb-4">
+                            Financial markets on Tuesday, January 20, 2026, experienced a violent repricing of risk. The catalyst was the resumption of U.S. trading after the Martin Luther King Jr. holiday, which allowed U.S. investors to react for the first time to the weekend's tariff threats.
+                        </p>
+                    </div>
+
+                    <!-- Chart: Global Market Performance -->
+                    <div class="chart-grid">
+                        <div class="chart-box">
+                            <canvas id="marketPerformanceChart"></canvas>
+                        </div>
+                        <div class="chart-box">
+                            <canvas id="commodityChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">4.2 Asian Markets: The Ring of Fire</h3>
+                        <p class="text-gray-700 mb-4">
+                            Asian markets faced a "double whammy" of external trade shocks and internal political instability. Japan's Nikkei 225 crashed 2.93% while Indian markets experienced a "bloodbath" with the BSE Sensex tanking over 1,000 points.
+                        </p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">4.3 Commodities: The Flight to Hard Assets</h3>
+                        <p class="text-gray-700 mb-4">
+                            As paper assets dissolved, capital fled to physical stores of value, pushing precious metals to historic highs. Gold prices surged 3% globally to $4,733 an ounce, while silver rallied over 7% to $95.30.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Technology Section -->
+                <section class="bg-white rounded-lg shadow-md p-6 hover-scale">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">5. Technological Paradigm Shifts: Innovation Amidst Chaos</h2>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">5.1 Apple's Strategic Pivot: The "Creator Studio"</h3>
+                        <p class="text-gray-700 mb-4">
+                            Apple has officially challenged Adobe's dominance in the creative software market with the launch of Apple Creator Studio, a subscription bundle for $12.99/month that includes Final Cut Pro, Logic Pro, Pixelmator Pro, Motion, Compressor, and MainStage.
+                        </p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">5.2 The PC Renaissance</h3>
+                        <p class="text-gray-700 mb-4">
+                            Defying the economic gloom, the personal computing market is witnessing a robust recovery. Gartner's data reveals that worldwide PC shipments grew 9.3% in Q4 2025, fueled by the corporate migration to Windows 11 and AI processing requirements.
+                        </p>
+                    </div>
+
+                    <!-- Chart: Tech Sector Performance -->
+                    <div class="chart-container">
+                        <canvas id="techSectorChart"></canvas>
+                    </div>
+                </section>
+
+                <!-- Davos 2026 -->
+                <section class="bg-white rounded-lg shadow-md p-6 hover-scale">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-purple-500 pb-2">6. Davos 2026: The Disconnected Summit</h2>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">6.1 The Theme vs. The Reality</h3>
+                        <p class="text-gray-700 mb-4">
+                            The World Economic Forum convened under the theme "A Spirit of Dialogue". However, the atmosphere on the ground has been defined by the stark absence of dialogue between the U.S. and its European allies regarding the trade escalation.
+                        </p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">6.2 Key Addresses and Initiatives</h3>
+                        <p class="text-gray-700 mb-4">
+                            Ursula von der Leyen positioned Europe as the defender of the "rules-based order" against American protectionism, while China's Vice-Premier He Lifeng seized the moral high ground, calling for "more cooperation" and stating that there are "no winners" in tariff wars.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Data Tables -->
+                <section class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-500 pb-2">10. Detailed Economic Data Appendices</h2>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Region</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Index</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Movement</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Primary Driver</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">North America</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Dow Jones Ind. Avg.</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600 font-medium">▼ 1.3% (-642 pts)</td>
+                                    <td class="px-6 py-4 text-sm text-gray-500">U.S.-EU Trade War fears; Industrial sector exposure</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">North America</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Nasdaq Composite</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600 font-medium">▼ 1.8%</td>
+                                    <td class="px-6 py-4 text-sm text-gray-500">Supply chain disruption fears; Tech valuation correction</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Europe</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">DAX (Germany)</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600 font-medium">▼ 1.5%</td>
+                                    <td class="px-6 py-4 text-sm text-gray-500">Auto sector vulnerability to U.S. tariffs</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Asia</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Nikkei 225 (Japan)</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600 font-medium">▼ 2.93% (-1,500+ pts)</td>
+                                    <td class="px-6 py-4 text-sm text-gray-500">Snap election uncertainty; Rising JGB yields</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1 space-y-6">
+                <!-- Quick Stats -->
+                <div class="bg-white rounded-lg shadow-md p-6 sticky top-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Market Impact Summary</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-red-50 rounded">
+                            <span class="text-sm font-medium text-red-800">Dow Jones</span>
+                            <span class="text-sm font-bold text-red-600">-1.3%</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-red-50 rounded">
+                            <span class="text-sm font-medium text-red-800">Nasdaq</span>
+                            <span class="text-sm font-bold text-red-600">-1.8%</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-green-50 rounded">
+                            <span class="text-sm font-medium text-green-800">Gold</span>
+                            <span class="text-sm font-bold text-green-600">+3.0%</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-green-50 rounded">
+                            <span class="text-sm font-medium text-green-800">Silver</span>
+                            <span class="text-sm font-bold text-green-600">+7.0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Events -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Key Events Timeline</h3>
+                    <div class="space-y-3">
+                        <div class="border-l-4 border-red-500 pl-4">
+                            <p class="text-sm font-medium text-gray-900">Greenland Tariff Ultimatum</p>
+                            <p class="text-xs text-gray-500">U.S. threatens 10-25% tariffs on 8 European nations</p>
+                        </div>
+                        <div class="border-l-4 border-orange-500 pl-4">
+                            <p class="text-sm font-medium text-gray-900">Iran Digital Iron Curtain</p>
+                            <p class="text-xs text-gray-500">Permanent whitelist internet system implemented</p>
+                        </div>
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <p class="text-sm font-medium text-gray-900">Apple Creator Studio</p>
+                            <p class="text-xs text-gray-500">New $12.99/month creative software bundle</p>
+                        </div>
+                        <div class="border-l-4 border-green-500 pl-4">
+                            <p class="text-sm font-medium text-gray-900">PC Market Recovery</p>
+                            <p class="text-xs text-gray-500">9.3% growth in Q4 2025 shipments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regional Focus -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Regional Spotlight</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-2">🇯🇵 Japan</h4>
+                            <p class="text-sm text-gray-600">Nikkei crashes 2.93% as snap election called for February 8</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-2">🇮🇳 India</h4>
+                            <p class="text-sm text-gray-600">Sensex drops 1,000+ points, rupee hits record low 90.97/USD</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-2">🇪🇺 Europe</h4>
+                            <p class="text-sm text-gray-600">Von der Leyen promises "unflinching" response to U.S. tariffs</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-2">🇮🇷 Iran</h4>
+                            <p class="text-sm text-gray-600">512+ protest locations across 31 provinces</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Reports -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Related Intelligence Reports</h3>
+                    <div class="space-y-2">
+                        <a href="#" class="block p-2 hover:bg-gray-50 rounded transition-colors">
+                            <p class="text-sm font-medium text-blue-600">Global Convergence (Jan 19, 2026)</p>
+                            <p class="text-xs text-gray-500">Geopolitics, Markets, and Cultural Shifts</p>
+                        </a>
+                        <a href="#" class="block p-2 hover:bg-gray-50 rounded transition-colors">
+                            <p class="text-sm font-medium text-blue-600">The Sunday Fracture (Jan 18, 2026)</p>
+                            <p class="text-xs text-gray-500">Storms, Summits, and the Science of Survival</p>
+                        </a>
+                        <a href="#" class="block p-2 hover:bg-gray-50 rounded transition-colors">
+                            <p class="text-sm font-medium text-blue-600">Technology & Gaming Report (Jan 16-17, 2026)</p>
+                            <p class="text-xs text-gray-500">Hardware Evolution and AI Integration</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4 mt-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Report Classification</h3>
+                    <p class="text-gray-300 text-sm">Comprehensive Situational Analysis & Strategic Outlook</p>
+                    <p class="text-gray-400 text-xs mt-2">Classification Level: Strategic Intelligence</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Analysis Framework</h3>
+                    <p class="text-gray-300 text-sm">Multi-dimensional strategic assessment integrating geopolitical, economic, and technological intelligence</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal & Trust</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li><a href="terms.html" class="hover:text-indigo-400 transition">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="hover:text-indigo-400 transition">Privacy Policy</a></li>
+                        <li><a href="disclaimer.html" class="hover:text-indigo-400 transition">Disclaimer</a></li>
+                        <li><a href="index.html#contact" class="hover:text-indigo-400 transition">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">© 2026 Global Strategic Intelligence Assessment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tariff Impact Analysis Chart
+        const tariffCtx = document.getElementById('tariffImpactChart').getContext('2d');
+        new Chart(tariffCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Denmark', 'Germany', 'France', 'UK', 'Netherlands', 'Sweden', 'Norway', 'Finland'],
+                datasets: [{
+                    label: 'Current Tariff (%)',
+                    data: [0, 0, 0, 0, 0, 0, 0, 0],
+                    backgroundColor: 'rgba(34, 197, 94, 0.5)',
+                    borderColor: 'rgba(34, 197, 94, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Proposed Tariff Feb 1 (%)',
+                    data: [10, 10, 10, 10, 10, 10, 10, 10],
+                    backgroundColor: 'rgba(249, 115, 22, 0.5)',
+                    borderColor: 'rgba(249, 115, 22, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Proposed Tariff Jun 1 (%)',
+                    data: [25, 25, 25, 25, 25, 25, 25, 25],
+                    backgroundColor: 'rgba(239, 68, 68, 0.5)',
+                    borderColor: 'rgba(239, 68, 68, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'U.S. Tariff Proposals on European Nations'
+                    },
+                    legend: {
+                        position: 'top',
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Tariff Percentage (%)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Iran Internet Restriction Timeline
+        const iranCtx = document.getElementById('iranInternetChart').getContext('2d');
+        new Chart(iranCtx, {
+            type: 'line',
+            data: {
+                labels: ['Dec 28', 'Jan 5', 'Jan 10', 'Jan 15', 'Jan 20'],
+                datasets: [{
+                    label: 'Internet Accessibility Index',
+                    data: [100, 75, 45, 20, 5],
+                    fill: false,
+                    borderColor: 'rgba(239, 68, 68, 1)',
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    tension: 0.1
+                }, {
+                    label: 'Protest Intensity',
+                    data: [20, 60, 85, 90, 95],
+                    fill: false,
+                    borderColor: 'rgba(249, 115, 22, 1)',
+                    backgroundColor: 'rgba(249, 115, 22, 0.1)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Iran Internet Restriction and Protest Timeline'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Index Value'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Global Market Performance Chart
+        const marketCtx = document.getElementById('marketPerformanceChart').getContext('2d');
+        new Chart(marketCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Dow Jones', 'Nasdaq', 'DAX', 'FTSE', 'Nikkei', 'Sensex'],
+                datasets: [{
+                    label: 'Daily Change (%)',
+                    data: [-1.3, -1.8, -1.5, -1.3, -2.93, -1.28],
+                    backgroundColor: [
+                        'rgba(239, 68, 68, 0.7)',
+                        'rgba(239, 68, 68, 0.7)',
+                        'rgba(239, 68, 68, 0.7)',
+                        'rgba(239, 68, 68, 0.7)',
+                        'rgba(239, 68, 68, 0.7)',
+                        'rgba(239, 68, 68, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(239, 68, 68, 1)',
+                        'rgba(239, 68, 68, 1)',
+                        'rgba(239, 68, 68, 1)',
+                        'rgba(239, 68, 68, 1)',
+                        'rgba(239, 68, 68, 1)',
+                        'rgba(239, 68, 68, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Global Market Performance (Jan 20, 2026)'
+                    },
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Percentage Change (%)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Commodity Chart
+        const commodityCtx = document.getElementById('commodityChart').getContext('2d');
+        new Chart(commodityCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Gold', 'Silver', 'Crude Oil', 'Bitcoin'],
+                datasets: [{
+                    label: 'Daily Change (%)',
+                    data: [3.0, 7.0, -2.1, -5.2],
+                    backgroundColor: [
+                        'rgba(34, 197, 94, 0.7)',
+                        'rgba(34, 197, 94, 0.7)',
+                        'rgba(239, 68, 68, 0.7)',
+                        'rgba(239, 68, 68, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(34, 197, 94, 1)',
+                        'rgba(34, 197, 94, 1)',
+                        'rgba(239, 68, 68, 1)',
+                        'rgba(239, 68, 68, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Commodity Performance (Jan 20, 2026)'
+                    },
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Percentage Change (%)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Tech Sector Performance Chart
+        const techCtx = document.getElementById('techSectorChart').getContext('2d');
+        new Chart(techCtx, {
+            type: 'radar',
+            data: {
+                labels: ['PC Shipments', 'Cloud Services', 'AI Software', 'Semiconductors', 'Creative Software', 'Gaming'],
+                datasets: [{
+                    label: 'Growth/Performance Index',
+                    data: [9.3, 12.5, 8.7, -3.2, 15.2, 6.8],
+                    fill: true,
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                    borderColor: 'rgba(59, 130, 246, 1)',
+                    pointBackgroundColor: 'rgba(59, 130, 246, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(59, 130, 246, 1)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Technology Sector Performance Index'
+                    }
+                },
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Performance Index'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Dynamic content loading simulation
+        document.addEventListener('DOMContentLoaded', function() {
+            const relatedLinks = document.querySelectorAll('a[href="#"]');
+            relatedLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const reportTitle = this.querySelector('p').textContent;
+                    console.log(`Loading report: ${reportTitle}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

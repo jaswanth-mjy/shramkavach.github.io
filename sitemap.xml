@@ -272,6 +272,13 @@
     
     <!-- Article Pages -->
     <url>
+        <loc>https://shramkavach.com/jan20_global_strategic_assessment.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    
+    <url>
         <loc>https://shramkavach.com/global-convergence-jan19-2026.html</loc>
         <lastmod>2026-01-20</lastmod>
         <changefreq>monthly</changefreq>

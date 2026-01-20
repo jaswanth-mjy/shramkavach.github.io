@@ -1,6 +1,21 @@
 {
   "articles": [
     {
+      "id": "jan20-global-strategic-assessment-2026",
+      "title": "Global Strategic Assessment: Geopolitical Fractures, Market Volatility, and Sectoral Shifts – January 20, 2026",
+      "shortTitle": "Global Strategic Assessment Jan 20",
+      "url": "jan20_global_strategic_assessment.html",
+      "icon": "📊",
+      "date": "2026-01-20",
+      "displayDate": "Jan 20, 2026",
+      "category": "strategic intelligence geopolitics markets technology sectoral analysis global assessment",
+      "tags": ["STRATEGIC INTELLIGENCE", "GEOPOLITICS", "MARKETS", "TECHNOLOGY"],
+      "readTime": "45 min",
+      "excerpt": "Comprehensive multi-dimensional strategic assessment integrating geopolitical fractures, market volatility, and technological sectoral shifts across global landscapes.",
+      "featured": true,
+      "priority": 1
+    },
+    {
       "id": "global-convergence-jan19-2026",
       "title": "Global Convergence: The January 19, 2026 Report on Geopolitics, Markets, and Cultural Shifts",
       "shortTitle": "Global Convergence Jan 19",
@@ -13,7 +28,7 @@
       "readTime": "48 min",
       "excerpt": "A Monday of fracture and resilience, characterized by a sharp juxtaposition between high-level diplomatic aspirations and the coercive reality of geoeconomics.",
       "featured": true,
-      "priority": 1
+      "priority": 2
     },
     {
       "id": "sunday-fracture-2026",
@@ -28,7 +43,7 @@
       "readTime": "52 min",
       "excerpt": "The date represents a singular, volatile node in the trajectory of the mid-2020s, characterized by extreme duality between elite diplomacy and ground-level reality.",
       "featured": true,
-      "priority": 2
+      "priority": 3
     },
     {
       "id": "technology-gaming-science-intelligence-2026",
@@ -43,7 +58,7 @@
       "readTime": "55 min",
       "excerpt": "The global technology landscape is defined by a paradoxical state of mature stability in hardware cycles and radical disruption in software infrastructure.",
       "featured": true,
-      "priority": 3
+      "priority": 4
     },
     {
       "id": "global-strategic-intelligence-jan16-2026",
@@ -58,7 +73,7 @@
       "readTime": "50 min",
       "excerpt": "The global operational landscape presents a striking dichotomy between the accelerating sophistication of digital automation and the persistent, often chaotic, fragility of physical and biological systems.",
       "featured": true,
-      "priority": 4
+      "priority": 5
     },
     {
       "id": "global-strategic-assessment-15-01-26",
@@ -73,7 +88,7 @@
       "readTime": "48 min",
       "excerpt": "As the sun set on January 15, 2026, the international system found itself navigating a confluence of crises that tested the resilience of global institutions, the stability of financial markets, and the very definition of sovereignty in the digital age.",
       "featured": true,
-      "priority": 5
+      "priority": 6
     },
     {
       "id": "global-strategic-intelligence-report-2026",
@@ -88,7 +103,7 @@
       "readTime": "52 min",
       "excerpt": "Comprehensive analysis of geopolitical instability, financial market volatility, agentic AI emergence, and regulatory fortification. Iran execution crisis, Golden Dome doctrine, Claude Computer Use, and vibe coding convergence.",
       "featured": true,
-      "priority": 6
+      "priority": 7
     },
     {
       "id": "global-situation-jan13-2026",
@@ -103,7 +118,7 @@
       "readTime": "48 min",
       "excerpt": "Analysis of Federal Reserve's extraordinary emergency meeting, gold price surge to $4,600+, SK Hynix's $5B AI infrastructure investment, and the accelerating shift in global geopolitical tensions.",
       "featured": true,
-      "priority": 7
+      "priority": 8
     },
     {
       "id": "great-decoupling-2026",

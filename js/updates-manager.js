@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'jan20-global-strategic-assessment-2026',
+            title: 'Global Strategic Assessment: Geopolitical Fractures, Market Volatility, and Sectoral Shifts – January 20, 2026',
+            shortTitle: 'Global Strategic Assessment Jan 20',
+            excerpt: 'Comprehensive multi-dimensional strategic assessment integrating geopolitical fractures, market volatility, and technological sectoral shifts across global landscapes.',
+            date: '2026-01-20',
+            displayDate: 'Jan 20, 2026',
+            category: 'strategic intelligence geopolitics markets technology sectoral analysis global assessment',
+            tags: ['📊 STRATEGIC INTELLIGENCE', '🌍 GEOPOLITICS', '📈 MARKETS', '💻 TECHNOLOGY'],
+            tagColors: ['bg-blue-600', 'bg-indigo-600', 'bg-purple-600', 'bg-pink-600'],
+            readTime: '45 min read',
+            author: 'ShramKavach',
+            icon: '📊',
+            gradient: 'from-blue-50 via-indigo-50 to-purple-50',
+            borderColor: 'border-blue-600',
+            stats: [
+                { label: 'Geopolitical', value: 'Fractures', subtext: 'Global strategic tensions', color: 'text-blue-600', icon: '🌍' },
+                { label: 'Market', value: 'Volatility', subtext: 'Financial instability', color: 'text-indigo-600', icon: '📈' },
+                { label: 'Tech', value: 'Shifts', subtext: 'Sectoral disruptions', color: 'text-purple-600', icon: '💻' },
+                { label: 'Strategic', value: 'Analysis', subtext: 'Multi-dimensional view', color: 'text-pink-600', icon: '📊' }
+            ],
+            link: 'jan20_global_strategic_assessment.html',
+            featured: true
+        },
+        {
             id: 'global-convergence-jan19-2026',
             title: 'Global Convergence: The January 19, 2026 Report on Geopolitics, Markets, and Cultural Shifts',
             shortTitle: 'Global Convergence Jan 19',
