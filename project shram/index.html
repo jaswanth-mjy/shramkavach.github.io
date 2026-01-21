@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project Shram - Open-source development hub for ShramKavach. Complete transparency in building tools for 150M+ Indian gig workers.">
+    <meta name="keywords" content="Project Shram, open source, gig worker tools, ShramKavach, developer platform">
+    <meta name="author" content="ShramKavach">
+    <meta name="theme-color" content="#000000">
+    
+    <title>Project Shram - Dev Hub | ShramKavach</title>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Project Shram - Open Source Dev Platform">
+    <meta property="og:description" content="Building transparent, open-source tools for 150M+ Indian gig workers">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://projectshram.shramkavach.com/">
+    <meta property="og:image" content="https://shramkavach.com/logo.webp">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', monospace;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Animated gradient background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #000000, #1a1a2e, #16213e, #0f3460);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            z-index: -2;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Grid overlay */
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            animation: gridScroll 20s linear infinite;
+        }
+
+        @keyframes gridScroll {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        /* Header/Navbar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00ffff;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: #00ffff;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #00ffff;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 70%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            border-left: 1px solid rgba(0, 255, 255, 0.3);
+            padding: 5rem 2rem;
+            transition: right 0.3s ease;
+            z-index: 1000;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .mobile-menu a {
+            color: #888;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+            display: block;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        }
+
+        .mobile-menu a:hover {
+            color: #00ffff;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .terminal-window {
+            max-width: 900px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            margin: 2rem auto;
+        }
+
+        .terminal-header {
+            background: rgba(0, 255, 255, 0.1);
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .terminal-body {
+            padding: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .typing-text {
+            color: #00ffff;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1.2em;
+            background: #00ffff;
+            margin-left: 4px;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .command-line {
+            color: #888;
+            margin: 1rem 0;
+        }
+
+        .prompt {
+            color: #00ff88;
+        }
+
+        .command {
+            color: #00ffff;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(0, 255, 255, 0.1);
+            border-color: rgba(0, 255, 255, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00ffff;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Section */
+        .section {
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #00ffff;
+            margin-bottom: 2rem;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* Feature Cards */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(0, 255, 255, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            color: #00ffff;
+            margin-bottom: 1rem;
+        }
+
+        .feature-description {
+            color: #888;
+            line-height: 1.8;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            border: 2px solid #00ffff;
+            color: #00ffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+            margin: 0.5rem;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: #00ffff;
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .cta-button:hover {
+            color: #000;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        .cta-button:hover::before {
+            left: 0;
+        }
+
+        /* Code Block */
+        .code-block {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            color: #00ffff;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        /* Timeline */
+        .timeline {
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: rgba(0, 255, 255, 0.3);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .timeline-content {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .timeline-date {
+            color: #00ffff;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-description {
+            color: #888;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            border-top: 1px solid rgba(0, 255, 255, 0.3);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #00ffff;
+        }
+
+        .footer-text {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .typing-text {
+                font-size: 1.8rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .navbar-content {
+                padding: 0 1rem;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            .stats-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .terminal-body {
+                padding: 1.5rem;
+            }
+
+            .stat-value {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background -->
+    <div class="bg-gradient"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo-section">
+                <img src="logo.webp" alt="ShramKavach" class="logo-img">
+                <span class="logo-text">PROJECT_SHRAM</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#contribute">Contribute</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#features" class="mobile-link">Features</a></li>
+            <li><a href="#roadmap" class="mobile-link">Roadmap</a></li>
+            <li><a href="#contribute" class="mobile-link">Contribute</a></li>
+            <li><a href="https://github.com/jaswanth-mjy/shramkavach.github.io" target="_blank" class="mobile-link">GitHub</a></li>
+            <li><a href="mailto:dev@shramkavach.com" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-dot dot-red"></div>
+                <div class="terminal-dot dot-yellow"></div>
+                <div class="terminal-dot dot-green"></div>
+            </div>
+            <div class="terminal-body">
+                <div class="typing-text">
+                    $ ./build_future<span class="cursor"></span>
+                </div>
+                <div class="command-line">
+                    <span class="prompt">shram@dev:~$</span> <span class="command">cat mission.txt</span>
+                </div>
+                <p style="color: #888; margin-top: 1rem; line-height: 1.8;">
+                    Building open-source tools for 150M+ Indian gig workers.<br>
+                    Complete transparency. Real impact. Community-driven development.
+                </p>
+                
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                    <a href="#contribute" class="cta-button">Start Contributing</a>
+                    <a href="https://github.com/jaswanth-mjy/shramkavach.github.io" class="cta-button" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-value">150M+</span>
+                <span class="stat-label">Gig Workers</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">100%</span>
+                <span class="stat-label">Open Source</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">24/7</span>
+                <span class="stat-label">Transparency</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">∞</span>
+                <span class="stat-label">Possibilities</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">&lt;FEATURES /&gt;</h2>
+            <p class="section-subtitle">Built with purpose. Powered by community.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔓</div>
+                    <h3 class="feature-title">100% Open Source</h3>
+                    <p class="feature-description">
+                        Every line of code is public. Fork, modify, contribute. 
+                        True transparency in development.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Real-time Updates</h3>
+                    <p class="feature-description">
+                        Watch us build in public. Live commits, real discussions, 
+                        honest progress tracking.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3 class="feature-title">Community First</h3>
+                    <p class="feature-description">
+                        Built by developers, for workers. Your contributions 
+                        directly impact millions.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h3 class="feature-title">Modern Stack</h3>
+                    <p class="feature-description">
+                        Cutting-edge tech. Best practices. Scalable architecture 
+                        for massive impact.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Mobile First</h3>
+                    <p class="feature-description">
+                        Built for the way workers actually use tech. 
+                        Simple, fast, accessible.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title">Global Scale</h3>
+                    <p class="feature-description">
+                        Designed for millions. Tested for reliability. 
+                        Ready for the future of work.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section" style="background: rgba(0, 0, 0, 0.3);">
+        <div class="container">
+            <h2 class="section-title">&lt;ABOUT_PROJECT /&gt;</h2>
+            
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-body">
+                    <div class="command-line">
+                        <span class="prompt">shram@dev:~$</span> <span class="command">cat README.md</span>
+                    </div>
+                    <div style="color: #888; margin-top: 1.5rem; line-height: 1.8;">
+                        <p style="margin-bottom: 1rem;">
+                            <span style="color: #00ffff;"># Project Shram</span>
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            India's 150M+ gig workers are the backbone of our economy, yet they lack basic protections and support systems.
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            <span style="color: #00ff88;">We're building ShramKavach</span> - an open-source platform to empower these workers with:
+                        </p>
+                        <ul style="list-style: none; padding-left: 1rem; margin-bottom: 1rem;">
+                            <li style="margin: 0.5rem 0;">→ Real-time earnings tracking</li>
+                            <li style="margin: 0.5rem 0;">→ Fair wage calculations</li>
+                            <li style="margin: 0.5rem 0;">→ Worker rights information</li>
+                            <li style="margin: 0.5rem 0;">→ Community support networks</li>
+                        </ul>
+                        <p style="margin-top: 1.5rem; color: #00ffff;">
+                            <strong>The difference? Everything is open. Everything is transparent. Everyone can contribute.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="section">
+        <div class="container">
+            <h2 class="section-title">&lt;ROADMAP /&gt;</h2>
+            <p class="section-subtitle">Building in public. One commit at a time.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Q1 2026 - IN PROGRESS</div>
+                        <div class="timeline-title">Foundation & Core Features</div>
+                        <div class="timeline-description">
+                            Platform architecture, user authentication, basic earnings tracking, 
+                            initial mobile app prototype.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Q2 2026</div>
+                        <div class="timeline-title">Beta Launch & Testing</div>
+                        <div class="timeline-description">
+                            Community testing with 1000+ gig workers, feedback integration, 
+                            performance optimization, multi-language support.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Q3 2026</div>
+                        <div class="timeline-title">Scale & Expand</div>
+                        <div class="timeline-description">
+                            Public launch, partnership integrations, AI-powered insights, 
+                            community forums, worker support network.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Q4 2026</div>
+                        <div class="timeline-title">Impact Measurement</div>
+                        <div class="timeline-description">
+                            Transparent impact reporting, worker success stories, 
+                            platform sustainability, global expansion planning.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contribute Section -->
+    <section id="contribute" class="section" style="background: rgba(0, 0, 0, 0.3);">
+        <div class="container">
+            <h2 class="section-title">&lt;GET_INVOLVED /&gt;</h2>
+            <p class="section-subtitle">Your code can change millions of lives.</p>
+            
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-body">
+                    <div class="command-line">
+                        <span class="prompt">shram@dev:~$</span> <span class="command">git clone https://github.com/jaswanth-mjy/shramkavach.github.io.git</span>
+                    </div>
+                    <div class="command-line">
+                        <span class="prompt">shram@dev:~$</span> <span class="command">cd project-shram</span>
+                    </div>
+                    <div class="command-line">
+                        <span class="prompt">shram@dev:~$</span> <span class="command">npm install</span>
+                    </div>
+                    <div class="command-line">
+                        <span class="prompt">shram@dev:~$</span> <span class="command">npm run dev</span>
+                    </div>
+                    <div style="color: #00ff88; margin-top: 1.5rem;">
+                        ✓ Development server running on http://localhost:3000
+                    </div>
+                    
+                    <div style="margin-top: 2rem; color: #888; line-height: 1.8;">
+                        <p style="margin-bottom: 1rem; color: #00ffff;">Ways to contribute:</p>
+                        <ul style="list-style: none; padding-left: 1rem;">
+                            <li style="margin: 0.5rem 0;">→ Write code (frontend, backend, mobile)</li>
+                            <li style="margin: 0.5rem 0;">→ Fix bugs and improve performance</li>
+                            <li style="margin: 0.5rem 0;">→ Improve documentation</li>
+                            <li style="margin: 0.5rem 0;">→ Design UI/UX components</li>
+                            <li style="margin: 0.5rem 0;">→ Test and provide feedback</li>
+                            <li style="margin: 0.5rem 0;">→ Spread the word</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <a href="https://github.com/jaswanth-mjy/shramkavach.github.io" class="cta-button" target="_blank">View Repository</a>
+                        <a href="mailto:dev@shramkavach.com" class="cta-button">Join Community</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/jaswanth-mjy/shramkavach.github.io" target="_blank">GitHub</a>
+            <a href="https://shramkavach.com" target="_blank">ShramKavach</a>
+            <a href="mailto:dev@shramkavach.com">Contact</a>
+            <a href="#">Documentation</a>
+            <a href="#">Community</a>
+        </div>
+        <p class="footer-text">
+            © 2026 Project Shram | Built with ❤️ for gig workers | 100% Open Source
+        </p>
+        <p class="footer-text" style="margin-top: 0.5rem;">
+            <span style="color: #00ffff;">shram@dev:~$</span> Building the future, one commit at a time_
+        </p>
+    </footer>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+        });
+
+        // Close menu when clicking on a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add typing effect to hero text
+        const typingText = document.querySelector('.typing-text');
+        if (typingText) {
+            const text = '$ ./build_future';
+            typingText.textContent = '';
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < text.length) {
+                    typingText.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                } else {
+                    typingText.innerHTML += '<span class="cursor"></span>';
+                }
+            }
+            
+            setTimeout(typeWriter, 500);
+        }
+    </script>
+</body>
+</html>
