@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Project Shram - Open-source development hub for ShramKavach. Complete transparency in building tools for 150M+ Indian gig workers.">
-    <meta name="keywords" content="Project Shram, open source, gig worker tools, ShramKavach, developer platform">
+    <meta name="description" content="Project Shram - Discover projects, templates, tech guides & learning resources. New project daily. Simple navigation for developers.">
+    <meta name="keywords" content="Project Shram, code projects, project templates, tech tutorials, learn programming, daily updates, developer resources, roadmaps, career guidance">
     <meta name="author" content="ShramKavach">
     <meta name="theme-color" content="#000000">
+    <meta name="robots" content="index, follow">
     
-    <title>Project Shram - Dev Hub | ShramKavach</title>
+    <title>Project Shram - Projects, Templates, Tech Info & Learning Platform</title>
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Project Shram - Open Source Dev Platform">
-    <meta property="og:description" content="Building transparent, open-source tools for 150M+ Indian gig workers">
+    <meta property="og:title" content="Project Shram - Developer Resource Platform">
+    <meta property="og:description" content="Projects • Templates • Tech Info • Learn • Roadmaps - Everything developers need in one place">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://projectshram.shramkavach.com/">
-    <meta property="og:image" content="https://shramkavach.com/logo.webp">
+    <meta property="og:image" content="https://projectshram.shramkavach.com/logo.webp">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Project Shram - Developer Platform">
+    <meta name="twitter:description" content="Projects, Templates, Tech Guides, Tutorials & Roadmaps for developers">
+    <meta name="twitter:image" content="https://projectshram.shramkavach.com/logo.webp">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
@@ -121,12 +128,34 @@
         .nav-links a {
             color: #888;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
             font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #00ffff;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
         }
 
         .nav-links a:hover {
             color: #00ffff;
+            border-color: rgba(0, 255, 255, 0.3);
+            background: rgba(0, 255, 255, 0.05);
+        }
+
+        .nav-links a:hover::after {
+            width: 70%;
         }
 
         /* Hamburger Menu */
@@ -164,17 +193,57 @@
             top: 0;
             right: -100%;
             width: 70%;
+            max-width: 320px;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(0, 0, 0, 0.98);
             backdrop-filter: blur(10px);
             border-left: 1px solid rgba(0, 255, 255, 0.3);
-            padding: 5rem 2rem;
+            padding: 5rem 2rem 2rem;
             transition: right 0.3s ease;
             z-index: 1000;
+            overflow-y: auto;
         }
 
         .mobile-menu.active {
             right: 0;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-close:hover {
+            background: rgba(0, 255, 255, 0.2);
+            border-color: rgba(0, 255, 255, 0.5);
+        }
+
+        .mobile-menu-close::before,
+        .mobile-menu-close::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: #00ffff;
+        }
+
+        .mobile-menu-close::before {
+            transform: rotate(45deg);
+        }
+
+        .mobile-menu-close::after {
+            transform: rotate(-45deg);
         }
 
         .mobile-menu ul {
@@ -196,6 +265,168 @@
 
         .mobile-menu a:hover {
             color: #00ffff;
+        }
+
+        /* Mobile Menu Backdrop */
+        .mobile-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 999;
+        }
+
+        .mobile-backdrop.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00ffff, #00ff88);
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 255, 255, 0.2);
+            border: 2px solid rgba(0, 255, 255, 0.5);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: rgba(0, 255, 255, 0.3);
+            border-color: #00ffff;
+            transform: translateY(-5px);
+        }
+
+        .scroll-top::before {
+            content: '↑';
+            color: #00ffff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection styles */
+        ::selection {
+            background: rgba(0, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        /* Focus visible for accessibility */
+        *:focus-visible {
+            outline: 2px solid #00ffff;
+            outline-offset: 4px;
+        }
+
+        /* Loading screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loading-text {
+            font-size: 1.5rem;
+            color: #00ffff;
+        }
+
+        /* Stat Counter Animation */
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00ffff;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Pulse Animation for New Badge */
+        .new-badge {
+            display: inline-block;
+            background: rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-left: 0.5rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Loading Animation */
+        .loading-dots::after {
+            content: '...';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
         }
 
         /* Container */
@@ -359,6 +590,25 @@
             padding: 2rem;
             border-radius: 8px;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,255,255,0.08) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
         }
 
         .feature-card:hover {
@@ -569,9 +819,20 @@
     </style>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-text">$ loading<span class="loading-dots"></span></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- Background -->
     <div class="bg-gradient"></div>
     <div class="grid-overlay"></div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop"></div>
 
     <!-- Navbar -->
     <nav class="navbar">
@@ -581,10 +842,11 @@
                 <span class="logo-text">PROJECT_SHRAM</span>
             </div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#roadmap">Roadmap</a></li>
-                <li><a href="#contribute">Contribute</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#templates">Templates</a></li>
+                <li><a href="#tech">Tech Info</a></li>
+                <li><a href="#learn">Learn</a></li>
+                <li><a href="#roadmap">Roadmaps</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -594,13 +856,18 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu Backdrop -->
+    <div class="mobile-backdrop" id="mobileBackdrop"></div>
+
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-close" id="closeMenu"></div>
         <ul>
-            <li><a href="#about" class="mobile-link">About</a></li>
-            <li><a href="#features" class="mobile-link">Features</a></li>
-            <li><a href="#roadmap" class="mobile-link">Roadmap</a></li>
-            <li><a href="#contribute" class="mobile-link">Contribute</a></li>
+            <li><a href="#projects" class="mobile-link">Projects</a></li>
+            <li><a href="#templates" class="mobile-link">Templates</a></li>
+            <li><a href="#tech" class="mobile-link">Tech Info</a></li>
+            <li><a href="#learn" class="mobile-link">Learn</a></li>
+            <li><a href="#roadmap" class="mobile-link">Roadmaps</a></li>
             <li><a href="https://github.com/jaswanth-mjy/shramkavach.github.io" target="_blank" class="mobile-link">GitHub</a></li>
             <li><a href="mailto:dev@shramkavach.com" class="mobile-link">Contact</a></li>
         </ul>
@@ -622,13 +889,13 @@
                     <span class="prompt">shram@dev:~$</span> <span class="command">cat mission.txt</span>
                 </div>
                 <p style="color: #888; margin-top: 1rem; line-height: 1.8;">
-                    Building open-source tools for 150M+ Indian gig workers.<br>
-                    Complete transparency. Real impact. Community-driven development.
+                    Projects • Templates • Tech Info • Learning Resources<br>
+                    New content daily. Easy navigation. Zero complexity.
                 </p>
                 
                 <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-                    <a href="#contribute" class="cta-button">Start Contributing</a>
-                    <a href="https://github.com/jaswanth-mjy/shramkavach.github.io" class="cta-button" target="_blank">View on GitHub</a>
+                    <a href="#projects" class="cta-button">Browse Projects</a>
+                    <a href="#templates" class="cta-button">Get Templates</a>
                 </div>
             </div>
         </div>
@@ -636,22 +903,22 @@
 
     <!-- Stats Section -->
     <div class="container">
-        <div class="stats-grid">
+        <div class="stats-grid fade-in">
             <div class="stat-card">
-                <span class="stat-value">150M+</span>
-                <span class="stat-label">Gig Workers</span>
+                <span class="stat-value" data-target="365">0</span>
+                <span class="stat-label">Days/Year Updates</span>
             </div>
             <div class="stat-card">
-                <span class="stat-value">100%</span>
-                <span class="stat-label">Open Source</span>
+                <span class="stat-value" data-target="100">0</span><span class="stat-value">+</span>
+                <span class="stat-label">Projects</span>
             </div>
             <div class="stat-card">
-                <span class="stat-value">24/7</span>
-                <span class="stat-label">Transparency</span>
+                <span class="stat-value" data-target="50">0</span><span class="stat-value">+</span>
+                <span class="stat-label">Templates</span>
             </div>
             <div class="stat-card">
                 <span class="stat-value">∞</span>
-                <span class="stat-label">Possibilities</span>
+                <span class="stat-label">Learning</span>
             </div>
         </div>
     </div>
@@ -660,33 +927,33 @@
     <section id="features" class="section">
         <div class="container">
             <h2 class="section-title">&lt;FEATURES /&gt;</h2>
-            <p class="section-subtitle">Built with purpose. Powered by community.</p>
+            <p class="section-subtitle">A platform for developers. Built by developers.</p>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🔓</div>
-                    <h3 class="feature-title">100% Open Source</h3>
+                    <div class="feature-icon">�</div>
+                    <h3 class="feature-title">Share Your Projects</h3>
                     <p class="feature-description">
-                        Every line of code is public. Fork, modify, contribute. 
-                        True transparency in development.
+                        Upload and showcase your development projects. 
+                        Let the world see what you're building.
                     </p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">Real-time Updates</h3>
+                    <h3 class="feature-title">Build in Public</h3>
                     <p class="feature-description">
-                        Watch us build in public. Live commits, real discussions, 
-                        honest progress tracking.
+                        Share your journey, get feedback, and iterate openly. 
+                        Transparency builds trust and community.
                     </p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">🤝</div>
-                    <h3 class="feature-title">Community First</h3>
+                    <h3 class="feature-title">Collaborate & Learn</h3>
                     <p class="feature-description">
-                        Built by developers, for workers. Your contributions 
-                        directly impact millions.
+                        Connect with developers, contribute to projects, 
+                        and grow your skills together.
                     </p>
                 </div>
                 
@@ -694,36 +961,36 @@
                     <div class="feature-icon">🛠️</div>
                     <h3 class="feature-title">Modern Stack</h3>
                     <p class="feature-description">
-                        Cutting-edge tech. Best practices. Scalable architecture 
-                        for massive impact.
+                        Built with cutting-edge tech. Fast, scalable, 
+                        and designed for developers.
                     </p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
-                    <h3 class="feature-title">Mobile First</h3>
+                    <h3 class="feature-title">Mobile Friendly</h3>
                     <p class="feature-description">
-                        Built for the way workers actually use tech. 
-                        Simple, fast, accessible.
+                        Access and share projects from anywhere. 
+                        Fully responsive design.
                     </p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">🌍</div>
-                    <h3 class="feature-title">Global Scale</h3>
+                    <h3 class="feature-title">Global Community</h3>
                     <p class="feature-description">
-                        Designed for millions. Tested for reliability. 
-                        Ready for the future of work.
+                        Join developers from around the world. 
+                        Share knowledge, build connections.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section" style="background: rgba(0, 0, 0, 0.3);">
+    <!-- Projects Section -->
+    <section id="projects" class="section fade-in" style="background: rgba(0, 0, 0, 0.3);">
         <div class="container">
-            <h2 class="section-title">&lt;ABOUT_PROJECT /&gt;</h2>
+            <h2 class="section-title">&lt;PROJECTS /&gt;</h2>
             
             <div class="terminal-window">
                 <div class="terminal-header">
@@ -733,26 +1000,27 @@
                 </div>
                 <div class="terminal-body">
                     <div class="command-line">
-                        <span class="prompt">shram@dev:~$</span> <span class="command">cat README.md</span>
+                        <span class="prompt">shram@dev:~$</span> <span class="command">ls projects/</span>
                     </div>
                     <div style="color: #888; margin-top: 1.5rem; line-height: 1.8;">
                         <p style="margin-bottom: 1rem;">
-                            <span style="color: #00ffff;"># Project Shram</span>
+                            <span style="color: #00ffff;"># Real-World Projects</span>
                         </p>
                         <p style="margin-bottom: 1rem;">
-                            India's 150M+ gig workers are the backbone of our economy, yet they lack basic protections and support systems.
+                            Browse complete projects with source code, live demos, and detailed documentation.
                         </p>
                         <p style="margin-bottom: 1rem;">
-                            <span style="color: #00ff88;">We're building ShramKavach</span> - an open-source platform to empower these workers with:
+                            <span style="color: #00ff88;">Categories:</span>
                         </p>
                         <ul style="list-style: none; padding-left: 1rem; margin-bottom: 1rem;">
-                            <li style="margin: 0.5rem 0;">→ Real-time earnings tracking</li>
-                            <li style="margin: 0.5rem 0;">→ Fair wage calculations</li>
-                            <li style="margin: 0.5rem 0;">→ Worker rights information</li>
-                            <li style="margin: 0.5rem 0;">→ Community support networks</li>
+                            <li style="margin: 0.5rem 0;">→ Web Development (React, Vue, Angular)</li>
+                            <li style="margin: 0.5rem 0;">→ Mobile Apps (Flutter, React Native)</li>
+                            <li style="margin: 0.5rem 0;">→ Backend APIs (Node.js, Python, Java)</li>
+                            <li style="margin: 0.5rem 0;">→ Tools & Utilities</li>
+                            <li style="margin: 0.5rem 0;">→ AI/ML Projects</li>
                         </ul>
                         <p style="margin-top: 1.5rem; color: #00ffff;">
-                            <strong>The difference? Everything is open. Everything is transparent. Everyone can contribute.</strong>
+                            <strong>✨ New project added every day!</strong>
                         </p>
                     </div>
                 </div>
@@ -760,69 +1028,10 @@
         </div>
     </section>
 
-    <!-- Roadmap Section -->
-    <section id="roadmap" class="section">
+    <!-- Templates Section -->
+    <section id="templates" class="section fade-in">
         <div class="container">
-            <h2 class="section-title">&lt;ROADMAP /&gt;</h2>
-            <p class="section-subtitle">Building in public. One commit at a time.</p>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Q1 2026 - IN PROGRESS</div>
-                        <div class="timeline-title">Foundation & Core Features</div>
-                        <div class="timeline-description">
-                            Platform architecture, user authentication, basic earnings tracking, 
-                            initial mobile app prototype.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Q2 2026</div>
-                        <div class="timeline-title">Beta Launch & Testing</div>
-                        <div class="timeline-description">
-                            Community testing with 1000+ gig workers, feedback integration, 
-                            performance optimization, multi-language support.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Q3 2026</div>
-                        <div class="timeline-title">Scale & Expand</div>
-                        <div class="timeline-description">
-                            Public launch, partnership integrations, AI-powered insights, 
-                            community forums, worker support network.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Q4 2026</div>
-                        <div class="timeline-title">Impact Measurement</div>
-                        <div class="timeline-description">
-                            Transparent impact reporting, worker success stories, 
-                            platform sustainability, global expansion planning.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contribute Section -->
-    <section id="contribute" class="section" style="background: rgba(0, 0, 0, 0.3);">
-        <div class="container">
-            <h2 class="section-title">&lt;GET_INVOLVED /&gt;</h2>
-            <p class="section-subtitle">Your code can change millions of lives.</p>
+            <h2 class="section-title">&lt;TEMPLATES /&gt;</h2>
             
             <div class="terminal-window">
                 <div class="terminal-header">
@@ -832,38 +1041,278 @@
                 </div>
                 <div class="terminal-body">
                     <div class="command-line">
-                        <span class="prompt">shram@dev:~$</span> <span class="command">git clone https://github.com/jaswanth-mjy/shramkavach.github.io.git</span>
+                        <span class="prompt">shram@dev:~$</span> <span class="command">cat templates.txt</span>
                     </div>
+                    <div style="color: #888; margin-top: 1.5rem; line-height: 1.8;">
+                        <p style="margin-bottom: 1rem;">
+                            <span style="color: #00ffff;"># Ready-to-Use Templates</span>
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            Copy-paste templates to kickstart your projects. Save hours of setup time.
+                        </p>
+                        <ul style="list-style: none; padding-left: 1rem; margin-bottom: 1rem;">
+                            <li style="margin: 0.5rem 0;">→ Landing Pages & Portfolios</li>
+                            <li style="margin: 0.5rem 0;">→ Dashboard Templates</li>
+                            <li style="margin: 0.5rem 0;">→ E-commerce Starters</li>
+                            <li style="margin: 0.5rem 0;">→ Blog & CMS Templates</li>
+                            <li style="margin: 0.5rem 0;">→ API Boilerplates</li>
+                        </ul>
+                        <p style="margin-top: 1.5rem; color: #00ffff;">
+                            <strong>All templates are production-ready and fully customizable.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Info Section -->
+    <section id="tech" class="section fade-in" style="background: rgba(0, 0, 0, 0.3);">
+        <div class="container">
+            <h2 class="section-title">&lt;TECH_INFO /&gt;</h2>
+            
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-body">
                     <div class="command-line">
-                        <span class="prompt">shram@dev:~$</span> <span class="command">cd project-shram</span>
+                        <span class="prompt">shram@dev:~$</span> <span class="command">./get-tech-info.sh</span>
                     </div>
+                    <div style="color: #888; margin-top: 1.5rem; line-height: 1.8;">
+                        <p style="margin-bottom: 1rem;">
+                            <span style="color: #00ffff;"># Technology Guides & Resources</span>
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            Deep dives into frameworks, tools, and best practices.
+                        </p>
+                        <ul style="list-style: none; padding-left: 1rem; margin-bottom: 1rem;">
+                            <li style="margin: 0.5rem 0;">→ Framework Comparisons (React vs Vue vs Angular)</li>
+                            <li style="margin: 0.5rem 0;">→ Database Selection Guides</li>
+                            <li style="margin: 0.5rem 0;">→ DevOps & Deployment Tutorials</li>
+                            <li style="margin: 0.5rem 0;">→ Security Best Practices</li>
+                            <li style="margin: 0.5rem 0;">→ Performance Optimization</li>
+                        </ul>
+                        <p style="margin-top: 1.5rem; color: #00ffff;">
+                            <strong>Make informed technology decisions for your projects.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learn Section -->
+    <section id="learn" class="section fade-in">
+        <div class="container">
+            <h2 class="section-title">&lt;LEARN /&gt;</h2>
+            
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-body">
                     <div class="command-line">
-                        <span class="prompt">shram@dev:~$</span> <span class="command">npm install</span>
+                        <span class="prompt">shram@dev:~$</span> <span class="command">learn --languages</span>
                     </div>
+                    <div style="color: #888; margin-top: 1.5rem; line-height: 1.8;">
+                        <p style="margin-bottom: 1rem;">
+                            <span style="color: #00ffff;"># Programming Languages & Tutorials</span>
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            Learn programming from scratch or level up your skills.
+                        </p>
+                        <ul style="list-style: none; padding-left: 1rem; margin-bottom: 1rem;">
+                            <li style="margin: 0.5rem 0;">→ <span style="color: #00ff88;">Python</span> - Beginner to Advanced</li>
+                            <li style="margin: 0.5rem 0;">→ <span style="color: #00ff88;">JavaScript</span> - Frontend & Backend</li>
+                            <li style="margin: 0.5rem 0;">→ <span style="color: #00ff88;">Java</span> - Enterprise Development</li>
+                            <li style="margin: 0.5rem 0;">→ <span style="color: #00ff88;">Go</span> - Modern Backend</li>
+                            <li style="margin: 0.5rem 0;">→ <span style="color: #00ff88;">Rust</span> - Systems Programming</li>
+                        </ul>
+                        <p style="margin-top: 1.5rem; color: #00ffff;">
+                            <strong>Practical tutorials with real code examples.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmaps Section -->
+    <section id="roadmap" class="section fade-in">
+        <div class="container">
+            <h2 class="section-title">&lt;CAREER_ROADMAPS /&gt;</h2>
+            <p class="section-subtitle">Step-by-step guides to your dream tech role.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Data Engineer</h3>
+                    <p class="feature-description">
+                        Learn data pipelines, ETL processes, SQL, Python, Spark, 
+                        Airflow, and cloud platforms. Complete path from basics to production.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#roadmap-data-engineer" style="color: #00ffff; text-decoration: none;">View Roadmap →</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚛️</div>
+                    <h3 class="feature-title">Frontend Developer</h3>
+                    <p class="feature-description">
+                        Master HTML, CSS, JavaScript, React, TypeScript, and modern 
+                        frontend tools. Build stunning user interfaces.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#roadmap-frontend" style="color: #00ffff; text-decoration: none;">View Roadmap →</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3 class="feature-title">Backend Developer</h3>
+                    <p class="feature-description">
+                        Learn Node.js, Python, databases, APIs, authentication, 
+                        and microservices. Build scalable systems.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#roadmap-backend" style="color: #00ffff; text-decoration: none;">View Roadmap →</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Mobile Developer</h3>
+                    <p class="feature-description">
+                        Master Flutter, React Native, or native development. 
+                        Build cross-platform mobile applications.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#roadmap-mobile" style="color: #00ffff; text-decoration: none;">View Roadmap →</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3 class="feature-title">DevOps Engineer</h3>
+                    <p class="feature-description">
+                        Learn CI/CD, Docker, Kubernetes, AWS/Azure, monitoring, 
+                        and infrastructure as code. Automate everything.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#roadmap-devops" style="color: #00ffff; text-decoration: none;">View Roadmap →</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">AI/ML Engineer</h3>
+                    <p class="feature-description">
+                        Master Python, TensorFlow, PyTorch, data science, 
+                        and deep learning. Build intelligent systems.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#roadmap-ai-ml" style="color: #00ffff; text-decoration: none;">View Roadmap →</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Full Stack Developer</h3>
+                    <p class="feature-description">
+                        Complete frontend + backend mastery. Build entire 
+                        applications from database to UI.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#roadmap-fullstack" style="color: #00ffff; text-decoration: none;">View Roadmap →</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Security Engineer</h3>
+                    <p class="feature-description">
+                        Learn cybersecurity, penetration testing, secure coding, 
+                        and ethical hacking. Protect systems.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#roadmap-security" style="color: #00ffff; text-decoration: none;">View Roadmap →</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Product Manager</h3>
+                    <p class="feature-description">
+                        Master product strategy, user research, analytics, 
+                        and stakeholder management. Lead products.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#roadmap-pm" style="color: #00ffff; text-decoration: none;">View Roadmap →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: #888; font-size: 1.1rem;">
+                    Each roadmap includes: Step-by-step learning path • Required skills • Projects to build • Resources & tutorials
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & Updates Section -->
+    <section id="contribute" class="section fade-in" style="background: rgba(0, 0, 0, 0.3);">
+        <div class="container">
+            <h2 class="section-title">&lt;STAY_UPDATED /&gt;</h2>
+            <p class="section-subtitle">New content added daily. Join our growing community.</p>
+            
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-body">
                     <div class="command-line">
-                        <span class="prompt">shram@dev:~$</span> <span class="command">npm run dev</span>
-                    </div>
-                    <div style="color: #00ff88; margin-top: 1.5rem;">
-                        ✓ Development server running on http://localhost:3000
+                        <span class="prompt">shram@dev:~$</span> <span class="command">cat latest-updates.txt</span>
                     </div>
                     
-                    <div style="margin-top: 2rem; color: #888; line-height: 1.8;">
-                        <p style="margin-bottom: 1rem; color: #00ffff;">Ways to contribute:</p>
+                    <div style="margin-top: 1.5rem; color: #888; line-height: 1.8;">
+                        <p style="margin-bottom: 1rem; color: #00ffff;">🆕 Recent Additions:</p>
                         <ul style="list-style: none; padding-left: 1rem;">
-                            <li style="margin: 0.5rem 0;">→ Write code (frontend, backend, mobile)</li>
-                            <li style="margin: 0.5rem 0;">→ Fix bugs and improve performance</li>
-                            <li style="margin: 0.5rem 0;">→ Improve documentation</li>
-                            <li style="margin: 0.5rem 0;">→ Design UI/UX components</li>
-                            <li style="margin: 0.5rem 0;">→ Test and provide feedback</li>
-                            <li style="margin: 0.5rem 0;">→ Spread the word</li>
+                            <li style="margin: 0.5rem 0; color: #00ff88;">✓ Complete Python learning path <span class="new-badge">NEW</span></li>
+                            <li style="margin: 0.5rem 0; color: #00ff88;">✓ Data Engineer roadmap with resources</li>
+                            <li style="margin: 0.5rem 0; color: #00ff88;">✓ React dashboard templates</li>
+                            <li style="margin: 0.5rem 0; color: #00ff88;">✓ DevOps deployment guides</li>
                         </ul>
+                        
+                        <p style="margin-top: 2rem; margin-bottom: 1rem; color: #00ffff;">📬 Stay Connected:</p>
+                        <ul style="list-style: none; padding-left: 1rem;">
+                            <li style="margin: 0.5rem 0;">→ Star us on GitHub for updates</li>
+                            <li style="margin: 0.5rem 0;">→ Follow for daily tech content</li>
+                            <li style="margin: 0.5rem 0;">→ Share with fellow developers</li>
+                            <li style="margin: 0.5rem 0;">→ Suggest topics you want to see</li>
+                        </ul>
+                        
+                        <p style="margin-top: 2rem; margin-bottom: 0.5rem; color: #888; font-size: 0.9rem;">
+                            💡 <strong>Tip:</strong> Press <code style="background: rgba(0,255,255,0.1); padding: 0.2rem 0.5rem; border-radius: 3px; color: #00ffff;">Ctrl+K</code> to quickly navigate between sections
+                        </p>
                     </div>
 
                     <div style="margin-top: 2rem; text-align: center;">
-                        <a href="https://github.com/jaswanth-mjy/shramkavach.github.io" class="cta-button" target="_blank">View Repository</a>
-                        <a href="mailto:dev@shramkavach.com" class="cta-button">Join Community</a>
+                        <a href="https://github.com/jaswanth-mjy/project-shram" class="cta-button" target="_blank">⭐ Star on GitHub</a>
+                        <a href="mailto:dev@shramkavach.com" class="cta-button">💬 Feedback</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
             </div>
         </div>
     </section>
@@ -871,18 +1320,19 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-links">
-            <a href="https://github.com/jaswanth-mjy/shramkavach.github.io" target="_blank">GitHub</a>
-            <a href="https://projectshram.shramkavach.com/" target="_blank">Project Shram</a>
-            <a href="https://shramkavach.com" target="_blank">ShramKavach</a>
+            <a href="#projects">Projects</a>
+            <a href="#templates">Templates</a>
+            <a href="#tech">Tech Info</a>
+            <a href="#learn">Learn</a>
+            <a href="#roadmap">Roadmaps</a>
+            <a href="https://github.com/jaswanth-mjy/project-shram" target="_blank">GitHub</a>
             <a href="mailto:dev@shramkavach.com">Contact</a>
-            <a href="#">Documentation</a>
-            <a href="#">Community</a>
         </div>
         <p class="footer-text">
-            © 2026 Project Shram | Built with ❤️ for gig workers | 100% Open Source
+            © 2026 Project Shram | Open source project sharing platform | Built with ❤️ by developers
         </p>
         <p class="footer-text" style="margin-top: 0.5rem;">
-            <span style="color: #00ffff;">shram@dev:~$</span> Building the future, one commit at a time_
+            <span style="color: #00ffff;">shram@dev:~$</span> Projects • Templates • Tech Info • Learn_
         </p>
     </footer>
 
@@ -890,30 +1340,41 @@
         // Hamburger menu toggle
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
+        const mobileBackdrop = document.getElementById('mobileBackdrop');
+        const closeMenu = document.getElementById('closeMenu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
+        function openMenu() {
+            hamburger.classList.add('active');
+            mobileMenu.classList.add('active');
+            mobileBackdrop.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenuFunc() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            mobileBackdrop.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
         hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+            if (mobileMenu.classList.contains('active')) {
+                closeMenuFunc();
+            } else {
+                openMenu();
+            }
         });
+
+        // Close button click
+        closeMenu.addEventListener('click', closeMenuFunc);
+
+        // Backdrop click
+        mobileBackdrop.addEventListener('click', closeMenuFunc);
 
         // Close menu when clicking on a link
         mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
+            link.addEventListener('click', closeMenuFunc);
         });
 
         // Smooth scrolling for navigation links
@@ -928,6 +1389,104 @@
                     });
                 }
             });
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            scrollProgress.style.width = progress + '%';
+        });
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Counter Animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+
+            const updateCounter = () => {
+                current += step;
+                if (current < target) {
+                    element.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            };
+
+            updateCounter();
+        }
+
+        // Intersection Observer for fade-in animations
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Trigger counter animation for stats
+                    if (entry.target.classList.contains('stats-grid')) {
+                        const counters = entry.target.querySelectorAll('.stat-value[data-target]');
+                        counters.forEach(counter => animateCounter(counter));
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            fadeObserver.observe(el);
+        });
+
+        // Add keyboard shortcut (Ctrl+K or Cmd+K for quick navigation)
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                const sections = ['projects', 'templates', 'tech', 'learn', 'roadmap'];
+                const current = sections.find(s => {
+                    const element = document.getElementById(s);
+                    const rect = element.getBoundingClientRect();
+                    return rect.top >= 0 && rect.top <= window.innerHeight / 2;
+                });
+                const currentIndex = sections.indexOf(current);
+                const next = sections[(currentIndex + 1) % sections.length];
+                document.getElementById(next).scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+
+        // Hide loading screen when page is ready
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loadingScreen');
+                if (loadingScreen) {
+                    loadingScreen.classList.add('hidden');
+                }
+            }, 500);
+        });
+
+        // Add smooth reveal for cards
+        document.querySelectorAll('.feature-card, .terminal-window').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.1}s`;
         });
 
         // Add typing effect to hero text
