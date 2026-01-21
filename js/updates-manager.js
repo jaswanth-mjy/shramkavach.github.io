@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-convergence-2026-jan21',
+            title: 'Global Convergence 2026: The Interplay of Geopolitical Volatility, Agentic AI, and Workforce Resilience',
+            shortTitle: 'Global Convergence Jan 21',
+            excerpt: 'Comprehensive analysis of the jarring dissonance between macroeconomic instability and accelerated technological integration, featuring the Greenland Shock, AI revolution, and workforce transformation.',
+            date: '2026-01-21',
+            displayDate: 'Jan 21, 2026',
+            category: 'global convergence agentic ai workforce resilience geopolitics market volatility cybersecurity SAP migration enterprise AI',
+            tags: ['🤖 AGENTIC AI', '🌐 CONVERGENCE', '👥 WORKFORCE', '🌍 GEOPOLITICS'],
+            tagColors: ['bg-emerald-600', 'bg-green-600', 'bg-teal-600', 'bg-cyan-600'],
+            readTime: '52 min read',
+            author: 'ShramKavach',
+            icon: '🤖',
+            gradient: 'from-emerald-50 via-green-50 to-teal-50',
+            borderColor: 'border-emerald-600',
+            stats: [
+                { label: 'Agentic AI', value: 'Revolution', subtext: 'Enterprise transformation', color: 'text-emerald-600', icon: '🤖' },
+                { label: 'Greenland', value: 'Shock', subtext: 'Geopolitical volatility', color: 'text-green-600', icon: '🌍' },
+                { label: 'Workforce', value: 'Resilience', subtext: 'Skills evolution', color: 'text-teal-600', icon: '👥' },
+                { label: 'Market', value: 'Volatility', subtext: 'Economic uncertainty', color: 'text-cyan-600', icon: '📈' }
+            ],
+            link: 'global-convergence-2026-jan21.html',
+            featured: true
+        },
+        {
             id: 'jan20-global-strategic-assessment-2026',
             title: 'Global Strategic Assessment: Geopolitical Fractures, Market Volatility, and Sectoral Shifts – January 20, 2026',
             shortTitle: 'Global Strategic Assessment Jan 20',
