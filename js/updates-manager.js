@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'convergence-intelligence-infrastructure-risk-jan22-2026',
+            title: 'The Convergence of Intelligence, Infrastructure, and Risk: A Comprehensive Analysis of the Global Technoeconomic Landscape (January 2026)',
+            shortTitle: 'Convergence Intelligence Jan 22',
+            excerpt: 'The global economy stands at a precarious yet exhilarating intersection of stabilizing traditional market dynamics and rapidly accelerating technological disruption.',
+            date: '2026-01-22',
+            displayDate: 'Jan 22, 2026',
+            category: 'convergence intelligence AI revolution crypto supercycle technoeconomic landscape infrastructure risk market analysis',
+            tags: ['🔄 CONVERGENCE', '🤖 AI REVOLUTION', '₿ CRYPTO', '🏗️ INFRASTRUCTURE'],
+            tagColors: ['bg-purple-600', 'bg-indigo-600', 'bg-blue-600', 'bg-cyan-600'],
+            readTime: '58 min read',
+            author: 'ShramKavach',
+            icon: '🔄',
+            gradient: 'from-purple-50 via-indigo-50 to-blue-50',
+            borderColor: 'border-purple-600',
+            stats: [
+                { label: 'AI', value: 'Revolution', subtext: 'Agentic infrastructure', color: 'text-purple-600', icon: '🤖' },
+                { label: 'Crypto', value: 'Supercycle', subtext: 'BitGo IPO signals', color: 'text-indigo-600', icon: '₿' },
+                { label: 'React 20', value: 'Launch', subtext: 'Frontend evolution', color: 'text-blue-600', icon: '⚛️' },
+                { label: 'Market', value: 'Dynamics', subtext: 'Risk convergence', color: 'text-cyan-600', icon: '📊' }
+            ],
+            link: 'convergence-intelligence-infrastructure-risk-jan22-2026.html',
+            featured: true
+        },
+        {
             id: 'global-convergence-2026-jan21',
             title: 'Global Convergence 2026: The Interplay of Geopolitical Volatility, Agentic AI, and Workforce Resilience',
             shortTitle: 'Global Convergence Jan 21',
