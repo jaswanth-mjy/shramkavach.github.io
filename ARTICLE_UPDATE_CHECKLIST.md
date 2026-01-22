@@ -10,6 +10,7 @@
 - [x] Fix breadcrumb URLs
 - [x] Add Google AdSense code to head section (after canonical URL, before title)
 - [x] Add Contact Us link to footer (Legal & Trust section)
+- [x] Ensure sidebar articles loader script is present: `<script src="js/sidebar-articles-loader.js?v=X.X"></script>`
 
 ### STEP 2: Data Files Update
 - [x] **articles-database.json** (data/articles-database.json)
@@ -64,7 +65,13 @@ Update banner text with new article summary
 - [x] Set lastmod to current date
 - [x] Set changefreq to "monthly"
 
-### STEP 7: Verification
+### STEP 7: Cache Busting (IMPORTANT - Do this LAST before commit)
+- [x] Update all JavaScript/CSS cache versions across ALL HTML files
+- [x] Find and replace: `?v=X.X` → `?v=X.X+1` (e.g., v=2.3 → v=2.4)
+- [x] Use: `find . -name "*.html" -type f ! -path "./.git/*" ! -name "*backup*" -exec sed -i '' 's/\?v=2\.[0-3]/?v=2.4/g' {} \;`
+- [x] This ensures browsers load fresh versions of JS/CSS files after updates
+
+### STEP 8: Verification
 - [x] All file links point to correct filename
 - [x] No broken links
 - [x] Priority numbering is sequential in articles-database.json

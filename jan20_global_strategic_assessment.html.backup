@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Strategic Assessment: Geopolitical Fractures, Market Volatility, and Sectoral Shifts</title>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2868999138532322"
+         crossorigin="anonymous"></script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
@@ -236,60 +241,14 @@
                     <div class="mb-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-3">6.2 Key Addresses and Initiatives</h3>
                         <p class="text-gray-700 mb-4">
-                            Ursula von der Leyen positioned Europe as the defender of the "rules-based order" against American protectionism. While she announced a €90 billion loan for Ukraine for 2026-2027, the focus was undeniably on the U.S. tariff threat.
-                        </p>
-                        <p class="text-gray-700 mb-4">
-                            China's Vice-Premier He Lifeng seized the moral high ground vacated by the U.S., calling for "more cooperation" and stating that there are "no winners" in tariff wars. He pledged that China would "open its door wider," specifically in the services sector, positioning Beijing as the stable alternative to a volatile Washington.
-                        </p>
-                        <p class="text-gray-700 mb-4">
-                            A major initiative was launched to address the global water crisis ("Blue Davos"), highlighting that 2.1 billion people lack access to safe drinking water. This underscores the WEF's attempt to keep long-term existential risks on the agenda despite immediate geopolitical fires.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Sports Section -->
-                <section class="bg-white rounded-lg shadow-md p-6 hover-scale">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-green-500 pb-2">7. Sports: The Australian Open (Day 3)</h2>
-                    
-                    <div class="mb-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">7.1 Key Match Reports</h3>
-                        <p class="text-gray-700 mb-4">
-                            The "Happy Slam" continued on January 20 under the shadow of intense heat and grueling competition. Defending champion Jannik Sinner (ITA) advanced largely untested after Hugo Gaston (FRA) retired due to injury. After dominating the first two sets (6-2, 6-1), Sinner's efficiency (just over an hour on court) preserves his energy for deeper runs.
-                        </p>
-                        <p class="text-gray-700 mb-4">
-                            Naomi Osaka (JPN) provided the day's drama. After winning the first set against Antonia Ruzic (CRO), she fell behind in the second and third, facing a break deficit. She rallied to win 6-3, 3-6, 6-4. Her "jellyfish" inspired outfit became the viral moment of the tournament, blending high fashion with high performance.
-                        </p>
-                        <p class="text-gray-700 mb-4">
-                            Madison Keys (USA), the defending women's champion, faced a nightmare start, trailing 0-4 in the first set against Ukrainian qualifier Oleksandra Oliynykova. She clawed back to win the set in a tiebreak and dominated the second (7-6, 6-1), showing the resilience required of a champion.
-                        </p>
-                    </div>
-
-                    <div class="mb-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">7.2 The Upset</h3>
-                        <p class="text-gray-700 mb-4">
-                            In a historic upset, Indonesian qualifier Janice Tjen defeated 22nd seed Leylah Fernandez (6-2, 7-6). This marks the first main draw win for an Indonesian player at the Australian Open in 28 years, signaling a potential resurgence for Southeast Asian tennis.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Regional Spotlight -->
-                <section class="bg-white rounded-lg shadow-md p-6 hover-scale">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">8. Regional Spotlight: Bengaluru, India</h2>
-                    
-                    <div class="mb-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">8.1 Infrastructure vs. Urban Reality</h3>
-                        <p class="text-gray-700 mb-4">
-                            Bengaluru, India's tech capital, exemplifies the struggle between rapid development and urban decay. On January 20, the city celebrated the inauguration of the ITPB Metro Skywalk. This ₹30 crore project connects the Pattandur Agrahara metro station directly to the International Tech Park and Park Square Mall. It is a critical piece of "last-mile" infrastructure designed to take 55,000 pedestrians off the congested roads.
-                        </p>
-                        <p class="text-gray-700 mb-4">
-                            Simultaneously, residents in major areas like HRBR Layout and Kammanahalli are bracing for a full-day power cut (10 am - 6 pm) on January 21 due to maintenance, highlighting the fragility of the basic utility grid. The NHAI approved a new flyover at the Manipal Hospital Junction in Mysuru, promising better connectivity between Bengaluru and its satellite cities.
+                            Ursula von der Leyen positioned Europe as the defender of the "rules-based order" against American protectionism, while China's Vice-Premier He Lifeng seized the moral high ground, calling for "more cooperation" and stating that there are "no winners" in tariff wars.
                         </p>
                     </div>
                 </section>
 
                 <!-- Data Tables -->
                 <section class="bg-white rounded-lg shadow-md p-6">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-500 pb-2">9. Detailed Economic Data Appendices</h2>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-500 pb-2">10. Detailed Economic Data Appendices</h2>
                     
                     <div class="overflow-x-auto">
                         <table class="min-w-full divide-y divide-gray-200">
@@ -321,120 +280,13 @@
                                     <td class="px-6 py-4 text-sm text-gray-500">Auto sector vulnerability to U.S. tariffs</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Europe</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">FTSE 100 (UK)</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600 font-medium">▼ 1.3%</td>
-                                    <td class="px-6 py-4 text-sm text-gray-500">Broad risk-off sentiment; Sterling volatility</td>
-                                </tr>
-                                <tr>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Asia</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Nikkei 225 (Japan)</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600 font-medium">▼ 2.93% (-1,500+ pts)</td>
                                     <td class="px-6 py-4 text-sm text-gray-500">Snap election uncertainty; Rising JGB yields</td>
                                 </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Asia</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">BSE Sensex (India)</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600 font-medium">▼ 1.28% (-1,066 pts)</td>
-                                    <td class="px-6 py-4 text-sm text-gray-500">FII exodus; Record low Rupee; Global contagion</td>
-                                </tr>
                             </tbody>
                         </table>
-                    </div>
-                    
-                    <div class="mt-8 overflow-x-auto">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Table 2: Commodity & Currency Snapshots</h3>
-                        <table class="min-w-full divide-y divide-gray-200">
-                            <thead class="bg-gray-50">
-                                <tr>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Asset</th>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Daily Change</th>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Context</th>
-                                </tr>
-                            </thead>
-                            <tbody class="bg-white divide-y divide-gray-200">
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Gold (Global)</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$4,733 / oz</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-medium">▲ 3.0%</td>
-                                    <td class="px-6 py-4 text-sm text-gray-500">Safe-haven flight amid geopolitical crisis</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Silver (Global)</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$95.30 / oz</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-medium">▲ 7.0%</td>
-                                    <td class="px-6 py-4 text-sm text-gray-500">Aggressive speculative buying; Industrial hedging</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Gold (India - 24K)</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">₹1,48,480 / 10g</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-medium">▲ ₹1,750</td>
-                                    <td class="px-6 py-4 text-sm text-gray-500">Currency depreciation + Global spot price surge</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">USD/INR</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">90.97</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600 font-medium">▲ (Rupee weakens)</td>
-                                    <td class="px-6 py-4 text-sm text-gray-500">Record low for Indian Rupee due to outflows</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <div class="mt-8 overflow-x-auto">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Table 3: WEF Chief Economists Outlook Summary (Jan 2026)</h3>
-                        <table class="min-w-full divide-y divide-gray-200">
-                            <thead class="bg-gray-50">
-                                <tr>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Metric</th>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Prediction</th>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Insight</th>
-                                </tr>
-                            </thead>
-                            <tbody class="bg-white divide-y divide-gray-200">
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Global Growth</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">53% expect weakening</td>
-                                    <td class="px-6 py-4 text-sm text-gray-500">Improved from 72% in late 2025; recession fears easing but stagnation likely</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">AI Equities</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">52% expect decline</td>
-                                    <td class="px-6 py-4 text-sm text-gray-500">Consensus that the "AI Bubble" in stocks is near bursting</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Fiscal Policy</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">>60% expect higher taxes/inflation</td>
-                                    <td class="px-6 py-4 text-sm text-gray-500">The era of fiscal austerity is over; debt will be inflated away</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Regional Leader</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">South & East Asia</td>
-                                    <td class="px-6 py-4 text-sm text-gray-500">Expected to drive global growth while Europe and Americas lag</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <!-- Conclusion -->
-                <section class="bg-white rounded-lg shadow-md p-6 hover-scale">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-800 pb-2">10. Conclusion: The Bifurcation of 2026</h2>
-                    
-                    <div class="mb-6">
-                        <p class="text-gray-700 mb-4">
-                            The events of January 20, 2026, represent a critical juncture in the trajectory of the 21st century. The Greenland Tariff Crisis has effectively ended the post-Cold War era of Transatlantic unity, replacing it with a nakedly transactional order where security alliances are leveraged for territorial and economic gain.
-                        </p>
-                        <p class="text-gray-700 mb-4">
-                            This geopolitical fragmentation is immediately reflected in the financial markets, which have abandoned the optimism of the new year in favor of defensive positioning, driving gold and silver to unsustainable highs. While the "real" economy—represented by PC shipments and tech innovation—shows resilience, it is increasingly operating in a separate reality from the geopolitical one.
-                        </p>
-                        <p class="text-gray-700 mb-4">
-                            Corporations like Apple are building enclosed ecosystems that act as buffers against external volatility. Meanwhile, in the Middle East, the Iranian regime's successful implementation of a "Digital Iron Curtain" offers a grim blueprint for how authoritarian states can survive modern uprisings: by simply deleting the connection to the outside world.
-                        </p>
-                        <p class="text-gray-700 mb-4">
-                            As the World Economic Forum continues in Davos, the rhetoric of "Dialogue" rings hollow against the background of trade wars and digital sieges. The remainder of 2026 will likely be defined by how nations and corporations navigate this bifurcated reality: a hyper-connected digital economy overlaid on a rapidly fracturing geopolitical map.
-                        </p>
                     </div>
                 </section>
             </div>
@@ -562,17 +414,16 @@
                     </div>
                 </div>
 
-                <!-- Related Reports -->
+                <!-- Related Articles -->
                 <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-lg font-bold text-gray-800 mb-4">📚 All Articles</h3>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Related Articles</h3>
                     <div class="space-y-3" id="sidebar-all-articles" data-sidebar-articles>
-                        <!-- Dynamically loaded by sidebar-articles-loader.js -->
+                        <!-- Articles loaded dynamically by sidebar-articles-loader.js -->
                         <div class="text-center py-4">
                             <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
                             <p class="text-sm text-gray-500 mt-2">Loading articles...</p>
                         </div>
                     </div>
-                    <div id="sidebar-articles-pagination" data-articles-pagination></div>
                 </div>
             </div>
         </div>
@@ -855,6 +706,6 @@
     </script>
     
     <!-- Sidebar Articles Loader -->
-    <script src="js/sidebar-articles-loader.js?v=2.4"></script>
+    <script src="js/sidebar-articles-loader.js"></script>
 </body>
 </html>
