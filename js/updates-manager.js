@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'great-convergence-industrialized-intelligence-jan23-2026',
+            title: 'The Great Convergence: Industrialized Intelligence, Capital Rotation, and the Redefinition of Labor',
+            shortTitle: 'Great Convergence Jan 23',
+            excerpt: 'January 23, 2026, marks the transition from AI\'s speculative phase to its industrial phase. Capital aggressively rotates from legacy tech to energy infrastructure, while 30,000 corporate roles vanish in a single day.',
+            date: '2026-01-23',
+            displayDate: 'Jan 23, 2026',
+            category: 'great convergence industrialized intelligence capital rotation AI energy trade workforce redefinition amazon layoffs cybersecurity crisis',
+            tags: ['⚡ GREAT CONVERGENCE', '🏭 AI INDUSTRIALIZATION', '⚡ ENERGY TRADE', '👥 WORKFORCE'],
+            tagColors: ['bg-red-600', 'bg-orange-600', 'bg-yellow-600', 'bg-green-600'],
+            readTime: '55 min read',
+            author: 'ShramKavach',
+            icon: '⚡',
+            gradient: 'from-red-50 via-orange-50 to-yellow-50',
+            borderColor: 'border-red-600',
+            stats: [
+                { label: 'Energy Trade', value: 'NextEra', subtext: 'AI infrastructure', color: 'text-green-600', icon: '⚡' },
+                { label: 'Layoffs', value: '30,000', subtext: 'Amazon cuts', color: 'text-red-600', icon: '👥' },
+                { label: 'Gold', value: '$4,970', subtext: 'Record highs', color: 'text-yellow-600', icon: '💰' },
+                { label: 'Intel', value: '-15%', subtext: 'Legacy decline', color: 'text-orange-600', icon: '📉' }
+            ],
+            link: 'great-convergence-industrialized-intelligence-jan23-2026.html',
+            featured: true
+        },
+        {
             id: 'convergence-intelligence-infrastructure-risk-jan22-2026',
             title: 'The Convergence of Intelligence, Infrastructure, and Risk: A Comprehensive Analysis of the Global Technoeconomic Landscape (January 2026)',
             shortTitle: 'Convergence Intelligence Jan 22',
