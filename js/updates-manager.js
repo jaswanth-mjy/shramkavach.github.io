@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-strategic-intelligence-jan24-2026',
+            title: 'Global Strategic Intelligence Report: Geopolitical Instability, Digital Asset Maturation, and the Semiconductor Paradigm Shift',
+            shortTitle: 'Strategic Intelligence Jan 24',
+            excerpt: 'The global landscape is characterized by a precarious equilibrium between escalating great power competition and stabilizing economic interdependence. Arctic security frameworks, crypto market maturation, and semiconductor paradigm shifts converge.',
+            date: '2026-01-24',
+            displayDate: 'Jan 24, 2026',
+            category: 'global strategic intelligence arctic security greenland crisis bitgo ipo semiconductor wars nvidia cybersecurity geopolitical analysis',
+            tags: ['🌐 STRATEGIC INTELLIGENCE', '🛡️ ARCTIC SECURITY', '₿ CRYPTO MARKETS', '💻 SEMICONDUCTORS'],
+            tagColors: ['bg-blue-600', 'bg-cyan-600', 'bg-purple-600', 'bg-indigo-600'],
+            readTime: '48 min read',
+            author: 'ShramKavach',
+            icon: '🌐',
+            gradient: 'from-blue-50 via-cyan-50 to-purple-50',
+            borderColor: 'border-blue-600',
+            stats: [
+                { label: 'Arctic', value: 'Framework', subtext: 'Greenland security', color: 'text-blue-600', icon: '🛡️' },
+                { label: 'BitGo IPO', value: '$20.1', subtext: 'Crypto maturation', color: 'text-purple-600', icon: '₿' },
+                { label: 'Nvidia N1', value: 'Launch', subtext: 'Chip paradigm shift', color: 'text-indigo-600', icon: '💻' },
+                { label: 'Risk Level', value: '90/100', subtext: 'Global volatility', color: 'text-cyan-600', icon: '📊' }
+            ],
+            link: 'global-strategic-intelligence-jan24-2026.html',
+            featured: true
+        },
+        {
             id: 'great-convergence-industrialized-intelligence-jan23-2026',
             title: 'The Great Convergence: Industrialized Intelligence, Capital Rotation, and the Redefinition of Labor',
             shortTitle: 'Great Convergence Jan 23',
