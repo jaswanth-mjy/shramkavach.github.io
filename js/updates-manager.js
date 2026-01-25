@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-strategic-realignment-jan2026',
+            title: 'Global Strategic Realignment: Operation Absolute Resolve, Board of Peace Initiative, and the Era of Abundance',
+            shortTitle: 'Strategic Realignment Jan 25',
+            excerpt: 'A radical transformation in global geopolitics: decisive unilateral action in Venezuela, transaction-based multilateralism in Gaza, Arctic security restructuring, and the emergence of an Era of Abundance through AI integration.',
+            date: '2026-01-25',
+            displayDate: 'Jan 25, 2026',
+            category: 'global strategic realignment operation absolute resolve board of peace venezuela intervention gaza reconstruction golden dome era of abundance',
+            tags: ['🎯 STRATEGIC REALIGNMENT', '🪖 VENEZUELA OP', '🕊️ GAZA PEACE', '✨ ABUNDANCE'],
+            tagColors: ['bg-red-600', 'bg-amber-600', 'bg-emerald-600', 'bg-yellow-600'],
+            readTime: '50 min read',
+            author: 'ShramKavach',
+            icon: '🎯',
+            gradient: 'from-red-50 via-amber-50 to-yellow-50',
+            borderColor: 'border-red-600',
+            stats: [
+                { label: 'Venezuela', value: 'Operation', subtext: 'Absolute Resolve', color: 'text-red-600', icon: '🪖' },
+                { label: 'Gaza', value: 'Board of Peace', subtext: 'Reconstruction', color: 'text-emerald-600', icon: '🕊️' },
+                { label: 'Golden Dome', value: 'Arctic', subtext: 'Security framework', color: 'text-amber-600', icon: '🛡️' },
+                { label: 'Abundance', value: 'Era', subtext: 'AI integration', color: 'text-yellow-600', icon: '✨' }
+            ],
+            link: 'global-strategic-realignment-jan2026.html',
+            featured: true
+        },
+        {
             id: 'global-strategic-intelligence-jan24-2026',
             title: 'Global Strategic Intelligence Report: Geopolitical Instability, Digital Asset Maturation, and the Semiconductor Paradigm Shift',
             shortTitle: 'Strategic Intelligence Jan 24',
