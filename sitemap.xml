@@ -272,6 +272,13 @@
     
     <!-- Article Pages -->
     <url>
+        <loc>https://shramkavach.com/strategic-horizon-2026.html</loc>
+        <lastmod>2026-01-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    
+    <url>
         <loc>https://shramkavach.com/global-strategic-realignment-jan2026.html</loc>
         <lastmod>2026-01-25</lastmod>
         <changefreq>monthly</changefreq>

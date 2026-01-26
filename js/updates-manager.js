@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'strategic-horizon-2026',
+            title: 'Strategic Horizon 2026: The Convergence of Geopolitical Assertiveness, Economic Sovereignty, and the Agentic AI Paradigm',
+            shortTitle: 'Strategic Horizon Jan 26',
+            excerpt: 'Comprehensive strategic analysis of India\'s 77th Republic Day showcasing geopolitical assertiveness through Operation Sindoor, EU strategic partnership, DeepSeek R1 agentic AI revolution, economic sovereignty, and the convergence of military modernization with technological paradigm shifts.',
+            date: '2026-01-26',
+            displayDate: 'Jan 26, 2026',
+            category: 'strategic horizon india republic day operation sindoor EU partnership agentic AI deepseek R1 economic sovereignty geopolitical assertiveness',
+            tags: ['🌅 STRATEGIC HORIZON', '🇮🇳 REPUBLIC DAY', '🤖 AGENTIC AI', '💼 SOVEREIGNTY'],
+            tagColors: ['bg-purple-600', 'bg-orange-600', 'bg-indigo-600', 'bg-blue-600'],
+            readTime: '45 min read',
+            author: 'ShramKavach',
+            icon: '🌅',
+            gradient: 'from-purple-50 via-orange-50 to-indigo-50',
+            borderColor: 'border-purple-600',
+            stats: [
+                { label: 'Republic Day', value: '77th', subtext: 'Operation Sindoor', color: 'text-orange-600', icon: '🇮🇳' },
+                { label: 'EU Partnership', value: 'Strategic', subtext: 'von der Leyen & Costa', color: 'text-purple-600', icon: '🤝' },
+                { label: 'DeepSeek R1', value: 'Agentic AI', subtext: 'Paradigm shift', color: 'text-indigo-600', icon: '🤖' },
+                { label: 'Sovereignty', value: 'Economic', subtext: 'Strategic autonomy', color: 'text-blue-600', icon: '💼' }
+            ],
+            link: 'strategic-horizon-2026.html',
+            featured: true
+        },
+        {
             id: 'global-strategic-realignment-jan2026',
             title: 'Global Strategic Realignment: Operation Absolute Resolve, Board of Peace Initiative, and the Era of Abundance',
             shortTitle: 'Strategic Realignment Jan 25',
