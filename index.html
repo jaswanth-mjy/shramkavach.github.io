@@ -503,6 +503,10 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        .noise-texture {
+            background: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch" /></filter><rect width="100%" height="100%" filter="url(%23noise)" /></svg>');
+        }
+
         .glow-button {
             box-shadow: 0 0 40px rgba(99, 102, 241, 0.4), 0 0 80px rgba(99, 102, 241, 0.2);
         }
@@ -793,12 +797,7 @@
             </div>
 
             <!-- Subtle noise texture -->
-            <div class="absolute inset-0 opacity-20" style="background: url('data:image/svg+xml,<svg viewBox=\" 0 0 200
-                200\" xmlns=\"http://www.w3.org/2000/svg\">
-                <filter id=\"noise\">
-                    <feTurbulence type=\"fractalNoise\" baseFrequency=\"0.9\" numOctaves=\"4\" stitchTiles=\"stitch\" />
-                </filter>
-                <rect width=\"100%\" height=\"100%\" filter=\"url(%23noise)\" /></svg>');">
+            <div class="absolute inset-0 opacity-20 noise-texture">
             </div>
         </div>
 
@@ -908,9 +907,6 @@
         <!-- Bottom Gradient Fade -->
         <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-50 to-transparent"></div>
     </section>
-
-   
-
     <!-- Quick Feature Cards -->
     <section class="py-12 bg-white">
         <div class="container mx-auto px-4">
