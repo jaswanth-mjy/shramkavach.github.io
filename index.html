@@ -235,10 +235,232 @@
     </script>
 
     <style>
-        body {
-            font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #ec4899;
+            --accent: #06b6d4;
+            --dark-bg: #0f0f23;
+            --dark-surface: #1a1a3e;
+            --dark-card: rgba(255, 255, 255, 0.05);
+            --light-bg: #f8fafc;
+            --light-surface: #ffffff;
         }
 
+        body {
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Dark Section Styles */
+        .section-dark {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #0f172a 100%);
+            color: white;
+        }
+
+        .section-dark .section-badge {
+            background: rgba(99, 102, 241, 0.2);
+            color: #a5b4fc;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .section-dark .section-title {
+            color: white;
+        }
+
+        .section-dark .section-desc {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .section-dark .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section-dark .card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Light Section Styles */
+        .section-light {
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+            color: #1e293b;
+        }
+
+        .section-light .section-badge {
+            background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+            color: #4f46e5;
+            border: 1px solid #c7d2fe;
+        }
+
+        .section-light .section-title {
+            color: #0f172a;
+        }
+
+        .section-light .section-desc {
+            color: #64748b;
+        }
+
+        .section-light .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-light .card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+
+        /* Premium Card Styles */
+        .premium-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 1.5rem;
+            overflow: hidden;
+        }
+
+        .premium-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .premium-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Modern Button Styles */
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+            background-size: 200% 200%;
+            animation: gradient-shift 4s ease infinite;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #fbbf24 0%, #f97316 25%, #ef4444 50%, #ec4899 75%, #a855f7 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Animations */
+        @keyframes gradient-shift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1.02);
+            }
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
+            }
+        }
+
+        @keyframes blob {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+
+        /* Glass Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Improved Focus States */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid #6366f1;
+            outline-offset: 2px;
+        }
+
+        /* Section Divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), transparent);
+        }
+
+        /* Shram Colors */
         .shram-orange {
             color: #FF6B35;
         }
@@ -263,32 +485,35 @@
             background-color: #059669;
         }
 
-        @keyframes blob {
+        /* Hero Section Styles */
+        .text-gradient {
+            background: linear-gradient(135deg, #fbbf24 0%, #f97316 25%, #ef4444 50%, #ec4899 75%, #a855f7 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
 
-            0%,
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glow-button {
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.4), 0 0 80px rgba(99, 102, 241, 0.2);
+        }
+
+        .glow-button:hover {
+            box-shadow: 0 0 60px rgba(99, 102, 241, 0.6), 0 0 100px rgba(99, 102, 241, 0.3);
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% center;
+            }
             100% {
-                transform: translate(0, 0) scale(1);
+                background-position: 200% center;
             }
-
-            33% {
-                transform: translate(30px, -50px) scale(1.1);
-            }
-
-            66% {
-                transform: translate(-20px, 20px) scale(0.9);
-            }
-        }
-
-        .animate-blob {
-            animation: blob 7s infinite;
-        }
-
-        .animation-delay-2000 {
-            animation-delay: 2s;
-        }
-
-        .animation-delay-4000 {
-            animation-delay: 4s;
         }
     </style>
 
@@ -541,74 +766,95 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section id="main"
-        class="relative py-16 md:py-24 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 overflow-hidden">
-        <!-- Animated Background Elements -->
-        <div class="absolute inset-0 opacity-20">
-            <div
-                class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-pulse">
+    <!-- Hero Section - Premium Dark Theme -->
+    <section id="main" class="relative min-h-[85vh] flex items-center overflow-hidden"
+        style="background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 25%, #2d1b4e 50%, #1e3a5f 75%, #0f2027 100%);">
+
+        <!-- Animated Gradient Mesh Background -->
+        <div class="absolute inset-0 overflow-hidden">
+            <!-- Large gradient orbs -->
+            <div class="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full opacity-30"
+                style="background: radial-gradient(circle, #6366f1 0%, transparent 70%); animation: float 8s ease-in-out infinite;">
             </div>
-            <div class="absolute top-40 right-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-overlay filter blur-3xl animate-pulse"
-                style="animation-delay: 1s;"></div>
-            <div class="absolute -bottom-20 left-1/2 w-72 h-72 bg-orange-300 rounded-full mix-blend-overlay filter blur-3xl animate-pulse"
-                style="animation-delay: 2s;"></div>
+            <div class="absolute top-[20%] right-[-5%] w-[500px] h-[500px] rounded-full opacity-25"
+                style="background: radial-gradient(circle, #ec4899 0%, transparent 70%); animation: float 10s ease-in-out infinite reverse;">
+            </div>
+            <div class="absolute bottom-[-10%] left-[30%] w-[700px] h-[700px] rounded-full opacity-20"
+                style="background: radial-gradient(circle, #06b6d4 0%, transparent 70%); animation: float 12s ease-in-out infinite;">
+            </div>
+
+            <!-- Grid pattern overlay -->
+            <div class="absolute inset-0 opacity-10"
+                style="background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 50px 50px;">
+            </div>
+
+            <!-- Subtle noise texture -->
+            <div class="absolute inset-0 opacity-20" style="background: url('data:image/svg+xml,<svg viewBox=\" 0 0 200
+                200\" xmlns=\"http://www.w3.org/2000/svg\">
+                <filter id=\"noise\">
+                    <feTurbulence type=\"fractalNoise\" baseFrequency=\"0.9\" numOctaves=\"4\" stitchTiles=\"stitch\" />
+                </filter>
+                <rect width=\"100%\" height=\"100%\" filter=\"url(%23noise)\" /></svg>');">
+            </div>
         </div>
 
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-5xl mx-auto">
-                <!-- Logo Badge -->
+        <div class="container mx-auto px-4 relative z-10 py-12">
+            <div class="max-w-6xl mx-auto">
+
+                <!-- Top Badge -->
                 <div class="flex justify-center mb-8">
-                    <div
-                        class="bg-white/20 backdrop-blur-md border-2 border-white/30 rounded-2xl p-4 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                        <img src="logo.webp" alt="ShramKavach Logo" class="w-16 h-16 object-contain">
+                    <div class="glass-card px-6 py-3 rounded-full flex items-center gap-3">
+                        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                        <span class="text-white/80 text-sm font-medium">100% Free • No Login Required • Zero Data
+                            Storage</span>
                     </div>
                 </div>
 
                 <!-- Main Heading -->
-                <div class="text-center text-white mb-8">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
-                        <span class="block">Empower Your Workforce</span>
-                        <span
-                            class="block bg-gradient-to-r from-yellow-300 via-orange-300 to-pink-300 bg-clip-text text-transparent">Know
-                            Your Rights</span>
+                <div class="text-center mb-12">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-[1.1] tracking-tight">
+                        <span class="text-white block mb-2">Empowering India's</span>
+                        <span class="text-gradient">15 Crore+ Workers</span>
                     </h1>
-                    <p class="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-white/90 leading-relaxed">
-                        Complete platform for gig workers - free calculators, legal tools, AI prompts, and worker rights
-                        protection
+                    <p class="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto leading-relaxed font-light">
+                        Free calculators, AI tools, legal documents & worker rights protection —
+                        <span class="text-white font-medium">updated for Labour Code 2025</span>
                     </p>
                 </div>
 
-                <!-- Feature Pills -->
-                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <!-- Feature Cards -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto">
                     <div
-                        class="group bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 px-5 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                        <span class="font-semibold text-white flex items-center gap-2">
-                            <span class="text-xl">🔒</span>
-                            <span>100% Privacy</span>
-                        </span>
+                        class="glass-card rounded-2xl p-5 text-center group hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                        <div class="text-3xl mb-2">🧮</div>
+                        <div class="text-2xl font-bold text-white mb-1">34+</div>
+                        <div class="text-white/60 text-sm">Free Calculators</div>
                     </div>
                     <div
-                        class="group bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 px-5 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                        <span class="font-semibold text-white flex items-center gap-2">
-                            <span class="text-xl">✅</span>
-                            <span>2025 Updated</span>
-                        </span>
+                        class="glass-card rounded-2xl p-5 text-center group hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                        <div class="text-3xl mb-2">🤖</div>
+                        <div class="text-2xl font-bold text-white mb-1">2761+</div>
+                        <div class="text-white/60 text-sm">AI Prompts</div>
                     </div>
                     <div
-                        class="group bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 px-5 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                        <span class="font-semibold text-white flex items-center gap-2">
-                            <span class="text-xl">💯</span>
-                            <span>Completely Free</span>
-                        </span>
+                        class="glass-card rounded-2xl p-5 text-center group hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                        <div class="text-3xl mb-2">📄</div>
+                        <div class="text-2xl font-bold text-white mb-1">30+</div>
+                        <div class="text-white/60 text-sm">Legal Tools</div>
+                    </div>
+                    <div
+                        class="glass-card rounded-2xl p-5 text-center group hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                        <div class="text-3xl mb-2">🔒</div>
+                        <div class="text-2xl font-bold text-white mb-1">100%</div>
+                        <div class="text-white/60 text-sm">Privacy First</div>
                     </div>
                 </div>
 
                 <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
                     <a href="calculators.html"
-                        class="group bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
-                        <span>🧮 Free Calculators</span>
+                        class="group glow-button bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3">
+                        <span>Explore Free Tools</span>
                         <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -616,41 +862,47 @@
                         </svg>
                     </a>
                     <a href="#adhikar"
-                        class="group bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/50 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
-                        <span>📚 Learn Rights</span>
-                        <svg class="w-5 h-5 group-hover:translate-y-0.5 transition-transform" fill="none"
+                        class="group glass-card text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 hover:bg-white/10 hover:scale-105 flex items-center justify-center gap-3 border border-white/20">
+                        <span>Know Your Rights</span>
+                        <svg class="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </a>
                 </div>
 
-                <!-- Statistics -->
-                <div class="flex flex-wrap justify-center gap-8">
-                    <div class="text-center">
-                        <div class="text-4xl md:text-5xl font-bold text-white mb-2">34+</div>
-                        <div class="text-sm md:text-base text-white/80 font-semibold">Free Tools</div>
+                <!-- Trust Badges -->
+                <div class="flex flex-wrap justify-center items-center gap-6 text-white/50 text-sm">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span>DPDP Act 2023 Compliant</span>
                     </div>
-                    <div class="text-center">
-                        <div class="text-4xl md:text-5xl font-bold text-white mb-2">100%</div>
-                        <div class="text-sm md:text-base text-white/80 font-semibold">Privacy</div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span>Labour Code 2025 Updated</span>
                     </div>
-                    <div class="text-center">
-                        <div class="text-4xl md:text-5xl font-bold text-white mb-2">0₹</div>
-                        <div class="text-sm md:text-base text-white/80 font-semibold">Completely Free</div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span>Client-Side Processing</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Wave Divider -->
-        <div class="absolute bottom-0 left-0 right-0">
-            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-12 md:h-16">
-                <path
-                    d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z"
-                    fill="white" />
-            </svg>
-        </div>
+        <!-- Bottom Gradient Fade -->
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-50 to-transparent"></div>
     </section>
 
     <!-- Ad Slot: Top Banner (After Hero) -->
