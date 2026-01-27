@@ -70,6 +70,12 @@
             color: #4b5563;
         }
 
+        /* Prevent horizontal scrolling and swipe issues */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
         /* Breaking News Ticker */
         .ticker-wrap {
             width: 100%;
@@ -145,6 +151,11 @@
         @media (max-width: 768px) {
             .chart-container {
                 height: 250px;
+            }
+
+            /* Hide sidebar completely on mobile to prevent swipe sliding */
+            .lg\:col-span-1.order-2.lg\:order-1 {
+                display: none;
             }
         }
 
