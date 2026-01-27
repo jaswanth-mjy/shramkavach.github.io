@@ -261,8 +261,13 @@
     </url>
     
     <!-- Article Pages -->
-    <url>
-        <loc>https://shramkavach.com/strategic-horizon-2026.html</loc>
+    <url>        <loc>https://shramkavach.com/state-of-future-2026.html</loc>
+        <lastmod>2026-01-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    
+    <url>        <loc>https://shramkavach.com/strategic-horizon-2026.html</loc>
         <lastmod>2026-01-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.95</priority>

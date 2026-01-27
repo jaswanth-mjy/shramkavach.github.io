@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'state-of-future-2026',
+            title: 'State of the Future 2026: The Convergence of Wealth, Code, and the Security Imperative',
+            shortTitle: 'State of Future Jan 27',
+            excerpt: 'Comprehensive analysis of India-EU FTA triggering massive market rally, Sensex surge to 81,857, gold reserves expansion, DeepSeek R1 AI revolution, prompt engineering evolution, and the critical convergence of wealth generation, code mastery, and security imperatives defining the 2026 landscape.',
+            date: '2026-01-27',
+            displayDate: 'Jan 27, 2026',
+            category: 'state of future india EU FTA market rally sensex surge gold reserves AI revolution deepseek R1 prompt engineering cybersecurity wealth code security',
+            tags: ['🔮 STATE OF FUTURE', '📈 MARKET RALLY', '🤖 AI REVOLUTION', '🔒 CYBERSECURITY'],
+            tagColors: ['bg-purple-600', 'bg-green-600', 'bg-indigo-600', 'bg-red-600'],
+            readTime: '42 min read',
+            author: 'ShramKavach',
+            icon: '🔮',
+            gradient: 'from-purple-50 via-green-50 to-indigo-50',
+            borderColor: 'border-purple-600',
+            stats: [
+                { label: 'Sensex', value: '81,857', subtext: 'FTA rally surge', color: 'text-green-600', icon: '📈' },
+                { label: 'Gold', value: '$117.45B', subtext: 'Reserve expansion', color: 'text-purple-600', icon: '💰' },
+                { label: 'DeepSeek R1', value: 'AI Era', subtext: 'Code revolution', color: 'text-indigo-600', icon: '🤖' },
+                { label: 'Security', value: 'Critical', subtext: 'Cyber imperative', color: 'text-red-600', icon: '🔒' }
+            ],
+            link: 'state-of-future-2026.html',
+            featured: true
+        },
+        {
             id: 'strategic-horizon-2026',
             title: 'Strategic Horizon 2026: The Convergence of Geopolitical Assertiveness, Economic Sovereignty, and the Agentic AI Paradigm',
             shortTitle: 'Strategic Horizon Jan 26',
