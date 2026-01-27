@@ -1558,19 +1558,6 @@
         // Newsletter Subscription Script
         const NEWSLETTER_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwtQh7BxI_9G7-ymgRoNrnLE8vAXjkagSlV73boO_PerJaiiB2cNpy81zybCMJU0wzTPA/exec';
 
-        // Show newsletter popup on page load (with delay)
-        window.addEventListener('load', function () {
-            // Check if user has already dismissed or subscribed
-            const hasSeenPopup = localStorage.getItem('newsletter-popup-dismissed');
-
-            if (!hasSeenPopup) {
-                // Show popup after 3 seconds
-                setTimeout(function () {
-                    document.getElementById('newsletter-popup').classList.remove('hidden');
-                }, 3000);
-            }
-        });
-
         // Close newsletter popup
         function closeNewsletterPopup() {
             document.getElementById('newsletter-popup').classList.add('hidden');
