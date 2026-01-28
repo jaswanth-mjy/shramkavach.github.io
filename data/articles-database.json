@@ -1,51 +1,67 @@
 {
   "articles": [
     {
+      "title": "Global Strategic Synthesis: The Convergence of Trade, Technology, and Security",
+      "url": "global-strategic-synthesis-2026.html",
+      "date": "January 28, 2026",
+      "category": "strategic-analysis",
+      "readTime": "48 min read",
+      "icon": "\ud83c\udf10",
+      "excerpt": "A comprehensive 24-hour strategic analysis revealing the convergence of trade, technology, and security: India-EU FTA impact on capital markets, IMF/World Bank upward GDP revisions for India FY26, crude oil reaching 4-month peak during India Energy Week, Apple AirTag 2 launch with extended UWB range, Nothing's flagship store opening, and the maturation of AI deployment amidst escalating cybersecurity threats\u2014all signaling a fundamental realignment of the global order where geoeconomic alliances, digital infrastructure, and security imperatives are inseparably intertwined.",
+      "tags": [
+        "\ud83c\udf10 STRATEGIC SYNTHESIS",
+        "\ud83e\udd1d TRADE",
+        "\ud83e\udd16 TECH",
+        "\ud83d\udd12 SECURITY"
+      ],
+      "priority": 1
+    },
+    {
       "id": "state-of-future-2026",
       "title": "State of the Future 2026: The Convergence of Wealth, Code, and the Security Imperative",
       "shortTitle": "State of Future Jan 27",
       "url": "state-of-future-2026.html",
-      "icon": "🔮",
+      "icon": "\ud83d\udd2e",
       "date": "2026-01-27",
       "displayDate": "Jan 27, 2026",
       "category": "state of future india EU FTA market rally sensex surge gold reserves AI revolution deepseek R1 prompt engineering cybersecurity wealth code security",
       "tags": [
-        "🔮 STATE OF FUTURE",
-        "📈 MARKET RALLY",
-        "🤖 AI REVOLUTION",
-        "🔒 CYBERSECURITY"
+        "\ud83d\udd2e STATE OF FUTURE",
+        "\ud83d\udcc8 MARKET RALLY",
+        "\ud83e\udd16 AI REVOLUTION",
+        "\ud83d\udd12 CYBERSECURITY"
       ],
       "readTime": "42 min",
       "excerpt": "Comprehensive analysis of India-EU FTA triggering massive market rally, Sensex surge to 81,857, gold reserves expansion, DeepSeek R1 AI revolution, prompt engineering evolution, and the critical convergence of wealth generation, code mastery, and security imperatives defining the 2026 landscape.",
       "featured": true,
-      "priority": 1
+      "priority": 2
     },
     {
       "id": "strategic-horizon-2026",
       "title": "Strategic Horizon 2026: The Convergence of Geopolitical Assertiveness, Economic Sovereignty, and the Agentic AI Paradigm",
       "shortTitle": "Strategic Horizon Jan 26",
       "url": "strategic-horizon-2026.html",
-      "icon": "🌅",
+      "icon": "\ud83c\udf05",
       "date": "2026-01-26",
       "displayDate": "Jan 26, 2026",
       "category": "strategic horizon india republic day operation sindoor EU partnership agentic AI deepseek R1 economic sovereignty geopolitical assertiveness",
       "tags": [
-        "🌅 STRATEGIC HORIZON",
-        "🇮🇳 REPUBLIC DAY",
-        "🤖 AGENTIC AI",
-        "💼 SOVEREIGNTY"
+        "\ud83c\udf05 STRATEGIC HORIZON",
+        "\ud83c\uddee\ud83c\uddf3 REPUBLIC DAY",
+        "\ud83e\udd16 AGENTIC AI",
+        "\ud83d\udcbc SOVEREIGNTY"
       ],
       "readTime": "45 min",
       "excerpt": "Comprehensive strategic analysis of India's 77th Republic Day showcasing geopolitical assertiveness through Operation Sindoor, EU strategic partnership, DeepSeek R1 agentic AI revolution, economic sovereignty, and the convergence of military modernization with technological paradigm shifts.",
       "featured": true,
-      "priority": 2
+      "priority": 3
     },
     {
       "id": "global-strategic-realignment-jan2026",
       "title": "Global Strategic Realignment: A Comprehensive Analysis of Operation Absolute Resolve, the Board of Peace Initiative, and the Era of Abundance",
       "shortTitle": "Strategic Realignment Jan 25",
       "url": "global-strategic-realignment-jan2026.html",
-      "icon": "🎯",
+      "icon": "\ud83c\udfaf",
       "date": "2026-01-25",
       "displayDate": "Jan 25, 2026",
       "category": "global strategic realignment operation absolute resolve board of peace venezuela intervention gaza reconstruction golden dome era of abundance",
@@ -58,14 +74,14 @@
       "readTime": "50 min",
       "excerpt": "A radical transformation in global geopolitics: decisive unilateral action in Venezuela, transaction-based multilateralism in Gaza, Arctic security restructuring, and the emergence of an Era of Abundance through AI integration.",
       "featured": true,
-      "priority": 3
+      "priority": 4
     },
     {
       "id": "global-strategic-intelligence-jan24-2026",
       "title": "Global Strategic Intelligence Report: Geopolitical Instability, Digital Asset Maturation, and the Semiconductor Paradigm Shift",
       "shortTitle": "Strategic Intelligence Jan 24",
       "url": "global-strategic-intelligence-jan24-2026.html",
-      "icon": "🌐",
+      "icon": "\ud83c\udf10",
       "date": "2026-01-24",
       "displayDate": "Jan 24, 2026",
       "category": "global strategic intelligence arctic security greenland crisis bitgo ipo semiconductor wars nvidia cybersecurity geopolitical analysis",
@@ -78,14 +94,14 @@
       "readTime": "48 min",
       "excerpt": "The global landscape is characterized by a precarious equilibrium between escalating great power competition and stabilizing economic interdependence. Arctic security frameworks, crypto market maturation, and semiconductor paradigm shifts converge.",
       "featured": true,
-      "priority": 4
+      "priority": 5
     },
     {
       "id": "great-convergence-industrialized-intelligence-jan23-2026",
       "title": "The Great Convergence: Industrialized Intelligence, Capital Rotation, and the Redefinition of Labor",
       "shortTitle": "Great Convergence Jan 23",
       "url": "great-convergence-industrialized-intelligence-jan23-2026.html",
-      "icon": "⚡",
+      "icon": "\u26a1",
       "date": "2026-01-23",
       "displayDate": "Jan 23, 2026",
       "category": "great convergence industrialized intelligence capital rotation AI energy trade workforce redefinition amazon layoffs cybersecurity crisis",
@@ -98,14 +114,14 @@
       "readTime": "55 min",
       "excerpt": "January 23, 2026, marks the transition from AI's speculative phase to its industrial phase. Capital aggressively rotates from legacy tech to energy infrastructure, while 30,000 corporate roles vanish in a single day.",
       "featured": true,
-      "priority": 5
+      "priority": 6
     },
     {
       "id": "convergence-intelligence-infrastructure-risk-jan22-2026",
       "title": "The Convergence of Intelligence, Infrastructure, and Risk: A Comprehensive Analysis of the Global Technoeconomic Landscape (January 2026)",
       "shortTitle": "Convergence Intelligence Jan 22",
       "url": "convergence-intelligence-infrastructure-risk-jan22-2026.html",
-      "icon": "🔄",
+      "icon": "\ud83d\udd04",
       "date": "2026-01-22",
       "displayDate": "Jan 22, 2026",
       "category": "convergence intelligence AI revolution crypto supercycle technoeconomic landscape infrastructure risk market analysis",
@@ -118,14 +134,14 @@
       "readTime": "58 min",
       "excerpt": "The global economy stands at a precarious yet exhilarating intersection of stabilizing traditional market dynamics and rapidly accelerating technological disruption.",
       "featured": true,
-      "priority": 7
+      "priority": 8
     },
     {
       "id": "global-convergence-2026-jan21",
       "title": "Global Convergence 2026: The Interplay of Geopolitical Volatility, Agentic AI, and Workforce Resilience",
       "shortTitle": "Global Convergence Jan 21",
       "url": "global-convergence-2026-jan21.html",
-      "icon": "🤖",
+      "icon": "\ud83e\udd16",
       "date": "2026-01-21",
       "displayDate": "Jan 21, 2026",
       "category": "global convergence agentic ai workforce resilience geopolitics market volatility cybersecurity SAP migration enterprise AI",
@@ -138,14 +154,14 @@
       "readTime": "52 min",
       "excerpt": "Comprehensive analysis of the jarring dissonance between macroeconomic instability and accelerated technological integration, featuring the Greenland Shock, AI revolution, and workforce transformation.",
       "featured": true,
-      "priority": 7
+      "priority": 8
     },
     {
       "id": "jan20-global-strategic-assessment-2026",
-      "title": "Global Strategic Assessment: Geopolitical Fractures, Market Volatility, and Sectoral Shifts – January 20, 2026",
+      "title": "Global Strategic Assessment: Geopolitical Fractures, Market Volatility, and Sectoral Shifts \u2013 January 20, 2026",
       "shortTitle": "Global Strategic Assessment Jan 20",
       "url": "jan20_global_strategic_assessment.html",
-      "icon": "📊",
+      "icon": "\ud83d\udcca",
       "date": "2026-01-20",
       "displayDate": "Jan 20, 2026",
       "category": "strategic intelligence geopolitics markets technology sectoral analysis global assessment",
@@ -158,14 +174,14 @@
       "readTime": "45 min",
       "excerpt": "Comprehensive multi-dimensional strategic assessment integrating geopolitical fractures, market volatility, and technological sectoral shifts across global landscapes.",
       "featured": true,
-      "priority": 8
+      "priority": 9
     },
     {
       "id": "global-convergence-jan19-2026",
       "title": "Global Convergence: The January 19, 2026 Report on Geopolitics, Markets, and Cultural Shifts",
       "shortTitle": "Global Convergence Jan 19",
       "url": "global-convergence-jan19-2026.html",
-      "icon": "🌐",
+      "icon": "\ud83c\udf10",
       "date": "2026-01-19",
       "displayDate": "Jan 19, 2026",
       "category": "global convergence geopolitics greenland crisis trade war financial markets davos iranian protests",
@@ -177,14 +193,14 @@
       "readTime": "48 min",
       "excerpt": "A Monday of fracture and resilience, characterized by a sharp juxtaposition between high-level diplomatic aspirations and the coercive reality of geoeconomics.",
       "featured": true,
-      "priority": 9
+      "priority": 10
     },
     {
       "id": "sunday-fracture-2026",
-      "title": "The Sunday Fracture: Storms, Summits, and the Science of Survival – January 18, 2026",
+      "title": "The Sunday Fracture: Storms, Summits, and the Science of Survival \u2013 January 18, 2026",
       "shortTitle": "The Sunday Fracture",
       "url": "sunday-fracture-2026.html",
-      "icon": "🌪️",
+      "icon": "\ud83c\udf2a\ufe0f",
       "date": "2026-01-18",
       "displayDate": "Jan 18, 2026",
       "category": "global analysis wef davos atmospheric separation nfl cultural dynamics world economic forum",
@@ -196,14 +212,14 @@
       "readTime": "52 min",
       "excerpt": "The date represents a singular, volatile node in the trajectory of the mid-2020s, characterized by extreme duality between elite diplomacy and ground-level reality.",
       "featured": true,
-      "priority": 10
+      "priority": 11
     },
     {
       "id": "technology-gaming-science-intelligence-2026",
-      "title": "Global Technology, Gaming, & Scientific Strategic Intelligence Report – January 17, 2026",
+      "title": "Global Technology, Gaming, & Scientific Strategic Intelligence Report \u2013 January 17, 2026",
       "shortTitle": "Technology Intelligence Jan 17",
       "url": "technology-gaming-science-intelligence-2026.html",
-      "icon": "🎮",
+      "icon": "\ud83c\udfae",
       "date": "2026-01-17",
       "displayDate": "Jan 17, 2026",
       "category": "technology intelligence consumer electronics ai gaming science innovation",
@@ -215,14 +231,14 @@
       "readTime": "55 min",
       "excerpt": "The global technology landscape is defined by a paradoxical state of mature stability in hardware cycles and radical disruption in software infrastructure.",
       "featured": true,
-      "priority": 11
+      "priority": 12
     },
     {
       "id": "global-strategic-intelligence-jan16-2026",
-      "title": "Global Strategic Intelligence Assessment: Operational, Technological, and Geopolitical Dynamics – January 16, 2026",
+      "title": "Global Strategic Intelligence Assessment: Operational, Technological, and Geopolitical Dynamics \u2013 January 16, 2026",
       "shortTitle": "Intelligence Assessment Jan 16",
       "url": "global-strategic-intelligence-jan16-2026.html",
-      "icon": "🎯",
+      "icon": "\ud83c\udfaf",
       "date": "2026-01-16",
       "displayDate": "Jan 16, 2026",
       "category": "intelligence assessment agentic ai operational iss parloa drone economy digital sovereignty",
@@ -234,14 +250,14 @@
       "readTime": "50 min",
       "excerpt": "The global operational landscape presents a striking dichotomy between the accelerating sophistication of digital automation and the persistent, often chaotic, fragility of physical and biological systems.",
       "featured": true,
-      "priority": 12
+      "priority": 13
     },
     {
       "id": "global-strategic-assessment-15-01-26",
-      "title": "Global Strategic Assessment: The Convergence of Kinetic, Financial, and Technological Risks – January 15, 2026",
+      "title": "Global Strategic Assessment: The Convergence of Kinetic, Financial, and Technological Risks \u2013 January 15, 2026",
       "shortTitle": "Strategic Assessment Jan 15",
       "url": "global-strategic-assessment-15-01-26.html",
-      "icon": "📊",
+      "icon": "\ud83d\udcca",
       "date": "2026-01-15",
       "displayDate": "Jan 15, 2026",
       "category": "strategic assessment kinetic risks financial crisis technological risks iran greenland fed ai",
@@ -253,14 +269,14 @@
       "readTime": "48 min",
       "excerpt": "As the sun set on January 15, 2026, the international system found itself navigating a confluence of crises that tested the resilience of global institutions, the stability of financial markets, and the very definition of sovereignty in the digital age.",
       "featured": true,
-      "priority": 11
+      "priority": 12
     },
     {
       "id": "global-strategic-intelligence-report-2026",
-      "title": "Global Strategic Intelligence Report: Convergence of Crisis, Capital, and Code – January 14, 2026",
+      "title": "Global Strategic Intelligence Report: Convergence of Crisis, Capital, and Code \u2013 January 14, 2026",
       "shortTitle": "Strategic Intelligence Report",
       "url": "global-strategic-intelligence-report-2026.html",
-      "icon": "🎯",
+      "icon": "\ud83c\udfaf",
       "date": "2026-01-14",
       "displayDate": "Jan 14, 2026",
       "category": "intelligence iran greenland agentic ai crypto regulation crisis",
@@ -272,14 +288,14 @@
       "readTime": "52 min",
       "excerpt": "Comprehensive analysis of geopolitical instability, financial market volatility, agentic AI emergence, and regulatory fortification. Iran execution crisis, Golden Dome doctrine, Claude Computer Use, and vibe coding convergence.",
       "featured": true,
-      "priority": 12
+      "priority": 13
     },
     {
       "id": "global-situation-jan13-2026",
       "title": "Global Situation Report: January 13, 2026 - Fed Crisis, AI Infrastructure, Gold Rally",
       "shortTitle": "Global Situation Report",
       "url": "global-situation-jan13-2026.html",
-      "icon": "🌍",
+      "icon": "\ud83c\udf0d",
       "date": "2026-01-13",
       "displayDate": "Jan 13, 2026",
       "category": "global situation federal reserve ai infrastructure gold crisis sk hynix",
@@ -291,14 +307,14 @@
       "readTime": "48 min",
       "excerpt": "Analysis of Federal Reserve's extraordinary emergency meeting, gold price surge to $4,600+, SK Hynix's $5B AI infrastructure investment, and the accelerating shift in global geopolitical tensions.",
       "featured": true,
-      "priority": 13
+      "priority": 14
     },
     {
       "id": "great-decoupling-2026",
-      "title": "The Great Decoupling of 2026: Institutional Crisis, The Biological Pivot, and the Redefinition of Human Value – January 12, 2026",
+      "title": "The Great Decoupling of 2026: Institutional Crisis, The Biological Pivot, and the Redefinition of Human Value \u2013 January 12, 2026",
       "shortTitle": "The Great Decoupling",
       "url": "great-decoupling-2026.html",
-      "icon": "🌪️",
+      "icon": "\ud83c\udf2a\ufe0f",
       "date": "2026-01-12",
       "displayDate": "Jan 12, 2026",
       "category": "institutional crisis biological ai human value fed emergency aeo",
@@ -310,14 +326,14 @@
       "readTime": "45 min",
       "excerpt": "The events of January 12, 2026, represent a singular, jagged fracture in the continuity of the global economic and technological order. Federal Reserve emergency meeting, AI lab crisis, vibe coding revolution, and the biological pivot redefining human value.",
       "featured": true,
-      "priority": 10
+      "priority": 11
     },
     {
       "id": "global-strategic-assessment-2026",
-      "title": "Global Strategic Assessment: Market Dynamics, Geopolitical Realignment, and Digital Asset Trajectories – January 11, 2026",
+      "title": "Global Strategic Assessment: Market Dynamics, Geopolitical Realignment, and Digital Asset Trajectories \u2013 January 11, 2026",
       "shortTitle": "Global Strategic Assessment",
       "url": "global-strategic-assessment-2026.html",
-      "icon": "📊",
+      "icon": "\ud83d\udcca",
       "date": "2026-01-11",
       "displayDate": "Jan 11, 2026",
       "category": "markets geopolitics crypto trade venezuela indo-pacific",
@@ -329,14 +345,14 @@
       "readTime": "50 min",
       "excerpt": "The global geopolitical and financial architecture is currently undergoing a stress test of a magnitude not seen since the early 2020s. Analysis of Venezuela intervention phase two, Indo-Pacific trade dynamics, crypto market volatility, and defense industrial realignment.",
       "featured": true,
-      "priority": 10
+      "priority": 11
     },
     {
       "id": "global-strategic-intelligence-2026",
-      "title": "Global Strategic Intelligence Report: The Convergence of Kinetic Geopolitics, Physical AI, and Financial Recalibration – January 10, 2026",
+      "title": "Global Strategic Intelligence Report: The Convergence of Kinetic Geopolitics, Physical AI, and Financial Recalibration \u2013 January 10, 2026",
       "shortTitle": "Global Strategic Intelligence Report",
       "url": "global-strategic-intelligence-2026.html",
-      "icon": "🎯",
+      "icon": "\ud83c\udfaf",
       "date": "2026-01-10",
       "displayDate": "Jan 10, 2026",
       "category": "intelligence geopolitics defense energy crypto ai",
@@ -348,14 +364,14 @@
       "readTime": "55 min",
       "excerpt": "The first ten days of 2026 have catalyzed a paradigm shift across global markets, defined by the re-emergence of kinetic geopolitical intervention, the maturation of artificial intelligence into physical reality, and a frantic repricing of risk assets. Venezuela reconstruction summit, $1.5T defense budget shock, Physical AI era.",
       "featured": true,
-      "priority": 11
+      "priority": 12
     },
     {
       "id": "jan-9-pivot-2026",
       "title": "Global Convergence: The January 9, 2026 Pivot Point - A Comprehensive Analysis of Macroeconomic Shifts, Financial Market Dynamics, and Technological Paradigms",
       "shortTitle": "Global Convergence: Jan 9, 2026",
       "url": "jan-9-pivot-2026.html",
-      "icon": "🌐",
+      "icon": "\ud83c\udf10",
       "date": "2026-01-09",
       "displayDate": "Jan 9, 2026",
       "category": "markets labor geopolitics technology ai",
@@ -367,14 +383,14 @@
       "readTime": "50 min",
       "excerpt": "Friday, January 9, 2026, will be recorded in economic history as a day of converging volatilities that resolved into a surprising equilibrium. Analysis of nonfarm payrolls, Supreme Court tariff ruling, CES 2026, Physical AI, and cybersecurity.",
       "featured": true,
-      "priority": 12
+      "priority": 13
     },
     {
       "id": "jan-8-pivot-2026",
       "title": "The Jan 8 Pivot: A Comprehensive Analysis of Market Dynamics, Geopolitical Realignment, and Technological Evolution in Early 2026",
       "shortTitle": "The Jan 8 Pivot",
       "url": "jan-8-pivot-2026.html",
-      "icon": "🔄",
+      "icon": "\ud83d\udd04",
       "date": "2026-01-08",
       "displayDate": "Jan 8, 2026",
       "category": "markets geopolitics defense technology labor",
@@ -386,14 +402,14 @@
       "readTime": "45 min",
       "excerpt": "Thursday, January 8, 2026, represents a singular moment where macroeconomic reality, geopolitical power, and technological innovation converged. Analysis of defense sector rotation, Venezuela intervention, jobless claims, and the vibe coding phenomenon.",
       "featured": true,
-      "priority": 12
+      "priority": 13
     },
     {
       "id": "great-recalibration-2026",
       "title": "The Great Recalibration: Converging Trajectories of Physical AI, Economic Stasis, and Digital Fragility on January 7, 2026",
       "shortTitle": "The Great Recalibration",
       "url": "great-recalibration-2026.html",
-      "icon": "⚖️",
+      "icon": "\u2696\ufe0f",
       "date": "2026-01-07",
       "displayDate": "Jan 7, 2026",
       "category": "technology ai labor markets cybersecurity",
@@ -405,14 +421,14 @@
       "readTime": "40 min",
       "excerpt": "The date of January 7, 2026, serves as a singular moment where high-technology ambition, macroeconomic realignment, and systemic digital vulnerability became inextricably knotted. Analysis of labor markets, CES 2026, vibe coding, and cybersecurity threats.",
       "featured": true,
-      "priority": 13
+      "priority": 14
     },
     {
       "id": "convergence-capital-code-2026",
       "title": "The Convergence of Capital and Code: A Strategic Analysis of the Post-Digital Economy in 2026",
       "shortTitle": "Capital & Code 2026",
       "url": "capital-and-code.html",
-      "icon": "💹",
+      "icon": "\ud83d\udcb9",
       "date": "2026-01-06",
       "displayDate": "Jan 6, 2026",
       "category": "finance ai technology markets cybersecurity",
@@ -424,14 +440,14 @@
       "readTime": "35 min",
       "excerpt": "On January 6, 2026, the global trajectory of finance and technology intersected at a definitive fulcrum, marking the transition from 'Generative AI' to the age of 'Agentic Intelligence.' Analysis of financial markets, NVIDIA's Rubin platform, cybersecurity threats, and the vibe coding revolution.",
       "featured": true,
-      "priority": 7
+      "priority": 8
     },
     {
       "id": "state-of-technosphere-2026",
       "title": "State of the Technosphere 2026: The Convergence of Autonomy, Capital, and Risk",
       "shortTitle": "State of Technosphere 2026",
       "url": "state-of-the-technosphere.html",
-      "icon": "🌐",
+      "icon": "\ud83c\udf10",
       "date": "2026-01-05",
       "displayDate": "Jan 5, 2026",
       "category": "technology ai markets finance cybersecurity",
@@ -443,14 +459,14 @@
       "readTime": "30 min",
       "excerpt": "As the first trading week of 2026 commences, the global technology landscape is undergoing a profound structural transformation characterized by a decisive shift from speculative 'AI hype' to 'industrial execution.'",
       "featured": true,
-      "priority": 7
+      "priority": 8
     },
     {
       "id": "twenty-twenties-inflection-point",
       "title": "The Inflection Point of the Twenty-Twenties",
       "shortTitle": "Inflection Point",
       "url": "twenty-twenties.html",
-      "icon": "📊",
+      "icon": "\ud83d\udcca",
       "date": "2026-01-04",
       "displayDate": "Jan 4, 2026",
       "category": "geopolitics ai technology markets finance",
@@ -460,16 +476,16 @@
         "GLOBAL"
       ],
       "readTime": "25 min",
-      "excerpt": "Sunday, January 4, 2026 marks a distinct inflection point—where technological acceleration, geopolitical tension, and financial structural shifts catalyzed into a new global reality.",
+      "excerpt": "Sunday, January 4, 2026 marks a distinct inflection point\u2014where technological acceleration, geopolitical tension, and financial structural shifts catalyzed into a new global reality.",
       "featured": true,
-      "priority": 8
+      "priority": 9
     },
     {
       "id": "kinetic-agentic-convergence-2026",
       "title": "The Convergence of Kinetic Force and Agentic Intelligence",
       "shortTitle": "Kinetic Force & Agentic Intelligence",
       "url": "the-convergence-of-kinetic-force-and-agentic-intelligence.html",
-      "icon": "⚔️",
+      "icon": "\u2694\ufe0f",
       "date": "2026-01-04",
       "displayDate": "Jan 4, 2026",
       "category": "geopolitics ai technology markets",
@@ -481,14 +497,14 @@
       "readTime": "18 min",
       "excerpt": "Operation Southern Spear reshapes Venezuela. Meta acquires Manus for $2B+ in the race for agentic AI. The dual singularity of 2026 has arrived.",
       "featured": true,
-      "priority": 9
+      "priority": 10
     },
     {
       "id": "the-great-divergence",
       "title": "The Great Divergence: Global Markets, Technological Agency, and Digital Resilience",
       "shortTitle": "The Great Divergence",
       "url": "the-great-divergence.html",
-      "icon": "🌐",
+      "icon": "\ud83c\udf10",
       "date": "2026-01-03",
       "displayDate": "Jan 3, 2026",
       "category": "markets ai technology",
@@ -498,16 +514,16 @@
         "MARKETS"
       ],
       "readTime": "20 min",
-      "excerpt": "Industrial resilience vs tech recalibration. AI Hype → AI Utility. Agentic operations redefine productivity while cybercrime industrializes.",
+      "excerpt": "Industrial resilience vs tech recalibration. AI Hype \u2192 AI Utility. Agentic operations redefine productivity while cybercrime industrializes.",
       "featured": true,
-      "priority": 10
+      "priority": 11
     },
     {
       "id": "upi-2026",
       "title": "The 2026 Reset: New Financial Rules Effective January 1",
       "shortTitle": "The 2026 Reset",
       "url": "UPI-2026.HTML",
-      "icon": "💳",
+      "icon": "\ud83d\udcb3",
       "date": "2026-01-01",
       "displayDate": "Jan 1, 2026",
       "category": "finance tax digital",
@@ -517,16 +533,16 @@
         "UPI"
       ],
       "readTime": "12 min",
-      "excerpt": "Weekly credit reporting, ₹12 Lakh tax-free income, and new UPI limits active now.",
+      "excerpt": "Weekly credit reporting, \u20b912 Lakh tax-free income, and new UPI limits active now.",
       "featured": true,
-      "priority": 11
+      "priority": 12
     },
     {
       "id": "bond-markets-2026",
       "title": "Bond Markets 2026: Your Complete Financial Survival Guide",
       "shortTitle": "Bond Markets 2026",
       "url": "bond-markets-2026.html",
-      "icon": "📉",
+      "icon": "\ud83d\udcc9",
       "date": "2026-01-01",
       "displayDate": "Jan 1, 2026",
       "category": "investment bonds tax",
@@ -536,16 +552,16 @@
         "TAX FREE"
       ],
       "readTime": "15 min",
-      "excerpt": "Zero tax up to ₹12 Lakh income! Complete strategy for Bonds vs FDs, credit score updates, and 2026 compliance.",
+      "excerpt": "Zero tax up to \u20b912 Lakh income! Complete strategy for Bonds vs FDs, credit score updates, and 2026 compliance.",
       "featured": true,
-      "priority": 12
+      "priority": 13
     },
     {
       "id": "december-31-2025",
       "title": "December 31 Dispatch: India's Economic & Regulatory Landscape",
       "shortTitle": "December 31 Dispatch",
       "url": "december-31-2025.html",
-      "icon": "🇮🇳",
+      "icon": "\ud83c\uddee\ud83c\uddf3",
       "date": "2025-12-31",
       "displayDate": "Dec 31, 2025",
       "category": "economy regulatory",
@@ -557,14 +573,14 @@
       "readTime": "14 min",
       "excerpt": "Comprehensive analysis of India's year-end economic position and regulatory changes.",
       "featured": false,
-      "priority": 11
+      "priority": 12
     },
     {
       "id": "year-end-2025",
       "title": "Year-End 2025: Financial & Tax Action Plan",
       "shortTitle": "Year-End Action Plan",
       "url": "year-end-2025.html",
-      "icon": "⏰",
+      "icon": "\u23f0",
       "date": "2025-12-26",
       "displayDate": "Dec 26, 2025",
       "category": "tax planning",
@@ -576,14 +592,14 @@
       "readTime": "10 min",
       "excerpt": "Critical deadlines and tax-saving strategies for year-end 2025.",
       "featured": false,
-      "priority": 12
+      "priority": 13
     },
     {
       "id": "freelancer-tax-2025",
       "title": "Freelancer Tax Guide 2025: Complete Section 44ADA Strategy",
       "shortTitle": "Freelancer Tax Guide",
       "url": "freelancer-tax-2025.html",
-      "icon": "💸",
+      "icon": "\ud83d\udcb8",
       "date": "2025-12-28",
       "displayDate": "Dec 28, 2025",
       "category": "tax freelancer",
@@ -595,14 +611,14 @@
       "readTime": "12 min",
       "excerpt": "Everything freelancers need to know about presumptive taxation and tax benefits.",
       "featured": false,
-      "priority": 13
+      "priority": 14
     },
     {
       "id": "financial-calculators-2025",
       "title": "Financial Calculators 2025: Free Tools for Gig Workers",
       "shortTitle": "Financial Calculators",
       "url": "financial-calculators-2025.html",
-      "icon": "🧮",
+      "icon": "\ud83e\uddee",
       "date": "2025-12-26",
       "displayDate": "Dec 26, 2025",
       "category": "tools calculators",
@@ -614,14 +630,14 @@
       "readTime": "5 min",
       "excerpt": "Free calculators for tax, gratuity, EPF, GST, and earnings management.",
       "featured": false,
-      "priority": 14
+      "priority": 15
     },
     {
       "id": "social-security-2025",
       "title": "Social Security Code Registration Guide for Platform Workers",
       "shortTitle": "Social Security Registration",
       "url": "social-security-2025.html",
-      "icon": "🛡️",
+      "icon": "\ud83d\udee1\ufe0f",
       "date": "2025-12-18",
       "displayDate": "Dec 18, 2025",
       "category": "social-security workers",
@@ -633,14 +649,14 @@
       "readTime": "8 min",
       "excerpt": "Step-by-step guide to register and access social security benefits.",
       "featured": false,
-      "priority": 15
+      "priority": 16
     },
     {
       "id": "gratuity-rule-2025",
       "title": "1-Year Gratuity Eligibility Rule: What Gig Workers Need to Know",
       "shortTitle": "1-Year Gratuity Rule",
       "url": "gratuity-rule-2025.html",
-      "icon": "💰",
+      "icon": "\ud83d\udcb0",
       "date": "2025-11-21",
       "displayDate": "Nov 21, 2025",
       "category": "gratuity benefits",
@@ -652,14 +668,14 @@
       "readTime": "7 min",
       "excerpt": "New gratuity rules reduce eligibility from 5 years to 1 year for workers.",
       "featured": false,
-      "priority": 16
+      "priority": 17
     },
     {
       "id": "platform-fees-2025",
       "title": "Platform Fee Cap 2026: Impact on Gig Worker Earnings",
       "shortTitle": "Platform Fee Cap 2026",
       "url": "platform-fees-2025.html",
-      "icon": "📱",
+      "icon": "\ud83d\udcf1",
       "date": "2025-12-12",
       "displayDate": "Dec 12, 2025",
       "category": "platforms fees",
@@ -671,14 +687,14 @@
       "readTime": "9 min",
       "excerpt": "New commission caps on delivery and ride-hailing platforms.",
       "featured": false,
-      "priority": 17
+      "priority": 18
     },
     {
       "id": "health-insurance-2025",
       "title": "Health Insurance Mandate for Platform Workers 2025",
       "shortTitle": "Health Insurance Mandate",
       "url": "health-insurance-2025.html",
-      "icon": "🏥",
+      "icon": "\ud83c\udfe5",
       "date": "2025-12-03",
       "displayDate": "Dec 3, 2025",
       "category": "health insurance",
@@ -690,14 +706,14 @@
       "readTime": "8 min",
       "excerpt": "Mandatory health insurance coverage for all platform workers.",
       "featured": false,
-      "priority": 18
+      "priority": 19
     },
     {
       "id": "gst-threshold-2025",
-      "title": "GST Threshold ₹40 Lakh: New Rules for Freelancers",
-      "shortTitle": "GST Threshold ₹40L",
+      "title": "GST Threshold \u20b940 Lakh: New Rules for Freelancers",
+      "shortTitle": "GST Threshold \u20b940L",
       "url": "gst-threshold-2025.html",
-      "icon": "📈",
+      "icon": "\ud83d\udcc8",
       "date": "2025-12-01",
       "displayDate": "Dec 1, 2025",
       "category": "gst tax",
@@ -709,14 +725,14 @@
       "readTime": "10 min",
       "excerpt": "Updated GST registration threshold and compliance requirements.",
       "featured": false,
-      "priority": 19
+      "priority": 20
     },
     {
       "id": "epfo-gig-workers-2025",
       "title": "EPFO Registration for Gig Workers: Complete Guide",
       "shortTitle": "EPFO for Gig Workers",
       "url": "epfo-gig-workers-2025.html",
-      "icon": "💼",
+      "icon": "\ud83d\udcbc",
       "date": "2025-11-28",
       "displayDate": "Nov 28, 2025",
       "category": "epf retirement",
@@ -728,14 +744,14 @@
       "readTime": "11 min",
       "excerpt": "How gig workers can register for EPF and secure retirement benefits.",
       "featured": false,
-      "priority": 20
+      "priority": 21
     },
     {
       "id": "minimum-wage-2025",
       "title": "Minimum Wage Guarantee for Gig Workers 2025",
       "shortTitle": "Minimum Wage Guarantee",
       "url": "minimum-wage-2025.html",
-      "icon": "⚖️",
+      "icon": "\u2696\ufe0f",
       "date": "2025-11-15",
       "displayDate": "Nov 15, 2025",
       "category": "wage rights",
@@ -747,14 +763,14 @@
       "readTime": "9 min",
       "excerpt": "State-wise minimum wage requirements for platform workers.",
       "featured": false,
-      "priority": 21
+      "priority": 22
     },
     {
       "id": "section-44ada-2025",
       "title": "Section 44ADA Tax Benefits for Professionals 2025",
       "shortTitle": "Section 44ADA Tax",
       "url": "section-44ada-2025.html",
-      "icon": "📊",
+      "icon": "\ud83d\udcca",
       "date": "2025-12-05",
       "displayDate": "Dec 5, 2025",
       "category": "tax professional",
@@ -766,7 +782,7 @@
       "readTime": "10 min",
       "excerpt": "Presumptive taxation scheme for professionals and consultants.",
       "featured": false,
-      "priority": 22
+      "priority": 23
     }
   ],
   "metadata": {

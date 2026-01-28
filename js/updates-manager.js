@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-strategic-synthesis-2026',
+            title: 'Global Strategic Synthesis: The Convergence of Trade, Technology, and Security',
+            shortTitle: 'Strategic Synthesis Jan 28',
+            excerpt: 'A comprehensive 24-hour strategic analysis revealing the convergence of trade, technology, and security: India-EU FTA impact on capital markets, IMF/World Bank upward GDP revisions for India FY26, crude oil reaching 4-month peak during India Energy Week, Apple AirTag 2 launch with extended UWB range, Nothing\'s flagship store opening, and the maturation of AI deployment amidst escalating cybersecurity threats.',
+            date: '2026-01-28',
+            displayDate: 'Jan 28, 2026',
+            category: 'strategic synthesis india EU FTA IMF world bank GDP forecast energy security AI deployment cybersecurity trade technology security convergence',
+            tags: ['🌐 STRATEGIC SYNTHESIS', '🤝 TRADE', '🤖 TECH', '🔒 SECURITY'],
+            tagColors: ['bg-blue-600', 'bg-cyan-600', 'bg-indigo-600', 'bg-red-600'],
+            readTime: '48 min read',
+            author: 'ShramKavach',
+            icon: '🌐',
+            gradient: 'from-blue-50 via-cyan-50 to-indigo-50',
+            borderColor: 'border-blue-600',
+            stats: [
+                { label: 'India-EU FTA', value: 'Market Impact', subtext: 'Capital inflows', color: 'text-cyan-600', icon: '🤝' },
+                { label: 'IMF/World Bank', value: 'GDP Revision', subtext: 'Upward forecast', color: 'text-blue-600', icon: '📊' },
+                { label: 'Crude Oil', value: '4-Month Peak', subtext: 'Energy security', color: 'text-indigo-600', icon: '⛽' },
+                { label: 'AI Maturation', value: 'Deployment', subtext: 'Security threats', color: 'text-red-600', icon: '🤖' }
+            ],
+            link: 'global-strategic-synthesis-2026.html',
+            featured: true
+        },
+        {
             id: 'state-of-future-2026',
             title: 'State of the Future 2026: The Convergence of Wealth, Code, and the Security Imperative',
             shortTitle: 'State of Future Jan 27',

@@ -261,6 +261,13 @@
     </url>
     
     <!-- Article Pages -->
+    <url>        <loc>https://shramkavach.com/global-strategic-synthesis-2026.html</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <!-- Article Pages -->
     <url>        <loc>https://shramkavach.com/state-of-future-2026.html</loc>
         <lastmod>2026-01-27</lastmod>
         <changefreq>monthly</changefreq>
