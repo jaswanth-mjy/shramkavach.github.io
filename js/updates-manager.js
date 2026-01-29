@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-strategic-situation-jan28-29-2026',
+            title: 'Global Strategic Situation & Intelligence Report: January 28–29, 2026',
+            shortTitle: 'Strategic Situation Jan 29',
+            excerpt: 'Comprehensive strategic intelligence on India\'s Economic Survey 2025 triggering market euphoria, Trump\'s reciprocal tariff threats destabilizing global trade, DeepSeek R1\'s AI revolution, and the precarious geopolitical transition defining the world between January 28-29, 2026.',
+            date: '2026-01-29',
+            displayDate: 'Jan 29, 2026',
+            category: 'strategic intelligence india economic survey sensex rally trump tariffs deepseek R1 AI revolution geopolitical transition domestic institutions',
+            tags: ['📊 STRATEGIC INTEL', '📈 ECONOMIC SURVEY', '🌐 TARIFF THREATS', '🤖 AI REVOLUTION'],
+            tagColors: ['bg-blue-600', 'bg-green-600', 'bg-orange-600', 'bg-indigo-600'],
+            readTime: '38 min read',
+            author: 'ShramKavach',
+            icon: '📊',
+            gradient: 'from-blue-50 via-green-50 to-orange-50',
+            borderColor: 'border-blue-600',
+            stats: [
+                { label: 'Economic Survey', value: 'Optimistic', subtext: 'Market euphoria', color: 'text-green-600', icon: '📈' },
+                { label: 'Sensex Rally', value: 'DII-Driven', subtext: 'Domestic power', color: 'text-blue-600', icon: '💪' },
+                { label: 'Trump Tariffs', value: 'Reciprocal', subtext: 'Trade tension', color: 'text-orange-600', icon: '🌐' },
+                { label: 'DeepSeek R1', value: 'AI Shift', subtext: 'Tech disruption', color: 'text-indigo-600', icon: '🤖' }
+            ],
+            link: 'global-strategic-situation-jan28-29-2026.html',
+            featured: true
+        },
+        {
             id: 'global-strategic-synthesis-2026',
             title: 'Global Strategic Synthesis: The Convergence of Trade, Technology, and Security',
             shortTitle: 'Strategic Synthesis Jan 28',
