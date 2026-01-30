@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-strategic-intelligence-monitor-jan29-30-2026',
+            title: 'Global Strategic Intelligence Monitor: Geopolitical Realignments, Regional Instability, and Economic Trajectories (January 29–30, 2026)',
+            shortTitle: 'Intel Monitor Jan 30',
+            excerpt: 'Critical 24-hour analysis: Ukraine-Russia peace talks, India-EU FTA & Energy Week in Goa, Trump tariff threats, Maharashtra cabinet expansion, and Sensex sell-off reality-checking the Economic Survey—convergence of kinetic conflicts, diplomatic realignments, and market volatility.',
+            date: '2026-01-30',
+            displayDate: 'Jan 30, 2026',
+            category: 'strategic intelligence monitor ukraine peace talks india EU FTA energy week goa trump tariffs maharashtra politics sensex sell-off geopolitical realignments',
+            tags: ['🎯 INTEL MONITOR', '🕊️ PEACE TALKS', '⚡ ENERGY SECURITY', '📉 MARKET SELL-OFF'],
+            tagColors: ['bg-indigo-600', 'bg-emerald-600', 'bg-yellow-600', 'bg-red-600'],
+            readTime: '42 min read',
+            author: 'ShramKavach',
+            icon: '🎯',
+            gradient: 'from-indigo-50 via-emerald-50 to-yellow-50',
+            borderColor: 'border-indigo-600',
+            stats: [
+                { label: 'Peace Talks', value: 'Ukraine-Russia', subtext: 'Western hope', color: 'text-emerald-600', icon: '🕊️' },
+                { label: 'Energy Week', value: 'Goa Concludes', subtext: 'Security focus', color: 'text-yellow-600', icon: '⚡' },
+                { label: 'Trump Tariffs', value: 'Reciprocal', subtext: 'Trade tension', color: 'text-orange-600', icon: '🌐' },
+                { label: 'Sensex', value: 'Sell-Off', subtext: 'Reality check', color: 'text-red-600', icon: '📉' }
+            ],
+            link: 'global-strategic-intelligence-monitor-jan29-30-2026.html',
+            featured: true
+        },
+        {
             id: 'global-strategic-situation-jan28-29-2026',
             title: 'Global Strategic Situation & Intelligence Report: January 28–29, 2026',
             shortTitle: 'Strategic Situation Jan 29',
