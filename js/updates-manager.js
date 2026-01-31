@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'strategic-intelligence-monitor-jan30-31-2026',
+            title: 'Strategic Intelligence Monitor: Comprehensive Analysis of Global Economic Shifts, Geopolitical Fractures, and Indian State Affairs (January 30–31, 2026)',
+            shortTitle: 'Intel Monitor Jan 31',
+            excerpt: 'Critical 48-hour analysis of Jan 30-31: Oil price collapse from high-velocity liquidity events, global equity sell-off across markets, Ukraine-Russia ceasefire implementation, Maharashtra political realignment, Argentina currency crisis deepening, and Sensex correction reality-checking the Economic Survey—convergence of commodity collapse, governance fractures, and geopolitical recalibration.',
+            date: '2026-01-31',
+            displayDate: 'Jan 31, 2026',
+            category: 'strategic intelligence monitor oil collapse equity sell-off ukraine ceasefire maharashtra politics argentina currency crisis geopolitical fractures global economic shifts',
+            tags: ['🔍 INTEL MONITOR', '💥 OIL COLLAPSE', '📉 MARKETS', '🌐 GEOPOLITICS'],
+            tagColors: ['bg-purple-600', 'bg-red-600', 'bg-orange-600', 'bg-blue-600'],
+            readTime: '38 min read',
+            author: 'ShramKavach',
+            icon: '🔍',
+            gradient: 'from-purple-50 via-red-50 to-orange-50',
+            borderColor: 'border-purple-600',
+            stats: [
+                { label: 'Oil Collapse', value: 'High-Velocity', subtext: 'Liquidity event', color: 'text-red-600', icon: '💥' },
+                { label: 'Equity Sell-Off', value: 'Global', subtext: 'Market correction', color: 'text-orange-600', icon: '📉' },
+                { label: 'Ukraine Ceasefire', value: 'Diplomatic', subtext: 'Geopolitical shift', color: 'text-blue-600', icon: '🕊️' },
+                { label: 'Maharashtra', value: 'Political', subtext: 'Governance shift', color: 'text-purple-600', icon: '🏛️' }
+            ],
+            link: 'strategic-intelligence-monitor-jan30-31-2026.html',
+            featured: true
+        },
+        {
             id: 'global-strategic-intelligence-monitor-jan29-30-2026',
             title: 'Global Strategic Intelligence Monitor: Geopolitical Realignments, Regional Instability, and Economic Trajectories (January 29–30, 2026)',
             shortTitle: 'Intel Monitor Jan 30',
