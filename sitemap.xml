@@ -261,6 +261,13 @@
     </url>
     
     <!-- Article Pages -->
+    <url>        <loc>https://shramkavach.com/global-strategic-situation-report-jan31-feb1-2026.html</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <!-- Article Pages -->
     <url>        <loc>https://shramkavach.com/strategic-intelligence-monitor-jan30-31-2026.html</loc>
         <lastmod>2026-02-01</lastmod>
         <changefreq>monthly</changefreq>

@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-strategic-situation-report-jan31-feb1-2026',
+            title: 'Global Strategic Situation Report: Comprehensive Analysis of Union Budget, Gold Market Recovery, and Regional Political Transitions (January 31 – February 01, 2026)',
+            shortTitle: 'Situation Report Feb 1',
+            excerpt: 'Strategic analysis of the pivotal 48-hour period: Union Budget 2026-27 announced with fiscal priorities, gold market recovery from crash, India-Russia energy cooperation intensifying, Maharashtra political stabilization, and convergence of fiscal policy with commodity volatility.',
+            date: '2026-02-01',
+            displayDate: 'Feb 1, 2026',
+            category: 'global strategic situation union budget 2026 gold recovery india russia energy maharashtra politics fiscal policy commodity markets',
+            tags: ['📋 SITUATION REPORT', '💰 UNION BUDGET', '📈 GOLD RECOVERY', '🌐 ENERGY TIES'],
+            tagColors: ['bg-blue-600', 'bg-green-600', 'bg-yellow-600', 'bg-indigo-600'],
+            readTime: '42 min read',
+            author: 'ShramKavach',
+            icon: '📋',
+            gradient: 'from-blue-50 via-green-50 to-yellow-50',
+            borderColor: 'border-blue-600',
+            stats: [
+                { label: 'Union Budget', value: '2026-27', subtext: 'Fiscal priorities', color: 'text-green-600', icon: '💰' },
+                { label: 'Gold Recovery', value: 'Partial', subtext: 'Market bounce', color: 'text-yellow-600', icon: '📈' },
+                { label: 'India-Russia', value: 'Energy Ties', subtext: 'Cooperation', color: 'text-indigo-600', icon: '🌐' },
+                { label: 'Maharashtra', value: 'Stabilization', subtext: 'Post-crisis', color: 'text-blue-600', icon: '🏛️' }
+            ],
+            link: 'global-strategic-situation-report-jan31-feb1-2026.html',
+            featured: true
+        },
+        {
             id: 'strategic-intelligence-monitor-jan30-31-2026',
             title: 'Strategic Intelligence Monitor: Comprehensive Analysis of Global Economic Shifts, Geopolitical Fractures, and Indian State Affairs (January 30–31, 2026)',
             shortTitle: 'Intel Monitor Jan 31',
