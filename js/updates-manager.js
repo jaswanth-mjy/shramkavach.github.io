@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-macroeconomic-geopolitical-risk-assessment-feb2-2026',
+            title: 'Global Macroeconomic and Geopolitical Risk Assessment: Comprehensive Analysis of Trade Policy Escalation, Commodity Volatility, and Regional Corridor Fragility (February 2, 2026)',
+            shortTitle: 'Risk Assessment Feb 2',
+            excerpt: 'Strategic risk assessment of Feb 2: Trump tariff threats escalating US-China trade tensions, gold market dynamics amid policy uncertainty, India-Middle East economic corridor fragility under regional pressures, Yemen geopolitical realignment, and convergence of macroeconomic policy risk with Middle Eastern instability.',
+            date: '2026-02-02',
+            displayDate: 'Feb 2, 2026',
+            category: 'global macroeconomic geopolitical risk assessment trump tariffs us china trade war gold market india middle east corridor yemen regional instability',
+            tags: ['⚠️ RISK ASSESSMENT', '💼 TRADE WAR', '📈 GOLD DYNAMICS', '🌍 REGIONAL RISKS'],
+            tagColors: ['bg-red-600', 'bg-orange-600', 'bg-yellow-600', 'bg-purple-600'],
+            readTime: '41 min read',
+            author: 'ShramKavach',
+            icon: '⚠️',
+            gradient: 'from-red-50 via-orange-50 to-purple-50',
+            borderColor: 'border-red-600',
+            stats: [
+                { label: 'Trump Tariffs', value: 'Escalation', subtext: 'Trade threats', color: 'text-orange-600', icon: '💼' },
+                { label: 'Gold Dynamics', value: 'Volatile', subtext: 'Policy risk', color: 'text-yellow-600', icon: '📈' },
+                { label: 'ME Corridor', value: 'Fragile', subtext: 'Regional pressures', color: 'text-purple-600', icon: '🌍' },
+                { label: 'Yemen Shift', value: 'Geopolitical', subtext: 'Realignment', color: 'text-red-600', icon: '⚠️' }
+            ],
+            link: 'global-macroeconomic-geopolitical-risk-assessment-feb2-2026.html',
+            featured: true
+        },
+        {
             id: 'global-strategic-situation-report-jan31-feb1-2026',
             title: 'Global Strategic Situation Report: Comprehensive Analysis of Union Budget, Gold Market Recovery, and Regional Political Transitions (January 31 – February 01, 2026)',
             shortTitle: 'Situation Report Feb 1',
