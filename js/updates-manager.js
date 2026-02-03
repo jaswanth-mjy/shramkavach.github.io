@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-macroeconomic-geopolitical-risk-assessment-feb3-2026',
+            title: 'Global Macroeconomic and Geopolitical Risk Assessment: Historic Trade Deal, Market Rally, and Regional Stability Shifts (February 3, 2026)',
+            shortTitle: 'Assessment Feb 3',
+            excerpt: 'Strategic assessment of Feb 3: Historic India-US trade deal driving record market rally, parliamentary crisis deepening with mass suspensions, precious metals recovery gaining momentum, Maharashtra political succession, Eastern Europe energy survival amid extreme winter, and convergence of diplomatic breakthrough with domestic political turbulence.',
+            date: '2026-02-03',
+            displayDate: 'Feb 3, 2026',
+            category: 'global macroeconomic geopolitical assessment india us trade deal market rally parliamentary crisis precious metals recovery eastern europe energy crisis',
+            tags: ['📊 ASSESSMENT', '🤝 TRADE DEAL', '📈 MARKET RALLY', '⚡ ENERGY CRISIS'],
+            tagColors: ['bg-blue-600', 'bg-green-600', 'bg-yellow-600', 'bg-purple-600'],
+            readTime: '46 min read',
+            author: 'ShramKavach',
+            icon: '📊',
+            gradient: 'from-blue-50 via-green-50 to-yellow-50',
+            borderColor: 'border-blue-600',
+            stats: [
+                { label: 'Trade Deal', value: 'Historic', subtext: 'India-US pact', color: 'text-green-600', icon: '🤝' },
+                { label: 'Market Rally', value: 'Record', subtext: 'All-time highs', color: 'text-yellow-600', icon: '📈' },
+                { label: 'Parliament', value: 'Crisis', subtext: 'Mass suspensions', color: 'text-red-600', icon: '⚖️' },
+                { label: 'Energy', value: 'Survival', subtext: 'Eastern Europe', color: 'text-purple-600', icon: '⚡' }
+            ],
+            link: 'global-macroeconomic-geopolitical-risk-assessment-feb3-2026.html',
+            featured: true
+        },
+        {
             id: 'global-macroeconomic-geopolitical-risk-assessment-feb2-2026',
             title: 'Global Macroeconomic and Geopolitical Risk Assessment: Comprehensive Analysis of Trade Policy Escalation, Commodity Volatility, and Regional Corridor Fragility (February 2, 2026)',
             shortTitle: 'Risk Assessment Feb 2',
