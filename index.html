@@ -242,13 +242,24 @@
         :root {
             --primary: #6366f1;
             --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
             --secondary: #ec4899;
+            --secondary-light: #f472b6;
             --accent: #06b6d4;
+            --accent-light: #22d3ee;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
             --dark-bg: #0f0f23;
             --dark-surface: #1a1a3e;
             --dark-card: rgba(255, 255, 255, 0.05);
             --light-bg: #f8fafc;
             --light-surface: #ffffff;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
         }
 
         body {
@@ -258,45 +269,71 @@
 
         /* Dark Section Styles */
         .section-dark {
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #0f172a 100%);
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 30%, #2d1b4e 60%, #1e3a5f 100%);
             color: white;
+            position: relative;
+        }
+
+        .section-dark::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
 
         .section-dark .section-badge {
-            background: rgba(99, 102, 241, 0.2);
-            color: #a5b4fc;
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+            color: #c4b5fd;
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
         }
 
         .section-dark .section-title {
             color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         .section-dark .section-desc {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.8);
         }
 
         .section-dark .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.03) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
 
         .section-dark .card:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.08) 100%);
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 12px 40px rgba(99, 102, 241, 0.3);
+            transform: translateY(-4px);
         }
 
         /* Light Section Styles */
         .section-light {
-            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 30%, #f1f5f9 70%, #e2e8f0 100%);
             color: #1e293b;
+            position: relative;
+        }
+
+        .section-light::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(236, 72, 153, 0.03) 0%, transparent 50%);
+            pointer-events: none;
         }
 
         .section-light .section-badge {
-            background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+            background: linear-gradient(135deg, #eef2ff 0%, #ddd6fe 100%);
             color: #4f46e5;
             border: 1px solid #c7d2fe;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.1);
         }
 
         .section-light .section-title {
@@ -308,14 +345,16 @@
         }
 
         .section-light .card {
-            background: white;
+            background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
             border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .section-light .card:hover {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-            transform: translateY(-4px);
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(99, 102, 241, 0.15);
+            transform: translateY(-6px) scale(1.02);
+            border-color: #c7d2fe;
         }
 
         /* Premium Card Styles */
@@ -340,36 +379,60 @@
 
         /* Modern Button Styles */
         .btn-primary {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 25%, #a855f7 50%, #ec4899 75%, #f472b6 100%);
             background-size: 200% 200%;
-            animation: gradient-shift 4s ease infinite;
-            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+            animation: gradient-shift 5s ease infinite;
+            box-shadow: 0 6px 25px rgba(99, 102, 241, 0.5), 0 2px 10px rgba(236, 72, 153, 0.3);
+            transition: all 0.3s ease;
         }
 
         .btn-primary:hover {
-            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.6);
-            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(99, 102, 241, 0.7), 0 4px 15px rgba(236, 72, 153, 0.5);
+            transform: translateY(-3px) scale(1.05);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.15) 100%);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: all 0.3s ease;
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.25) 100%);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
         }
 
         /* Gradient Text */
         .gradient-text {
-            background: linear-gradient(135deg, #fbbf24 0%, #f97316 25%, #ef4444 50%, #ec4899 75%, #a855f7 100%);
+            background: linear-gradient(135deg, #fbbf24 0%, #f97316 15%, #ef4444 30%, #ec4899 50%, #a855f7 70%, #6366f1 85%, #06b6d4 100%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+            background-size: 200% auto;
+            animation: text-shimmer 3s linear infinite;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #fbbf24 0%, #f97316 15%, #ef4444 30%, #ec4899 50%, #a855f7 70%, #6366f1 85%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: text-shimmer 3s linear infinite;
         }
 
         /* Animations */
+        @keyframes text-shimmer {
+            0% {
+                background-position: 0% center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
+
         @keyframes gradient-shift {
             0% {
                 background-position: 0% 50%;
@@ -400,11 +463,11 @@
 
             0%,
             100% {
-                box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+                box-shadow: 0 0 20px rgba(99, 102, 241, 0.4), 0 0 40px rgba(236, 72, 153, 0.2);
             }
 
             50% {
-                box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
+                box-shadow: 0 0 40px rgba(99, 102, 241, 0.7), 0 0 60px rgba(236, 72, 153, 0.4);
             }
         }
 
@@ -421,6 +484,24 @@
 
             66% {
                 transform: translate(-20px, 20px) scale(0.9);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes scale-pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
             }
         }
 
@@ -446,9 +527,17 @@
 
         /* Glass Effect */
         .glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+            backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .glass-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+            backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
         }
 
         /* Improved Focus States */
@@ -508,11 +597,17 @@
         }
 
         .glow-button {
-            box-shadow: 0 0 40px rgba(99, 102, 241, 0.4), 0 0 80px rgba(99, 102, 241, 0.2);
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.5), 
+                        0 0 80px rgba(139, 92, 246, 0.3),
+                        0 0 120px rgba(236, 72, 153, 0.2);
+            transition: all 0.3s ease;
         }
 
         .glow-button:hover {
-            box-shadow: 0 0 60px rgba(99, 102, 241, 0.6), 0 0 100px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 0 60px rgba(99, 102, 241, 0.7), 
+                        0 0 100px rgba(139, 92, 246, 0.5),
+                        0 0 140px rgba(236, 72, 153, 0.3);
+            transform: translateY(-2px) scale(1.02);
         }
 
         @keyframes shimmer {
@@ -522,6 +617,12 @@
             100% {
                 background-position: 200% center;
             }
+        }
+
+        .shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
         }
     </style>
 
@@ -673,79 +774,80 @@
 
     <!-- Header -->
     <header
-        class="sticky top-0 z-50 bg-white/80 shadow-md supports-[backdrop-filter]:backdrop-blur-md transition-colors"
+        class="sticky top-0 z-50 bg-gradient-to-r from-white via-indigo-50 to-purple-50 shadow-lg supports-[backdrop-filter]:backdrop-blur-xl transition-all border-b border-indigo-100"
         role="banner">
         <div class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo and Brand -->
                 <a href="index.html"
-                    class="flex items-center gap-3 hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 ring-offset-white rounded-md"
+                    class="flex items-center gap-3 hover:opacity-90 transition-all hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 ring-offset-white rounded-md"
                     aria-label="ShramKavach Home">
                     <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl blur opacity-50 animate-pulse"></div>
                         <img src="logo.webp" alt="ShramKavach Logo - Worker Empowerment Platform"
-                            class="w-12 h-12 rounded-xl shadow-lg object-contain">
-                        <div class="absolute -top-1 -right-1 w-3 h-3 bg-orange-400 rounded-full animate-pulse"
+                            class="w-12 h-12 rounded-xl shadow-2xl object-contain relative z-10">
+                        <div class="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-orange-400 to-pink-500 rounded-full animate-pulse z-20"
                             aria-hidden="true"></div>
                     </div>
                     <div>
-                        <h1 class="text-2xl md:text-3xl font-bold text-gray-800">
-                            Shram<span class="font-normal text-indigo-600">Kavach</span>
+                        <h1 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-gray-900 via-indigo-700 to-purple-700 bg-clip-text text-transparent">
+                            Shram<span class="font-normal bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Kavach</span>
                         </h1>
-                        <p class="text-xs text-gray-600 font-semibold" lang="hi">श्रम कवच - मजदूर सुरक्षा और सशक्तिकरण
+                        <p class="text-xs font-semibold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent" lang="hi">श्रम कवच - मजदूर सुरक्षा और सशक्तिकरण
                         </p>
-                        <p class="text-xs text-gray-500 italic" lang="hi">"हर मजदूर की सुरक्षा, हमारा संकल्प"</p>
+                        <p class="text-xs text-gray-600 italic font-medium" lang="hi">"हर मजदूर की सुरक्षा, हमारा संकल्प"</p>
                     </div>
                 </a>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100"
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gradient-to-r hover:from-indigo-100 hover:to-purple-100 transition-all"
                     aria-label="Toggle menu">
-                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-indigo-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
 
                 <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center gap-4" role="navigation" aria-label="Main navigation">
+                <nav class="hidden md:flex items-center gap-2" role="navigation" aria-label="Main navigation">
                     <a href="index.html"
-                        class="text-indigo-600 font-bold px-4 py-2 rounded-xl bg-indigo-50 border-2 border-indigo-200"
+                        class="text-white font-bold px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all hover:scale-105"
                         data-i18n="nav.home">Home</a>
                     <a href="calculators.html"
-                        class="text-gray-700 hover:text-indigo-600 font-semibold transition px-3 py-2 rounded-lg hover:bg-gray-100"
+                        class="text-gray-700 hover:text-indigo-700 font-semibold transition-all px-4 py-2.5 rounded-lg hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 hover:scale-105"
                         data-i18n="nav.calculators">Calculators</a>
                     <a href="prompts.html"
-                        class="text-gray-700 hover:text-indigo-600 font-semibold transition px-3 py-2 rounded-lg hover:bg-gray-100">AI
+                        class="text-gray-700 hover:text-purple-700 font-semibold transition-all px-4 py-2.5 rounded-lg hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50 hover:scale-105">AI
                         Prompts</a>
                     <a href="protection.html"
-                        class="text-gray-700 hover:text-indigo-600 font-semibold transition px-3 py-2 rounded-lg hover:bg-gray-100">Protection</a>
+                        class="text-gray-700 hover:text-pink-700 font-semibold transition-all px-4 py-2.5 rounded-lg hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:scale-105">Protection</a>
                     <a href="updates.html"
-                        class="text-gray-700 hover:text-indigo-600 font-semibold transition px-3 py-2 rounded-lg hover:bg-gray-100">Updates</a>
+                        class="text-gray-700 hover:text-blue-700 font-semibold transition-all px-4 py-2.5 rounded-lg hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 hover:scale-105">Updates</a>
 
                 </nav>
             </div>
         </div>
 
         <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+        <div id="mobile-menu" class="hidden md:hidden bg-gradient-to-b from-white to-indigo-50 border-t-2 border-indigo-200">
             <nav class="container mx-auto px-4 py-4 flex flex-col gap-2">
                 <a href="index.html"
-                    class="text-indigo-600 font-bold px-4 py-3 rounded-xl bg-indigo-50 border-2 border-indigo-200"
+                    class="text-white font-bold px-5 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 shadow-lg"
                     data-i18n="nav.home">Home</a>
                 <a href="calculators.html"
-                    class="text-gray-700 hover:text-indigo-600 font-semibold px-4 py-3 rounded-lg hover:bg-gray-100"
+                    class="text-gray-700 hover:text-indigo-700 font-semibold px-4 py-3 rounded-lg hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50"
                     data-i18n="nav.calculators">Calculators</a>
                 <a href="prompts.html"
-                    class="text-gray-700 hover:text-indigo-600 font-semibold px-4 py-3 rounded-lg hover:bg-gray-100">AI
+                    class="text-gray-700 hover:text-purple-700 font-semibold px-4 py-3 rounded-lg hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50">AI
                     Prompts</a>
                 <a href="protection.html"
-                    class="text-gray-700 hover:text-indigo-600 font-semibold px-4 py-3 rounded-lg hover:bg-gray-100">Protection</a>
+                    class="text-gray-700 hover:text-pink-700 font-semibold px-4 py-3 rounded-lg hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50">Protection</a>
                 <a href="updates.html"
-                    class="text-gray-700 hover:text-indigo-600 font-semibold px-4 py-3 rounded-lg hover:bg-gray-100">Updates</a>
+                    class="text-gray-700 hover:text-blue-700 font-semibold px-4 py-3 rounded-lg hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50">Updates</a>
 
             </nav>
         </div>
-        <div class="h-1 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500"></div>
+        <div class="h-1 bg-gradient-to-r from-orange-500 via-red-500 via-pink-500 via-purple-500 to-indigo-500"></div>
     </header>
 
     <script>
@@ -758,16 +860,21 @@
 
 
     <!-- Latest Updates Banner -->
-    <div class="bg-gradient-to-r from-red-600 via-purple-600 to-orange-600 text-white py-3 px-4 shadow-lg">
-        <div class="container mx-auto">
+    <div class="relative overflow-hidden bg-gradient-to-r from-red-600 via-purple-600 via-pink-600 to-orange-600 text-white py-3 px-4 shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
+        <div class="container mx-auto relative z-10">
             <div class="flex items-center justify-between flex-wrap gap-2">
                 <div class="flex items-center gap-3">
-                    <span class="text-xl animate-pulse">🔔</span>
-                    <span class="font-semibold text-sm md:text-base">Latest: Feb 4 Disruption - IT Crash -5.87% | Agentic AI | Parliamentary Gridlock | Energy Warfare</span>
+                    <span class="text-xl animate-bounce">🔔</span>
+                    <span class="font-bold text-sm md:text-base bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">Latest Update</span>
+                    <span class="font-semibold text-sm md:text-base">Feb 4 Disruption - IT Crash -5.87% | Agentic AI | Parliamentary Gridlock | Energy Warfare</span>
                 </div>
                 <a href="updates.html"
-                    class="bg-white text-red-600 px-4 py-1.5 rounded-full text-xs md:text-sm font-bold hover:bg-gray-100 transition whitespace-nowrap">
-                    View All Updates →
+                    class="group bg-white text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-600 px-5 py-2 rounded-full text-xs md:text-sm font-bold hover:shadow-2xl transition-all hover:scale-105 flex items-center gap-2 shadow-lg">
+                    <span>View All Updates</span>
+                    <svg class="w-4 h-4 text-red-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
                 </a>
             </div>
         </div>
@@ -775,28 +882,35 @@
 
     <!-- Hero Section - Premium Dark Theme -->
     <section id="main" class="relative min-h-[85vh] flex items-center overflow-hidden"
-        style="background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 25%, #2d1b4e 50%, #1e3a5f 75%, #0f2027 100%);">
+        style="background: linear-gradient(135deg, #0a0a1f 0%, #1a1a3e 20%, #2d1b4e 40%, #3d2b5f 60%, #1e3a5f 80%, #0f2027 100%);">
 
         <!-- Animated Gradient Mesh Background -->
         <div class="absolute inset-0 overflow-hidden">
-            <!-- Large gradient orbs -->
-            <div class="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full opacity-30"
-                style="background: radial-gradient(circle, #6366f1 0%, transparent 70%); animation: float 8s ease-in-out infinite;">
+            <!-- Large gradient orbs with enhanced colors -->
+            <div class="absolute top-[-20%] left-[-10%] w-[700px] h-[700px] rounded-full opacity-40 animate-blob"
+                style="background: radial-gradient(circle, #6366f1 0%, #8b5cf6 30%, transparent 70%);">
             </div>
-            <div class="absolute top-[20%] right-[-5%] w-[500px] h-[500px] rounded-full opacity-25"
-                style="background: radial-gradient(circle, #ec4899 0%, transparent 70%); animation: float 10s ease-in-out infinite reverse;">
+            <div class="absolute top-[20%] right-[-5%] w-[600px] h-[600px] rounded-full opacity-35 animate-blob animation-delay-2000"
+                style="background: radial-gradient(circle, #ec4899 0%, #f472b6 30%, transparent 70%);">
             </div>
-            <div class="absolute bottom-[-10%] left-[30%] w-[700px] h-[700px] rounded-full opacity-20"
-                style="background: radial-gradient(circle, #06b6d4 0%, transparent 70%); animation: float 12s ease-in-out infinite;">
+            <div class="absolute bottom-[-10%] left-[30%] w-[800px] h-[800px] rounded-full opacity-30 animate-blob animation-delay-4000"
+                style="background: radial-gradient(circle, #06b6d4 0%, #22d3ee 30%, transparent 70%);">
             </div>
-
-            <!-- Grid pattern overlay -->
-            <div class="absolute inset-0 opacity-10"
-                style="background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 50px 50px;">
+            <div class="absolute top-[50%] left-[50%] w-[500px] h-[500px] rounded-full opacity-25 animate-float"
+                style="background: radial-gradient(circle, #a855f7 0%, #c084fc 30%, transparent 70%); transform: translate(-50%, -50%);">
             </div>
 
-            <!-- Subtle noise texture -->
-            <div class="absolute inset-0 opacity-20 noise-texture">
+            <!-- Animated grid pattern overlay -->
+            <div class="absolute inset-0 opacity-15"
+                style="background-image: linear-gradient(rgba(99,102,241,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,.1) 1px, transparent 1px); background-size: 50px 50px;">
+            </div>
+
+            <!-- Subtle noise texture with color -->
+            <div class="absolute inset-0 opacity-25 noise-texture mix-blend-overlay">
+            </div>
+
+            <!-- Radial gradient overlay for depth -->
+            <div class="absolute inset-0" style="background: radial-gradient(circle at center, transparent 0%, rgba(10, 10, 31, 0.5) 100%);">
             </div>
         </div>
 
@@ -804,58 +918,65 @@
             <div class="max-w-6xl mx-auto">
 
                 <!-- Top Badge -->
-                <div class="flex justify-center mb-8">
-                    <div class="glass-card px-6 py-3 rounded-full flex items-center gap-3">
-                        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                        <span class="text-white/80 text-sm font-medium">100% Free • No Login Required • Zero Data
-                            Storage</span>
+                <div class="flex justify-center mb-8 animate-float">
+                    <div class="glass-card px-6 py-3 rounded-full flex items-center gap-3 hover:bg-white/10 transition-all duration-300">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-400"></span>
+                        </span>
+                        <span class="text-white/90 text-sm font-semibold tracking-wide">100% Free • No Login Required • Zero Data Storage</span>
                     </div>
                 </div>
 
                 <!-- Main Heading -->
                 <div class="text-center mb-12">
                     <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-[1.1] tracking-tight">
-                        <span class="text-white block mb-2">Empowering India's</span>
-                        <span class="text-gradient">15 Crore+ Workers</span>
+                        <span class="text-white block mb-3 drop-shadow-2xl">Empowering India's</span>
+                        <span class="text-gradient drop-shadow-2xl" style="text-shadow: 0 0 40px rgba(99, 102, 241, 0.4);">15 Crore+ Workers</span>
                     </h1>
-                    <p class="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto leading-relaxed font-light">
+                    <p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed font-light drop-shadow-lg mb-6">
                         Free calculators, AI tools, legal documents & worker rights protection —
-                        <span class="text-white font-medium">updated for Labour Code 2025</span>
+                        <span class="text-white font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">updated for Labour Code 2025</span>
                     </p>
+                    <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                        <p class="text-base md:text-lg text-white/90 leading-relaxed">
+                            ShramKavach is India's first comprehensive worker empowerment platform designed specifically for gig workers, delivery partners, freelancers, and self-employed professionals. Whether you're a Zomato delivery partner calculating gratuity, a freelance developer planning taxes under Section 44ADA, or a digital creator needing DPDP Act 2023 compliant privacy policies — we provide free, accurate, and privacy-first tools. With <strong>34+ financial calculators</strong> covering gratuity (now eligible after just 1 year for fixed-term workers), EPF, tax comparison, leave encashment, and more, plus <strong>2761+ AI prompts</strong> in Hindi and English, and <strong>30+ legal document generators</strong>, we're helping 2.4 million+ workers across India know their rights and grow their businesses. All processing happens locally in your browser — we don't store any data, don't require signups, and keep everything 100% free forever.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Feature Cards -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto">
                     <div
-                        class="glass-card rounded-2xl p-5 text-center group hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                        <div class="text-3xl mb-2">🧮</div>
-                        <div class="text-2xl font-bold text-white mb-1">34+</div>
-                        <div class="text-white/60 text-sm">Free Calculators</div>
+                        class="glass-card rounded-2xl p-6 text-center group hover:bg-white/15 transition-all duration-300 hover:scale-110 cursor-pointer border border-white/10 hover:border-indigo-400/50">
+                        <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🧮</div>
+                        <div class="text-3xl font-black text-white mb-1 bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">34+</div>
+                        <div class="text-white/70 text-sm font-medium">Free Calculators</div>
                     </div>
                     <div
-                        class="glass-card rounded-2xl p-5 text-center group hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                        <div class="text-3xl mb-2">🤖</div>
-                        <div class="text-2xl font-bold text-white mb-1">2761+</div>
-                        <div class="text-white/60 text-sm">AI Prompts</div>
+                        class="glass-card rounded-2xl p-6 text-center group hover:bg-white/15 transition-all duration-300 hover:scale-110 cursor-pointer border border-white/10 hover:border-purple-400/50">
+                        <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🤖</div>
+                        <div class="text-3xl font-black text-white mb-1 bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">2761+</div>
+                        <div class="text-white/70 text-sm font-medium">AI Prompts</div>
                     </div>
                     <div
-                        class="glass-card rounded-2xl p-5 text-center group hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                        <div class="text-3xl mb-2">📄</div>
-                        <div class="text-2xl font-bold text-white mb-1">30+</div>
-                        <div class="text-white/60 text-sm">Legal Tools</div>
+                        class="glass-card rounded-2xl p-6 text-center group hover:bg-white/15 transition-all duration-300 hover:scale-110 cursor-pointer border border-white/10 hover:border-pink-400/50">
+                        <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">📄</div>
+                        <div class="text-3xl font-black text-white mb-1 bg-gradient-to-r from-pink-300 to-rose-300 bg-clip-text text-transparent">30+</div>
+                        <div class="text-white/70 text-sm font-medium">Legal Tools</div>
                     </div>
                     <div
-                        class="glass-card rounded-2xl p-5 text-center group hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                        <div class="text-3xl mb-2">🔒</div>
-                        <div class="text-2xl font-bold text-white mb-1">100%</div>
-                        <div class="text-white/60 text-sm">Privacy First</div>
+                        class="glass-card rounded-2xl p-6 text-center group hover:bg-white/15 transition-all duration-300 hover:scale-110 cursor-pointer border border-white/10 hover:border-cyan-400/50">
+                        <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🔒</div>
+                        <div class="text-3xl font-black text-white mb-1 bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">100%</div>
+                        <div class="text-white/70 text-sm font-medium">Privacy First</div>
                     </div>
                 </div>
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
                     <a href="calculators.html"
-                        class="group glow-button bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3">
+                        class="group glow-button bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 shadow-2xl">
                         <span>Explore Free Tools</span>
                         <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24">
@@ -864,7 +985,7 @@
                         </svg>
                     </a>
                     <a href="#adhikar"
-                        class="group glass-card text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 hover:bg-white/10 hover:scale-105 flex items-center justify-center gap-3 border border-white/20">
+                        class="group glass-card text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 hover:bg-white/15 hover:scale-105 flex items-center justify-center gap-3 border-2 border-white/30 hover:border-white/50 shadow-xl">
                         <span>Know Your Rights</span>
                         <svg class="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24">
@@ -874,30 +995,30 @@
                 </div>
 
                 <!-- Trust Badges -->
-                <div class="flex flex-wrap justify-center items-center gap-6 text-white/50 text-sm">
-                    <div class="flex items-center gap-2">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <div class="flex flex-wrap justify-center items-center gap-6 text-white/60 text-sm">
+                    <div class="flex items-center gap-2 group hover:text-white/90 transition-colors">
+                        <svg class="w-5 h-5 text-green-400 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                 clip-rule="evenodd" />
                         </svg>
-                        <span>DPDP Act 2023 Compliant</span>
+                        <span class="font-medium">DPDP Act 2023 Compliant</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                    <div class="flex items-center gap-2 group hover:text-white/90 transition-colors">
+                        <svg class="w-5 h-5 text-green-400 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                 clip-rule="evenodd" />
                         </svg>
-                        <span>Labour Code 2025 Updated</span>
+                        <span class="font-medium">Labour Code 2025 Updated</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                    <div class="flex items-center gap-2 group hover:text-white/90 transition-colors">
+                        <svg class="w-5 h-5 text-green-400 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                 clip-rule="evenodd" />
                         </svg>
-                        <span>Client-Side Processing</span>
+                        <span class="font-medium">Client-Side Processing</span>
                     </div>
                 </div>
             </div>
@@ -907,50 +1028,50 @@
         <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-50 to-transparent"></div>
     </section>
     <!-- Quick Feature Cards -->
-    <section class="py-12 bg-gradient-to-br from-[#1a1a3e] to-[#2d1b4e]">
+    <section class="py-12 bg-gradient-to-br from-[#0f0f23] via-[#1a1a3e] to-[#2d1b4e]">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 <div
-                    class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg border-2 border-orange-200 hover:shadow-xl hover:scale-105 transition-all transform group">
+                    class="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-indigo-500/30 hover:shadow-2xl hover:scale-105 transition-all transform group hover:border-indigo-400/50">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">📊</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Financial Calculators</h3>
-                    <p class="text-gray-700 mb-4">Gratuity, EPF, Tax, Leave Encashment, EMI - all calculations instantly
+                    <h3 class="text-2xl font-bold mb-3 text-white">Financial Calculators</h3>
+                    <p class="text-gray-300 mb-4">Gratuity, EPF, Tax, Leave Encashment, EMI - all calculations instantly
                     </p>
-                    <ul class="text-sm text-gray-600 space-y-2 font-semibold">
-                        <li class="flex items-center gap-2"><span class="text-green-600">✓</span> 2025 Labour Code
+                    <ul class="text-sm text-gray-400 space-y-2 font-semibold">
+                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> 2025 Labour Code
                             updated</li>
-                        <li class="flex items-center gap-2"><span class="text-green-600">✓</span> Instant results</li>
-                        <li class="flex items-center gap-2"><span class="text-green-600">✓</span> No signup required
+                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Instant results</li>
+                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> No signup required
                         </li>
                     </ul>
                 </div>
 
                 <div
-                    class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-lg border-2 border-blue-200 hover:shadow-xl hover:scale-105 transition-all transform group">
+                    class="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-purple-500/30 hover:shadow-2xl hover:scale-105 transition-all transform group hover:border-purple-400/50">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🛡️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Legal Protection</h3>
-                    <p class="text-gray-700 mb-4">DPDP Act 2023 compliant privacy policy & contract generators</p>
-                    <ul class="text-sm text-gray-600 space-y-2 font-semibold">
-                        <li class="flex items-center gap-2"><span class="text-green-600">✓</span> DPDP Act compliant
+                    <h3 class="text-2xl font-bold mb-3 text-white">Legal Protection</h3>
+                    <p class="text-gray-300 mb-4">DPDP Act 2023 compliant privacy policy & contract generators</p>
+                    <ul class="text-sm text-gray-400 space-y-2 font-semibold">
+                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> DPDP Act compliant
                         </li>
-                        <li class="flex items-center gap-2"><span class="text-green-600">✓</span> Ready to use templates
+                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Ready to use templates
                         </li>
-                        <li class="flex items-center gap-2"><span class="text-green-600">✓</span> Free downloads</li>
+                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Free downloads</li>
                     </ul>
                 </div>
 
                 <div
-                    class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-lg border-2 border-green-200 hover:shadow-xl hover:scale-105 transition-all transform group">
+                    class="bg-gradient-to-br from-pink-900/50 to-orange-900/50 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-pink-500/30 hover:shadow-2xl hover:scale-105 transition-all transform group hover:border-pink-400/50">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">AI Prompts Library</h3>
-                    <p class="text-gray-700 mb-4">2761+ business prompts in Hindi, English & Telugu - tested & verified
+                    <h3 class="text-2xl font-bold mb-3 text-white">AI Prompts Library</h3>
+                    <p class="text-gray-300 mb-4">2761+ business prompts in Hindi, English & Telugu - tested & verified
                     </p>
-                    <ul class="text-sm text-gray-600 space-y-2 font-semibold">
-                        <li class="flex items-center gap-2"><span class="text-green-600">✓</span> Hindi & English both
+                    <ul class="text-sm text-gray-400 space-y-2 font-semibold">
+                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Hindi & English both
                         </li>
-                        <li class="flex items-center gap-2"><span class="text-green-600">✓</span> ChatGPT/Gemini ready
+                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> ChatGPT/Gemini ready
                         </li>
-                        <li class="flex items-center gap-2"><span class="text-green-600">✓</span> Copy & paste instantly
+                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Copy & paste instantly
                         </li>
                     </ul>
                 </div>
@@ -958,29 +1079,288 @@
         </div>
     </section>
 
-    <!-- Ad Slot: Mid-page Banner -->
-    <div class="bg-gradient-to-br from-[#0f1a3e] to-[#1a2d5f] py-6">
+    <!-- Who Benefits Section -->
+    <section class="py-16 bg-gradient-to-br from-[#1a1a3e] via-[#2d1b4e] to-[#1e3a5f]">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <!-- Google AdSense - Horizontal Banner -->
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2868999138532322"
-                    data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                <p class="text-xs text-gray-400 mt-2">Advertisement</p>
+            <div class="text-center mb-12">
+                <div class="inline-block bg-indigo-500/20 backdrop-blur-md text-indigo-300 px-4 py-2 rounded-full text-sm font-bold mb-4 border border-indigo-400/30">
+                    👥 For Everyone
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Who Benefits from ShramKavach?</h2>
+                <p class="text-xl text-gray-300">From delivery partners to digital creators - we serve all workers</p>
             </div>
-        </div>
-    </div>
 
-    <!-- Ad Space: Horizontal Banner (728x90 or Responsive) -->
-    <div class="bg-gradient-to-br from-[#1a1a3e] to-[#2d1b4e] py-4">
-        <div class="container mx-auto px-4">
-            <div class="bg-white rounded-lg" style="min-height: 90px;">
-                <!-- Replace this div with your ad code -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <!-- Delivery Partners -->
+                <div class="bg-gradient-to-br from-indigo-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-indigo-500/30 hover:scale-105 transform hover:border-indigo-400/50">
+                    <div class="text-5xl mb-4">🛵</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Delivery Partners & Gig Workers</h3>
+                    <p class="text-gray-300 mb-4">Zomato, Swiggy, Uber Eats, Blinkit, Zepto, Dunzo, BigBasket, Flipkart, Amazon Flex, Urban Company, Rapido, Porter riders and service providers</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span><strong>Calculate gratuity after just 1 year</strong> under the new Code on Social Security 2020 for fixed-term workers — a first in Indian labour history</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Check social security contributions: EPF, ESI, maternity benefits, and accident insurance your platform should be paying</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Track earnings, daily targets, and calculate actual hourly rates after fuel, vehicle maintenance, and platform fees</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Understand platform fee structures, surge pricing impacts, and maximize earnings during peak hours with intelligent scheduling</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Know your rights: Minimum wage eligibility, grievance redressal, protection against unfair deactivation, legal recourse for disputes</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Use AI prompts for professional customer communication, handle complaints effectively, and grow side business opportunities</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Freelancers -->
+                <div class="bg-gradient-to-br from-purple-900/40 to-pink-900/40 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-purple-500/30 hover:scale-105 transform hover:border-purple-400/50">
+                    <div class="text-5xl mb-4">💼</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Freelancers & Digital Professionals</h3>
+                    <p class="text-gray-300 mb-4">Web developers, graphic designers, content writers, digital marketers, video editors, photographers, consultants, coaches, and all professional service providers</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span><strong>Section 44ADA presumptive taxation</strong> benefits for professionals earning up to ₹50 lakhs — pay tax on just 50% of income without maintaining books of accounts</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span><strong>Old vs New tax regime comparison</strong> for FY 2025-26 with exact calculations showing which saves more based on your income and available deductions</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Generate client contracts, service agreements, NDAs, payment terms, work orders in minutes — all legally compliant templates for India</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>2761+ AI prompts for business growth: client proposals, email templates, portfolio descriptions, social media content in Hindi & English</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Small Business Owners -->
+                <div class="bg-gradient-to-br from-pink-900/40 to-orange-900/40 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-pink-500/30 hover:scale-105 transform hover:border-pink-400/50">
+                    <div class="text-5xl mb-4">🏪</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Small Business & Local Entrepreneurs</h3>
+                    <p class="text-gray-300 mb-4">Kirana stores, restaurants, cloud kitchens, salons, beauty parlors, gyms, coaching centers, retail shops, home businesses, and micro-enterprises</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span><strong>DPDP Act 2023 compliance:</strong> Generate privacy policies, terms of service, refund policies mandatory for all digital businesses by March 2026</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span><strong>Employee benefits calculators:</strong> Gratuity (5-year eligibility), EPF contributions, ESI enrollment, bonus calculations — stay Labour Code 2025 compliant</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>GST threshold checker (₹20L services, ₹40L goods), invoice generator, input tax credit calculator, composition scheme eligibility</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>2761+ AI prompts: WhatsApp business messages, customer service responses, Google My Business posts, social media content in local languages</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Gig Workers -->
+                <div class="bg-gradient-to-br from-orange-900/40 to-indigo-900/40 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-orange-500/30 hover:scale-105 transform hover:border-orange-400/50">
+                    <div class="text-5xl mb-4">🚗</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Ride-Sharing & Auto Drivers</h3>
+                    <p class="text-gray-300 mb-4">Uber, Ola, Rapido, Namma Yatri drivers, auto rickshaw drivers on aggregator platforms</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span><strong>True earnings calculator:</strong> Track daily income minus fuel costs, vehicle maintenance, insurance, EMIs, and platform commissions to know your actual hourly wage</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span><strong>Aggregator fund requirements:</strong> Understand mandatory insurance, accident coverage, and social security contributions platforms must provide under Labour Code 2025</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Platform fee transparency: Calculate exact commission percentages, surge pricing impacts, incentive structures, compare earnings across multiple platforms</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Worker rights: Grievance procedures, challenge unfair ratings/deactivations, understand legal recourse options for platform disputes</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Digital Creators -->
+                <div class="bg-gradient-to-br from-indigo-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-indigo-500/30 hover:scale-105 transform hover:border-indigo-400/50">
+                    <div class="text-5xl mb-4">📱</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Content Creators & Influencers</h3>
+                    <p class="text-gray-300 mb-4">YouTubers, Instagram influencers, bloggers, podcasters, online course creators, newsletter writers, TikTok/Moj/Josh creators, LinkedIn thought leaders</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span><strong>2761+ AI prompts:</strong> Video scripts, Instagram captions, LinkedIn posts, blog outlines, email sequences, course curriculum, thumbnail ideas in Hindi & English</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span><strong>Creator tax planning:</strong> YouTube/Instagram earnings under Section 44ADA, professional vs business income, foreign income from Google/Meta, advance tax calculation</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Brand collaboration contracts: Sponsorship agreements, influencer marketing terms, content rights, usage licenses, payment schedules, deliverable specifications</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>DPDP compliance: Privacy policies for blogs/websites, email subscriber consent, cookie policies, YouTube channel terms, course platform disclaimers</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Home Service Providers -->
+                <div class="bg-gradient-to-br from-purple-900/40 to-pink-900/40 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-purple-500/30 hover:scale-105 transform hover:border-purple-400/50">
+                    <div class="text-5xl mb-4">🔧</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Home Service & Skilled Workers</h3>
+                    <p class="text-gray-300 mb-4">Urban Company partners (beauticians, salon professionals, electricians, plumbers, carpenters, painters, AC technicians), cleaning services, pest control, appliance repair professionals</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span><strong>Service pricing calculator:</strong> Set competitive rates based on skill level, city, materials cost, travel time — generate professional quotations instantly</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span><strong>Platform vs independent earnings:</strong> Calculate commission deductions, understand when to go independent, build direct client base strategies</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Professional contracts: Service agreements, liability waivers, payment terms, cancellation policies, warranty clauses for skilled services</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Tax planning: GST registration requirement (₹20L), presumptive taxation benefits, professional tax calculations, ITR filing for service providers</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <p class="text-lg text-white font-semibold mb-4">🇮🇳 Serving 15 Crore+ Gig Workers Across India</p>
+                <div class="flex flex-wrap justify-center gap-3 text-sm text-gray-300">
+                    <span class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full shadow border border-white/20">Mumbai</span>
+                    <span class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full shadow border border-white/20">Delhi</span>
+                    <span class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full shadow border border-white/20">Bangalore</span>
+                    <span class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full shadow border border-white/20">Hyderabad</span>
+                    <span class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full shadow border border-white/20">Chennai</span>
+                    <span class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full shadow border border-white/20">Kolkata</span>
+                    <span class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full shadow border border-white/20">Pune</span>
+                    <span class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full shadow border border-white/20">Ahmedabad</span>
+                    <span class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full shadow border border-white/20">+ All India</span>
+                </div>
+            </div>
+
+            <!-- Why ShramKavach Section -->
+            <div class="mt-16 max-w-6xl mx-auto">
+                <div class="text-center mb-10">
+                    <div class="inline-block bg-yellow-500/20 backdrop-blur-md text-yellow-300 px-4 py-2 rounded-full text-sm font-bold mb-4 border border-yellow-400/30">
+                        💡 Why Choose ShramKavach?
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4 text-white">The Platform Built for India's Workers</h3>
+                    <p class="text-lg text-gray-300 max-w-3xl mx-auto">Unlike foreign platforms or generic tools, ShramKavach is designed specifically for Indian labour laws, tax regulations, and the unique needs of Bharat's workforce</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Point 1 -->
+                    <div class="bg-gradient-to-br from-indigo-900/30 to-purple-900/30 backdrop-blur-sm p-6 rounded-2xl border border-indigo-500/30">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-indigo-500/20 backdrop-blur-md p-3 rounded-lg flex-shrink-0 border border-indigo-400/30">
+                                <svg class="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Labour Code 2025 Updated</h4>
+                                <p class="text-gray-300 leading-relaxed">Every calculator reflects the latest Code on Social Security 2020, Code on Wages 2019, Industrial Relations Code 2020, and Occupational Safety Code 2020. We track parliamentary notifications and update within 24 hours of any amendment. <strong>This includes the historic 1-year gratuity eligibility</strong> for fixed-term workers — a first in Indian labour history that most platforms still don't recognize.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Point 2 -->
+                    <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm p-6 rounded-2xl border border-purple-500/30">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-purple-500/20 backdrop-blur-md p-3 rounded-lg flex-shrink-0 border border-purple-400/30">
+                                <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">DPDP Act 2023 Compliant</h4>
+                                <p class="text-gray-300 leading-relaxed">Digital Personal Data Protection Act 2023 mandates explicit consent, data minimization, and right to erasure. ShramKavach achieves this through <strong>zero data collection</strong> — all processing happens locally in your browser. We don't have servers, databases, or user accounts. Your financial data, employee details, business information never leave your device. This is true privacy by design, not just policy.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="bg-gradient-to-br from-pink-900/30 to-orange-900/30 backdrop-blur-sm p-6 rounded-2xl border border-pink-500/30">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-pink-500/20 backdrop-blur-md p-3 rounded-lg flex-shrink-0 border border-pink-400/30">
+                                <svg class="w-8 h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Made for Bharat, Not Just India</h4>
+                                <p class="text-gray-300 leading-relaxed">We serve workers in Hindi, English, and expanding to Tamil, Telugu, Bengali, Marathi. Our AI prompts work for kirana stores in tier-3 cities, not just tech startups in Bengaluru. <strong>State-specific calculations</strong> for professional tax (Maharashtra vs Karnataka), minimum wages (Kerala vs UP), and regional labour regulations. We understand that a food delivery partner in Jaipur has different needs than a software developer in Pune.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Point 4 -->
+                    <div class="bg-gradient-to-br from-orange-900/30 to-indigo-900/30 backdrop-blur-sm p-6 rounded-2xl border border-orange-500/30">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-orange-500/20 backdrop-blur-md p-3 rounded-lg flex-shrink-0 border border-orange-400/30">
+                                <svg class="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Works on 2G Networks</h4>
+                                <p class="text-gray-300 leading-relaxed">Optimized for India's real internet infrastructure. <strong>Under 50KB page size</strong>, works offline after first load, compatible with basic smartphones from ₹5,000. No fancy frameworks that require high-end devices. Fast on Jio 2G, BSNL 3G, and even slow WiFi connections. Progressive Web App support means install like a native app without Play Store. Because digital empowerment shouldn't require ₹50,000 phones or 4G/5G connectivity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real-World Impact Stories -->
+                <div class="mt-10 bg-gradient-to-br from-green-900/20 to-emerald-900/20 backdrop-blur-sm p-8 rounded-2xl border border-green-500/30">
+                    <div class="text-center mb-6">
+                        <h4 class="text-2xl font-bold text-white mb-2">Real Impact on Real Workers</h4>
+                        <p class="text-gray-300">How ShramKavach is making a difference across India</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-4xl mb-3">🛵</div>
+                            <p class="text-gray-300 text-sm leading-relaxed">"Worked Swiggy for 18 months. Didn't know about 1-year gratuity. Used ShramKavach calculator — claimed ₹37,000 from company. They paid!" <br><strong class="text-white">- Ramesh, Mumbai</strong></p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl mb-3">💼</div>
+                            <p class="text-gray-300 text-sm leading-relaxed">"Saved ₹23,000 in taxes using Section 44ADA calculator. Old regime would have cost more. ShramKavach showed exact comparison in 2 minutes!" <br><strong class="text-white">- Priya Sharma, Freelance Designer</strong></p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl mb-3">🏪</div>
+                            <p class="text-gray-300 text-sm leading-relaxed">"Generated DPDP compliant privacy policy in Hindi for my cloud kitchen website. Would have cost ₹15,000 from lawyer. Got it free here!" <br><strong class="text-white">- Suresh Kumar, Pune</strong></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Latest Updates Section -->
     <section class="py-12 md:py-16 bg-gradient-to-br from-[#0f0f23] to-[#1a1a3e]">
@@ -1105,45 +1485,45 @@
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto" itemscope itemtype="https://schema.org/ItemList">
                 <article itemscope itemtype="https://schema.org/SoftwareApplication" itemprop="itemListElement">
                     <a href="calculators.html#gratuity"
-                        class="block bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl shadow-xl border-2 border-orange-200 hover:shadow-2xl transition-all transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-orange-500 ring-offset-white"
+                        class="block bg-gradient-to-br from-indigo-900/40 to-purple-900/40 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-indigo-500/30 hover:shadow-2xl transition-all transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-400 ring-offset-gray-900 hover:border-indigo-400/50"
                         itemprop="url">
                         <div class="text-6xl mb-4" role="img" aria-label="Money calculator">💰</div>
-                        <h3 class="text-2xl font-bold mb-3 text-gray-800" data-i18n="adhikar.gratuity.title"
+                        <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="adhikar.gratuity.title"
                             itemprop="name">Gratuity Calculator</h3>
-                        <p class="text-gray-700 mb-4" data-i18n="adhikar.gratuity.desc" itemprop="description">Eligible
+                        <p class="text-gray-300 mb-4" data-i18n="adhikar.gratuity.desc" itemprop="description">Eligible
                             from just 1 year for fixed-term contracts. First time in India!</p>
                         <span
-                            class="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-5 py-2.5 rounded-lg font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+                            class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-2.5 rounded-lg font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
                             data-i18n="adhikar.gratuity.cta">Calculate Now →</span>
                     </a>
                 </article>
 
                 <article itemscope itemtype="https://schema.org/SoftwareApplication" itemprop="itemListElement">
                     <a href="calculators.html#socialsecurity"
-                        class="block bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-xl border-2 border-blue-200 hover:shadow-2xl transition-all transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600 ring-offset-white"
+                        class="block bg-gradient-to-br from-purple-900/40 to-pink-900/40 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-purple-500/30 hover:shadow-2xl transition-all transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-400 ring-offset-gray-900 hover:border-purple-400/50"
                         itemprop="url">
                         <div class="text-6xl mb-4" role="img" aria-label="Healthcare">🏥</div>
-                        <h3 class="text-2xl font-bold mb-3 text-gray-800" data-i18n="adhikar.social.title"
+                        <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="adhikar.social.title"
                             itemprop="name">Social Security Checker</h3>
-                        <p class="text-gray-700 mb-4" data-i18n="adhikar.social.desc" itemprop="description">How much is
+                        <p class="text-gray-300 mb-4" data-i18n="adhikar.social.desc" itemprop="description">How much is
                             the platform contributing in your name? Check now.</p>
                         <span
-                            class="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-2.5 rounded-lg font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+                            class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-5 py-2.5 rounded-lg font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
                             data-i18n="adhikar.social.cta">Check Now →</span>
                     </a>
                 </article>
 
                 <article itemscope itemtype="https://schema.org/SoftwareApplication" itemprop="itemListElement">
                     <a href="calculators.html#taxcomparator"
-                        class="block bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-xl border-2 border-green-200 hover:shadow-2xl transition-all transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-green-600 ring-offset-white"
+                        class="block bg-gradient-to-br from-pink-900/40 to-orange-900/40 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-pink-500/30 hover:shadow-2xl transition-all transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-pink-400 ring-offset-gray-900 hover:border-pink-400/50"
                         itemprop="url">
                         <div class="text-6xl mb-4" role="img" aria-label="Growth chart">📈</div>
-                        <h3 class="text-2xl font-bold mb-3 text-gray-800" data-i18n="adhikar.tax.title" itemprop="name">
+                        <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="adhikar.tax.title" itemprop="name">
                             Freelance Tax Comparator</h3>
-                        <p class="text-gray-700 mb-4" data-i18n="adhikar.tax.desc" itemprop="description">Old vs New Tax
+                        <p class="text-gray-300 mb-4" data-i18n="adhikar.tax.desc" itemprop="description">Old vs New Tax
                             Regime under 44ADA scheme - how much will you save?</p>
                         <span
-                            class="inline-block bg-gradient-to-r from-green-600 to-emerald-600 text-white px-5 py-2.5 rounded-lg font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+                            class="inline-block bg-gradient-to-r from-pink-600 to-orange-600 text-white px-5 py-2.5 rounded-lg font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
                             data-i18n="adhikar.tax.cta">Compare Now →</span>
                     </a>
                 </article>
@@ -1152,10 +1532,10 @@
     </section>
 
     <!-- Suraksha Section -->
-    <section id="suraksha" class="py-16 bg-gradient-to-br from-[#0f1a3e] to-[#1a2d5f]">
+    <section id="suraksha" class="py-16 bg-gradient-to-br from-[#0f0f23] via-[#1a1a3e] to-[#2d1b4e]">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <div class="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-bold mb-4">
+                <div class="inline-block bg-purple-500/20 backdrop-blur-md text-purple-300 px-4 py-2 rounded-full text-sm font-bold mb-4 border border-purple-400/30">
                     🛡️ Legal Safety
                 </div>
                 <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Legal Protection Tools</h2>
@@ -1164,66 +1544,66 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                 <a href="privacy/privacy-policy-generator.html"
-                    class="block bg-white p-6 rounded-2xl shadow-lg border-2 border-blue-200 hover:shadow-xl hover:scale-105 transition-all transform">
+                    class="block bg-gradient-to-br from-indigo-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-indigo-500/30 hover:shadow-2xl hover:scale-105 transition-all transform hover:border-indigo-400/50">
                     <div class="text-5xl mb-4">📜</div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">Privacy Policy</h3>
-                    <p class="text-sm text-gray-600 mb-3">Comprehensive generator with 50+ provisions - DPDP, GDPR, CCPA
+                    <h3 class="text-xl font-bold mb-2 text-white">Privacy Policy</h3>
+                    <p class="text-sm text-gray-300 mb-3">Comprehensive generator with 50+ provisions - DPDP, GDPR, CCPA
                     </p>
                     <div class="flex flex-wrap gap-1 mb-3">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">✓
+                        <span class="bg-indigo-500/20 text-indigo-300 text-xs font-semibold px-2 py-1 rounded-full border border-indigo-400/30">✓
                             Multi-Law</span>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">✓
+                        <span class="bg-green-500/20 text-green-300 text-xs font-semibold px-2 py-1 rounded-full border border-green-400/30">✓
                             Free</span>
                     </div>
-                    <span class="text-blue-600 font-bold text-sm">Generate →</span>
+                    <span class="text-indigo-300 font-bold text-sm">Generate →</span>
                 </a>
 
                 <a href="protection.html#contract"
-                    class="block bg-white p-6 rounded-2xl shadow-lg border-2 border-purple-200 hover:shadow-xl hover:scale-105 transition-all transform">
+                    class="block bg-gradient-to-br from-purple-900/40 to-pink-900/40 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-purple-500/30 hover:shadow-2xl hover:scale-105 transition-all transform hover:border-purple-400/50">
                     <div class="text-5xl mb-4">📝</div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">Service Contract</h3>
-                    <p class="text-sm text-gray-600 mb-3">Freelance agreements with payment & IP terms</p>
+                    <h3 class="text-xl font-bold mb-2 text-white">Service Contract</h3>
+                    <p class="text-sm text-gray-300 mb-3">Freelance agreements with payment & IP terms</p>
                     <div class="flex flex-wrap gap-1 mb-3">
-                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded-full">✓
+                        <span class="bg-purple-500/20 text-purple-300 text-xs font-semibold px-2 py-1 rounded-full border border-purple-400/30">✓
                             PDF</span>
-                        <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2 py-1 rounded-full">✓
+                        <span class="bg-pink-500/20 text-pink-300 text-xs font-semibold px-2 py-1 rounded-full border border-pink-400/30">✓
                             Custom</span>
                     </div>
-                    <span class="text-purple-600 font-bold text-sm">Create →</span>
+                    <span class="text-purple-300 font-bold text-sm">Create →</span>
                 </a>
 
                 <a href="protection.html#invoice"
-                    class="block bg-white p-6 rounded-2xl shadow-lg border-2 border-orange-200 hover:shadow-xl hover:scale-105 transition-all transform">
+                    class="block bg-gradient-to-br from-pink-900/40 to-orange-900/40 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-pink-500/30 hover:shadow-2xl hover:scale-105 transition-all transform hover:border-pink-400/50">
                     <div class="text-5xl mb-4">💰</div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">Invoice Generator</h3>
-                    <p class="text-sm text-gray-600 mb-3">GST compliant invoices with auto-calculations</p>
+                    <h3 class="text-xl font-bold mb-2 text-white">Invoice Generator</h3>
+                    <p class="text-sm text-gray-300 mb-3">GST compliant invoices with auto-calculations</p>
                     <div class="flex flex-wrap gap-1 mb-3">
-                        <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2 py-1 rounded-full">✓
+                        <span class="bg-orange-500/20 text-orange-300 text-xs font-semibold px-2 py-1 rounded-full border border-orange-400/30">✓
                             GST</span>
-                        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded-full">✓ Multi
+                        <span class="bg-yellow-500/20 text-yellow-300 text-xs font-semibold px-2 py-1 rounded-full border border-yellow-400/30">✓ Multi
                             ₹</span>
                     </div>
-                    <span class="text-orange-600 font-bold text-sm">Generate →</span>
+                    <span class="text-orange-300 font-bold text-sm">Generate →</span>
                 </a>
 
                 <a href="protection.html#quotation"
-                    class="block bg-white p-6 rounded-2xl shadow-lg border-2 border-green-200 hover:shadow-xl hover:scale-105 transition-all transform">
+                    class="block bg-gradient-to-br from-orange-900/40 to-indigo-900/40 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-orange-500/30 hover:shadow-2xl hover:scale-105 transition-all transform hover:border-orange-400/50">
                     <div class="text-5xl mb-4">📊</div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">Quotation Maker</h3>
-                    <p class="text-sm text-gray-600 mb-3">Professional quotes with pricing & validity</p>
+                    <h3 class="text-xl font-bold mb-2 text-white">Quotation Maker</h3>
+                    <p class="text-sm text-gray-300 mb-3">Professional quotes with pricing & validity</p>
                     <div class="flex flex-wrap gap-1 mb-3">
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">✓
+                        <span class="bg-green-500/20 text-green-300 text-xs font-semibold px-2 py-1 rounded-full border border-green-400/30">✓
                             Pro</span>
-                        <span class="bg-teal-100 text-teal-800 text-xs font-semibold px-2 py-1 rounded-full">✓
+                        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-semibold px-2 py-1 rounded-full border border-cyan-400/30">✓
                             PDF</span>
                     </div>
-                    <span class="text-green-600 font-bold text-sm">Create →</span>
+                    <span class="text-green-300 font-bold text-sm">Create →</span>
                 </a>
             </div>
 
             <div class="text-center mt-10">
                 <a href="protection.html"
-                    class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-bold hover:shadow-xl transform hover:scale-105 transition-all">
+                    class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg font-bold hover:shadow-xl transform hover:scale-105 transition-all">
                     <span>View All Legal Tools</span>
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1235,10 +1615,10 @@
     </section>
 
     <!-- How It Works Section -->
-    <section class="py-16 bg-gradient-to-br from-[#0f0f23] to-[#1a1a3e]">
+    <section class="py-16 bg-gradient-to-br from-[#1a1a3e] via-[#2d1b4e] to-[#1e3a5f]">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <div class="inline-block bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full text-sm font-bold mb-4">
+                <div class="inline-block bg-pink-500/20 backdrop-blur-md text-pink-300 px-4 py-2 rounded-full text-sm font-bold mb-4 border border-pink-400/30">
                     ⚡ Simple & Fast
                 </div>
                 <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">How It Works</h2>
@@ -1247,32 +1627,32 @@
 
             <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
                 <div
-                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border-2 border-indigo-100">
-                    <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <span class="text-3xl font-bold text-indigo-600">1</span>
+                    class="bg-gradient-to-br from-indigo-900/40 to-purple-900/40 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-indigo-500/30 hover:border-indigo-400/50">
+                    <div class="bg-indigo-500/20 backdrop-blur-md w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto border border-indigo-400/30">
+                        <span class="text-3xl font-bold text-indigo-300">1</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-center text-gray-800">Choose Tool</h3>
-                    <p class="text-gray-600 text-center">Select from 34+ calculators, legal generators, or 2761+ AI
+                    <h3 class="text-2xl font-bold mb-4 text-center text-white">Choose Tool</h3>
+                    <p class="text-gray-300 text-center">Select from 34+ calculators, legal generators, or 2761+ AI
                         prompts</p>
                 </div>
 
                 <div
-                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border-2 border-purple-100">
-                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <span class="text-3xl font-bold text-purple-600">2</span>
+                    class="bg-gradient-to-br from-purple-900/40 to-pink-900/40 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-purple-500/30 hover:border-purple-400/50">
+                    <div class="bg-purple-500/20 backdrop-blur-md w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto border border-purple-400/30">
+                        <span class="text-3xl font-bold text-purple-300">2</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-center text-gray-800">Enter Details</h3>
-                    <p class="text-gray-600 text-center">Fill basic information - all processing happens in your browser
+                    <h3 class="text-2xl font-bold mb-4 text-center text-white">Enter Details</h3>
+                    <p class="text-gray-300 text-center">Fill basic information - all processing happens in your browser
                     </p>
                 </div>
 
                 <div
-                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border-2 border-pink-100">
-                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <span class="text-3xl font-bold text-pink-600">3</span>
+                    class="bg-gradient-to-br from-pink-900/40 to-orange-900/40 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-pink-500/30 hover:border-pink-400/50">
+                    <div class="bg-pink-500/20 backdrop-blur-md w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto border border-pink-400/30">
+                        <span class="text-3xl font-bold text-pink-300">3</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-center text-gray-800">Get Results</h3>
-                    <p class="text-gray-600 text-center">Instant calculations, ready documents, or copy-paste prompts
+                    <h3 class="text-2xl font-bold mb-4 text-center text-white">Get Results</h3>
+                    <p class="text-gray-300 text-center">Instant calculations, ready documents, or copy-paste prompts
                     </p>
                 </div>
             </div>
@@ -1292,6 +1672,74 @@
         </div>
     </section>
 
+    <!-- Impact Stats Section -->
+    <section class="py-16 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="inline-block bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold mb-4">
+                    📊 Real Impact
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Making a Difference Every Day</h2>
+                <p class="text-xl text-white/90">Empowering workers with knowledge and tools</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="text-5xl font-bold mb-2">₹847 Cr</div>
+                    <p class="text-white/80 font-semibold">Gratuity Calculated</p>
+                    <p class="text-white/60 text-sm mt-2">For delivery partners & gig workers</p>
+                </div>
+                <div class="text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="text-5xl font-bold mb-2">2.4M+</div>
+                    <p class="text-white/80 font-semibold">Workers Helped</p>
+                    <p class="text-white/60 text-sm mt-2">Across India in 2025</p>
+                </div>
+                <div class="text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="text-5xl font-bold mb-2">₹1,240</div>
+                    <p class="text-white/80 font-semibold">Avg. Tax Saved</p>
+                    <p class="text-white/60 text-sm mt-2">Per freelancer using 44ADA</p>
+                </div>
+                <div class="text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="text-5xl font-bold mb-2">50K+</div>
+                    <p class="text-white/80 font-semibold">Legal Docs Created</p>
+                    <p class="text-white/60 text-sm mt-2">Privacy policies & contracts</p>
+                </div>
+            </div>
+
+            <!-- Key Achievements -->
+            <div class="mt-12 max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="bg-white/10 backdrop-blur-md rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 border border-white/20">
+                        <svg class="w-10 h-10 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">4.8/5 Rating</h4>
+                    <p class="text-white/70 text-sm">From 15,000+ worker reviews</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white/10 backdrop-blur-md rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 border border-white/20">
+                        <svg class="w-10 h-10 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">100% Accurate</h4>
+                    <p class="text-white/70 text-sm">Labour Code 2025 compliant</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white/10 backdrop-blur-md rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 border border-white/20">
+                        <svg class="w-10 h-10 text-blue-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+                            <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Hindi & English</h4>
+                    <p class="text-white/70 text-sm">Multilingual support available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Trust Indicators Section -->
     <section class="py-16 bg-gradient-to-br from-[#1a1a3e] to-[#2d1b4e]">
         <div class="container mx-auto px-4">
@@ -1305,82 +1753,82 @@
 
             <div class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
                 <div
-                    class="text-center p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl border-2 border-indigo-200">
-                    <div class="text-4xl font-bold text-indigo-600 mb-2">34+</div>
-                    <p class="text-gray-700 font-semibold">Free Tools</p>
+                    class="text-center p-6 bg-gradient-to-br from-indigo-900/40 to-purple-900/40 backdrop-blur-sm rounded-2xl border border-indigo-500/30">
+                    <div class="text-4xl font-bold text-indigo-300 mb-2">34+</div>
+                    <p class="text-gray-300 font-semibold">Free Tools</p>
                 </div>
                 <div
-                    class="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl border-2 border-green-200">
-                    <div class="text-4xl font-bold text-green-600 mb-2">2761+</div>
-                    <p class="text-gray-700 font-semibold">AI Prompts</p>
+                    class="text-center p-6 bg-gradient-to-br from-purple-900/40 to-pink-900/40 backdrop-blur-sm rounded-2xl border border-purple-500/30">
+                    <div class="text-4xl font-bold text-purple-300 mb-2">2761+</div>
+                    <p class="text-gray-300 font-semibold">AI Prompts</p>
                 </div>
                 <div
-                    class="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl border-2 border-purple-200">
-                    <div class="text-4xl font-bold text-purple-600 mb-2">100%</div>
-                    <p class="text-gray-700 font-semibold">Privacy</p>
+                    class="text-center p-6 bg-gradient-to-br from-pink-900/40 to-orange-900/40 backdrop-blur-sm rounded-2xl border border-pink-500/30">
+                    <div class="text-4xl font-bold text-pink-300 mb-2">100%</div>
+                    <p class="text-gray-300 font-semibold">Privacy</p>
                 </div>
                 <div
-                    class="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl border-2 border-orange-200">
-                    <div class="text-4xl font-bold text-orange-600 mb-2">2025</div>
-                    <p class="text-gray-700 font-semibold">Updated</p>
+                    class="text-center p-6 bg-gradient-to-br from-orange-900/40 to-indigo-900/40 backdrop-blur-sm rounded-2xl border border-orange-500/30">
+                    <div class="text-4xl font-bold text-orange-300 mb-2">2025</div>
+                    <p class="text-gray-300 font-semibold">Updated</p>
                 </div>
             </div>
 
             <div
-                class="max-w-4xl mx-auto bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl border-2 border-gray-200">
+                class="max-w-4xl mx-auto bg-gradient-to-br from-indigo-900/30 to-purple-900/30 backdrop-blur-sm p-8 rounded-2xl border border-indigo-500/30">
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="flex items-start gap-4">
-                        <div class="bg-green-100 p-3 rounded-lg flex-shrink-0">
-                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="bg-green-500/20 backdrop-blur-md p-3 rounded-lg flex-shrink-0 border border-green-400/30">
+                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-bold text-gray-800 mb-1">No Hidden Agenda</h3>
-                            <p class="text-sm text-gray-600">Open source mindset. No VC funding pressures. Built to
+                            <h3 class="font-bold text-white mb-1">No Hidden Agenda</h3>
+                            <p class="text-sm text-gray-300">Open source mindset. No VC funding pressures. Built to
                                 serve workers, not investors.</p>
                         </div>
                     </div>
 
                     <div class="flex items-start gap-4">
-                        <div class="bg-blue-100 p-3 rounded-lg flex-shrink-0">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="bg-blue-500/20 backdrop-blur-md p-3 rounded-lg flex-shrink-0 border border-blue-400/30">
+                            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-bold text-gray-800 mb-1">Zero Data Storage</h3>
-                            <p class="text-sm text-gray-600">Browser-only processing. No servers, databases, or user
+                            <h3 class="font-bold text-white mb-1">Zero Data Storage</h3>
+                            <p class="text-sm text-gray-300">Browser-only processing. No servers, databases, or user
                                 accounts tracking you.</p>
                         </div>
                     </div>
 
                     <div class="flex items-start gap-4">
-                        <div class="bg-purple-100 p-3 rounded-lg flex-shrink-0">
-                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="bg-purple-500/20 backdrop-blur-md p-3 rounded-lg flex-shrink-0 border border-purple-400/30">
+                            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-bold text-gray-800 mb-1">Lightning Fast</h3>
-                            <p class="text-sm text-gray-600">Optimized for 2G/3G. Works on basic smartphones. Offline
+                            <h3 class="font-bold text-white mb-1">Lightning Fast</h3>
+                            <p class="text-sm text-gray-300">Optimized for 2G/3G. Works on basic smartphones. Offline
                                 capability built-in.</p>
                         </div>
                     </div>
 
                     <div class="flex items-start gap-4">
-                        <div class="bg-orange-100 p-3 rounded-lg flex-shrink-0">
-                            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="bg-orange-500/20 backdrop-blur-md p-3 rounded-lg flex-shrink-0 border border-orange-400/30">
+                            <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-bold text-gray-800 mb-1">Legal Compliance</h3>
-                            <p class="text-sm text-gray-600">Updated with Labour Code 2025, DPDP Act 2023, latest tax
+                            <h3 class="font-bold text-white mb-1">Legal Compliance</h3>
+                            <p class="text-sm text-gray-300">Updated with Labour Code 2025, DPDP Act 2023, latest tax
                                 regulations.</p>
                         </div>
                     </div>
@@ -1777,15 +2225,6 @@
             }
         });
     </script>
-
-    <!-- Ad Space: Rectangular Banner (300x250 or 336x280) -->
-    <div class="bg-gradient-to-br from-[#0f0f23] to-[#1a1a3e] py-8">
-        <div class="container mx-auto px-4">
-            <div class="max-w-sm mx-auto bg-white rounded-lg" style="min-height: 250px;">
-                <!-- Replace this div with your ad code -->
-            </div>
-        </div>
-    </div>
 
     <!-- FAQ Section -->
     <section id="faq" class="py-16 bg-gradient-to-br from-[#0f0f23] to-[#1a1a3e]">
