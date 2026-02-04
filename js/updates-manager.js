@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-macroeconomic-geopolitical-risk-assessment-feb4-2026',
+            title: 'Global Macroeconomic and Geopolitical Risk Assessment: Tech Sector Disruption, Parliamentary Gridlock, and Energy Warfare (February 4, 2026)',
+            shortTitle: 'Disruption Feb 4',
+            excerpt: 'Strategic assessment of Feb 4: Indian IT sector crashes 5.87% on Anthropic agentic AI disruption threatening coding jobs, parliamentary crisis deepening with mass opposition walkouts, Maharashtra political succession intensifying, Eastern Europe energy warfare escalating with Nord Stream sabotage reports, precious metals recovery gaining strength, and convergence of technological disruption with political instability.',
+            date: '2026-02-04',
+            displayDate: 'Feb 4, 2026',
+            category: 'global macroeconomic geopolitical assessment indian it crash agentic ai anthropic parliamentary crisis maharashtra energy warfare precious metals',
+            tags: ['⚡ DISRUPTION', '💻 AI CRASH', '🏛️ CRISIS', '⚔️ ENERGY WAR'],
+            tagColors: ['bg-red-600', 'bg-purple-600', 'bg-orange-600', 'bg-gray-600'],
+            readTime: '44 min read',
+            author: 'ShramKavach',
+            icon: '⚡',
+            gradient: 'from-red-50 via-purple-50 to-orange-50',
+            borderColor: 'border-red-600',
+            stats: [
+                { label: 'IT Crash', value: '-5.87%', subtext: 'AI disruption', color: 'text-red-600', icon: '💻' },
+                { label: 'Parliament', value: 'Gridlock', subtext: 'Mass walkouts', color: 'text-orange-600', icon: '🏛️' },
+                { label: 'Energy War', value: 'Escalation', subtext: 'Nord Stream', color: 'text-gray-600', icon: '⚔️' },
+                { label: 'Metals', value: 'Recovery', subtext: 'Safe haven', color: 'text-purple-600', icon: '💎' }
+            ],
+            link: 'global-macroeconomic-geopolitical-risk-assessment-feb4-2026.html',
+            featured: true
+        },
+        {
             id: 'global-macroeconomic-geopolitical-risk-assessment-feb3-2026',
             title: 'Global Macroeconomic and Geopolitical Risk Assessment: Historic Trade Deal, Market Rally, and Regional Stability Shifts (February 3, 2026)',
             shortTitle: 'Assessment Feb 3',
