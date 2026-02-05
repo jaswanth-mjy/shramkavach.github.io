@@ -261,6 +261,12 @@
     </url>
     
     <!-- Article Pages -->
+    <url>        <loc>https://shramkavach.com/state-of-global-intelligence-capital-feb5-2026.html</loc>
+        <lastmod>2026-02-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
     <url>        <loc>https://shramkavach.com/global-macroeconomic-geopolitical-risk-assessment-feb4-2026.html</loc>
         <lastmod>2026-02-05</lastmod>
         <changefreq>monthly</changefreq>

@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'state-of-global-intelligence-capital-feb5-2026',
+            title: 'The State of Global Intelligence and Capital: Comprehensive Analysis of Technology Recovery, Capital Rotation, and Energy Dynamics (February 5, 2026)',
+            shortTitle: 'Intelligence & Capital Feb 5',
+            excerpt: 'Strategic assessment of Feb 5: Nifty IT rebounds 3.7% from AI-driven crash signaling market adaptation, capital rotation accelerating from technology to precious metals safe havens, emerging markets demonstrating structural resilience, Eastern Europe energy crisis deepening with infrastructure sabotage, and the convergence of artificial intelligence disruption with global capital flow dynamics.',
+            date: '2026-02-05',
+            displayDate: 'Feb 5, 2026',
+            category: 'global intelligence capital nifty it recovery capital rotation precious metals emerging markets energy crisis ai disruption',
+            tags: ['🧠 INTELLIGENCE', '💎 CAPITAL FLOW', '📈 IT RECOVERY', '⚡ ENERGY CRISIS'],
+            tagColors: ['bg-purple-600', 'bg-yellow-600', 'bg-green-600', 'bg-orange-600'],
+            readTime: '38 min read',
+            author: 'ShramKavach',
+            icon: '🧠',
+            gradient: 'from-purple-50 via-yellow-50 to-green-50',
+            borderColor: 'border-purple-600',
+            stats: [
+                { label: 'IT Recovery', value: '+3.7%', subtext: 'Market rebound', color: 'text-green-600', icon: '📈' },
+                { label: 'Capital Flow', value: 'Rotation', subtext: 'Tech to metals', color: 'text-yellow-600', icon: '💎' },
+                { label: 'Markets', value: 'Resilient', subtext: 'Emerging strength', color: 'text-purple-600', icon: '🌍' },
+                { label: 'Energy', value: 'Crisis', subtext: 'Infrastructure hit', color: 'text-orange-600', icon: '⚡' }
+            ],
+            link: 'state-of-global-intelligence-capital-feb5-2026.html',
+            featured: true
+        },
+        {
             id: 'global-macroeconomic-geopolitical-risk-assessment-feb4-2026',
             title: 'Global Macroeconomic and Geopolitical Risk Assessment: Tech Sector Disruption, Parliamentary Gridlock, and Energy Warfare (February 4, 2026)',
             shortTitle: 'Disruption Feb 4',
