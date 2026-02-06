@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'ai-industrial-integration-report-feb6-2026',
+            title: 'The 2026 Artificial Intelligence Industrial Integration Report: Technical Frontiers, Financial Convergence, and the Agentic Paradigm (February 6, 2026)',
+            shortTitle: 'AI Integration Report Feb 6',
+            excerpt: 'Comprehensive analysis of the Great Assimilation: SpaceX-xAI $1.25T merger creating industrial AI powerhouse, NVIDIA Rubin platform breakthrough, agentic AI paradigm shifting from chat to autonomous workflows, 4.9% productivity surge, and the transition from experimental to operational AI transforming enterprise infrastructure.',
+            date: '2026-02-06',
+            displayDate: 'Feb 6, 2026',
+            category: 'ai artificial intelligence industrial integration spacex xai nvidia rubin agentic paradigm productivity',
+            tags: ['🤖 AI INTEGRATION', '🚀 SPACEX-XAI', '💎 NVIDIA RUBIN', '⚡ AGENTIC AI'],
+            tagColors: ['bg-blue-600', 'bg-purple-600', 'bg-green-600', 'bg-indigo-600'],
+            readTime: '42 min read',
+            author: 'ShramKavach',
+            icon: '🤖',
+            gradient: 'from-blue-50 via-purple-50 to-green-50',
+            borderColor: 'border-blue-600',
+            stats: [
+                { label: 'Merger Value', value: '$1.25T', subtext: 'SpaceX-xAI', color: 'text-purple-600', icon: '🚀' },
+                { label: 'Productivity', value: '+4.9%', subtext: 'AI surge', color: 'text-green-600', icon: '📈' },
+                { label: 'Platform', value: 'Rubin', subtext: 'NVIDIA launch', color: 'text-blue-600', icon: '💎' },
+                { label: 'Paradigm', value: 'Agentic', subtext: 'Autonomous AI', color: 'text-indigo-600', icon: '⚡' }
+            ],
+            link: 'ai-industrial-integration-report-feb6-2026.html',
+            featured: true
+        },
+        {
             id: 'state-of-global-intelligence-capital-feb5-2026',
             title: 'The State of Global Intelligence and Capital: Comprehensive Analysis of Technology Recovery, Capital Rotation, and Energy Dynamics (February 5, 2026)',
             shortTitle: 'Intelligence & Capital Feb 5',
