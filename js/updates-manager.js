@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'comprehensive-global-analysis-feb7-2026',
+            title: 'Comprehensive Analysis of Global Macroeconomic Indicators, Technological Frontiers, and Sociocultural Shifts (February 7, 2026)',
+            shortTitle: 'Global Analysis Feb 7',
+            excerpt: 'Comprehensive analysis of February 7, 2026: $650B AI infrastructure supercycle, India-US trade pact, gold market surge, CES 2026, deepfake crisis, T20 World Cup, and sociocultural shifts defining the global paradigm.',
+            date: '2026-02-07',
+            displayDate: 'Feb 7, 2026',
+            category: 'global analysis macroeconomic technology ai infrastructure india us trade gold ces deepfake t20 world cup',
+            tags: ['🌍 GLOBAL ANALYSIS', '💻 AI SUPERCYCLE', '🏆 TRADE DEALS', '📱 CES 2026'],
+            tagColors: ['bg-cyan-600', 'bg-blue-600', 'bg-green-600', 'bg-purple-600'],
+            readTime: '38 min read',
+            author: 'ShramKavach',
+            icon: '🌍',
+            gradient: 'from-cyan-50 via-blue-50 to-purple-50',
+            borderColor: 'border-cyan-600',
+            stats: [
+                { label: 'AI Capex', value: '$650B', subtext: 'Infrastructure boom', color: 'text-blue-600', icon: '💻' },
+                { label: 'Trade Deal', value: 'India-US', subtext: 'Strategic pact', color: 'text-green-600', icon: '🏆' },
+                { label: 'Gold Market', value: 'Surge', subtext: 'Record demand', color: 'text-yellow-600', icon: '💰' },
+                { label: 'CES 2026', value: 'Innovation', subtext: 'Tech showcase', color: 'text-purple-600', icon: '📱' }
+            ],
+            link: 'comprehensive-global-analysis-feb7-2026.html',
+            featured: true
+        },
+        {
             id: 'ai-industrial-integration-report-feb6-2026',
             title: 'The 2026 Artificial Intelligence Industrial Integration Report: Technical Frontiers, Financial Convergence, and the Agentic Paradigm (February 6, 2026)',
             shortTitle: 'AI Integration Report Feb 6',
