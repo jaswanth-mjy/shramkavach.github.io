@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'comprehensive-global-analysis-feb8-2026',
+            title: 'Comprehensive Analysis of Global Macroeconomic Indicators, Technological Frontiers, and Sociocultural Shifts (February 8, 2026)',
+            shortTitle: 'Global Analysis Feb 8',
+            excerpt: 'India AI Impact Summit 2026 draws 35,000+ delegates with hotel rooms hitting ₹1.97 lakh/night, $650B AI capex boom continues, frontier models Kimi K2.5 and Qwen3-Max-Thinking launch, Indian gold market dynamics shift, and viral social phenomena define February 8, 2026.',
+            date: '2026-02-08',
+            displayDate: 'Feb 8, 2026',
+            category: 'india ai summit technology frontier models gold market olympics social phenomena',
+            tags: ['🎯 AI SUMMIT', '💰 GOLD MARKET', '🤖 FRONTIER AI', '🏆 OLYMPICS'],
+            tagColors: ['bg-indigo-600', 'bg-yellow-600', 'bg-purple-600', 'bg-green-600'],
+            readTime: '48 min read',
+            author: 'ShramKavach',
+            icon: '🎯',
+            gradient: 'from-indigo-50 via-purple-50 to-yellow-50',
+            borderColor: 'border-indigo-600',
+            stats: [
+                { label: 'AI Summit', value: '35K+', subtext: 'Delegates', color: 'text-indigo-600', icon: '🎯' },
+                { label: 'Hotel Rooms', value: '₹1.97L', subtext: 'Per night', color: 'text-red-600', icon: '🏨' },
+                { label: 'Gold Market', value: 'Dynamic', subtext: 'Price shifts', color: 'text-yellow-600', icon: '💰' },
+                { label: 'Frontier AI', value: 'Launch', subtext: 'New models', color: 'text-purple-600', icon: '🤖' }
+            ],
+            link: 'comprehensive-global-analysis-feb8-2026.html',
+            featured: true
+        },
+        {
             id: 'comprehensive-global-analysis-feb7-2026',
             title: 'Comprehensive Analysis of Global Macroeconomic Indicators, Technological Frontiers, and Sociocultural Shifts (February 7, 2026)',
             shortTitle: 'Global Analysis Feb 7',
