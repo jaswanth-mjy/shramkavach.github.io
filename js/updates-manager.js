@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'state-of-global-finance-autonomous-intelligence-feb9-2026',
+            title: 'The 2026 State of Global Finance and Autonomous Intelligence: A Comprehensive Synthesis of Market Dynamics, Agentic Architectures, and Regulatory Landscapes',
+            shortTitle: 'Global Finance & Agentic AI Feb 9',
+            excerpt: 'Nifty surges 0.68%, Dow crosses 50,000 milestone. Anthropic Effect wipes $300B from SaaS sector as agentic AI reshapes enterprise software. EU AI Act enforcement begins August 2026, Colorado CAIA takes effect. Comprehensive analysis of market dynamics, autonomous intelligence, and regulatory transformation.',
+            date: '2026-02-09',
+            displayDate: 'Feb 9, 2026',
+            category: 'global finance agentic ai market rally saas crisis anthropic effect eu ai act colorado regulatory',
+            tags: ['🤖 AGENTIC AI', '📈 MARKET RALLY', '💼 SAAS CRISIS', '⚖️ AI REGULATION'],
+            tagColors: ['bg-purple-600', 'bg-green-600', 'bg-red-600', 'bg-blue-600'],
+            readTime: '24 min read',
+            author: 'ShramKavach',
+            icon: '🤖',
+            gradient: 'from-purple-50 via-blue-50 to-green-50',
+            borderColor: 'border-purple-600',
+            stats: [
+                { label: 'Dow Jones', value: '50,000', subtext: 'Milestone', color: 'text-green-600', icon: '📈' },
+                { label: 'Nifty 50', value: '+0.68%', subtext: 'Rally', color: 'text-blue-600', icon: '📊' },
+                { label: 'SaaS Crisis', value: '$300B', subtext: 'Lost value', color: 'text-red-600', icon: '💼' },
+                { label: 'EU AI Act', value: 'Aug 2026', subtext: 'Enforcement', color: 'text-purple-600', icon: '⚖️' }
+            ],
+            link: 'state-of-global-finance-autonomous-intelligence-feb9-2026.html',
+            featured: true
+        },
+        {
             id: 'comprehensive-global-analysis-feb8-2026',
             title: 'Comprehensive Analysis of Global Macroeconomic Indicators, Technological Frontiers, and Sociocultural Shifts (February 8, 2026)',
             shortTitle: 'Global Analysis Feb 8',

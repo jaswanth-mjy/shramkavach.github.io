@@ -260,7 +260,11 @@
         <priority>0.8</priority>
     </url>
     
-    <!-- Article Pages -->
+    <!-- Article Pages -->    <url>        <loc>https://shramkavach.com/state-of-global-finance-autonomous-intelligence-feb9-2026.html</loc>
+        <lastmod>2026-02-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
     <url>        <loc>https://shramkavach.com/comprehensive-global-analysis-feb8-2026.html</loc>
         <lastmod>2026-02-09</lastmod>
         <changefreq>monthly</changefreq>
