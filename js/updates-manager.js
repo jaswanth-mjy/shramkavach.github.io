@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-intelligence-capital-report-feb10-2026',
+            title: 'The 2026 Global Intelligence and Capital Report: Systematic Integration of Finance, Generative AI, and Secure Developmental Infrastructure',
+            shortTitle: 'Global Intelligence & Capital Feb 10',
+            excerpt: 'Indian markets extend rally with Nifty +0.26%, US software sector faces 22% correction, GPT-5.2 achieves 100% AIME benchmark, AI engineer salaries reach $170K+, cybersecurity breach costs hit $4.88M. Comprehensive analysis of capital markets, agentic AI workflows, and secure infrastructure.',
+            date: '2026-02-10',
+            displayDate: 'Feb 10, 2026',
+            category: 'global intelligence capital analysis ai benchmarks tech salaries cybersecurity',
+            tags: ['🔬 CAPITAL ANALYSIS', '🤖 AI BENCHMARKS', '💼 TECH SALARIES', '🔒 CYBERSECURITY'],
+            tagColors: ['bg-teal-600', 'bg-purple-600', 'bg-blue-600', 'bg-red-600'],
+            readTime: '26 min read',
+            author: 'ShramKavach',
+            icon: '🔬',
+            gradient: 'from-teal-50 via-purple-50 to-blue-50',
+            borderColor: 'border-teal-600',
+            stats: [
+                { label: 'Nifty 50', value: '+0.26%', subtext: 'Rally extends', color: 'text-green-600', icon: '📈' },
+                { label: 'GPT-5.2', value: '100%', subtext: 'AIME score', color: 'text-purple-600', icon: '🤖' },
+                { label: 'AI Engineer', value: '$170K+', subtext: 'Average salary', color: 'text-blue-600', icon: '💼' },
+                { label: 'Breach Cost', value: '$4.88M', subtext: 'Per incident', color: 'text-red-600', icon: '🔒' }
+            ],
+            link: 'global-intelligence-capital-report-feb10-2026.html',
+            featured: true
+        },
+        {
             id: 'state-of-global-finance-autonomous-intelligence-feb9-2026',
             title: 'The 2026 State of Global Finance and Autonomous Intelligence: A Comprehensive Synthesis of Market Dynamics, Agentic Architectures, and Regulatory Landscapes',
             shortTitle: 'Global Finance & Agentic AI Feb 9',
