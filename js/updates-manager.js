@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-orchestration-capital-autonomous-intelligence-feb11-2026',
+            title: 'The Global Orchestration of Capital and Autonomous Intelligence: A Strategic Analysis of February 2026',
+            shortTitle: 'Capital Orchestration & AI Feb 11',
+            excerpt: 'US adds 130K jobs with unemployment at 4.3%, Alphabet raises $30B debt for AI arms race, Oracle announces $50B AI expansion. Runway valued at $5.3B, Claude Opus 4.6 leads benchmarks. Strategic analysis of capital orchestration and autonomous intelligence.',
+            date: '2026-02-11',
+            displayDate: 'Feb 11, 2026',
+            category: 'strategic analysis capital markets autonomous ai jobs report',
+            tags: ['🎯 STRATEGIC ANALYSIS', '💰 CAPITAL MARKETS', '🤖 AUTONOMOUS AI', '📊 JOBS REPORT'],
+            tagColors: ['bg-indigo-600', 'bg-green-600', 'bg-purple-600', 'bg-blue-600'],
+            readTime: '28 min read',
+            author: 'ShramKavach',
+            icon: '🎯',
+            gradient: 'from-indigo-50 via-green-50 to-purple-50',
+            borderColor: 'border-indigo-600',
+            stats: [
+                { label: 'US Jobs', value: '130K', subtext: 'Added Feb', color: 'text-blue-600', icon: '📊' },
+                { label: 'Alphabet Debt', value: '$30B', subtext: 'AI expansion', color: 'text-green-600', icon: '💰' },
+                { label: 'Runway Value', value: '$5.3B', subtext: 'Series E', color: 'text-purple-600', icon: '🚀' },
+                { label: 'Claude Opus', value: '4.6', subtext: 'Top benchmark', color: 'text-indigo-600', icon: '🤖' }
+            ],
+            link: 'global-orchestration-capital-autonomous-intelligence-feb11-2026.html',
+            featured: true
+        },
+        {
             id: 'global-intelligence-capital-report-feb10-2026',
             title: 'The 2026 Global Intelligence and Capital Report: Systematic Integration of Finance, Generative AI, and Secure Developmental Infrastructure',
             shortTitle: 'Global Intelligence & Capital Feb 10',
