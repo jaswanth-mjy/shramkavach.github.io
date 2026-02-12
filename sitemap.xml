@@ -260,7 +260,12 @@
         <priority>0.8</priority>
     </url>
     
-    <!-- Article Pages -->    <url>        <loc>https://shramkavach.com/global-orchestration-capital-autonomous-intelligence-feb11-2026.html</loc>
+    <!-- Article Pages -->    <url>        <loc>https://shramkavach.com/great-bifurcation-industrialization-ai-feb12-2026.html</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>        <loc>https://shramkavach.com/global-orchestration-capital-autonomous-intelligence-feb11-2026.html</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.95</priority>
