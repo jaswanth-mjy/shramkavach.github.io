@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'global-technological-financial-synthesis-feb13-2026',
+            title: 'The Global Technological and Financial Synthesis: Market Volatility, Generative AI Evolution, and Strategic Digital Resilience',
+            shortTitle: 'Global Tech & Financial Synthesis Feb 13',
+            excerpt: 'BSE Sensex crashes 1,048 points, Indian IT index -5%, S&P 500 at 6,836. GPT-5.3-Codex-Spark delivers 1,000+ tokens/sec, Disney faces $2.75M CCPA fine. Comprehensive analysis of market volatility and AI acceleration.',
+            date: '2026-02-13',
+            displayDate: 'Feb 13, 2026',
+            category: 'market volatility indian markets ai acceleration cybersecurity',
+            tags: ['📊 MARKET VOLATILITY', '🇮🇳 INDIAN MARKETS', '⚡ AI ACCELERATION', '🔒 CYBERSECURITY'],
+            tagColors: ['bg-blue-600', 'bg-orange-600', 'bg-purple-600', 'bg-gray-600'],
+            readTime: '28 min read',
+            author: 'ShramKavach',
+            icon: '📊',
+            gradient: 'from-blue-50 via-purple-50 to-indigo-50',
+            borderColor: 'border-blue-600',
+            stats: [
+                { label: 'BSE Sensex', value: '-1,048', subtext: 'Points crash', color: 'text-red-600', icon: '📉' },
+                { label: 'IT Index', value: '-5%', subtext: 'Decline', color: 'text-orange-600', icon: '💻' },
+                { label: 'GPT-5.3', value: '1K+/sec', subtext: 'Token speed', color: 'text-purple-600', icon: '⚡' },
+                { label: 'Disney Fine', value: '$2.75M', subtext: 'CCPA penalty', color: 'text-gray-600', icon: '⚖️' }
+            ],
+            link: 'global-technological-financial-synthesis-feb13-2026.html',
+            featured: true
+        },
+        {
             id: 'great-bifurcation-industrialization-ai-feb12-2026',
             title: 'The Great Bifurcation: The Industrialization of Artificial Intelligence and the Redefining of Economic, Technical, and Security Architectures',
             shortTitle: 'Great Bifurcation: AI Industrialization Feb 12',
