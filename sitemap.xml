@@ -260,7 +260,12 @@
         <priority>0.8</priority>
     </url>
     
-    <!-- Article Pages -->    <url>        <loc>https://shramkavach.com/global-technological-financial-synthesis-feb13-2026.html</loc>
+    <!-- Article Pages -->    <url>        <loc>https://shramkavach.com/strategic-equilibrium-autonomous-agency-feb14-2026.html</loc>
+        <lastmod>2026-02-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>        <loc>https://shramkavach.com/global-technological-financial-synthesis-feb13-2026.html</loc>
         <lastmod>2026-02-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.95</priority>

@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'strategic-equilibrium-autonomous-agency-feb14-2026',
+            title: 'Strategic Equilibrium in the Age of Autonomous Agency: A Comprehensive Audit of Financial, Technological, and Security Architectures',
+            shortTitle: 'Strategic Equilibrium & Autonomous Agency Feb 14',
+            excerpt: 'BSE Sensex -1.25%, Nasdaq -2.03%, NVIDIA $4.4T market cap. Q-Day compressed to 2029, AI salaries hit $300K+, gold flash crash -$200. Comprehensive audit of financial volatility, AI evolution, and post-quantum security mandates.',
+            date: '2026-02-14',
+            displayDate: 'Feb 14, 2026',
+            category: 'strategic audit post-quantum market crash ai salaries',
+            tags: ['🛡️ STRATEGIC AUDIT', '🔐 POST-QUANTUM', '📉 MARKET CRASH', '💰 AI SALARIES'],
+            tagColors: ['bg-purple-600', 'bg-gray-600', 'bg-red-600', 'bg-green-600'],
+            readTime: '30 min read',
+            author: 'ShramKavach',
+            icon: '🛡️',
+            gradient: 'from-purple-50 via-gray-50 to-red-50',
+            borderColor: 'border-purple-600',
+            stats: [
+                { label: 'Sensex', value: '-1.25%', subtext: 'BSE drop', color: 'text-red-600', icon: '📉' },
+                { label: 'NVIDIA', value: '$4.4T', subtext: 'Market cap', color: 'text-green-600', icon: '🚀' },
+                { label: 'Q-Day', value: '2029', subtext: 'Timeline', color: 'text-purple-600', icon: '🔐' },
+                { label: 'AI Salary', value: '$300K+', subtext: 'Engineers', color: 'text-gray-600', icon: '💰' }
+            ],
+            link: 'strategic-equilibrium-autonomous-agency-feb14-2026.html',
+            featured: true
+        },
+        {
             id: 'global-technological-financial-synthesis-feb13-2026',
             title: 'The Global Technological and Financial Synthesis: Market Volatility, Generative AI Evolution, and Strategic Digital Resilience',
             shortTitle: 'Global Tech & Financial Synthesis Feb 13',
