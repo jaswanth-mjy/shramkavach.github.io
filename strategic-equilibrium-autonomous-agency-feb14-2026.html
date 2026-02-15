@@ -963,6 +963,9 @@
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
+                animation: false,
+                interaction: { mode: null },
+                hover: { mode: null },
                 indexAxis: 'y',
                 scales: {
                     x: {
@@ -976,7 +979,8 @@
                 plugins: {
                     legend: {
                         display: false
-                    }
+                    },
+                    tooltip: { enabled: false }
                 }
             }
         });
@@ -1010,6 +1014,9 @@
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
+                animation: false,
+                interaction: { mode: null },
+                hover: { mode: null },
                 scales: {
                     y: {
                         beginAtZero: true,
@@ -1022,7 +1029,8 @@
                 plugins: {
                     legend: {
                         display: false
-                    }
+                    },
+                    tooltip: { enabled: false }
                 }
             }
         });
@@ -1051,6 +1059,9 @@
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
+                animation: false,
+                interaction: { mode: null },
+                hover: { mode: null },
                 scales: {
                     y: {
                         beginAtZero: true,
@@ -1059,6 +1070,9 @@
                             text: 'Compensation ($K)'
                         }
                     }
+                },
+                plugins: {
+                    tooltip: { enabled: false }
                 }
             }
         });
@@ -1138,6 +1152,9 @@
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
+                animation: false,
+                interaction: { mode: null },
+                hover: { mode: null },
                 scales: {
                     y: {
                         title: {
@@ -1150,7 +1167,8 @@
                 plugins: {
                     legend: {
                         display: false
-                    }
+                    },
+                    tooltip: { enabled: false }
                 }
             }
         });
