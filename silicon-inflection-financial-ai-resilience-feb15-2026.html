@@ -1156,8 +1156,10 @@
 
     <!-- Charts Scripts -->
     <script>
+    document.addEventListener('DOMContentLoaded', function() {
         // Indian Market Chart
-        const indianMarketCtx = document.getElementById('indianMarketChart').getContext('2d');
+        const indianMarketCtx = document.getElementById('indianMarketChart')?.getContext('2d');
+        if (!indianMarketCtx) return;
         new Chart(indianMarketCtx, {
             type: 'bar',
             data: {
@@ -1187,7 +1189,8 @@
         });
 
         // Global Markets Chart
-        const globalMarketsCtx = document.getElementById('globalMarketsChart').getContext('2d');
+        const globalMarketsCtx = document.getElementById('globalMarketsChart')?.getContext('2d');
+        if (!globalMarketsCtx) return;
         new Chart(globalMarketsCtx, {
             type: 'bar',
             data: {
@@ -1215,7 +1218,8 @@
         });
 
         // AI Adoption Chart
-        const aiAdoptionCtx = document.getElementById('aiAdoptionChart').getContext('2d');
+        const aiAdoptionCtx = document.getElementById('aiAdoptionChart')?.getContext('2d');
+        if (!aiAdoptionCtx) return;
         new Chart(aiAdoptionCtx, {
             type: 'bar',
             data: {
@@ -1258,7 +1262,8 @@
         });
 
         // Developer Metrics Chart
-        const developerMetricsCtx = document.getElementById('developerMetricsChart').getContext('2d');
+        const developerMetricsCtx = document.getElementById('developerMetricsChart')?.getContext('2d');
+        if (!developerMetricsCtx) return;
         new Chart(developerMetricsCtx, {
             type: 'doughnut',
             data: {
@@ -1280,7 +1285,8 @@
         });
 
         // Prompting Success Chart
-        const promptingCtx = document.getElementById('promptingChart').getContext('2d');
+        const promptingCtx = document.getElementById('promptingChart')?.getContext('2d');
+        if (!promptingCtx) return;
         new Chart(promptingCtx, {
             type: 'bar',
             data: {
@@ -1309,7 +1315,8 @@
         });
 
         // Economic Outlook Chart
-        const economicOutlookCtx = document.getElementById('economicOutlookChart').getContext('2d');
+        const economicOutlookCtx = document.getElementById('economicOutlookChart')?.getContext('2d');
+        if (!economicOutlookCtx) return;
         new Chart(economicOutlookCtx, {
             type: 'bar',
             data: {
@@ -1343,6 +1350,7 @@
                 }
             }
         });
+    });
     </script>
 
     <script src="js/sidebar-articles-loader.js?v=4.8" defer></script>

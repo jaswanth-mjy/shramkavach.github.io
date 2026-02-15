@@ -966,8 +966,10 @@
 
     <!-- Chart.js Initialization -->
     <script>
+    document.addEventListener('DOMContentLoaded', function() {
         // SaaS Collapse Chart
-        const saasCollapseCtx = document.getElementById('saasCollapseChart').getContext('2d');
+        const saasCollapseCtx = document.getElementById('saasCollapseChart')?.getContext('2d');
+        if (!saasCollapseCtx) return;
         new Chart(saasCollapseCtx, {
             type: 'bar',
             data: {
@@ -1012,7 +1014,8 @@
         });
 
         // Traffic Trends Chart
-        const trafficTrendsCtx = document.getElementById('trafficTrendsChart').getContext('2d');
+        const trafficTrendsCtx = document.getElementById('trafficTrendsChart')?.getContext('2d');
+        if (!trafficTrendsCtx) return;
         new Chart(trafficTrendsCtx, {
             type: 'line',
             data: {
@@ -1050,7 +1053,8 @@
         });
 
         // Productivity Chart
-        const productivityCtx = document.getElementById('productivityChart').getContext('2d');
+        const productivityCtx = document.getElementById('productivityChart')?.getContext('2d');
+        if (!productivityCtx) return;
         new Chart(productivityCtx, {
             type: 'bar',
             data: {
@@ -1095,7 +1099,8 @@
         });
 
         // Cyber Threat Chart
-        const cyberThreatCtx = document.getElementById('cyberThreatChart').getContext('2d');
+        const cyberThreatCtx = document.getElementById('cyberThreatChart')?.getContext('2d');
+        if (!cyberThreatCtx) return;
         new Chart(cyberThreatCtx, {
             type: 'bar',
             data: {
@@ -1138,6 +1143,7 @@
                 }
             }
         });
+    });
     </script>
 </body>
 </html>

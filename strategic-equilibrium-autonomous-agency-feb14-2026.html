@@ -928,8 +928,10 @@
 
     <!-- Chart.js Initialization -->
     <script>
+    document.addEventListener('DOMContentLoaded', function() {
         // Global Indices Chart
-        const globalIndicesCtx = document.getElementById('globalIndicesChart').getContext('2d');
+        const globalIndicesCtx = document.getElementById('globalIndicesChart')?.getContext('2d');
+        if (!globalIndicesCtx) return;
         new Chart(globalIndicesCtx, {
             type: 'bar',
             data: {
@@ -1026,7 +1028,8 @@
         });
 
         // Compensation Chart
-        const compensationCtx = document.getElementById('compensationChart').getContext('2d');
+        const compensationCtx = document.getElementById('compensationChart')?.getContext('2d');
+        if (!compensationCtx) return;
         new Chart(compensationCtx, {
             type: 'bar',
             data: {
@@ -1061,7 +1064,8 @@
         });
 
         // Breach Cost Chart
-        const breachCostCtx = document.getElementById('breachCostChart').getContext('2d');
+        const breachCostCtx = document.getElementById('breachCostChart')?.getContext('2d');
+        if (!breachCostCtx) return;
         new Chart(breachCostCtx, {
             type: 'bar',
             data: {
@@ -1105,7 +1109,8 @@
         });
 
         // Asset Volatility Chart
-        const assetVolatilityCtx = document.getElementById('assetVolatilityChart').getContext('2d');
+        const assetVolatilityCtx = document.getElementById('assetVolatilityChart')?.getContext('2d');
+        if (!assetVolatilityCtx) return;
         new Chart(assetVolatilityCtx, {
             type: 'bar',
             data: {
@@ -1149,6 +1154,7 @@
                 }
             }
         });
+    });
     </script>
 </body>
 </html>
