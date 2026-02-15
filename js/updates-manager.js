@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'silicon-inflection-financial-ai-resilience-feb15-2026',
+            title: 'The Silicon Inflection: Global Financial Markets, Generative AI & Technical Resilience',
+            shortTitle: 'Silicon Inflection: Markets, AI & Resilience Feb 15',
+            excerpt: 'SENSEX crash -1,048 pts, NIFTY IT -4.5%, developer AI adoption 92%, ToT prompting 74% success. Comprehensive analysis of tech correction, agentic AI evolution, developer productivity crisis, and EPOCH career framework.',
+            date: '2026-02-15',
+            displayDate: 'Feb 15, 2026',
+            category: 'silicon inflection developer ai tech correction career framework',
+            tags: ['🔷 SILICON INFLECTION', '💻 DEVELOPER AI', '📈 TECH CORRECTION', '🎯 CAREER FRAMEWORK'],
+            tagColors: ['bg-cyan-600', 'bg-blue-600', 'bg-red-600', 'bg-purple-600'],
+            readTime: '35 min read',
+            author: 'ShramKavach',
+            icon: '🔷',
+            gradient: 'from-cyan-50 via-blue-50 to-purple-50',
+            borderColor: 'border-cyan-600',
+            stats: [
+                { label: 'SENSEX', value: '-1,048', subtext: 'Points drop', color: 'text-red-600', icon: '📉' },
+                { label: 'Dev AI', value: '92%', subtext: 'Adoption', color: 'text-blue-600', icon: '💻' },
+                { label: 'ToT Success', value: '74%', subtext: 'Prompting', color: 'text-purple-600', icon: '🎯' },
+                { label: 'NIFTY IT', value: '-4.5%', subtext: 'Correction', color: 'text-orange-600', icon: '📊' }
+            ],
+            link: 'silicon-inflection-financial-ai-resilience-feb15-2026.html',
+            featured: true
+        },
+        {
             id: 'strategic-equilibrium-autonomous-agency-feb14-2026',
             title: 'Strategic Equilibrium in the Age of Autonomous Agency: A Comprehensive Audit of Financial, Technological, and Security Architectures',
             shortTitle: 'Strategic Equilibrium & Autonomous Agency Feb 14',
