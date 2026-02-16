@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'structural-divergence-agentic-frontier-feb16-2026',
+            title: 'Structural Divergence and the Agentic Frontier: Global Finance & Technology',
+            shortTitle: 'Structural Divergence: Markets, AI & Agentic Feb 16',
+            excerpt: 'SENSEX +0.79% recovery, NIFTY IT -9% weekly repricing, $2.52T AI enterprise spending, Claude 4.5 30-hour autonomous coding. Comprehensive analysis of market divergence, agentic AI transformation, workforce displacement, and structural technology shifts.',
+            date: '2026-02-16',
+            displayDate: 'Feb 16, 2026',
+            category: 'structural divergence agentic ai it repricing workforce shift',
+            tags: ['🔀 STRUCTURAL DIVERGENCE', '🤖 AGENTIC AI', '📊 IT REPRICING', '💼 WORKFORCE SHIFT'],
+            tagColors: ['bg-slate-600', 'bg-indigo-600', 'bg-purple-600', 'bg-blue-600'],
+            readTime: '32 min read',
+            author: 'ShramKavach',
+            icon: '🔀',
+            gradient: 'from-slate-50 via-indigo-50 to-purple-50',
+            borderColor: 'border-slate-600',
+            stats: [
+                { label: 'SENSEX', value: '+0.79%', subtext: 'Recovery', color: 'text-green-600', icon: '📈' },
+                { label: 'IT Weekly', value: '-9%', subtext: 'Repricing', color: 'text-red-600', icon: '📊' },
+                { label: 'AI Spend', value: '$2.52T', subtext: '2026 Est.', color: 'text-purple-600', icon: '💰' },
+                { label: 'Claude 4.5', value: '30hrs', subtext: 'Auto Code', color: 'text-indigo-600', icon: '🤖' }
+            ],
+            link: 'structural-divergence-agentic-frontier-feb16-2026.html',
+            featured: true
+        },
+        {
             id: 'silicon-inflection-financial-ai-resilience-feb15-2026',
             title: 'The Silicon Inflection: Global Financial Markets, Generative AI & Technical Resilience',
             shortTitle: 'Silicon Inflection: Markets, AI & Resilience Feb 15',
