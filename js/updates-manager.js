@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'intelligence-age-financial-equilibrium-feb17-2026',
+            title: 'The Intelligence Age: Global Financial Equilibrium, AI Proliferation & Cybersecurity Resilience',
+            shortTitle: 'Intelligence Age: Financial Equilibrium & AI Feb 17',
+            excerpt: 'Dow 49,500, SENSEX 83,450, $390B AI market, Grok-3 94.5% HumanEval, Fujitsu 100x productivity, $10.22M breach costs, 30,700 tech layoffs. Comprehensive analysis of the Intelligence Age.',
+            date: '2026-02-17',
+            displayDate: 'Feb 17, 2026',
+            category: 'intelligence age financial equilibrium ai proliferation cybersecurity',
+            tags: ['🧠 INTELLIGENCE AGE', '📈 FINANCIAL EQUILIBRIUM', '🤖 AI PROLIFERATION', '🔒 CYBERSECURITY'],
+            tagColors: ['bg-purple-600', 'bg-green-600', 'bg-amber-600', 'bg-red-600'],
+            readTime: '34 min read',
+            author: 'ShramKavach',
+            icon: '🧠',
+            gradient: 'from-slate-50 via-purple-50 to-teal-50',
+            borderColor: 'border-purple-600',
+            stats: [
+                { label: 'Dow', value: '49,500', subtext: 'Record', color: 'text-green-600', icon: '📈' },
+                { label: 'SENSEX', value: '83,450', subtext: 'Recovery', color: 'text-green-600', icon: '🇮🇳' },
+                { label: 'Grok-3', value: '94.5%', subtext: 'HumanEval', color: 'text-amber-600', icon: '🤖' },
+                { label: 'Layoffs', value: '30.7K', subtext: 'Tech Jobs', color: 'text-red-600', icon: '💼' }
+            ],
+            link: 'intelligence-age-financial-equilibrium-feb17-2026.html',
+            featured: true
+        },
+        {
             id: 'structural-divergence-agentic-frontier-feb16-2026',
             title: 'Structural Divergence and the Agentic Frontier: Global Finance & Technology',
             shortTitle: 'Structural Divergence: Markets, AI & Agentic Feb 16',
