@@ -40,20 +40,20 @@
         .section-hardware { border-left: 4px solid #84cc16; }
         .section-coding { border-left: 4px solid #6366f1; }
         .section-conclusion { border-left: 4px solid #475569; }
-        .data-table { @apply w-full border-collapse text-sm; }
-        .data-table th { @apply bg-gray-100 p-3 text-left font-semibold border-b-2 border-gray-300; }
-        .data-table td { @apply p-3 border-b border-gray-200; }
-        .data-table tr:hover { @apply bg-gray-50; }
-        .metric-card { @apply bg-white rounded-xl shadow-lg p-4 border-l-4; }
-        .chart-container { @apply bg-white rounded-xl shadow-lg p-6 mb-6; }
-        .stat-highlight { @apply text-2xl font-bold; }
-        .negative { @apply text-red-600; }
-        .positive { @apply text-green-600; }
-        .warning { @apply text-amber-600; }
-        .critical { @apply text-red-700 font-semibold; }
-        .quote-box { @apply bg-gradient-to-r from-slate-800 to-slate-700 text-white p-6 rounded-xl my-6 italic; }
-        .apocalypse-box { @apply bg-gradient-to-r from-red-900 to-red-700 text-white p-6 rounded-xl my-6; }
-        .survival-badge { @apply inline-block px-2 py-1 rounded-full text-xs font-bold; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+        .data-table th { background-color: #f3f4f6; padding: 0.75rem; text-align: left; font-weight: 600; border-bottom: 2px solid #d1d5db; }
+        .data-table td { padding: 0.75rem; border-bottom: 1px solid #e5e7eb; }
+        .data-table tr:hover { background-color: #f9fafb; }
+        .metric-card { background-color: #fff; border-radius: 0.75rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); padding: 1rem; border-left-width: 4px; }
+        .chart-container { background-color: #fff; border-radius: 0.75rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); padding: 1.5rem; margin-bottom: 1.5rem; }
+        .stat-highlight { font-size: 1.5rem; font-weight: 700; }
+        .negative { color: #dc2626; }
+        .positive { color: #16a34a; }
+        .warning { color: #d97706; }
+        .critical { color: #b91c1c; font-weight: 600; }
+        .quote-box { background: linear-gradient(to right, #1e293b, #334155); color: #fff; padding: 1.5rem; border-radius: 0.75rem; margin: 1.5rem 0; font-style: italic; }
+        .apocalypse-box { background: linear-gradient(to right, #7f1d1d, #b91c1c); color: #fff; padding: 1.5rem; border-radius: 0.75rem; margin: 1.5rem 0; }
+        .survival-badge { display: inline-block; padding: 0.25rem 0.5rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; }
     </style>
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2868999138532322" crossorigin="anonymous"></script>
