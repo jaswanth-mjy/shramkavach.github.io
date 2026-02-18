@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'great-architecture-shift-agentic-ai-feb18-2026',
+            title: 'The Great Architecture Shift: Global Finance, Agentic AI & 2026 Market Reset',
+            shortTitle: 'Architecture Shift: SaaSpocalypse & Agentic AI Feb 18',
+            excerpt: 'SaaSpocalypse vaporizes $2T, Claude 4.6 Elo 1633, GPT-5.3-Codex self-creates, S&P 6,843, SENSEX 83,734, Pixel 10a, Python 3.14. Architecture Shift analysis.',
+            date: '2026-02-18',
+            displayDate: 'Feb 18, 2026',
+            category: 'architecture shift saaspocalypse agentic ai market reset',
+            tags: ['🏗️ ARCHITECTURE SHIFT', '💥 SAASPOCALYPSE', '🤖 AGENTIC AI', '📊 MARKET RESET'],
+            tagColors: ['bg-slate-600', 'bg-red-600', 'bg-purple-600', 'bg-blue-600'],
+            readTime: '32 min read',
+            author: 'ShramKavach',
+            icon: '🏗️',
+            gradient: 'from-slate-50 via-blue-50 to-purple-50',
+            borderColor: 'border-blue-600',
+            stats: [
+                { label: 'S&P 500', value: '6,843', subtext: '+0.10%', color: 'text-green-600', icon: '📈' },
+                { label: 'SENSEX', value: '83,734', subtext: '+0.34%', color: 'text-green-600', icon: '🇮🇳' },
+                { label: 'Claude 4.6', value: '1633', subtext: 'Elo Score', color: 'text-purple-600', icon: '🤖' },
+                { label: 'SaaS Lost', value: '$2T', subtext: 'Vaporized', color: 'text-red-600', icon: '💥' }
+            ],
+            link: 'great-architecture-shift-agentic-ai-feb18-2026.html',
+            featured: true
+        },
+        {
             id: 'intelligence-age-financial-equilibrium-feb17-2026',
             title: 'The Intelligence Age: Global Financial Equilibrium, AI Proliferation & Cybersecurity Resilience',
             shortTitle: 'Intelligence Age: Financial Equilibrium & AI Feb 17',
