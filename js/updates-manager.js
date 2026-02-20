@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: '2026-convergence-sovereign-intelligence-feb20-2026',
+            title: 'The 2026 Convergence: Sovereign Intelligence, Inference Economics & Global Agentic Rebuild',
+            shortTitle: '2026 Convergence: Sovereign AI & Inference Economics Feb 20',
+            excerpt: 'US GDP 1.4%, Core PCE 3.0%, S&P 6,896, SENSEX 82,498, 41% AI-generated code, 280x token cost drop, South Korea AI Act, MCP Protocol. Year of Truth.',
+            date: '2026-02-20',
+            displayDate: 'Feb 20, 2026',
+            category: 'sovereign ai inference economics agentic rebuild gdp pce',
+            tags: ['🌍 SOVEREIGN AI', '💰 INFERENCE ECONOMICS', '🤖 AGENTIC REBUILD', '📊 GDP & PCE'],
+            tagColors: ['bg-emerald-600', 'bg-amber-600', 'bg-purple-600', 'bg-blue-600'],
+            readTime: '33 min read',
+            author: 'ShramKavach',
+            icon: '🌍',
+            gradient: 'from-slate-50 via-emerald-50 to-amber-50',
+            borderColor: 'border-emerald-600',
+            stats: [
+                { label: 'GDP', value: '1.4%', subtext: 'Q4 2025', color: 'text-red-600', icon: '📊' },
+                { label: 'S&P 500', value: '6,896', subtext: '+0.50%', color: 'text-green-600', icon: '📈' },
+                { label: 'AI Code', value: '41%', subtext: 'Generated', color: 'text-purple-600', icon: '🤖' },
+                { label: 'Token Cost', value: '280x', subtext: 'Drop', color: 'text-amber-600', icon: '💰' }
+            ],
+            link: '2026-convergence-sovereign-intelligence-feb20-2026.html',
+            featured: true
+        },
+        {
             id: 'convergence-complexity-finance-ai-feb19-2026',
             title: 'Convergence and Complexity: Global Finance, AI & Digital Infrastructure',
             shortTitle: 'Convergence & Complexity: Finance, AI & Infra Feb 19',
