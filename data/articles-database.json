@@ -1,6 +1,24 @@
 {
   "articles": [
     {
+      "title": "Convergence and Complexity: Global Finance, AI & Digital Infrastructure",
+      "shortTitle": "Convergence & Complexity: Finance, AI & Infra Feb 19",
+      "url": "convergence-complexity-finance-ai-feb19-2026.html",
+      "date": "February 19, 2026",
+      "displayDate": "Feb 19, 2026",
+      "category": "strategic-intelligence",
+      "readTime": "35 min read",
+      "icon": "\ud83c\udf10",
+      "excerpt": "SENSEX crashes 1,236 pts (-1.48%), Claude Opus 4.6 MRCR 76%, OpenAI $100B round, DDoS up 168%, India loses Rs 7.5 lakh crore, Walmart earnings beat, Sovereign AI, Nuclear Renaissance.",
+      "tags": [
+        "\ud83c\udf10 CONVERGENCE",
+        "\ud83d\udcc9 MARKET CRASH",
+        "\ud83e\udd16 CLAUDE OPUS 4.6",
+        "\ud83d\udee1\ufe0f CYBERSECURITY"
+      ],
+      "priority": 1
+    },
+    {
       "title": "The Great Architecture Shift: Global Finance, Agentic AI & 2026 Market Reset",
       "shortTitle": "Architecture Shift: SaaSpocalypse & Agentic AI Feb 18",
       "url": "great-architecture-shift-agentic-ai-feb18-2026.html",

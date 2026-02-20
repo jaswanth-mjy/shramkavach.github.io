@@ -9,6 +9,30 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
+            id: 'convergence-complexity-finance-ai-feb19-2026',
+            title: 'Convergence and Complexity: Global Finance, AI & Digital Infrastructure',
+            shortTitle: 'Convergence & Complexity: Finance, AI & Infra Feb 19',
+            excerpt: 'SENSEX crashes 1,236 pts (-1.48%), Claude Opus 4.6 MRCR 76%, OpenAI $100B round, DDoS up 168%, India loses Rs 7.5 lakh crore, Walmart earnings beat, Sovereign AI.',
+            date: '2026-02-19',
+            displayDate: 'Feb 19, 2026',
+            category: 'convergence complexity finance ai digital infrastructure cybersecurity',
+            tags: ['🌐 CONVERGENCE', '📉 MARKET CRASH', '🤖 CLAUDE OPUS 4.6', '🛡️ CYBERSECURITY'],
+            tagColors: ['bg-indigo-600', 'bg-red-600', 'bg-purple-600', 'bg-pink-600'],
+            readTime: '35 min read',
+            author: 'ShramKavach',
+            icon: '🌐',
+            gradient: 'from-slate-50 via-indigo-50 to-red-50',
+            borderColor: 'border-indigo-600',
+            stats: [
+                { label: 'SENSEX', value: '-1.48%', subtext: '-1,236 pts', color: 'text-red-600', icon: '📉' },
+                { label: 'Opus 4.6', value: '76%', subtext: 'MRCR v2', color: 'text-purple-600', icon: '🤖' },
+                { label: 'OpenAI', value: '$100B', subtext: 'Valuation', color: 'text-green-600', icon: '💰' },
+                { label: 'DDoS', value: '+168%', subtext: 'YoY Surge', color: 'text-pink-600', icon: '🛡️' }
+            ],
+            link: 'convergence-complexity-finance-ai-feb19-2026.html',
+            featured: true
+        },
+        {
             id: 'great-architecture-shift-agentic-ai-feb18-2026',
             title: 'The Great Architecture Shift: Global Finance, Agentic AI & 2026 Market Reset',
             shortTitle: 'Architecture Shift: SaaSpocalypse & Agentic AI Feb 18',
