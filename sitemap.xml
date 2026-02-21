@@ -260,18 +260,16 @@
         <priority>0.8</priority>
     </url>
     
-<<<<<<< HEAD
-    <!-- Article Pages -->    <url>        <loc>https://shramkavach.com/2026-convergence-sovereign-intelligence-feb20-2026.html</loc>
-        <lastmod>2026-02-21</lastmod>
-=======
-    <!-- Article Pages -->    <url>        <loc>https://shramkavach.com/multipolar-economic-realignment-agentic-ai-feb21-2026.html</loc>
+    <!-- Article Pages -->
+    <url>
+        <loc>https://shramkavach.com/multipolar-economic-realignment-agentic-ai-feb21-2026.html</loc>
         <lastmod>2026-02-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.95</priority>
     </url>
-    <url>        <loc>https://shramkavach.com/2026-convergence-sovereign-intelligence-feb20-2026.html</loc>
+    <url>
+        <loc>https://shramkavach.com/2026-convergence-sovereign-intelligence-feb20-2026.html</loc>
         <lastmod>2026-02-20</lastmod>
->>>>>>> 974dc0e (Feb 21 article integration: Multipolar Economic Realignment & Agentic AI - Gemini 3.1 Pro 77.1%, S&P 6,909, 82:1 agent ratio, Pax Silica, cache v5.3)
         <changefreq>monthly</changefreq>
         <priority>0.95</priority>
     </url>
