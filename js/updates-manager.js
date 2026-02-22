@@ -9,27 +9,27 @@
     // Articles database - Add new articles here (automatically sorted by date)
     const articlesDatabase = [
         {
-            id: 'multipolar-economic-realignment-agentic-ai-feb21-2026',
-            title: 'Multipolar Economic Realignment & Agentic AI Paradigm',
-            shortTitle: 'Multipolar Economic Realignment & Agentic AI Feb 21',
-            excerpt: 'Supreme Court tariff ruling, Gemini 3.1 Pro 77.1% ARC-AGI-2, S&P 6,909, SENSEX 82,814, Pax Silica alliance, 82:1 agent-to-human ratio. February 21, 2026.',
-            date: '2026-02-21',
-            displayDate: 'Feb 21, 2026',
-            category: 'economic-realignment agentic-ai paradigm',
-            tags: ['💻 AGENTIC AI', '🌍 MULTIPOLAR ECONOMICS', '📝 SUPREME COURT', '👨‍💻 AGENT-TO-HUMAN'],
-            tagColors: ['bg-blue-600', 'bg-emerald-600', 'bg-amber-600', 'bg-purple-600'],
-            readTime: '34 min read',
+            id: 'global-forensic-analysis-february-22-2026',
+            title: 'Technological Synthesis and Capital Reallocation: A Global Forensic Analysis',
+            shortTitle: 'Tech Synthesis & Capital Reallocation Feb 22',
+            excerpt: '$75B US equity outflow ("Bye America" trade), KOSPI +100%, Sensex +650pts, Claude Code security shock, Nifty IT -16% YTD, A2A economy $15T by 2028. February 22, 2026.',
+            date: '2026-02-22',
+            displayDate: 'Feb 22, 2026',
+            category: 'forensic-analysis agentic-ai capital-reallocation',
+            tags: ['🔎 FORENSIC ANALYSIS', '💻 AGENTIC AI', '💸 BYE AMERICA', '📈 CAPITAL REALLOCATION'],
+            tagColors: ['bg-indigo-600', 'bg-blue-600', 'bg-amber-600', 'bg-emerald-600'],
+            readTime: '28 min read',
             author: 'ShramKavach',
-            icon: '💻',
-            gradient: 'from-blue-50 via-emerald-50 to-amber-50',
-            borderColor: 'border-blue-600',
+            icon: '🔎',
+            gradient: 'from-indigo-50 via-amber-50 to-rose-50',
+            borderColor: 'border-indigo-600',
             stats: [
-                { label: 'Gemini 3.1 Pro', value: '77.1%', subtext: 'ARC-AGI-2', color: 'text-blue-600', icon: '💻' },
-                { label: 'S&P 500', value: '6,909', subtext: '+0.69%', color: 'text-green-600', icon: '📈' },
-                { label: 'Agent Ratio', value: '82:1', subtext: 'Agent:Human', color: 'text-purple-600', icon: '👨‍💻' },
-                { label: 'Pax Silica', value: 'Alliance', subtext: 'New Bloc', color: 'text-amber-600', icon: '🌍' }
+                { label: 'US Outflow', value: '$75B', subtext: 'Bye America', color: 'text-amber-600', icon: '💸' },
+                { label: 'Sensex', value: '+650pts', subtext: 'Feb 22', color: 'text-green-600', icon: '📈' },
+                { label: 'KOSPI', value: '+100%', subtext: '12M Return', color: 'text-emerald-600', icon: '🌏' },
+                { label: 'Nifty IT', value: '-16%', subtext: 'YTD Decline', color: 'text-rose-600', icon: '📉' }
             ],
-            link: 'multipolar-economic-realignment-agentic-ai-feb21-2026.html',
+            link: 'Global_forensic_analysis_February_22.html',
             featured: true
         },
         {

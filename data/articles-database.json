@@ -1,6 +1,24 @@
 {
   "articles": [
     {
+      "title": "Technological Synthesis and Capital Reallocation: A Global Forensic Analysis",
+      "shortTitle": "Tech Synthesis & Capital Reallocation Feb 22",
+      "url": "Global_forensic_analysis_February_22.html",
+      "date": "February 22, 2026",
+      "displayDate": "Feb 22, 2026",
+      "category": "forensic-analysis agentic-ai capital-reallocation",
+      "readTime": "28 min read",
+      "icon": "🔎",
+      "excerpt": "$75B US equity outflow ('Bye America' trade), KOSPI +100%, Sensex +650pts, Claude Code security shock, Nifty IT -16% YTD, A2A economy $15T by 2028. February 22, 2026.",
+      "tags": [
+        "🔎 FORENSIC ANALYSIS",
+        "💻 AGENTIC AI",
+        "💸 BYE AMERICA",
+        "📈 CAPITAL REALLOCATION"
+      ],
+      "priority": 1
+    },
+    {
       "title": "Multipolar Economic Realignment & Agentic AI Paradigm",
       "shortTitle": "Multipolar Economic Realignment & Agentic AI Feb 21",
       "url": "multipolar-economic-realignment-agentic-ai-feb21-2026.html",
@@ -16,7 +34,7 @@
         "\ud83d\udcdd SUPREME COURT",
         "\ud83d\udc68\u200d\ud83d\udcbb AGENT-TO-HUMAN"
       ],
-      "priority": 1
+      "priority": 2
     },
     {
       "title": "The 2026 Convergence: Sovereign Intelligence, Inference Economics & Global Agentic Rebuild",
