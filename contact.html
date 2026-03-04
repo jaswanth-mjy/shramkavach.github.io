@@ -72,11 +72,7 @@
             <!-- Contact Form -->
             <div class="bg-white rounded-lg shadow p-8">
                 <h2 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-                <form action="https://formsubmit.co/shramkavach@gmail.com" method="POST" class="space-y-4">
-                    <input type="hidden" name="_subject" value="New contact from ShramKavach">
-                    <input type="hidden" name="_captcha" value="true">
-                    <input type="hidden" name="_next" value="https://shramkavach.com/contact.html">
-                    <input type="text" name="_honey" style="display:none">
+                <form id="contactForm" class="space-y-4">
                     <div>
                         <label for="name" class="block text-sm font-semibold text-gray-700 mb-1">Name</label>
                         <input type="text" name="name" id="name" required
@@ -92,11 +88,43 @@
                         <textarea name="message" id="message" rows="5" required
                             class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none resize-vertical"></textarea>
                     </div>
-                    <button type="submit"
+                    <button type="submit" id="contactSubmit"
                         class="w-full bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors">
                         Send Message
                     </button>
+                    <div id="contactMessage" class="hidden text-center py-3 rounded-lg text-sm font-medium"></div>
                 </form>
+                <script>
+                    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+                        e.preventDefault();
+                        const btn = document.getElementById('contactSubmit');
+                        const msg = document.getElementById('contactMessage');
+                        btn.disabled = true;
+                        btn.textContent = 'Sending...';
+                        try {
+                            await fetch('https://script.google.com/macros/s/AKfycbzOrN8TYxH5C-Q9HVE8aN7GB_E2z8M-kgAcciP8Kf4PBr6cAeKA2A7oYnzQbBk4D-1W/exec', {
+                                method: 'POST',
+                                mode: 'no-cors',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({
+                                    action: 'contact',
+                                    name: document.getElementById('name').value,
+                                    email: document.getElementById('email').value,
+                                    message: document.getElementById('message').value
+                                })
+                            });
+                            msg.textContent = '✅ Message sent successfully! We\'ll get back to you soon.';
+                            msg.className = 'text-center py-3 rounded-lg text-sm font-medium bg-green-50 text-green-700 border border-green-200';
+                            this.reset();
+                        } catch (err) {
+                            msg.textContent = '❌ Failed to send. Please email us directly at shramkavach@gmail.com';
+                            msg.className = 'text-center py-3 rounded-lg text-sm font-medium bg-red-50 text-red-700 border border-red-200';
+                        } finally {
+                            btn.disabled = false;
+                            btn.textContent = 'Send Message';
+                        }
+                    });
+                </script>
             </div>
         </div>
 
